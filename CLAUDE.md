@@ -441,3 +441,109 @@ export interface UpdateFormationDto {
   positions: CreateFormationPositionDto[];
 }
 ```
+
+### Frontend（Public - 顧客向け参照アプリ）
+
+#### 概要
+- 管理アプリ（`frontend/`）とは別の顧客向け参照専用Webアプリ
+- CRUD機能なし、参照のみ
+- リッチでモダンなデザイン
+
+#### 技術スタック
+- **フレームワーク**: React 18
+- **言語**: TypeScript
+- **ビルドツール**: Vite
+- **状態管理**: TanStack Query
+- **ルーティング**: React Router v6
+- **スタイリング**: Tailwind CSS（モダンなデザイン向け）
+- **アニメーション**: Framer Motion（リッチなUX向け）
+
+#### ディレクトリ構成
+
+```
+frontend-admin/          # 管理アプリ（既存のfrontend/をリネーム）
+frontend-public/         # 顧客向け参照アプリ（新規作成）
+├── src/
+│   ├── api/
+│   │   ├── client.ts
+│   │   ├── members.ts
+│   │   ├── groups.ts
+│   │   └── formations.ts
+│   │
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Header.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Card.tsx
+│   │   │   └── Loading.tsx
+│   │   ├── members/
+│   │   │   ├── MemberCard.tsx
+│   │   │   └── MemberProfile.tsx
+│   │   ├── groups/
+│   │   │   ├── GroupCard.tsx
+│   │   │   └── GroupHero.tsx
+│   │   └── formations/
+│   │       └── FormationStage.tsx
+│   │
+│   ├── pages/
+│   │   ├── HomePage.tsx           # トップページ
+│   │   ├── MembersPage.tsx        # メンバー一覧
+│   │   ├── MemberDetailPage.tsx   # メンバー詳細
+│   │   ├── GroupsPage.tsx         # グループ一覧
+│   │   ├── GroupDetailPage.tsx    # グループ詳細
+│   │   └── FormationPage.tsx      # フォーメーション表示
+│   │
+│   ├── types/
+│   │   └── index.ts
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── package.json
+├── tailwind.config.js
+└── vite.config.ts
+```
+
+#### 画面一覧
+
+| 画面 | パス | 機能 |
+|------|------|------|
+| トップ | / | ヒーローセクション、最新情報、ナビゲーション |
+| メンバー一覧 | /members | カード形式で画像付き一覧表示 |
+| メンバー詳細 | /members/:id | プロフィール、画像ギャラリー |
+| グループ一覧 | /groups | グループカード一覧 |
+| グループ詳細 | /groups/:id | グループ情報、所属メンバー一覧 |
+| フォーメーション | /formations/:id | フォーメーション図表示 |
+
+#### フォーメーション表示仕様
+
+```
+        ステージ後方（客席から遠い）
+        ┌─────────────────────────┐
+        │                         │
+        │    [3列目: n人]         │  ← row=3（上段）
+        │                         │
+        │   [2列目: m人]          │  ← row=2（中段）
+        │                         │
+        │  [1列目: k人]           │  ← row=1（下段・最前列）
+        │                         │
+        └─────────────────────────┘
+        ステージ前方（客席に近い）
+              ↓
+            客席
+```
+
+- row=1 が最前列（画面下部に表示）
+- row の値が大きいほど後方（画面上部に表示）
+- 各列は人数に応じて中央揃え
+- メンバー画像を円形で表示、ポジション番号をバッジ表示
+
+#### デザイン要件
+
+- **カラーパレット**: グラデーション背景、アクセントカラー
+- **タイポグラフィ**: モダンなフォント、適切な階層
+- **カード**: シャドウ、ホバーエフェクト、画像オーバーレイ
+- **アニメーション**: ページ遷移、スクロールアニメーション、ホバーエフェクト
+- **レスポンシブ**: モバイルファースト設計
+- **画像表示**: 高品質な画像表示、遅延読み込み、プレースホルダー
