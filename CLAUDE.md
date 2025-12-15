@@ -109,3 +109,92 @@ tests/
 - **Domain層**: 他の層に依存しない。純粋なビジネスロジックのみ
 - **Infrastructure層**: Domain層のインターフェースを実装
 - **集約**: トランザクション整合性の境界。集約ルート経由でのみアクセス
+
+## 要件
+
+### 概要
+
+アイドルのメンバー、グループ、フォーメーション情報を管理するAPI
+
+### ドメインモデル
+
+#### Member（メンバー）
+| プロパティ | 型 | 説明 |
+|-----------|-----|------|
+| Id | Guid | メンバーID |
+| Name | string | 名前 |
+| BirthDate | DateOnly | 生年月日 |
+| Images | List<MemberImage> | 画像一覧 |
+| GroupId | Guid? | 所属グループID |
+| CreatedAt | DateTime | 作成日時 |
+| UpdatedAt | DateTime | 更新日時 |
+
+#### MemberImage（メンバー画像）
+| プロパティ | 型 | 説明 |
+|-----------|-----|------|
+| Id | Guid | 画像ID |
+| MemberId | Guid | メンバーID |
+| Url | string | 画像URL |
+| IsPrimary | bool | メイン画像フラグ |
+| CreatedAt | DateTime | 作成日時 |
+
+#### Group（グループ）
+| プロパティ | 型 | 説明 |
+|-----------|-----|------|
+| Id | Guid | グループID |
+| Name | string | グループ名 |
+| DebutDate | DateOnly? | デビュー日 |
+| Members | List<Member> | 所属メンバー一覧 |
+| CreatedAt | DateTime | 作成日時 |
+| UpdatedAt | DateTime | 更新日時 |
+
+#### Formation（フォーメーション）
+| プロパティ | 型 | 説明 |
+|-----------|-----|------|
+| Id | Guid | フォーメーションID |
+| Name | string | フォーメーション名（曲名など） |
+| GroupId | Guid | グループID |
+| Positions | List<FormationPosition> | ポジション一覧 |
+| CreatedAt | DateTime | 作成日時 |
+| UpdatedAt | DateTime | 更新日時 |
+
+#### FormationPosition（フォーメーションポジション）
+| プロパティ | 型 | 説明 |
+|-----------|-----|------|
+| Id | Guid | ポジションID |
+| FormationId | Guid | フォーメーションID |
+| MemberId | Guid | メンバーID |
+| PositionNumber | int | ポジション番号 |
+| Row | int | 列（前後） |
+| Column | int | 行（左右） |
+
+### API エンドポイント
+
+#### Members API
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | /api/members | メンバー一覧取得 |
+| GET | /api/members/{id} | メンバー詳細取得 |
+| POST | /api/members | メンバー登録 |
+| PUT | /api/members/{id} | メンバー更新 |
+| DELETE | /api/members/{id} | メンバー削除 |
+| POST | /api/members/{id}/images | メンバー画像追加 |
+| DELETE | /api/members/{id}/images/{imageId} | メンバー画像削除 |
+
+#### Groups API
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | /api/groups | グループ一覧取得 |
+| GET | /api/groups/{id} | グループ詳細取得 |
+| POST | /api/groups | グループ登録 |
+| PUT | /api/groups/{id} | グループ更新 |
+| DELETE | /api/groups/{id} | グループ削除 |
+
+#### Formations API
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | /api/formations | フォーメーション一覧取得 |
+| GET | /api/formations/{id} | フォーメーション詳細取得 |
+| POST | /api/formations | フォーメーション登録 |
+| PUT | /api/formations/{id} | フォーメーション更新 |
+| DELETE | /api/formations/{id} | フォーメーション削除 |
