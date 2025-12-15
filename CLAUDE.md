@@ -251,75 +251,96 @@ services.AddScoped<IFormationRepository, PostgresFormationRepository>();
 ### Frontend（React）
 
 #### 技術スタック
-- **フレームワーク**: React 18+
+- **フレームワーク**: React 18
 - **言語**: TypeScript
 - **ビルドツール**: Vite
-- **状態管理**: React Query（サーバー状態）
-- **UIライブラリ**: 任意（Tailwind CSS等）
-- **HTTPクライアント**: fetch / axios
+- **状態管理**: TanStack Query（React Query v5）
+- **ルーティング**: React Router v6
+- **HTTPクライアント**: fetch API
+- **スタイリング**: CSS（カスタム）
 
-#### フォルダ構成
+#### 起動方法
+
+```bash
+# 開発サーバー起動
+cd frontend
+npm run dev
+# http://localhost:5173 でアクセス
+
+# ビルド
+npm run build
+```
+
+#### フォルダ構成（実装済み）
 
 ```
 frontend/
 ├── src/
-│   ├── api/                      # API通信
-│   │   ├── client.ts             # HTTPクライアント設定
-│   │   ├── members.ts            # Members API
-│   │   ├── groups.ts             # Groups API
-│   │   └── formations.ts         # Formations API
+│   ├── api/                      # API通信層
+│   │   ├── client.ts             # HTTPクライアント（共通fetch wrapper）
+│   │   ├── members.ts            # Members API（CRUD）
+│   │   ├── groups.ts             # Groups API（CRUD）
+│   │   └── formations.ts         # Formations API（CRUD）
 │   │
 │   ├── components/               # UIコンポーネント
-│   │   ├── common/               # 共通コンポーネント
-│   │   │   ├── Button.tsx
-│   │   │   ├── Modal.tsx
-│   │   │   └── Table.tsx
-│   │   ├── members/
-│   │   │   ├── MemberList.tsx
-│   │   │   ├── MemberForm.tsx
-│   │   │   └── MemberCard.tsx
-│   │   ├── groups/
-│   │   │   ├── GroupList.tsx
-│   │   │   ├── GroupForm.tsx
-│   │   │   └── GroupDetail.tsx
-│   │   └── formations/
-│   │       ├── FormationList.tsx
-│   │       ├── FormationForm.tsx
-│   │       └── FormationGrid.tsx  # フォーメーション配置表示
+│   │   └── common/               # 共通コンポーネント
+│   │       ├── Layout.tsx        # ナビゲーション付きレイアウト
+│   │       └── Modal.tsx         # モーダルダイアログ
 │   │
-│   ├── hooks/                    # カスタムフック
-│   │   ├── useMembers.ts
-│   │   ├── useGroups.ts
-│   │   └── useFormations.ts
-│   │
-│   ├── pages/                    # ページコンポーネント
-│   │   ├── MembersPage.tsx
-│   │   ├── GroupsPage.tsx
-│   │   ├── FormationsPage.tsx
-│   │   └── HomePage.tsx
+│   ├── pages/                    # ページコンポーネント（CRUD機能付き）
+│   │   ├── HomePage.tsx          # ダッシュボード（統計表示）
+│   │   ├── MembersPage.tsx       # メンバー管理（一覧・登録・編集・削除）
+│   │   ├── GroupsPage.tsx        # グループ管理（一覧・登録・編集・削除）
+│   │   └── FormationsPage.tsx    # フォーメーション管理（一覧・登録・編集・削除）
 │   │
 │   ├── types/                    # 型定義
-│   │   └── index.ts              # API レスポンス型
+│   │   └── index.ts              # API DTOに対応するTypeScript型
 │   │
-│   ├── App.tsx
-│   └── main.tsx
+│   ├── App.tsx                   # ルーティング設定、QueryClientProvider
+│   ├── main.tsx                  # エントリーポイント
+│   └── index.css                 # グローバルスタイル
 │
 ├── package.json
 ├── tsconfig.json
-└── vite.config.ts
+└── vite.config.ts                # APIプロキシ設定（/api → localhost:5000）
 ```
 
 #### 画面一覧
 
 | 画面 | パス | 機能 |
 |------|------|------|
-| ホーム | / | ダッシュボード |
-| メンバー一覧 | /members | 一覧表示、検索、追加ボタン |
-| メンバー詳細 | /members/:id | 詳細表示、編集、画像管理、削除 |
-| グループ一覧 | /groups | 一覧表示、追加ボタン |
-| グループ詳細 | /groups/:id | 詳細表示、所属メンバー一覧、編集、削除 |
-| フォーメーション一覧 | /formations | 一覧表示、追加ボタン |
-| フォーメーション詳細 | /formations/:id | フォーメーション配置図表示、編集、削除 |
+| ホーム | / | ダッシュボード（メンバー・グループ・フォーメーション数） |
+| メンバー管理 | /members | 一覧テーブル、モーダルで登録・編集、削除確認 |
+| グループ管理 | /groups | 一覧テーブル、モーダルで登録・編集、削除確認 |
+| フォーメーション管理 | /formations | 一覧テーブル、モーダルで登録・編集（ポジション動的追加）、削除確認 |
+
+#### APIプロキシ設定
+
+```typescript
+// vite.config.ts
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+    },
+  },
+})
+```
+
+#### 主要コンポーネントの責務
+
+| コンポーネント | 責務 |
+|---------------|------|
+| Layout | ナビゲーションバー、ページコンテンツのラッパー |
+| Modal | 汎用モーダルダイアログ（登録・編集フォーム用） |
+| HomePage | API呼び出し、統計カードの表示 |
+| MembersPage | メンバーCRUD、グループ選択ドロップダウン |
+| GroupsPage | グループCRUD、デビュー日入力 |
+| FormationsPage | フォーメーションCRUD、ポジション動的追加・削除 |
 
 #### 型定義（types/index.ts）
 
@@ -342,6 +363,18 @@ export interface MemberImage {
   createdAt: string;
 }
 
+export interface CreateMemberDto {
+  name: string;
+  birthDate: string;
+  groupId?: string | null;
+}
+
+export interface UpdateMemberDto {
+  name: string;
+  birthDate: string;
+  groupId?: string | null;
+}
+
 // Group
 export interface Group {
   id: string;
@@ -361,6 +394,16 @@ export interface GroupSummary {
   updatedAt: string;
 }
 
+export interface CreateGroupDto {
+  name: string;
+  debutDate?: string | null;
+}
+
+export interface UpdateGroupDto {
+  name: string;
+  debutDate?: string | null;
+}
+
 // Formation
 export interface Formation {
   id: string;
@@ -377,5 +420,24 @@ export interface FormationPosition {
   positionNumber: number;
   row: number;
   column: number;
+}
+
+export interface CreateFormationDto {
+  name: string;
+  groupId: string;
+  positions: CreateFormationPositionDto[];
+}
+
+export interface CreateFormationPositionDto {
+  memberId: string;
+  positionNumber: number;
+  row: number;
+  column: number;
+}
+
+export interface UpdateFormationDto {
+  name: string;
+  groupId: string;
+  positions: CreateFormationPositionDto[];
 }
 ```
