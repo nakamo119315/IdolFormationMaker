@@ -198,3 +198,52 @@ tests/
 | POST | /api/formations | フォーメーション登録 |
 | PUT | /api/formations/{id} | フォーメーション更新 |
 | DELETE | /api/formations/{id} | フォーメーション削除 |
+
+### データベース
+
+#### 方針
+- **初期DB**: SQLite（サーバ内ファイルベース、追加インストール不要）
+- **将来的な拡張**: PostgreSQL、SQL Server等への差し替えを想定
+
+#### リポジトリパターン
+
+```
+Domain層（インターフェース定義）
+├── Members/Repositories/
+│   └── IMemberRepository.cs          # インターフェース
+├── Groups/Repositories/
+│   └── IGroupRepository.cs
+└── Formations/Repositories/
+    └── IFormationRepository.cs
+
+Infrastructure層（実装）
+├── Persistence/
+│   ├── AppDbContext.cs               # EF Core DbContext
+│   ├── SQLite/                       # SQLite実装（初期）
+│   │   ├── SqliteMemberRepository.cs
+│   │   ├── SqliteGroupRepository.cs
+│   │   └── SqliteFormationRepository.cs
+│   └── PostgreSQL/                   # PostgreSQL実装（将来）
+│       ├── PostgresMemberRepository.cs
+│       └── ...
+```
+
+#### DI設定による切り替え
+
+```csharp
+// SQLite使用時
+services.AddScoped<IMemberRepository, SqliteMemberRepository>();
+services.AddScoped<IGroupRepository, SqliteGroupRepository>();
+services.AddScoped<IFormationRepository, SqliteFormationRepository>();
+
+// PostgreSQL切り替え時（実装クラスを差し替えるだけ）
+services.AddScoped<IMemberRepository, PostgresMemberRepository>();
+services.AddScoped<IGroupRepository, PostgresGroupRepository>();
+services.AddScoped<IFormationRepository, PostgresFormationRepository>();
+```
+
+#### 設計ポイント
+- Domain層はDB実装の詳細を知らない（インターフェースのみ依存）
+- Application層はインターフェース経由でリポジトリを利用
+- Infrastructure層で具体的なDB実装を提供
+- DIコンテナでの登録変更のみでDB切り替え可能
