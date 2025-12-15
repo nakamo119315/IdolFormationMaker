@@ -1,0 +1,6 @@
+@IdolManagement.Presentation_HostAddress = http://localhost:5059
+
+GET {{IdolManagement.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
