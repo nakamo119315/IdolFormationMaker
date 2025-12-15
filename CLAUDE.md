@@ -247,3 +247,135 @@ services.AddScoped<IFormationRepository, PostgresFormationRepository>();
 - Application層はインターフェース経由でリポジトリを利用
 - Infrastructure層で具体的なDB実装を提供
 - DIコンテナでの登録変更のみでDB切り替え可能
+
+### Frontend（React）
+
+#### 技術スタック
+- **フレームワーク**: React 18+
+- **言語**: TypeScript
+- **ビルドツール**: Vite
+- **状態管理**: React Query（サーバー状態）
+- **UIライブラリ**: 任意（Tailwind CSS等）
+- **HTTPクライアント**: fetch / axios
+
+#### フォルダ構成
+
+```
+frontend/
+├── src/
+│   ├── api/                      # API通信
+│   │   ├── client.ts             # HTTPクライアント設定
+│   │   ├── members.ts            # Members API
+│   │   ├── groups.ts             # Groups API
+│   │   └── formations.ts         # Formations API
+│   │
+│   ├── components/               # UIコンポーネント
+│   │   ├── common/               # 共通コンポーネント
+│   │   │   ├── Button.tsx
+│   │   │   ├── Modal.tsx
+│   │   │   └── Table.tsx
+│   │   ├── members/
+│   │   │   ├── MemberList.tsx
+│   │   │   ├── MemberForm.tsx
+│   │   │   └── MemberCard.tsx
+│   │   ├── groups/
+│   │   │   ├── GroupList.tsx
+│   │   │   ├── GroupForm.tsx
+│   │   │   └── GroupDetail.tsx
+│   │   └── formations/
+│   │       ├── FormationList.tsx
+│   │       ├── FormationForm.tsx
+│   │       └── FormationGrid.tsx  # フォーメーション配置表示
+│   │
+│   ├── hooks/                    # カスタムフック
+│   │   ├── useMembers.ts
+│   │   ├── useGroups.ts
+│   │   └── useFormations.ts
+│   │
+│   ├── pages/                    # ページコンポーネント
+│   │   ├── MembersPage.tsx
+│   │   ├── GroupsPage.tsx
+│   │   ├── FormationsPage.tsx
+│   │   └── HomePage.tsx
+│   │
+│   ├── types/                    # 型定義
+│   │   └── index.ts              # API レスポンス型
+│   │
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+#### 画面一覧
+
+| 画面 | パス | 機能 |
+|------|------|------|
+| ホーム | / | ダッシュボード |
+| メンバー一覧 | /members | 一覧表示、検索、追加ボタン |
+| メンバー詳細 | /members/:id | 詳細表示、編集、画像管理、削除 |
+| グループ一覧 | /groups | 一覧表示、追加ボタン |
+| グループ詳細 | /groups/:id | 詳細表示、所属メンバー一覧、編集、削除 |
+| フォーメーション一覧 | /formations | 一覧表示、追加ボタン |
+| フォーメーション詳細 | /formations/:id | フォーメーション配置図表示、編集、削除 |
+
+#### 型定義（types/index.ts）
+
+```typescript
+// Member
+export interface Member {
+  id: string;
+  name: string;
+  birthDate: string;
+  groupId: string | null;
+  images: MemberImage[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface MemberImage {
+  id: string;
+  url: string;
+  isPrimary: boolean;
+  createdAt: string;
+}
+
+// Group
+export interface Group {
+  id: string;
+  name: string;
+  debutDate: string | null;
+  members: Member[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface GroupSummary {
+  id: string;
+  name: string;
+  debutDate: string | null;
+  memberCount: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// Formation
+export interface Formation {
+  id: string;
+  name: string;
+  groupId: string;
+  positions: FormationPosition[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FormationPosition {
+  id: string;
+  memberId: string;
+  positionNumber: number;
+  row: number;
+  column: number;
+}
+```
