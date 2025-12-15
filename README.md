@@ -117,6 +117,73 @@ cd tests/Application.Tests
 ~/.dotnet/dotnet test
 ```
 
+## Docker
+
+### Docker Compose (推奨)
+
+全サービスを一括起動:
+
+```bash
+docker-compose up -d
+```
+
+| サービス | URL |
+|----------|-----|
+| API | http://localhost:5000 |
+| 管理用フロントエンド | http://localhost:3000 |
+| 公開用フロントエンド | http://localhost:3001 |
+
+停止:
+
+```bash
+docker-compose down
+```
+
+### 個別ビルド
+
+```bash
+# バックエンドAPI
+docker build -t idol-api .
+docker run -p 5000:80 idol-api
+
+# 管理用フロントエンド
+docker build -t idol-admin ./frontend-admin
+docker run -p 3000:80 idol-admin
+
+# 公開用フロントエンド
+docker build -t idol-public ./frontend-public
+docker run -p 3001:80 idol-public
+```
+
+### データ永続化
+
+docker-compose使用時、SQLiteデータベースは`api-data`ボリュームに保存されます。
+
+```bash
+# ボリューム確認
+docker volume ls
+
+# データバックアップ
+docker cp $(docker-compose ps -q api):/app/data/idolmanagement.db ./backup.db
+```
+
+## 環境変数
+
+`.env.example`をコピーして設定:
+
+```bash
+cp .env.example .env
+```
+
+詳細は各ディレクトリの`.env.example`を参照してください。
+
+## CI/CD
+
+GitHub Actionsでプッシュ/PR時に自動テスト:
+
+- バックエンド: ビルド + テスト
+- フロントエンド: Lint + ビルド
+
 ## API エンドポイント
 
 ### Members
