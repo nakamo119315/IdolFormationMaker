@@ -1,24 +1,31 @@
 # Backend API Dockerfile
 FROM mcr.microsoft.com/dotnet/sdk:10.0-preview AS build
+
+# Reduce memory usage during build
+ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
+ENV DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
+ENV DOTNET_NOLOGO=1
+
 WORKDIR /src
 
-# Copy project files
-COPY src/Domain/*.csproj ./Domain/
-COPY src/Application/*.csproj ./Application/
-COPY src/Infrastructure/*.csproj ./Infrastructure/
-COPY src/Presentation/*.csproj ./Presentation/
+# Copy solution and project files
+COPY *.slnx ./
+COPY src/Domain/*.csproj ./src/Domain/
+COPY src/Application/*.csproj ./src/Application/
+COPY src/Infrastructure/*.csproj ./src/Infrastructure/
+COPY src/Presentation/*.csproj ./src/Presentation/
 
-# Restore dependencies
-RUN dotnet restore ./Presentation/IdolManagement.Presentation.csproj
+# Restore dependencies (with reduced parallelism to lower memory usage)
+RUN dotnet restore --disable-parallel
 
 # Copy source code
-COPY src/ ./
+COPY src/ ./src/
 
-# Build
-WORKDIR /src/Presentation
-RUN dotnet publish -c Release -o /app/publish
+# Build and publish
+WORKDIR /src/src/Presentation
+RUN dotnet publish -c Release -o /app/publish --no-restore
 
-# Runtime image
+# Runtime image (much smaller ~200MB vs ~2GB SDK)
 FROM mcr.microsoft.com/dotnet/aspnet:10.0-preview AS runtime
 WORKDIR /app
 
