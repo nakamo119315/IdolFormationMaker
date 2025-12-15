@@ -8,6 +8,7 @@ export function Header() {
     { path: '/', label: 'Home' },
     { path: '/members', label: 'Members' },
     { path: '/groups', label: 'Groups' },
+    { path: '/formations', label: 'Formations' },
   ];
 
   return (
