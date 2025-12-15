@@ -4,12 +4,14 @@ import { formationsApi } from '../api/formations';
 import { membersApi } from '../api/members';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
-import type { Formation, CreateFormationDto, UpdateFormationDto, CreateFormationPositionDto } from '../types';
+import type { Formation, CreateFormationDto, UpdateFormationDto, CreateFormationPositionDto, Member } from '../types';
 
 export function FormationsPage() {
   const queryClient = useQueryClient();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
   const [editingFormation, setEditingFormation] = useState<Formation | null>(null);
+  const [viewingFormation, setViewingFormation] = useState<Formation | null>(null);
   const [formData, setFormData] = useState<CreateFormationDto>({
     name: '',
     groupId: '',
@@ -76,9 +78,19 @@ export function FormationsPage() {
     setIsModalOpen(true);
   };
 
+  const openDetailModal = (formation: Formation) => {
+    setViewingFormation(formation);
+    setIsDetailModalOpen(true);
+  };
+
   const closeModal = () => {
     setIsModalOpen(false);
     setEditingFormation(null);
+  };
+
+  const closeDetailModal = () => {
+    setIsDetailModalOpen(false);
+    setViewingFormation(null);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -117,6 +129,38 @@ export function FormationsPage() {
     });
   };
 
+  // フォーメーションを列ごとにグループ化
+  const getFormationRows = (formation: Formation) => {
+    const rowMap = new Map<number, typeof formation.positions>();
+    formation.positions.forEach(pos => {
+      const existing = rowMap.get(pos.row) || [];
+      existing.push(pos);
+      rowMap.set(pos.row, existing);
+    });
+
+    // 各列をcolumnでソート
+    const sortedRows = Array.from(rowMap.entries())
+      .sort((a, b) => a[0] - b[0])
+      .map(([row, positions]) => ({
+        row,
+        positions: positions.sort((a, b) => a.column - b.column),
+      }));
+
+    return sortedRows;
+  };
+
+  // メンバー情報を取得
+  const getMemberInfo = (memberId: string): Member | undefined => {
+    return members?.find(m => m.id === memberId);
+  };
+
+  // メンバーのプライマリ画像を取得
+  const getMemberImage = (member: Member | undefined): string | null => {
+    if (!member) return null;
+    const primaryImage = member.images.find(img => img.isPrimary) ?? member.images[0];
+    return primaryImage?.url ?? null;
+  };
+
   if (isLoading) return <div>読み込み中...</div>;
 
   return (
@@ -146,6 +190,12 @@ export function FormationsPage() {
               <td>
                 <button
                   className="btn btn-sm"
+                  onClick={() => openDetailModal(formation)}
+                >
+                  詳細
+                </button>
+                <button
+                  className="btn btn-sm"
                   onClick={() => openEditModal(formation)}
                 >
                   編集
@@ -162,6 +212,50 @@ export function FormationsPage() {
         </tbody>
       </table>
 
+      {/* 詳細モーダル（フォーメーション図） */}
+      <Modal
+        isOpen={isDetailModalOpen}
+        onClose={closeDetailModal}
+        title={viewingFormation ? `${viewingFormation.name} - フォーメーション` : 'フォーメーション詳細'}
+      >
+        {viewingFormation && (
+          <div className="formation-detail">
+            <div className="formation-info">
+              <p><strong>グループ:</strong> {groups?.find(g => g.id === viewingFormation.groupId)?.name ?? '-'}</p>
+              <p><strong>ポジション数:</strong> {viewingFormation.positions.length}人</p>
+            </div>
+            <div className="formation-stage">
+              <div className="stage-label">ステージ前方</div>
+              <div className="formation-grid">
+                {getFormationRows(viewingFormation).map(({ row, positions }) => (
+                  <div key={row} className="formation-row">
+                    {positions.map((pos) => {
+                      const member = getMemberInfo(pos.memberId);
+                      const imageUrl = getMemberImage(member);
+                      return (
+                        <div key={pos.id} className="formation-position">
+                          <div className="position-number">{pos.positionNumber}</div>
+                          {imageUrl ? (
+                            <img src={imageUrl} alt={member?.name} className="position-image" />
+                          ) : (
+                            <div className="position-image-placeholder">
+                              {member?.name?.charAt(0) ?? '?'}
+                            </div>
+                          )}
+                          <div className="position-name">{member?.name ?? '未設定'}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
+              <div className="stage-label">ステージ後方</div>
+            </div>
+          </div>
+        )}
+      </Modal>
+
+      {/* 編集モーダル */}
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
