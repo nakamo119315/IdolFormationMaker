@@ -4,6 +4,9 @@ public record MemberDto(
     Guid Id,
     string Name,
     DateOnly BirthDate,
+    string? Birthplace,
+    string? PenLightColor1,
+    string? PenLightColor2,
     Guid? GroupId,
     IEnumerable<MemberImageDto> Images,
     DateTime CreatedAt,
@@ -20,12 +23,18 @@ public record MemberImageDto(
 public record CreateMemberDto(
     string Name,
     DateOnly BirthDate,
+    string? Birthplace,
+    string? PenLightColor1,
+    string? PenLightColor2,
     Guid? GroupId
 );
 
 public record UpdateMemberDto(
     string Name,
     DateOnly BirthDate,
+    string? Birthplace,
+    string? PenLightColor1,
+    string? PenLightColor2,
     Guid? GroupId
 );
 

@@ -7,6 +7,9 @@ public class Member : IEntity
     public Guid Id { get; private set; }
     public string Name { get; private set; } = string.Empty;
     public DateOnly BirthDate { get; private set; }
+    public string? Birthplace { get; private set; }
+    public string? PenLightColor1 { get; private set; }
+    public string? PenLightColor2 { get; private set; }
     public Guid? GroupId { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; private set; }
@@ -16,7 +19,7 @@ public class Member : IEntity
 
     private Member() { }
 
-    public static Member Create(string name, DateOnly birthDate, Guid? groupId = null)
+    public static Member Create(string name, DateOnly birthDate, string? birthplace = null, string? penLightColor1 = null, string? penLightColor2 = null, Guid? groupId = null)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Name is required.", nameof(name));
@@ -27,19 +30,25 @@ public class Member : IEntity
             Id = Guid.NewGuid(),
             Name = name,
             BirthDate = birthDate,
+            Birthplace = birthplace,
+            PenLightColor1 = penLightColor1,
+            PenLightColor2 = penLightColor2,
             GroupId = groupId,
             CreatedAt = now,
             UpdatedAt = now
         };
     }
 
-    public void Update(string name, DateOnly birthDate, Guid? groupId)
+    public void Update(string name, DateOnly birthDate, string? birthplace, string? penLightColor1, string? penLightColor2, Guid? groupId)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Name is required.", nameof(name));
 
         Name = name;
         BirthDate = birthDate;
+        Birthplace = birthplace;
+        PenLightColor1 = penLightColor1;
+        PenLightColor2 = penLightColor2;
         GroupId = groupId;
         UpdatedAt = DateTime.UtcNow;
     }

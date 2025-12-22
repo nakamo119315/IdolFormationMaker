@@ -37,6 +37,14 @@ export function MemberCard({ member, index }: MemberCardProps) {
               {member.name}
             </h3>
             <p className="text-sm text-slate-500 mt-1">{member.birthDate}</p>
+            {member.birthplace && (
+              <p className="text-xs text-slate-400 mt-0.5">{member.birthplace}</p>
+            )}
+            {member.penLightColor1 && (
+              <p className="text-xs text-primary-500 mt-1">
+                {member.penLightColor1}×{member.penLightColor2}
+              </p>
+            )}
           </div>
         </div>
       </Link>

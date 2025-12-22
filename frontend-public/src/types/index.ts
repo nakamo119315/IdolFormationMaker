@@ -2,6 +2,9 @@ export interface Member {
   id: string;
   name: string;
   birthDate: string;
+  birthplace: string | null;
+  penLightColor1: string | null;
+  penLightColor2: string | null;
   groupId: string | null;
   images: MemberImage[];
   createdAt: string;

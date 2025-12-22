@@ -14,6 +14,9 @@ export function MembersPage() {
   const [formData, setFormData] = useState<CreateMemberDto>({
     name: '',
     birthDate: '',
+    birthplace: null,
+    penLightColor1: null,
+    penLightColor2: null,
     groupId: null,
   });
   const [imageUrl, setImageUrl] = useState('');
@@ -71,7 +74,7 @@ export function MembersPage() {
 
   const openCreateModal = () => {
     setEditingMember(null);
-    setFormData({ name: '', birthDate: '', groupId: null });
+    setFormData({ name: '', birthDate: '', birthplace: null, penLightColor1: null, penLightColor2: null, groupId: null });
     setIsModalOpen(true);
   };
 
@@ -80,6 +83,9 @@ export function MembersPage() {
     setFormData({
       name: member.name,
       birthDate: member.birthDate,
+      birthplace: member.birthplace,
+      penLightColor1: member.penLightColor1,
+      penLightColor2: member.penLightColor2,
       groupId: member.groupId,
     });
     setIsModalOpen(true);
@@ -152,6 +158,8 @@ export function MembersPage() {
             <th>画像</th>
             <th>名前</th>
             <th>生年月日</th>
+            <th>出身地</th>
+            <th>サイリウム</th>
             <th>所属グループ</th>
             <th>操作</th>
           </tr>
@@ -177,6 +185,12 @@ export function MembersPage() {
                 </td>
                 <td>{member.name}</td>
                 <td>{member.birthDate}</td>
+                <td>{member.birthplace ?? '-'}</td>
+                <td>
+                  {member.penLightColor1 && member.penLightColor2
+                    ? `${member.penLightColor1}×${member.penLightColor2}`
+                    : '-'}
+                </td>
                 <td>
                   {groups?.find((g) => g.id === member.groupId)?.name ?? '-'}
                 </td>
@@ -217,6 +231,8 @@ export function MembersPage() {
             <div className="member-info">
               <p><strong>名前:</strong> {viewingMember.name}</p>
               <p><strong>生年月日:</strong> {viewingMember.birthDate}</p>
+              <p><strong>出身地:</strong> {viewingMember.birthplace ?? '未設定'}</p>
+              <p><strong>サイリウムカラー:</strong> {viewingMember.penLightColor1 && viewingMember.penLightColor2 ? `${viewingMember.penLightColor1}×${viewingMember.penLightColor2}` : '未設定'}</p>
               <p><strong>所属グループ:</strong> {groups?.find(g => g.id === viewingMember.groupId)?.name ?? '未所属'}</p>
             </div>
             <div className="member-images">
@@ -261,6 +277,33 @@ export function MembersPage() {
               value={formData.birthDate}
               onChange={(e) => setFormData({ ...formData, birthDate: e.target.value })}
               required
+            />
+          </div>
+          <div className="form-group">
+            <label>出身地</label>
+            <input
+              type="text"
+              value={formData.birthplace ?? ''}
+              onChange={(e) => setFormData({ ...formData, birthplace: e.target.value || null })}
+              placeholder="例: 東京都"
+            />
+          </div>
+          <div className="form-group">
+            <label>サイリウムカラー1</label>
+            <input
+              type="text"
+              value={formData.penLightColor1 ?? ''}
+              onChange={(e) => setFormData({ ...formData, penLightColor1: e.target.value || null })}
+              placeholder="例: ピンク"
+            />
+          </div>
+          <div className="form-group">
+            <label>サイリウムカラー2</label>
+            <input
+              type="text"
+              value={formData.penLightColor2 ?? ''}
+              onChange={(e) => setFormData({ ...formData, penLightColor2: e.target.value || null })}
+              placeholder="例: 白"
             />
           </div>
           <div className="form-group">

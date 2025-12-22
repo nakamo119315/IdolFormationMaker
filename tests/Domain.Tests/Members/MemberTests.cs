@@ -10,15 +10,21 @@ public class MemberTests
         // Arrange
         var name = "Test Member";
         var birthDate = new DateOnly(2000, 1, 15);
+        var birthplace = "東京都";
+        var penLightColor1 = "ピンク";
+        var penLightColor2 = "白";
         var groupId = Guid.NewGuid();
 
         // Act
-        var member = Member.Create(name, birthDate, groupId);
+        var member = Member.Create(name, birthDate, birthplace, penLightColor1, penLightColor2, groupId);
 
         // Assert
         Assert.NotEqual(Guid.Empty, member.Id);
         Assert.Equal(name, member.Name);
         Assert.Equal(birthDate, member.BirthDate);
+        Assert.Equal(birthplace, member.Birthplace);
+        Assert.Equal(penLightColor1, member.PenLightColor1);
+        Assert.Equal(penLightColor2, member.PenLightColor2);
         Assert.Equal(groupId, member.GroupId);
         Assert.Empty(member.Images);
         Assert.True(member.CreatedAt <= DateTime.UtcNow);
@@ -66,7 +72,7 @@ public class MemberTests
         System.Threading.Thread.Sleep(10);
 
         // Act
-        member.Update(newName, newBirthDate, newGroupId);
+        member.Update(newName, newBirthDate, null, null, null, newGroupId);
 
         // Assert
         Assert.Equal(newName, member.Name);

@@ -39,9 +39,9 @@ export function FormationsPage() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 overflow-hidden">
           {/* フォーメーション一覧 */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 order-2 lg:order-1">
             <div className="space-y-4">
               {formations?.map((formation, index) => (
                 <motion.button
@@ -74,7 +74,7 @@ export function FormationsPage() {
           </div>
 
           {/* フォーメーション表示 */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 order-1 lg:order-2 overflow-hidden">
             {selectedFormation && members ? (
               <motion.div
                 key={selectedFormation.id}
@@ -95,7 +95,8 @@ export function FormationsPage() {
                   <svg className="w-16 h-16 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
                   </svg>
-                  <p>左のリストからフォーメーションを選択してください</p>
+                  <p className="hidden lg:block">左のリストからフォーメーションを選択してください</p>
+                  <p className="lg:hidden">下のリストからフォーメーションを選択してください</p>
                 </div>
               </div>
             )}

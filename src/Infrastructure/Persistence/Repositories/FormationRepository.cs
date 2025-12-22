@@ -44,13 +44,28 @@ public class FormationRepository : IFormationRepository
 
     public async Task UpdateAsync(Formation formation, CancellationToken cancellationToken = default)
     {
-        var existingPositions = await _context.FormationPositions
+        // Delete existing positions directly from DB
+        await _context.FormationPositions
             .Where(p => p.FormationId == formation.Id)
-            .ToListAsync(cancellationToken);
+            .ExecuteDeleteAsync(cancellationToken);
 
-        _context.FormationPositions.RemoveRange(existingPositions);
+        // Detach any tracked position entities to avoid conflicts
+        var trackedPositions = _context.ChangeTracker.Entries<FormationPosition>()
+            .Where(e => e.Entity.FormationId == formation.Id)
+            .ToList();
+        foreach (var entry in trackedPositions)
+        {
+            entry.State = EntityState.Detached;
+        }
 
-        _context.Formations.Update(formation);
+        // Add new positions
+        foreach (var position in formation.Positions)
+        {
+            _context.FormationPositions.Add(position);
+        }
+
+        // Update formation properties only
+        _context.Entry(formation).State = EntityState.Modified;
         await _context.SaveChangesAsync(cancellationToken);
     }
 

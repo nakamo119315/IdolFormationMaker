@@ -24,6 +24,9 @@ public class UpdateMemberHandler
         member.Update(
             command.Dto.Name,
             command.Dto.BirthDate,
+            command.Dto.Birthplace,
+            command.Dto.PenLightColor1,
+            command.Dto.PenLightColor2,
             command.Dto.GroupId
         );
 
@@ -36,6 +39,9 @@ public class UpdateMemberHandler
         member.Id,
         member.Name,
         member.BirthDate,
+        member.Birthplace,
+        member.PenLightColor1,
+        member.PenLightColor2,
         member.GroupId,
         member.Images.Select(i => new MemberImageDto(i.Id, i.Url, i.IsPrimary, i.CreatedAt)),
         member.CreatedAt,

@@ -4,7 +4,8 @@ import { formationsApi } from '../api/formations';
 import { membersApi } from '../api/members';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
-import type { Formation, CreateFormationDto, UpdateFormationDto, CreateFormationPositionDto, Member } from '../types';
+import { FormationEditor } from '../components/formations/FormationEditor';
+import type { Formation, CreateFormationDto, UpdateFormationDto, Member } from '../types';
 
 export function FormationsPage() {
   const queryClient = useQueryClient();
@@ -65,15 +66,33 @@ export function FormationsPage() {
 
   const openEditModal = (formation: Formation) => {
     setEditingFormation(formation);
+
+    // 行ごとにグループ化して列を再計算
+    const positionsByRow = new Map<number, typeof formation.positions>();
+    formation.positions.forEach(p => {
+      const existing = positionsByRow.get(p.row) || [];
+      existing.push(p);
+      positionsByRow.set(p.row, existing);
+    });
+
+    // 各行内でpositionNumber順にソートし、列を1から振り直す
+    const recalculatedPositions = Array.from(positionsByRow.entries())
+      .flatMap(([, rowPositions]) => {
+        return rowPositions
+          .sort((a, b) => a.positionNumber - b.positionNumber)
+          .map((p, idx) => ({
+            memberId: p.memberId,
+            positionNumber: p.positionNumber,
+            row: p.row,
+            column: idx + 1,  // 行内で1から順に振り直す
+          }));
+      })
+      .sort((a, b) => a.positionNumber - b.positionNumber);
+
     setFormData({
       name: formation.name,
       groupId: formation.groupId,
-      positions: formation.positions.map(p => ({
-        memberId: p.memberId,
-        positionNumber: p.positionNumber,
-        row: p.row,
-        column: p.column,
-      })),
+      positions: recalculatedPositions,
     });
     setIsModalOpen(true);
   };
@@ -108,27 +127,6 @@ export function FormationsPage() {
     }
   };
 
-  const addPosition = () => {
-    const nextNumber = formData.positions.length + 1;
-    setFormData({
-      ...formData,
-      positions: [...formData.positions, { memberId: '', positionNumber: nextNumber, row: 1, column: nextNumber }],
-    });
-  };
-
-  const updatePosition = (index: number, field: keyof CreateFormationPositionDto, value: string | number) => {
-    const newPositions = [...formData.positions];
-    newPositions[index] = { ...newPositions[index], [field]: value };
-    setFormData({ ...formData, positions: newPositions });
-  };
-
-  const removePosition = (index: number) => {
-    setFormData({
-      ...formData,
-      positions: formData.positions.filter((_, i) => i !== index),
-    });
-  };
-
   // フォーメーションを列ごとにグループ化
   const getFormationRows = (formation: Formation) => {
     const rowMap = new Map<number, typeof formation.positions>();
@@ -138,12 +136,12 @@ export function FormationsPage() {
       rowMap.set(pos.row, existing);
     });
 
-    // 各列をcolumnでソート
+    // 各列をpositionNumberでソート
     const sortedRows = Array.from(rowMap.entries())
       .sort((a, b) => a[0] - b[0])
       .map(([row, positions]) => ({
         row,
-        positions: positions.sort((a, b) => a.column - b.column),
+        positions: positions.sort((a, b) => a.positionNumber - b.positionNumber),
       }));
 
     return sortedRows;
@@ -229,6 +227,7 @@ export function FormationsPage() {
               <div className="formation-grid">
                 {getFormationRows(viewingFormation).map(({ row, positions }) => (
                   <div key={row} className="formation-row">
+                    <div className="row-label">{row}列目</div>
                     {positions.map((pos) => {
                       const member = getMemberInfo(pos.memberId);
                       const imageUrl = getMemberImage(member);
@@ -288,61 +287,25 @@ export function FormationsPage() {
             </select>
           </div>
 
-          <div className="form-group">
-            <label>ポジション</label>
-            <button type="button" className="btn btn-sm" onClick={addPosition}>
-              + ポジション追加
-            </button>
-          </div>
-
-          {formData.positions.map((position, index) => (
-            <div key={index} className="position-row">
-              <div className="position-fields">
-                <div className="form-group">
-                  <label>番号</label>
-                  <input
-                    type="number"
-                    min="1"
-                    value={position.positionNumber}
-                    onChange={(e) => updatePosition(index, 'positionNumber', parseInt(e.target.value) || 1)}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label>列</label>
-                  <input
-                    type="number"
-                    min="1"
-                    value={position.row}
-                    onChange={(e) => updatePosition(index, 'row', parseInt(e.target.value) || 1)}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label>メンバー</label>
-                  <select
-                    value={position.memberId}
-                    onChange={(e) => updatePosition(index, 'memberId', e.target.value)}
-                    required
-                  >
-                    <option value="">選択してください</option>
-                    {members?.map((member) => (
-                      <option key={member.id} value={member.id}>
-                        {member.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <button
-                  type="button"
-                  className="btn btn-sm btn-danger"
-                  onClick={() => removePosition(index)}
-                >
-                  削除
-                </button>
-              </div>
+          {formData.groupId && members && (
+            <div className="form-group">
+              <label>ポジション配置（メンバーをグリッドにドラッグ＆ドロップ）</label>
+              <FormationEditor
+                members={members.filter(m => m.groupId === formData.groupId)}
+                allMembers={members}
+                positions={formData.positions}
+                onChange={(positions) => setFormData({ ...formData, positions })}
+              />
             </div>
-          ))}
+          )}
+
+          {!formData.groupId && (
+            <div className="form-group">
+              <p style={{ color: '#666', fontStyle: 'italic' }}>
+                グループを選択するとポジション配置ができます
+              </p>
+            </div>
+          )}
 
           <div className="form-actions">
             <button type="button" className="btn" onClick={closeModal}>

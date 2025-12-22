@@ -28,8 +28,10 @@ public class GetFormationHandler
         formation.Id,
         formation.Name,
         formation.GroupId,
-        formation.Positions.Select(p => new FormationPositionDto(
-            p.Id, p.MemberId, p.PositionNumber, p.Row, p.Column)),
+        formation.Positions
+            .OrderBy(p => p.PositionNumber)
+            .Select(p => new FormationPositionDto(
+                p.Id, p.MemberId, p.PositionNumber, p.Row, p.Column)),
         formation.CreatedAt,
         formation.UpdatedAt
     );

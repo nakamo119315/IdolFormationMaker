@@ -3,6 +3,9 @@ export interface Member {
   id: string;
   name: string;
   birthDate: string;
+  birthplace: string | null;
+  penLightColor1: string | null;
+  penLightColor2: string | null;
   groupId: string | null;
   images: MemberImage[];
   createdAt: string;
@@ -19,12 +22,18 @@ export interface MemberImage {
 export interface CreateMemberDto {
   name: string;
   birthDate: string;
+  birthplace?: string | null;
+  penLightColor1?: string | null;
+  penLightColor2?: string | null;
   groupId?: string | null;
 }
 
 export interface UpdateMemberDto {
   name: string;
   birthDate: string;
+  birthplace?: string | null;
+  penLightColor1?: string | null;
+  penLightColor2?: string | null;
   groupId?: string | null;
 }
 

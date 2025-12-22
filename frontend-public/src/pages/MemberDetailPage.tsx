@@ -113,6 +113,27 @@ export function MemberDetailPage() {
                 <p className="text-2xl font-semibold text-slate-800">{member.birthDate}</p>
               </div>
 
+              {member.birthplace && (
+                <div className="p-6 bg-white rounded-2xl shadow-lg">
+                  <h3 className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">
+                    Birthplace
+                  </h3>
+                  <p className="text-2xl font-semibold text-slate-800">{member.birthplace}</p>
+                </div>
+              )}
+
+              {member.penLightColor1 && (
+                <div className="p-6 bg-white rounded-2xl shadow-lg">
+                  <h3 className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">
+                    Penlight Color
+                  </h3>
+                  <p className="text-2xl font-semibold text-slate-800">
+                    {member.penLightColor1}
+                    {member.penLightColor2 && ` / ${member.penLightColor2}`}
+                  </p>
+                </div>
+              )}
+
               <div className="p-6 bg-white rounded-2xl shadow-lg">
                 <h3 className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">
                   Photos
