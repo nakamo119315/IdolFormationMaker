@@ -152,7 +152,7 @@ export function FormationEditor({ members, allMembers, positions, onChange }: Fo
   const handleDragOver = (event: DragOverEvent) => {
     const over = event.over;
     if (over && over.id.toString().startsWith('cell-')) {
-      const [, row, column] = over.id.split('-');
+      const [, row, column] = over.id.toString().split('-');
       setOverCell({ row: parseInt(row), column: parseInt(column) });
     } else {
       setOverCell(null);
