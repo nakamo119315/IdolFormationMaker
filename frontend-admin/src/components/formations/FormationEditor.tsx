@@ -9,7 +9,7 @@ import {
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
-import type { DragStartEvent, DragEndEvent } from '@dnd-kit/core';
+import type { DragStartEvent, DragEndEvent, DragOverEvent } from '@dnd-kit/core';
 import type { Member, CreateFormationPositionDto } from '../../types';
 import './FormationEditor.css';
 
@@ -149,7 +149,7 @@ export function FormationEditor({ members, allMembers, positions, onChange }: Fo
     setActiveId(event.active.id as string);
   };
 
-  const handleDragOver = (event: any) => {
+  const handleDragOver = (event: DragOverEvent) => {
     const over = event.over;
     if (over && over.id.toString().startsWith('cell-')) {
       const [, row, column] = over.id.split('-');
