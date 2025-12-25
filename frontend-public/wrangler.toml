@@ -1,6 +1,6 @@
 name = "idolformationmaker"
 compatibility_date = "2024-12-25"
-main = "src/worker.ts"
+main = "worker/index.ts"
 
 [assets]
 directory = "./dist"
