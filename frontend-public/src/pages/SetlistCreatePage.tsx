@@ -359,7 +359,7 @@ export function SetlistCreatePage() {
                   )}
                 </div>
                 {/* 曲選択 */}
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                   <div className="flex-1">
                     <select
                       value={selectedSongId}
@@ -379,7 +379,7 @@ export function SetlistCreatePage() {
                       setSongSearch('');
                     }}
                     disabled={!selectedSongId}
-                    className="px-4 py-2 bg-rose-500 text-white rounded-lg font-medium hover:bg-rose-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="w-full sm:w-auto px-4 py-3 sm:py-2 bg-rose-500 text-white rounded-lg font-medium hover:bg-rose-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     追加
                   </button>
