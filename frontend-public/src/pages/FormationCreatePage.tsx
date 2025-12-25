@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
@@ -14,10 +14,6 @@ export function FormationCreatePage() {
   const { id } = useParams<{ id: string }>();
   const queryClient = useQueryClient();
   const isEditing = !!id;
-
-  const [name, setName] = useState('');
-  const [groupId, setGroupId] = useState('');
-  const [positions, setPositions] = useState<CreateFormationPositionDto[]>([]);
 
   const { data: groups, isLoading: groupsLoading } = useQuery({
     queryKey: ['groups'],
@@ -35,20 +31,26 @@ export function FormationCreatePage() {
     enabled: isEditing,
   });
 
-  useEffect(() => {
-    if (formation) {
-      setName(formation.name);
-      setGroupId(formation.groupId);
-      setPositions(
-        formation.positions.map((p) => ({
-          memberId: p.memberId,
-          positionNumber: p.positionNumber,
-          row: p.row,
-          column: p.column,
-        }))
-      );
-    }
-  }, [formation]);
+  // Initialize state from formation data (for editing mode)
+  const [name, setName] = useState('');
+  const [groupId, setGroupId] = useState('');
+  const [positions, setPositions] = useState<CreateFormationPositionDto[]>([]);
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  // Initialize form when formation data is loaded
+  if (formation && !isInitialized) {
+    setName(formation.name);
+    setGroupId(formation.groupId);
+    setPositions(
+      formation.positions.map((p) => ({
+        memberId: p.memberId,
+        positionNumber: p.positionNumber,
+        row: p.row,
+        column: p.column,
+      }))
+    );
+    setIsInitialized(true);
+  }
 
   const createMutation = useMutation({
     mutationFn: formationsApi.create,
