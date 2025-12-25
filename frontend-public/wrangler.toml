@@ -1,14 +1,6 @@
 name = "idolformationmaker"
 compatibility_date = "2024-12-25"
-
-[site]
-bucket = "./dist"
-
-# Cloudflare Pages用の設定
-# GitHub連携の場合はDashboardで以下を設定:
-# - ルートディレクトリ: frontend-public
-# - ビルドコマンド: npm install && npm run build
-# - 出力ディレクトリ: dist
+pages_build_output_dir = "./dist"
 
 # 環境変数はCloudflare Dashboardで設定
 # VITE_API_URL = "https://your-tunnel-subdomain.trycloudflare.com"
