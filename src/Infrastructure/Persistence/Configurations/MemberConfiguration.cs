@@ -17,6 +17,13 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
         builder.Property(m => m.BirthDate)
             .IsRequired();
 
+        builder.Property(m => m.Generation)
+            .IsRequired(false);
+
+        builder.Property(m => m.IsGraduated)
+            .IsRequired()
+            .HasDefaultValue(false);
+
         builder.HasMany(m => m.Images)
             .WithOne()
             .HasForeignKey(i => i.MemberId)

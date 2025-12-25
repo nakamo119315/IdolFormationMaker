@@ -14,6 +14,10 @@ public class GroupConfiguration : IEntityTypeConfiguration<Group>
             .IsRequired()
             .HasMaxLength(100);
 
+        builder.Property(g => g.HasGeneration)
+            .IsRequired()
+            .HasDefaultValue(false);
+
         builder.HasMany(g => g.Members)
             .WithOne()
             .HasForeignKey(m => m.GroupId)

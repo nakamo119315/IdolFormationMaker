@@ -32,6 +32,8 @@ public class GetMemberHandler
         member.PenLightColor1,
         member.PenLightColor2,
         member.GroupId,
+        member.Generation,
+        member.IsGraduated,
         member.Images.Select(i => new MemberImageDto(i.Id, i.Url, i.IsPrimary, i.CreatedAt)),
         member.CreatedAt,
         member.UpdatedAt

@@ -11,6 +11,8 @@ public class Member : IEntity
     public string? PenLightColor1 { get; private set; }
     public string? PenLightColor2 { get; private set; }
     public Guid? GroupId { get; private set; }
+    public int? Generation { get; private set; }
+    public bool IsGraduated { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; private set; }
 
@@ -19,7 +21,7 @@ public class Member : IEntity
 
     private Member() { }
 
-    public static Member Create(string name, DateOnly birthDate, string? birthplace = null, string? penLightColor1 = null, string? penLightColor2 = null, Guid? groupId = null)
+    public static Member Create(string name, DateOnly birthDate, string? birthplace = null, string? penLightColor1 = null, string? penLightColor2 = null, Guid? groupId = null, int? generation = null, bool isGraduated = false)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Name is required.", nameof(name));
@@ -34,12 +36,14 @@ public class Member : IEntity
             PenLightColor1 = penLightColor1,
             PenLightColor2 = penLightColor2,
             GroupId = groupId,
+            Generation = generation,
+            IsGraduated = isGraduated,
             CreatedAt = now,
             UpdatedAt = now
         };
     }
 
-    public void Update(string name, DateOnly birthDate, string? birthplace, string? penLightColor1, string? penLightColor2, Guid? groupId)
+    public void Update(string name, DateOnly birthDate, string? birthplace, string? penLightColor1, string? penLightColor2, Guid? groupId, int? generation, bool isGraduated)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Name is required.", nameof(name));
@@ -50,6 +54,8 @@ public class Member : IEntity
         PenLightColor1 = penLightColor1;
         PenLightColor2 = penLightColor2;
         GroupId = groupId;
+        Generation = generation;
+        IsGraduated = isGraduated;
         UpdatedAt = DateTime.UtcNow;
     }
 

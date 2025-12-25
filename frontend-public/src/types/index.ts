@@ -6,6 +6,8 @@ export interface Member {
   penLightColor1: string | null;
   penLightColor2: string | null;
   groupId: string | null;
+  generation: number | null;
+  isGraduated: boolean;
   images: MemberImage[];
   createdAt: string;
   updatedAt: string;
@@ -22,6 +24,7 @@ export interface Group {
   id: string;
   name: string;
   debutDate: string | null;
+  hasGeneration: boolean;
   members: Member[];
   createdAt: string;
   updatedAt: string;
@@ -31,6 +34,7 @@ export interface GroupSummary {
   id: string;
   name: string;
   debutDate: string | null;
+  hasGeneration: boolean;
   memberCount: number;
   createdAt: string;
   updatedAt: string;
@@ -51,6 +55,25 @@ export interface FormationPosition {
   positionNumber: number;
   row: number;
   column: number;
+}
+
+export interface CreateFormationDto {
+  name: string;
+  groupId: string;
+  positions: CreateFormationPositionDto[];
+}
+
+export interface CreateFormationPositionDto {
+  memberId: string;
+  positionNumber: number;
+  row: number;
+  column: number;
+}
+
+export interface UpdateFormationDto {
+  name: string;
+  groupId: string;
+  positions: CreateFormationPositionDto[];
 }
 
 export interface Song {

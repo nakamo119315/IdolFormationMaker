@@ -29,8 +29,10 @@ public class GetGroupHandler
         group.Id,
         group.Name,
         group.DebutDate,
+        group.HasGeneration,
         group.Members.Select(m => new MemberDto(
             m.Id, m.Name, m.BirthDate, m.Birthplace, m.PenLightColor1, m.PenLightColor2, m.GroupId,
+            m.Generation, m.IsGraduated,
             m.Images.Select(i => new MemberImageDto(i.Id, i.Url, i.IsPrimary, i.CreatedAt)),
             m.CreatedAt, m.UpdatedAt)),
         group.CreatedAt,

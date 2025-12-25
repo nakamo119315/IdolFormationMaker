@@ -8,6 +8,7 @@ public class Group : IEntity
     public Guid Id { get; private set; }
     public string Name { get; private set; } = string.Empty;
     public DateOnly? DebutDate { get; private set; }
+    public bool HasGeneration { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; private set; }
 
@@ -16,7 +17,7 @@ public class Group : IEntity
 
     private Group() { }
 
-    public static Group Create(string name, DateOnly? debutDate = null)
+    public static Group Create(string name, DateOnly? debutDate = null, bool hasGeneration = false)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Name is required.", nameof(name));
@@ -27,18 +28,20 @@ public class Group : IEntity
             Id = Guid.NewGuid(),
             Name = name,
             DebutDate = debutDate,
+            HasGeneration = hasGeneration,
             CreatedAt = now,
             UpdatedAt = now
         };
     }
 
-    public void Update(string name, DateOnly? debutDate)
+    public void Update(string name, DateOnly? debutDate, bool hasGeneration)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Name is required.", nameof(name));
 
         Name = name;
         DebutDate = debutDate;
+        HasGeneration = hasGeneration;
         UpdatedAt = DateTime.UtcNow;
     }
 

@@ -59,7 +59,7 @@ public class GroupTests
         System.Threading.Thread.Sleep(10);
 
         // Act
-        group.Update(newName, newDebutDate);
+        group.Update(newName, newDebutDate, false);
 
         // Assert
         Assert.Equal(newName, group.Name);
@@ -74,7 +74,7 @@ public class GroupTests
         var group = Group.Create("Test Group", new DateOnly(2020, 1, 1));
 
         // Act
-        group.Update("Updated Name", null);
+        group.Update("Updated Name", null, false);
 
         // Assert
         Assert.Null(group.DebutDate);

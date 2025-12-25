@@ -21,7 +21,7 @@ public class CreateGroupHandlerTests
     public async Task HandleAsync_WithValidData_ShouldCreateAndReturnGroup()
     {
         // Arrange
-        var dto = new CreateGroupDto("Test Group", new DateOnly(2020, 5, 1));
+        var dto = new CreateGroupDto("Test Group", new DateOnly(2020, 5, 1), null);
         var command = new CreateGroupCommand(dto);
 
         _groupRepositoryMock
@@ -46,7 +46,7 @@ public class CreateGroupHandlerTests
     public async Task HandleAsync_WithoutDebutDate_ShouldCreateGroupWithNullDebutDate()
     {
         // Arrange
-        var dto = new CreateGroupDto("Test Group", null);
+        var dto = new CreateGroupDto("Test Group", null, null);
         var command = new CreateGroupCommand(dto);
 
         _groupRepositoryMock

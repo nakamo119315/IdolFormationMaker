@@ -72,7 +72,7 @@ public class MemberTests
         System.Threading.Thread.Sleep(10);
 
         // Act
-        member.Update(newName, newBirthDate, null, null, null, newGroupId);
+        member.Update(newName, newBirthDate, null, null, null, newGroupId, null, false);
 
         // Assert
         Assert.Equal(newName, member.Name);

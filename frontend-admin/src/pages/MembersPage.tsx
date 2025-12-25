@@ -18,6 +18,8 @@ export function MembersPage() {
     penLightColor1: null,
     penLightColor2: null,
     groupId: null,
+    generation: null,
+    isGraduated: false,
   });
   const [imageUrl, setImageUrl] = useState('');
 
@@ -74,7 +76,7 @@ export function MembersPage() {
 
   const openCreateModal = () => {
     setEditingMember(null);
-    setFormData({ name: '', birthDate: '', birthplace: null, penLightColor1: null, penLightColor2: null, groupId: null });
+    setFormData({ name: '', birthDate: '', birthplace: null, penLightColor1: null, penLightColor2: null, groupId: null, generation: null, isGraduated: false });
     setIsModalOpen(true);
   };
 
@@ -87,6 +89,8 @@ export function MembersPage() {
       penLightColor1: member.penLightColor1,
       penLightColor2: member.penLightColor2,
       groupId: member.groupId,
+      generation: member.generation,
+      isGraduated: member.isGraduated,
     });
     setIsModalOpen(true);
   };
@@ -161,6 +165,8 @@ export function MembersPage() {
             <th>出身地</th>
             <th>サイリウム</th>
             <th>所属グループ</th>
+            <th>期別</th>
+            <th>状態</th>
             <th>操作</th>
           </tr>
         </thead>
@@ -194,6 +200,8 @@ export function MembersPage() {
                 <td>
                   {groups?.find((g) => g.id === member.groupId)?.name ?? '-'}
                 </td>
+                <td>{member.generation ? `${member.generation}期` : '-'}</td>
+                <td>{member.isGraduated ? '卒業' : '現役'}</td>
                 <td>
                   <button
                     className="btn btn-sm"
@@ -234,6 +242,8 @@ export function MembersPage() {
               <p><strong>出身地:</strong> {viewingMember.birthplace ?? '未設定'}</p>
               <p><strong>サイリウムカラー:</strong> {viewingMember.penLightColor1 && viewingMember.penLightColor2 ? `${viewingMember.penLightColor1}×${viewingMember.penLightColor2}` : '未設定'}</p>
               <p><strong>所属グループ:</strong> {groups?.find(g => g.id === viewingMember.groupId)?.name ?? '未所属'}</p>
+              <p><strong>期別:</strong> {viewingMember.generation ? `${viewingMember.generation}期` : '未設定'}</p>
+              <p><strong>状態:</strong> {viewingMember.isGraduated ? '卒業' : '現役'}</p>
             </div>
             <div className="member-images">
               <h4>画像一覧 ({viewingMember.images.length}枚)</h4>
@@ -321,6 +331,26 @@ export function MembersPage() {
                 </option>
               ))}
             </select>
+          </div>
+          <div className="form-group">
+            <label>期別</label>
+            <input
+              type="number"
+              min="1"
+              value={formData.generation ?? ''}
+              onChange={(e) => setFormData({ ...formData, generation: e.target.value ? parseInt(e.target.value) : null })}
+              placeholder="例: 1"
+            />
+          </div>
+          <div className="form-group">
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                checked={formData.isGraduated ?? false}
+                onChange={(e) => setFormData({ ...formData, isGraduated: e.target.checked })}
+              />
+              卒業済み
+            </label>
           </div>
 
           {/* 画像管理（編集時のみ） */}

@@ -11,6 +11,7 @@ export function GroupsPage() {
   const [formData, setFormData] = useState<CreateGroupDto>({
     name: '',
     debutDate: null,
+    hasGeneration: false,
   });
 
   const { data: groups, isLoading } = useQuery({
@@ -44,7 +45,7 @@ export function GroupsPage() {
 
   const openCreateModal = () => {
     setEditingGroup(null);
-    setFormData({ name: '', debutDate: null });
+    setFormData({ name: '', debutDate: null, hasGeneration: false });
     setIsModalOpen(true);
   };
 
@@ -53,6 +54,7 @@ export function GroupsPage() {
     setFormData({
       name: group.name,
       debutDate: group.debutDate,
+      hasGeneration: group.hasGeneration,
     });
     setIsModalOpen(true);
   };
@@ -94,6 +96,7 @@ export function GroupsPage() {
             <th>名前</th>
             <th>デビュー日</th>
             <th>メンバー数</th>
+            <th>期別管理</th>
             <th>操作</th>
           </tr>
         </thead>
@@ -103,6 +106,7 @@ export function GroupsPage() {
               <td>{group.name}</td>
               <td>{group.debutDate ?? '-'}</td>
               <td>{group.memberCount}</td>
+              <td>{group.hasGeneration ? 'あり' : '-'}</td>
               <td>
                 <button
                   className="btn btn-sm"
@@ -144,6 +148,16 @@ export function GroupsPage() {
               value={formData.debutDate ?? ''}
               onChange={(e) => setFormData({ ...formData, debutDate: e.target.value || null })}
             />
+          </div>
+          <div className="form-group">
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                checked={formData.hasGeneration ?? false}
+                onChange={(e) => setFormData({ ...formData, hasGeneration: e.target.checked })}
+              />
+              期別管理あり（乃木坂46等）
+            </label>
           </div>
           <div className="form-actions">
             <button type="button" className="btn" onClick={closeModal}>

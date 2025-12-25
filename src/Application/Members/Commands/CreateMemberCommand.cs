@@ -23,7 +23,9 @@ public class CreateMemberHandler
             command.Dto.Birthplace,
             command.Dto.PenLightColor1,
             command.Dto.PenLightColor2,
-            command.Dto.GroupId
+            command.Dto.GroupId,
+            command.Dto.Generation,
+            command.Dto.IsGraduated ?? false
         );
 
         await _memberRepository.AddAsync(member, cancellationToken);
@@ -39,6 +41,8 @@ public class CreateMemberHandler
         member.PenLightColor1,
         member.PenLightColor2,
         member.GroupId,
+        member.Generation,
+        member.IsGraduated,
         member.Images.Select(i => new MemberImageDto(i.Id, i.Url, i.IsPrimary, i.CreatedAt)),
         member.CreatedAt,
         member.UpdatedAt

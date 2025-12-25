@@ -7,6 +7,8 @@ export interface Member {
   penLightColor1: string | null;
   penLightColor2: string | null;
   groupId: string | null;
+  generation: number | null;
+  isGraduated: boolean;
   images: MemberImage[];
   createdAt: string;
   updatedAt: string;
@@ -26,6 +28,8 @@ export interface CreateMemberDto {
   penLightColor1?: string | null;
   penLightColor2?: string | null;
   groupId?: string | null;
+  generation?: number | null;
+  isGraduated?: boolean;
 }
 
 export interface UpdateMemberDto {
@@ -35,6 +39,8 @@ export interface UpdateMemberDto {
   penLightColor1?: string | null;
   penLightColor2?: string | null;
   groupId?: string | null;
+  generation?: number | null;
+  isGraduated?: boolean;
 }
 
 export interface AddMemberImageDto {
@@ -47,6 +53,7 @@ export interface Group {
   id: string;
   name: string;
   debutDate: string | null;
+  hasGeneration: boolean;
   members: Member[];
   createdAt: string;
   updatedAt: string;
@@ -56,6 +63,7 @@ export interface GroupSummary {
   id: string;
   name: string;
   debutDate: string | null;
+  hasGeneration: boolean;
   memberCount: number;
   createdAt: string;
   updatedAt: string;
@@ -64,11 +72,13 @@ export interface GroupSummary {
 export interface CreateGroupDto {
   name: string;
   debutDate?: string | null;
+  hasGeneration?: boolean;
 }
 
 export interface UpdateGroupDto {
   name: string;
   debutDate?: string | null;
+  hasGeneration?: boolean;
 }
 
 // Formation

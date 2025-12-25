@@ -25,6 +25,7 @@ public class GetAllGroupsHandler
         group.Id,
         group.Name,
         group.DebutDate,
+        group.HasGeneration,
         group.Members.Count,
         group.CreatedAt,
         group.UpdatedAt

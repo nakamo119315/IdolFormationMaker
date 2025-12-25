@@ -27,7 +27,9 @@ public class UpdateMemberHandler
             command.Dto.Birthplace,
             command.Dto.PenLightColor1,
             command.Dto.PenLightColor2,
-            command.Dto.GroupId
+            command.Dto.GroupId,
+            command.Dto.Generation,
+            command.Dto.IsGraduated
         );
 
         await _memberRepository.UpdateAsync(member, cancellationToken);
@@ -43,6 +45,8 @@ public class UpdateMemberHandler
         member.PenLightColor1,
         member.PenLightColor2,
         member.GroupId,
+        member.Generation,
+        member.IsGraduated,
         member.Images.Select(i => new MemberImageDto(i.Id, i.Url, i.IsPrimary, i.CreatedAt)),
         member.CreatedAt,
         member.UpdatedAt

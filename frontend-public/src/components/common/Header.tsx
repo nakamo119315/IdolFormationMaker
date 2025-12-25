@@ -13,6 +13,7 @@ export function Header() {
     { path: '/formations', label: 'フォーメーション' },
     { path: '/songs', label: '楽曲' },
     { path: '/setlists', label: 'セトリ' },
+    { path: '/member-sort', label: 'ソート' },
   ];
 
   return (
