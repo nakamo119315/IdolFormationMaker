@@ -7,6 +7,16 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
+    // Debug endpoint
+    if (url.pathname === '/_debug') {
+      return new Response(JSON.stringify({
+        API_URL: env.API_URL || 'NOT SET',
+        hasAssets: !!env.ASSETS,
+      }), {
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
     // API requests - proxy to backend
     if (url.pathname.startsWith('/api/')) {
       return handleApiRequest(request, env, url);
