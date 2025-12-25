@@ -15,6 +15,7 @@ import type { Member, CreateFormationPositionDto } from '../../types';
 
 interface FormationEditorProps {
   members: Member[];
+  allMembers: Member[];  // For looking up placed members
   positions: CreateFormationPositionDto[];
   onChange: (positions: CreateFormationPositionDto[]) => void;
 }
@@ -140,7 +141,7 @@ function DroppableCell({
   );
 }
 
-export function FormationEditor({ members, positions, onChange }: FormationEditorProps) {
+export function FormationEditor({ members, allMembers, positions, onChange }: FormationEditorProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [overCell, setOverCell] = useState<GridCell | null>(null);
 
@@ -163,7 +164,8 @@ export function FormationEditor({ members, positions, onChange }: FormationEdito
     return positions.find(p => p.row === row && p.column === column);
   };
 
-  const getMemberById = (id: string) => members.find(m => m.id === id);
+  // Use allMembers for lookup to find placed members even if they're not in filtered list
+  const getMemberById = (id: string) => allMembers.find(m => m.id === id);
 
   const handleDragStart = (event: DragStartEvent) => {
     setActiveId(event.active.id as string);

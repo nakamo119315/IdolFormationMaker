@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useRef } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuery } from '@tanstack/react-query';
 import { membersApi } from '../api/members';
@@ -9,12 +9,19 @@ import html2canvas from 'html2canvas-pro';
 
 type Phase = 'filter' | 'sorting' | 'result';
 
-interface SortState {
-  candidates: Member[];
-  bracket: Member[][];
-  currentRound: number;
-  currentMatchIndex: number;
-  winners: Member[];
+interface MergeSortState {
+  // Working arrays for merge sort
+  segments: Member[][];
+  // Current merge state
+  leftIndex: number;
+  rightIndex: number;
+  mergedSoFar: Member[];
+  currentLeft: Member[];
+  currentRight: Member[];
+  // Total comparisons tracking
+  totalComparisons: number;
+  completedComparisons: number;
+  // Final result
   finalRanking: Member[];
 }
 
@@ -23,7 +30,7 @@ export function MemberSortPage() {
   const [selectedGroupId, setSelectedGroupId] = useState<string>('');
   const [selectedGenerations, setSelectedGenerations] = useState<number[]>([]);
   const [includeGraduated, setIncludeGraduated] = useState(false);
-  const [sortState, setSortState] = useState<SortState | null>(null);
+  const [sortState, setSortState] = useState<MergeSortState | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
 
   const { data: members, isLoading: membersLoading } = useQuery({
@@ -72,98 +79,129 @@ export function MemberSortPage() {
     return shuffled;
   };
 
+  // Estimate total comparisons for merge sort: O(n log n)
+  const estimateComparisons = (n: number): number => {
+    if (n <= 1) return 0;
+    return Math.ceil(n * Math.log2(n));
+  };
+
   const startSort = () => {
     if (filteredMembers.length < 2) return;
 
     const shuffled = shuffleArray(filteredMembers);
-    const bracket: Member[][] = [];
-
-    for (let i = 0; i < shuffled.length; i += 2) {
-      if (i + 1 < shuffled.length) {
-        bracket.push([shuffled[i], shuffled[i + 1]]);
-      } else {
-        bracket.push([shuffled[i]]);
-      }
-    }
+    // Initialize segments: each member is its own sorted segment
+    const segments = shuffled.map((m) => [m]);
 
     setSortState({
-      candidates: shuffled,
-      bracket,
-      currentRound: 1,
-      currentMatchIndex: 0,
-      winners: [],
+      segments,
+      leftIndex: 0,
+      rightIndex: 0,
+      mergedSoFar: [],
+      currentLeft: segments[0],
+      currentRight: segments.length > 1 ? segments[1] : [],
+      totalComparisons: estimateComparisons(shuffled.length),
+      completedComparisons: 0,
       finalRanking: [],
     });
     setPhase('sorting');
   };
 
-  const handleChoice = useCallback(
-    (winner: Member) => {
-      if (!sortState) return;
+  const advanceMergeSort = (state: MergeSortState, winner: Member): MergeSortState => {
+    const { leftIndex, rightIndex, mergedSoFar, currentLeft, currentRight } = state;
 
-      const currentMatch = sortState.bracket[sortState.currentMatchIndex];
-      const loser = currentMatch.find((m) => m.id !== winner.id);
-      const newWinners = [...sortState.winners, winner];
-      const newRanking = loser
-        ? [loser, ...sortState.finalRanking]
-        : sortState.finalRanking;
+    // Determine which side the winner came from
+    const leftMember = currentLeft[leftIndex];
+    const winnerIsLeft = winner.id === leftMember?.id;
 
-      const nextMatchIndex = sortState.currentMatchIndex + 1;
+    const newMerged = [...mergedSoFar, winner];
+    let newLeftIndex = winnerIsLeft ? leftIndex + 1 : leftIndex;
+    let newRightIndex = winnerIsLeft ? rightIndex : rightIndex + 1;
 
-      if (nextMatchIndex >= sortState.bracket.length) {
-        if (newWinners.length === 1) {
-          setSortState({
-            ...sortState,
-            winners: [],
-            finalRanking: [newWinners[0], ...newRanking],
-          });
-          setPhase('result');
-        } else {
-          const newBracket: Member[][] = [];
-          for (let i = 0; i < newWinners.length; i += 2) {
-            if (i + 1 < newWinners.length) {
-              newBracket.push([newWinners[i], newWinners[i + 1]]);
-            } else {
-              newBracket.push([newWinners[i]]);
-            }
-          }
-          setSortState({
-            ...sortState,
-            bracket: newBracket,
-            currentRound: sortState.currentRound + 1,
-            currentMatchIndex: 0,
-            winners: [],
-            finalRanking: newRanking,
-          });
-        }
-      } else {
-        setSortState({
-          ...sortState,
-          currentMatchIndex: nextMatchIndex,
-          winners: newWinners,
-          finalRanking: newRanking,
-        });
-      }
-    },
-    [sortState]
-  );
+    // Check if one side is exhausted
+    if (newLeftIndex >= currentLeft.length) {
+      // Left exhausted, append remaining right
+      const finalMerged = [...newMerged, ...currentRight.slice(newRightIndex)];
+      return finishCurrentMerge(state, finalMerged);
+    }
+    if (newRightIndex >= currentRight.length) {
+      // Right exhausted, append remaining left
+      const finalMerged = [...newMerged, ...currentLeft.slice(newLeftIndex)];
+      return finishCurrentMerge(state, finalMerged);
+    }
+
+    // Continue current merge
+    return {
+      ...state,
+      leftIndex: newLeftIndex,
+      rightIndex: newRightIndex,
+      mergedSoFar: newMerged,
+      completedComparisons: state.completedComparisons + 1,
+    };
+  };
+
+  const finishCurrentMerge = (state: MergeSortState, mergedSegment: Member[]): MergeSortState => {
+    const { segments, currentLeft, currentRight } = state;
+
+    // Find the indices of current segments
+    const leftSegmentIndex = segments.findIndex((s) => s === currentLeft);
+    const rightSegmentIndex = segments.findIndex((s) => s === currentRight);
+
+    // Create new segments array with merged result
+    const newSegments = segments.filter(
+      (_, i) => i !== leftSegmentIndex && i !== rightSegmentIndex
+    );
+    newSegments.push(mergedSegment);
+
+    // If only one segment left, we're done!
+    if (newSegments.length === 1) {
+      return {
+        ...state,
+        segments: newSegments,
+        finalRanking: newSegments[0],
+        completedComparisons: state.completedComparisons + 1,
+      };
+    }
+
+    // Start next merge
+    return {
+      ...state,
+      segments: newSegments,
+      leftIndex: 0,
+      rightIndex: 0,
+      mergedSoFar: [],
+      currentLeft: newSegments[0],
+      currentRight: newSegments[1],
+      completedComparisons: state.completedComparisons + 1,
+    };
+  };
+
+  const handleChoice = (winner: Member) => {
+    if (!sortState) return;
+
+    const newState = advanceMergeSort(sortState, winner);
+    setSortState(newState);
+
+    if (newState.finalRanking.length > 0) {
+      setPhase('result');
+    }
+  };
 
   const getPrimaryImage = (member: Member) => {
     return member.images.find((img) => img.isPrimary) ?? member.images[0];
   };
 
-  const currentMatch = sortState?.bracket[sortState.currentMatchIndex];
-
-  const totalMatches = useMemo(() => {
-    if (!sortState) return 0;
-    return sortState.candidates.length - 1;
+  // Current comparison pair
+  const currentPair = useMemo(() => {
+    if (!sortState || sortState.finalRanking.length > 0) return null;
+    const left = sortState.currentLeft[sortState.leftIndex];
+    const right = sortState.currentRight[sortState.rightIndex];
+    if (!left || !right) return null;
+    return [left, right];
   }, [sortState]);
 
-  const completedMatches = useMemo(() => {
-    if (!sortState) return 0;
-    const matchesInPreviousRounds =
-      sortState.candidates.length - Math.pow(2, Math.ceil(Math.log2(sortState.candidates.length) - sortState.currentRound + 1));
-    return Math.max(0, matchesInPreviousRounds) + sortState.currentMatchIndex;
+  const progressPercent = useMemo(() => {
+    if (!sortState || sortState.totalComparisons === 0) return 0;
+    return Math.min(100, (sortState.completedComparisons / sortState.totalComparisons) * 100);
   }, [sortState]);
 
   const handleSaveImage = async () => {
@@ -190,7 +228,7 @@ export function MemberSortPage() {
   if (membersLoading || groupsLoading) return <Loading />;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-20 sm:pt-24 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatePresence mode="wait">
           {/* フィルター画面 */}
@@ -203,7 +241,7 @@ export function MemberSortPage() {
               className="space-y-8"
             >
               <div className="text-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 mb-4">
                   Member Sort
                 </h1>
                 <p className="text-slate-500">
@@ -211,7 +249,7 @@ export function MemberSortPage() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-lg p-6 space-y-6">
+              <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">
                     グループ
@@ -277,6 +315,11 @@ export function MemberSortPage() {
                 <div className="pt-4 border-t border-slate-100">
                   <p className="text-center text-slate-500 mb-4">
                     対象: <span className="font-semibold text-primary-500">{filteredMembers.length}</span> 名
+                    {filteredMembers.length >= 2 && (
+                      <span className="text-sm text-slate-400 ml-2">
+                        (約{estimateComparisons(filteredMembers.length)}回比較)
+                      </span>
+                    )}
                   </p>
                   <button
                     onClick={startSort}
@@ -291,7 +334,7 @@ export function MemberSortPage() {
           )}
 
           {/* ソート画面 */}
-          {phase === 'sorting' && currentMatch && (
+          {phase === 'sorting' && currentPair && (
             <motion.div
               key="sorting"
               initial={{ opacity: 0 }}
@@ -300,24 +343,22 @@ export function MemberSortPage() {
               className="space-y-6"
             >
               <div className="text-center">
-                <h2 className="text-2xl font-bold text-slate-800 mb-2">
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-2">
                   どちらが好き？
                 </h2>
                 <div className="w-full bg-slate-200 rounded-full h-2 mb-2">
                   <div
                     className="bg-primary-500 h-2 rounded-full transition-all duration-300"
-                    style={{
-                      width: `${(completedMatches / totalMatches) * 100}%`,
-                    }}
+                    style={{ width: `${progressPercent}%` }}
                   />
                 </div>
                 <p className="text-sm text-slate-500">
-                  Round {sortState?.currentRound}
+                  {sortState?.completedComparisons} / 約{sortState?.totalComparisons} 比較
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                {currentMatch.map((member, idx) => {
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                {currentPair.map((member, idx) => {
                   const image = getPrimaryImage(member);
                   return (
                     <motion.button
@@ -338,18 +379,18 @@ export function MemberSortPage() {
                           />
                         ) : (
                           <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                            <span className="text-5xl text-white font-bold">
+                            <span className="text-4xl sm:text-5xl text-white font-bold">
                               {member.name.charAt(0)}
                             </span>
                           </div>
                         )}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                        <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                          <h3 className="text-lg font-bold truncate">
+                        <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white">
+                          <h3 className="text-base sm:text-lg font-bold truncate">
                             {member.name}
                           </h3>
                           {member.generation && (
-                            <p className="text-sm text-white/70">
+                            <p className="text-xs sm:text-sm text-white/70">
                               {member.generation}期
                             </p>
                           )}
@@ -359,20 +400,6 @@ export function MemberSortPage() {
                   );
                 })}
               </div>
-
-              {currentMatch.length === 1 && (
-                <div className="text-center">
-                  <p className="text-slate-500 mb-4">
-                    {currentMatch[0].name}は不戦勝です
-                  </p>
-                  <button
-                    onClick={() => handleChoice(currentMatch[0])}
-                    className="px-6 py-3 bg-primary-500 text-white rounded-xl font-medium hover:bg-primary-600 transition-colors"
-                  >
-                    次へ
-                  </button>
-                </div>
-              )}
             </motion.div>
           )}
 
@@ -385,7 +412,7 @@ export function MemberSortPage() {
               className="space-y-6"
             >
               <div className="text-center">
-                <h1 className="text-3xl font-bold text-slate-800 mb-2">
+                <h1 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2">
                   Your Ranking
                 </h1>
                 <p className="text-slate-500">
