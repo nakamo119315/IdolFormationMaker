@@ -1,0 +1,6 @@
+name = "idol-admin"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "dist"
+
+# 環境変数はCloudflare Dashboardで設定
+# VITE_API_URL = "https://your-tunnel.trycloudflare.com/api"

@@ -13,15 +13,22 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// CORS設定: 環境変数 ALLOWED_ORIGINS でカンマ区切りで追加可能
+var allowedOrigins = builder.Configuration["AllowedOrigins"]?.Split(',') ?? [];
+var defaultOrigins = new[]
+{
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://192.168.0.23:5173",
+    "http://192.168.0.23:5174"
+};
+var allOrigins = defaultOrigins.Concat(allowedOrigins).Where(o => !string.IsNullOrEmpty(o)).ToArray();
+
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
-        policy.WithOrigins(
-                "http://localhost:5173",
-                "http://localhost:5174",
-                "http://192.168.0.23:5173",
-                "http://192.168.0.23:5174")
+        policy.WithOrigins(allOrigins)
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
