@@ -48,6 +48,22 @@ public class SetlistRepository : ISetlistRepository
 
     public async Task UpdateAsync(Setlist setlist, CancellationToken cancellationToken = default)
     {
+        // Detach tracked items to avoid concurrency issues
+        var trackedItems = _context.ChangeTracker.Entries<SetlistItem>()
+            .Where(e => e.Entity.SetlistId == setlist.Id)
+            .ToList();
+        foreach (var entry in trackedItems)
+        {
+            entry.State = EntityState.Detached;
+        }
+
+        var trackedParticipants = _context.ChangeTracker.Entries<SetlistItemParticipant>().ToList();
+        foreach (var entry in trackedParticipants)
+        {
+            entry.State = EntityState.Detached;
+        }
+
+        // Delete existing items from database
         var existingItems = await _context.SetlistItems
             .Where(i => i.SetlistId == setlist.Id)
             .Include(i => i.Participants)
@@ -58,8 +74,17 @@ public class SetlistRepository : ISetlistRepository
             _context.SetlistItemParticipants.RemoveRange(item.Participants);
         }
         _context.SetlistItems.RemoveRange(existingItems);
+        await _context.SaveChangesAsync(cancellationToken);
 
-        _context.Setlists.Update(setlist);
+        // Update setlist and add new items
+        var setlistEntry = _context.Entry(setlist);
+        setlistEntry.State = EntityState.Modified;
+
+        foreach (var item in setlist.Items)
+        {
+            _context.SetlistItems.Add(item);
+        }
+
         await _context.SaveChangesAsync(cancellationToken);
     }
 
