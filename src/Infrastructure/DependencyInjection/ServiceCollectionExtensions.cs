@@ -1,3 +1,5 @@
+using IdolManagement.Application.Data.Queries;
+using IdolManagement.Infrastructure.Data;
 using IdolManagement.Application.Formations.Commands;
 using IdolManagement.Application.Formations.Queries;
 using IdolManagement.Application.Groups.Commands;
@@ -76,6 +78,10 @@ public static class ServiceCollectionExtensions
         services.AddScoped<GetSetlistHandler>();
         services.AddScoped<GetAllSetlistsHandler>();
         services.AddScoped<GetSetlistsByGroupHandler>();
+
+        // Data Export/Import
+        services.AddScoped<ExportDataHandler>();
+        services.AddScoped<ImportDataHandler>();
 
         return services;
     }

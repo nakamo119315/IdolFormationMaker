@@ -14,6 +14,7 @@ export function Layout({ children }: LayoutProps) {
     { path: '/groups', label: 'グループ' },
     { path: '/formations', label: 'フォーメーション' },
     { path: '/songs', label: '楽曲' },
+    { path: '/data', label: 'データ管理' },
   ];
 
   return (

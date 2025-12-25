@@ -6,6 +6,7 @@ import { MembersPage } from './pages/MembersPage';
 import { GroupsPage } from './pages/GroupsPage';
 import { FormationsPage } from './pages/FormationsPage';
 import { SongsPage } from './pages/SongsPage';
+import { DataPage } from './pages/DataPage';
 import './index.css';
 
 const queryClient = new QueryClient({
@@ -28,6 +29,7 @@ function App() {
             <Route path="/groups" element={<GroupsPage />} />
             <Route path="/formations" element={<FormationsPage />} />
             <Route path="/songs" element={<SongsPage />} />
+            <Route path="/data" element={<DataPage />} />
           </Routes>
         </Layout>
       </BrowserRouter>
