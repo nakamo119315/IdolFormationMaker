@@ -6,5 +6,4 @@ main = "worker/index.ts"
 directory = "./dist"
 binding = "ASSETS"
 
-[vars]
-API_URL = "https://combining-introductory-removable-update.trycloudflare.com"
+# API_URL is set via: npx wrangler secret put API_URL
