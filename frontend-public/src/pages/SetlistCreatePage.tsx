@@ -40,48 +40,46 @@ function SortableItem({
     <div
       ref={setNodeRef}
       style={style}
-      className="bg-white rounded-lg shadow-sm border border-slate-200 p-4 mb-2"
+      className="bg-white rounded-lg shadow-sm border border-slate-200 p-3 mb-2"
     >
-      <div className="flex items-start gap-3">
+      <div className="flex items-start gap-2">
         <button
           {...attributes}
           {...listeners}
-          className="p-2 text-slate-400 hover:text-slate-600 cursor-grab active:cursor-grabbing"
+          className="p-1 text-slate-400 hover:text-slate-600 cursor-grab active:cursor-grabbing flex-shrink-0"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
           </svg>
         </button>
 
-        <div className="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center text-white font-bold flex-shrink-0">
+        <div className="w-5 h-5 rounded-full bg-rose-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5">
           {item.order}
         </div>
 
         <div className="flex-1 min-w-0">
-          <p className="font-medium text-slate-800 mb-2">{getSongTitle(item.songId)}</p>
+          <p className="font-medium text-slate-800 text-sm leading-snug break-words">{getSongTitle(item.songId)}</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <div>
-              <label className="text-xs text-slate-500 mb-1 block">センター（任意）</label>
-              <select
-                value={item.centerMemberId || ''}
-                onChange={(e) => onUpdate({ ...item, centerMemberId: e.target.value || null })}
-                className="w-full text-sm border border-slate-200 rounded px-2 py-1"
-              >
-                <option value="">未選択</option>
-                {members.map((m) => (
-                  <option key={m.id} value={m.id}>{m.name}</option>
-                ))}
-              </select>
-            </div>
+          <div className="mt-2">
+            <label className="text-xs text-slate-500 mb-1 block">センター</label>
+            <select
+              value={item.centerMemberId || ''}
+              onChange={(e) => onUpdate({ ...item, centerMemberId: e.target.value || null })}
+              className="w-full text-sm border border-slate-200 rounded px-2 py-1"
+            >
+              <option value="">未選択</option>
+              {members.map((m) => (
+                <option key={m.id} value={m.id}>{m.name}</option>
+              ))}
+            </select>
           </div>
         </div>
 
         <button
           onClick={onRemove}
-          className="p-2 text-slate-400 hover:text-red-500"
+          className="p-1 text-slate-400 hover:text-red-500 flex-shrink-0"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
