@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
+import { DndContext, closestCenter, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors } from '@dnd-kit/core';
 import type { DragEndEvent } from '@dnd-kit/core';
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
@@ -102,6 +102,7 @@ export function SetlistCreatePage() {
 
   const sensors = useSensors(
     useSensor(PointerSensor),
+    useSensor(TouchSensor),
     useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
   );
 
@@ -135,13 +136,15 @@ export function SetlistCreatePage() {
       setGroupId(existingSetlist.groupId);
       setEventDate(existingSetlist.eventDate || '');
       setItems(
-        existingSetlist.items.map((item) => ({
-          tempId: item.id,
-          songId: item.songId,
-          order: item.order,
-          centerMemberId: item.centerMemberId,
-          participantMemberIds: item.participantMemberIds,
-        }))
+        [...existingSetlist.items]
+          .sort((a, b) => a.order - b.order)
+          .map((item) => ({
+            tempId: item.id,
+            songId: item.songId,
+            order: item.order,
+            centerMemberId: item.centerMemberId,
+            participantMemberIds: item.participantMemberIds,
+          }))
       );
     }
   }, [existingSetlist]);
