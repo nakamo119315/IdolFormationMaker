@@ -366,6 +366,7 @@ export function SetlistCreatePage() {
                       onChange={(e) => setSelectedSongId(e.target.value)}
                       className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
                     >
+                      <option value="">曲を選択してください</option>
                       {filteredSongs.map((song) => (
                         <option key={song.id} value={song.id}>{song.title}</option>
                       ))}
