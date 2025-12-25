@@ -1,4 +1,5 @@
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+// Use /api which is proxied by Pages Functions in production
+const API_BASE = '/api';
 
 export class ApiError extends Error {
   status: number;
