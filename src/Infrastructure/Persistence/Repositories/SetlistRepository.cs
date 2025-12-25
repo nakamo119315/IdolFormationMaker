@@ -48,41 +48,39 @@ public class SetlistRepository : ISetlistRepository
 
     public async Task UpdateAsync(Setlist setlist, CancellationToken cancellationToken = default)
     {
-        // Detach tracked items to avoid concurrency issues
-        var trackedItems = _context.ChangeTracker.Entries<SetlistItem>()
-            .Where(e => e.Entity.SetlistId == setlist.Id)
-            .ToList();
-        foreach (var entry in trackedItems)
-        {
-            entry.State = EntityState.Detached;
-        }
+        // Fetch existing setlist from DB (tracked by EF)
+        var existing = await _context.Setlists
+            .Include(s => s.Items)
+                .ThenInclude(i => i.Participants)
+            .FirstOrDefaultAsync(s => s.Id == setlist.Id, cancellationToken)
+            ?? throw new InvalidOperationException($"Setlist with ID {setlist.Id} not found.");
 
-        var trackedParticipants = _context.ChangeTracker.Entries<SetlistItemParticipant>().ToList();
-        foreach (var entry in trackedParticipants)
-        {
-            entry.State = EntityState.Detached;
-        }
+        // Update setlist properties via domain method
+        existing.Update(setlist.Name, setlist.EventDate);
 
-        // Delete existing items from database
-        var existingItems = await _context.SetlistItems
-            .Where(i => i.SetlistId == setlist.Id)
-            .Include(i => i.Participants)
-            .ToListAsync(cancellationToken);
-
-        foreach (var item in existingItems)
+        // Remove existing items and participants (EF will track deletions)
+        foreach (var item in existing.Items)
         {
             _context.SetlistItemParticipants.RemoveRange(item.Participants);
         }
-        _context.SetlistItems.RemoveRange(existingItems);
-        await _context.SaveChangesAsync(cancellationToken);
+        _context.SetlistItems.RemoveRange(existing.Items);
 
-        // Update setlist and add new items
-        var setlistEntry = _context.Entry(setlist);
-        setlistEntry.State = EntityState.Modified;
-
+        // Add new items with participants
         foreach (var item in setlist.Items)
         {
-            _context.SetlistItems.Add(item);
+            var newItem = SetlistItem.Create(
+                existing.Id,
+                item.SongId,
+                item.Order,
+                item.CenterMemberId
+            );
+
+            foreach (var participant in item.Participants)
+            {
+                newItem.AddParticipant(participant.MemberId);
+            }
+
+            _context.SetlistItems.Add(newItem);
         }
 
         await _context.SaveChangesAsync(cancellationToken);

@@ -44,28 +44,31 @@ public class FormationRepository : IFormationRepository
 
     public async Task UpdateAsync(Formation formation, CancellationToken cancellationToken = default)
     {
-        // Delete existing positions directly from DB
-        await _context.FormationPositions
-            .Where(p => p.FormationId == formation.Id)
-            .ExecuteDeleteAsync(cancellationToken);
+        // Fetch existing formation from DB (tracked by EF)
+        var existing = await _context.Formations
+            .Include(f => f.Positions)
+            .FirstOrDefaultAsync(f => f.Id == formation.Id, cancellationToken)
+            ?? throw new InvalidOperationException($"Formation with ID {formation.Id} not found.");
 
-        // Detach any tracked position entities to avoid conflicts
-        var trackedPositions = _context.ChangeTracker.Entries<FormationPosition>()
-            .Where(e => e.Entity.FormationId == formation.Id)
-            .ToList();
-        foreach (var entry in trackedPositions)
-        {
-            entry.State = EntityState.Detached;
-        }
+        // Update formation properties via domain method
+        existing.Update(formation.Name, formation.GroupId);
+
+        // Remove existing positions (EF will track deletions)
+        _context.FormationPositions.RemoveRange(existing.Positions);
 
         // Add new positions
-        foreach (var position in formation.Positions)
+        foreach (var pos in formation.Positions)
         {
-            _context.FormationPositions.Add(position);
+            var newPosition = FormationPosition.Create(
+                existing.Id,
+                pos.MemberId,
+                pos.PositionNumber,
+                pos.Row,
+                pos.Column
+            );
+            _context.FormationPositions.Add(newPosition);
         }
 
-        // Update formation properties only
-        _context.Entry(formation).State = EntityState.Modified;
         await _context.SaveChangesAsync(cancellationToken);
     }
 
