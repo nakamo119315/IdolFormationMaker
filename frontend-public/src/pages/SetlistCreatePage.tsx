@@ -53,19 +53,18 @@ function SortableItem({
           </svg>
         </button>
 
-        <div className="w-5 h-5 rounded-full bg-rose-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5">
-          {item.order}
-        </div>
-
         <div className="flex-1 min-w-0">
-          <p className="font-medium text-slate-800 text-sm leading-snug break-words">{getSongTitle(item.songId)}</p>
+          <p className="font-medium text-slate-800 text-sm leading-snug">
+            <span className="text-rose-500 mr-1">{item.order}.</span>
+            {getSongTitle(item.songId)}
+          </p>
 
-          <div className="mt-2">
-            <label className="text-xs text-slate-500 mb-1 block">センター</label>
+          <div className="mt-2 flex items-center gap-2">
+            <label className="text-xs text-slate-500 flex-shrink-0">センター:</label>
             <select
               value={item.centerMemberId || ''}
               onChange={(e) => onUpdate({ ...item, centerMemberId: e.target.value || null })}
-              className="w-full text-sm border border-slate-200 rounded px-2 py-1"
+              className="flex-1 text-sm border border-slate-200 rounded px-2 py-1"
             >
               <option value="">未選択</option>
               {members.map((m) => (
