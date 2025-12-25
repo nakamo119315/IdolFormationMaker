@@ -240,6 +240,15 @@ export function SetlistCreatePage() {
     return matchesGroup && matchesSearch;
   }) || [];
 
+  const firstFilteredSongId = filteredSongs.length > 0 ? filteredSongs[0].id : null;
+
+  // 検索時に最初の曲を自動選択
+  useEffect(() => {
+    if (songSearch && firstFilteredSongId) {
+      setSelectedSongId(firstFilteredSongId);
+    }
+  }, [songSearch, firstFilteredSongId]);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
