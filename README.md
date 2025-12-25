@@ -8,6 +8,9 @@
 - **メンバー管理**: アイドルメンバーのCRUD操作、画像管理
 - **グループ管理**: グループのCRUD操作
 - **フォーメーション管理**: ステージフォーメーションの作成・編集
+- **楽曲管理**: 楽曲情報のCRUD操作
+- **セットリスト管理**: ライブセットリストの作成・編集
+- **データ管理**: 全データのエクスポート/インポート
 
 ### 管理用フロントエンド (frontend-admin)
 管理者向けのCRUD機能を提供します。
@@ -18,6 +21,8 @@
 | メンバー一覧 | メンバーの追加・編集・削除、画像管理 |
 | グループ一覧 | グループの追加・編集・削除 |
 | フォーメーション一覧 | フォーメーションの作成・編集・削除 |
+| 楽曲一覧 | 楽曲の追加・編集・削除 |
+| データ管理 | データのエクスポート/インポート |
 
 ### 公開用フロントエンド (frontend-public)
 顧客向けの閲覧専用ページです。モダンなデザインとアニメーションを採用しています。
@@ -30,6 +35,11 @@
 | グループ一覧 | グループカードのグリッド表示 |
 | グループ詳細 | グループ情報、所属メンバー一覧 |
 | フォーメーション | ステージ形式でのフォーメーション表示 |
+| 楽曲一覧 | 楽曲カードのグリッド表示 |
+| 楽曲詳細 | 歌詞・クレジット表示 |
+| セトリ一覧 | セットリストのグリッド表示 |
+| セトリ詳細 | セットリストの曲順表示 |
+| セトリ作成 | ドラッグ&ドロップでセットリスト作成 |
 
 #### フォーメーション表示について
 - `row=1` がステージ前方（画面下部）
@@ -65,11 +75,17 @@
 dotnet10App/
 ├── src/
 │   ├── Domain/           # ドメイン層（エンティティ、リポジトリインターフェース）
+│   │   ├── Members/      # メンバードメイン
+│   │   ├── Groups/       # グループドメイン
+│   │   ├── Formations/   # フォーメーションドメイン
+│   │   ├── Songs/        # 楽曲ドメイン
+│   │   └── Setlists/     # セットリストドメイン
 │   ├── Application/      # アプリケーション層（ユースケース、DTO）
 │   ├── Infrastructure/   # インフラ層（EF Core、リポジトリ実装）
 │   └── Presentation/     # プレゼンテーション層（API コントローラ）
 ├── tests/
-│   └── Application.Tests/ # ユニットテスト
+│   ├── Domain.Tests/     # ドメイン層ユニットテスト
+│   └── Application.Tests/ # アプリケーション層ユニットテスト
 ├── frontend-admin/       # 管理用フロントエンド
 └── frontend-public/      # 公開用フロントエンド
 ```
@@ -113,9 +129,22 @@ http://localhost:5174
 ## テスト実行
 
 ```bash
-cd tests/Application.Tests
+# 全テスト実行
 ~/.dotnet/dotnet test
+
+# ドメインテストのみ
+~/.dotnet/dotnet test tests/Domain.Tests
+
+# アプリケーションテストのみ
+~/.dotnet/dotnet test tests/Application.Tests
 ```
+
+### テストカバレッジ
+
+| レイヤー | テスト数 | 対象 |
+|----------|---------|------|
+| Domain | 73 | エンティティ、値オブジェクト |
+| Application | 9 | ハンドラー |
 
 ## Docker
 
@@ -209,3 +238,38 @@ GitHub Actionsでプッシュ/PR時に自動テスト:
 - `POST /api/formations` - フォーメーション作成
 - `PUT /api/formations/{id}` - フォーメーション更新
 - `DELETE /api/formations/{id}` - フォーメーション削除
+
+### Songs
+- `GET /api/songs` - 楽曲一覧
+- `GET /api/songs/{id}` - 楽曲詳細
+- `GET /api/songs/group/{groupId}` - グループ別楽曲一覧
+- `POST /api/songs` - 楽曲作成
+- `PUT /api/songs/{id}` - 楽曲更新
+- `DELETE /api/songs/{id}` - 楽曲削除
+
+### Setlists
+- `GET /api/setlists` - セットリスト一覧
+- `GET /api/setlists/{id}` - セットリスト詳細
+- `GET /api/setlists/group/{groupId}` - グループ別セットリスト一覧
+- `POST /api/setlists` - セットリスト作成
+- `PUT /api/setlists/{id}` - セットリスト更新
+- `DELETE /api/setlists/{id}` - セットリスト削除
+
+### Data (エクスポート/インポート)
+- `GET /api/data/export` - 全データをJSON形式でエクスポート
+- `POST /api/data/import?clearExisting=false` - JSONデータをインポート
+
+## Cloudflare Pages デプロイ
+
+フロントエンドはCloudflare Pagesにデプロイ可能です。バックエンドはCloudflare Tunnelで公開します。
+
+詳細は [DEPLOY.md](DEPLOY.md) を参照してください。
+
+```bash
+# Cloudflare Tunnelでバックエンドを公開
+cloudflared tunnel --url http://localhost:5059
+
+# フロントエンドをデプロイ
+cd frontend-admin && npm run deploy
+cd frontend-public && npm run deploy
+```
