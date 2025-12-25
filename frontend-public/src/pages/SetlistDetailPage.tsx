@@ -116,27 +116,25 @@ export function SetlistDetailPage() {
           transition={{ delay: 0.1 }}
           className="bg-white rounded-2xl shadow-lg border border-slate-100 p-4"
         >
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-1">
+          <div className="space-y-1">
             {sortedItems.map((item) => {
               const centerName = getMemberName(item.centerMemberId);
               return (
                 <div
                   key={item.id}
-                  className="flex items-center gap-2 px-2 py-1.5 rounded hover:bg-slate-50 transition-colors"
+                  className="flex items-baseline gap-1 px-2 py-1 rounded hover:bg-slate-50 transition-colors"
                 >
-                  <span className="w-6 h-6 rounded-full bg-rose-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
-                    {item.order}
+                  <span className="text-rose-500 text-sm font-bold flex-shrink-0">
+                    {item.order}.
                   </span>
-                  <div className="flex-1 min-w-0">
-                    <span className="text-sm text-slate-800 truncate block">
-                      {getSongTitle(item.songId)}
+                  <span className="text-sm text-slate-800">
+                    {getSongTitle(item.songId)}
+                  </span>
+                  {centerName && (
+                    <span className="text-xs text-rose-400 ml-1">
+                      (C: {centerName})
                     </span>
-                    {centerName && (
-                      <span className="text-xs text-rose-500 truncate block">
-                        C: {centerName}
-                      </span>
-                    )}
-                  </div>
+                  )}
                 </div>
               );
             })}

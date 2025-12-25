@@ -128,6 +128,7 @@ export function SetlistCreatePage() {
     enabled: isEdit,
   });
 
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     if (existingSetlist) {
       setName(existingSetlist.name);
@@ -144,6 +145,20 @@ export function SetlistCreatePage() {
       );
     }
   }, [existingSetlist]);
+
+  // 検索時に最初の曲を自動選択
+  useEffect(() => {
+    if (!songs || !songSearch) return;
+    const filtered = songs.filter((s) => {
+      const matchesGroup = !groupId || s.groupId === groupId;
+      const matchesSearch = s.title.toLowerCase().includes(songSearch.toLowerCase());
+      return matchesGroup && matchesSearch;
+    });
+    if (filtered.length > 0) {
+      setSelectedSongId(filtered[0].id);
+    }
+  }, [songSearch, songs, groupId]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const createMutation = useMutation({
     mutationFn: setlistsApi.create,
@@ -236,15 +251,6 @@ export function SetlistCreatePage() {
     const matchesSearch = !songSearch || s.title.toLowerCase().includes(songSearch.toLowerCase());
     return matchesGroup && matchesSearch;
   }) || [];
-
-  const firstFilteredSongId = filteredSongs.length > 0 ? filteredSongs[0].id : null;
-
-  // 検索時に最初の曲を自動選択
-  useEffect(() => {
-    if (songSearch && firstFilteredSongId) {
-      setSelectedSongId(firstFilteredSongId);
-    }
-  }, [songSearch, firstFilteredSongId]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
