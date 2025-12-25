@@ -4,9 +4,15 @@ using IdolManagement.Application.Groups.Commands;
 using IdolManagement.Application.Groups.Queries;
 using IdolManagement.Application.Members.Commands;
 using IdolManagement.Application.Members.Queries;
+using IdolManagement.Application.Setlists.Commands;
+using IdolManagement.Application.Setlists.Queries;
+using IdolManagement.Application.Songs.Commands;
+using IdolManagement.Application.Songs.Queries;
 using IdolManagement.Domain.Formations.Repositories;
 using IdolManagement.Domain.Groups.Repositories;
 using IdolManagement.Domain.Members.Repositories;
+using IdolManagement.Domain.Setlists.Repositories;
+using IdolManagement.Domain.Songs.Repositories;
 using IdolManagement.Infrastructure.Persistence;
 using IdolManagement.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +30,8 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IMemberRepository, MemberRepository>();
         services.AddScoped<IGroupRepository, GroupRepository>();
         services.AddScoped<IFormationRepository, FormationRepository>();
+        services.AddScoped<ISongRepository, SongRepository>();
+        services.AddScoped<ISetlistRepository, SetlistRepository>();
 
         return services;
     }
@@ -52,6 +60,22 @@ public static class ServiceCollectionExtensions
         services.AddScoped<DeleteFormationHandler>();
         services.AddScoped<GetFormationHandler>();
         services.AddScoped<GetAllFormationsHandler>();
+
+        // Songs
+        services.AddScoped<CreateSongHandler>();
+        services.AddScoped<UpdateSongHandler>();
+        services.AddScoped<DeleteSongHandler>();
+        services.AddScoped<GetSongHandler>();
+        services.AddScoped<GetAllSongsHandler>();
+        services.AddScoped<GetSongsByGroupHandler>();
+
+        // Setlists
+        services.AddScoped<CreateSetlistHandler>();
+        services.AddScoped<UpdateSetlistHandler>();
+        services.AddScoped<DeleteSetlistHandler>();
+        services.AddScoped<GetSetlistHandler>();
+        services.AddScoped<GetAllSetlistsHandler>();
+        services.AddScoped<GetSetlistsByGroupHandler>();
 
         return services;
     }

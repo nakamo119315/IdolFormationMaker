@@ -7,10 +7,12 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/members', label: 'Members' },
-    { path: '/groups', label: 'Groups' },
-    { path: '/formations', label: 'Formations' },
+    { path: '/', label: 'ホーム' },
+    { path: '/members', label: 'メンバー' },
+    { path: '/groups', label: 'グループ' },
+    { path: '/formations', label: 'フォーメーション' },
+    { path: '/songs', label: '楽曲' },
+    { path: '/setlists', label: 'セトリ' },
   ];
 
   return (

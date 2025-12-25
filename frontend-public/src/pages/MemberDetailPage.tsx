@@ -20,7 +20,18 @@ export function MemberDetailPage() {
   });
 
   if (isLoading) return <Loading />;
-  if (!member) return <div className="pt-24 text-center">メンバーが見つかりません</div>;
+  if (!member) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-slate-500 mb-4">メンバーが見つかりません</p>
+          <Link to="/members" className="text-rose-500 hover:underline">
+            メンバー一覧に戻る
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   const primaryImage = member.images.find(img => img.isPrimary) ?? member.images[0];
   const group = groups?.find(g => g.id === member.groupId);
@@ -41,7 +52,7 @@ export function MemberDetailPage() {
             <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to Members
+            メンバー一覧に戻る
           </Link>
         </motion.div>
 
@@ -107,16 +118,16 @@ export function MemberDetailPage() {
 
             <div className="space-y-6">
               <div className="p-6 bg-white rounded-2xl shadow-lg">
-                <h3 className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">
-                  Birthday
+                <h3 className="text-sm font-medium text-slate-500 tracking-wider mb-2">
+                  生年月日
                 </h3>
                 <p className="text-2xl font-semibold text-slate-800">{member.birthDate}</p>
               </div>
 
               {member.birthplace && (
                 <div className="p-6 bg-white rounded-2xl shadow-lg">
-                  <h3 className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">
-                    Birthplace
+                  <h3 className="text-sm font-medium text-slate-500 tracking-wider mb-2">
+                    出身地
                   </h3>
                   <p className="text-2xl font-semibold text-slate-800">{member.birthplace}</p>
                 </div>
@@ -124,19 +135,19 @@ export function MemberDetailPage() {
 
               {member.penLightColor1 && (
                 <div className="p-6 bg-white rounded-2xl shadow-lg">
-                  <h3 className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">
-                    Penlight Color
+                  <h3 className="text-sm font-medium text-slate-500 tracking-wider mb-2">
+                    ペンライトカラー
                   </h3>
                   <p className="text-2xl font-semibold text-slate-800">
                     {member.penLightColor1}
-                    {member.penLightColor2 && ` / ${member.penLightColor2}`}
+                    {member.penLightColor2 && member.penLightColor2 !== member.penLightColor1 && ` × ${member.penLightColor2}`}
                   </p>
                 </div>
               )}
 
               <div className="p-6 bg-white rounded-2xl shadow-lg">
-                <h3 className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">
-                  Photos
+                <h3 className="text-sm font-medium text-slate-500 tracking-wider mb-2">
+                  画像数
                 </h3>
                 <p className="text-2xl font-semibold text-slate-800">{member.images.length}</p>
               </div>

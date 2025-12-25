@@ -5,9 +5,17 @@ import { HomePage } from './pages/HomePage';
 import { MembersPage } from './pages/MembersPage';
 import { GroupsPage } from './pages/GroupsPage';
 import { FormationsPage } from './pages/FormationsPage';
+import { SongsPage } from './pages/SongsPage';
 import './index.css';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5分間キャッシュ
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 function App() {
   return (
@@ -19,6 +27,7 @@ function App() {
             <Route path="/members" element={<MembersPage />} />
             <Route path="/groups" element={<GroupsPage />} />
             <Route path="/formations" element={<FormationsPage />} />
+            <Route path="/songs" element={<SongsPage />} />
           </Routes>
         </Layout>
       </BrowserRouter>

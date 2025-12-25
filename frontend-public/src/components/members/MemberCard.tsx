@@ -42,7 +42,8 @@ export function MemberCard({ member, index }: MemberCardProps) {
             )}
             {member.penLightColor1 && (
               <p className="text-xs text-primary-500 mt-1">
-                {member.penLightColor1}×{member.penLightColor2}
+                {member.penLightColor1}
+                {member.penLightColor2 && member.penLightColor2 !== member.penLightColor1 && `×${member.penLightColor2}`}
               </p>
             )}
           </div>

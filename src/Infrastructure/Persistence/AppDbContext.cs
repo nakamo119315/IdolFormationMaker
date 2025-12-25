@@ -1,6 +1,8 @@
 using IdolManagement.Domain.Formations.Entities;
 using IdolManagement.Domain.Groups.Entities;
 using IdolManagement.Domain.Members.Entities;
+using IdolManagement.Domain.Setlists.Entities;
+using IdolManagement.Domain.Songs.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace IdolManagement.Infrastructure.Persistence;
@@ -16,6 +18,10 @@ public class AppDbContext : DbContext
     public DbSet<Group> Groups => Set<Group>();
     public DbSet<Formation> Formations => Set<Formation>();
     public DbSet<FormationPosition> FormationPositions => Set<FormationPosition>();
+    public DbSet<Song> Songs => Set<Song>();
+    public DbSet<Setlist> Setlists => Set<Setlist>();
+    public DbSet<SetlistItem> SetlistItems => Set<SetlistItem>();
+    public DbSet<SetlistItemParticipant> SetlistItemParticipants => Set<SetlistItemParticipant>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

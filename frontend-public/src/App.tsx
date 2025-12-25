@@ -8,6 +8,11 @@ import { MemberDetailPage } from './pages/MemberDetailPage';
 import { GroupsPage } from './pages/GroupsPage';
 import { GroupDetailPage } from './pages/GroupDetailPage';
 import { FormationsPage } from './pages/FormationsPage';
+import { SongsPage } from './pages/SongsPage';
+import { SongDetailPage } from './pages/SongDetailPage';
+import { SetlistsPage } from './pages/SetlistsPage';
+import { SetlistDetailPage } from './pages/SetlistDetailPage';
+import { SetlistCreatePage } from './pages/SetlistCreatePage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -32,6 +37,12 @@ function App() {
               <Route path="/groups" element={<GroupsPage />} />
               <Route path="/groups/:id" element={<GroupDetailPage />} />
               <Route path="/formations" element={<FormationsPage />} />
+              <Route path="/songs" element={<SongsPage />} />
+              <Route path="/songs/:id" element={<SongDetailPage />} />
+              <Route path="/setlists" element={<SetlistsPage />} />
+              <Route path="/setlists/new" element={<SetlistCreatePage />} />
+              <Route path="/setlists/:id" element={<SetlistDetailPage />} />
+              <Route path="/setlists/:id/edit" element={<SetlistCreatePage />} />
             </Routes>
           </main>
           <Footer />

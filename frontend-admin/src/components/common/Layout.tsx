@@ -13,6 +13,7 @@ export function Layout({ children }: LayoutProps) {
     { path: '/members', label: 'メンバー' },
     { path: '/groups', label: 'グループ' },
     { path: '/formations', label: 'フォーメーション' },
+    { path: '/songs', label: '楽曲' },
   ];
 
   return (

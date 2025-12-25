@@ -107,3 +107,93 @@ export interface UpdateFormationDto {
   groupId: string;
   positions: CreateFormationPositionDto[];
 }
+
+// Song
+export interface Song {
+  id: string;
+  groupId: string;
+  title: string;
+  lyricist: string;
+  composer: string;
+  arranger: string | null;
+  lyrics: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SongSummary {
+  id: string;
+  groupId: string;
+  title: string;
+  lyricist: string;
+  composer: string;
+  arranger: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface CreateSongDto {
+  groupId: string;
+  title: string;
+  lyricist: string;
+  composer: string;
+  arranger?: string | null;
+  lyrics?: string | null;
+}
+
+export interface UpdateSongDto {
+  title: string;
+  lyricist: string;
+  composer: string;
+  arranger?: string | null;
+  lyrics?: string | null;
+}
+
+// Setlist
+export interface Setlist {
+  id: string;
+  name: string;
+  groupId: string;
+  eventDate: string | null;
+  items: SetlistItem[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SetlistSummary {
+  id: string;
+  name: string;
+  groupId: string;
+  eventDate: string | null;
+  itemCount: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SetlistItem {
+  id: string;
+  songId: string;
+  order: number;
+  centerMemberId: string | null;
+  participantMemberIds: string[];
+}
+
+export interface CreateSetlistDto {
+  name: string;
+  groupId: string;
+  eventDate?: string | null;
+  items: CreateSetlistItemDto[];
+}
+
+export interface CreateSetlistItemDto {
+  songId: string;
+  order: number;
+  centerMemberId?: string | null;
+  participantMemberIds?: string[] | null;
+}
+
+export interface UpdateSetlistDto {
+  name: string;
+  eventDate?: string | null;
+  items: CreateSetlistItemDto[];
+}
