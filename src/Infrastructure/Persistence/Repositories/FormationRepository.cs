@@ -42,25 +42,25 @@ public class FormationRepository : IFormationRepository
         return formation;
     }
 
-    public async Task UpdateAsync(Formation formation, CancellationToken cancellationToken = default)
+    public async Task UpdateAsync(Guid id, string name, Guid groupId, IEnumerable<FormationPositionData> positions, CancellationToken cancellationToken = default)
     {
-        // Fetch existing formation from DB (tracked by EF)
-        var existing = await _context.Formations
+        // Get formation with positions (tracked)
+        var formation = await _context.Formations
             .Include(f => f.Positions)
-            .FirstOrDefaultAsync(f => f.Id == formation.Id, cancellationToken)
-            ?? throw new InvalidOperationException($"Formation with ID {formation.Id} not found.");
+            .FirstOrDefaultAsync(f => f.Id == id, cancellationToken)
+            ?? throw new InvalidOperationException($"Formation with ID {id} not found.");
 
-        // Update formation properties via domain method
-        existing.Update(formation.Name, formation.GroupId);
+        // Update formation properties
+        formation.Update(name, groupId);
 
-        // Remove existing positions (EF will track deletions)
-        _context.FormationPositions.RemoveRange(existing.Positions);
+        // Remove existing positions through EF tracking
+        _context.FormationPositions.RemoveRange(formation.Positions);
 
         // Add new positions
-        foreach (var pos in formation.Positions)
+        foreach (var pos in positions)
         {
             var newPosition = FormationPosition.Create(
-                existing.Id,
+                id,
                 pos.MemberId,
                 pos.PositionNumber,
                 pos.Row,

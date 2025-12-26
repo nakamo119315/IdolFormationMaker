@@ -46,38 +46,38 @@ public class SetlistRepository : ISetlistRepository
         return setlist;
     }
 
-    public async Task UpdateAsync(Setlist setlist, CancellationToken cancellationToken = default)
+    public async Task UpdateAsync(Guid id, string name, DateOnly? eventDate, IEnumerable<SetlistItemData> items, CancellationToken cancellationToken = default)
     {
         // Fetch existing setlist from DB (tracked by EF)
-        var existing = await _context.Setlists
+        var setlist = await _context.Setlists
             .Include(s => s.Items)
                 .ThenInclude(i => i.Participants)
-            .FirstOrDefaultAsync(s => s.Id == setlist.Id, cancellationToken)
-            ?? throw new InvalidOperationException($"Setlist with ID {setlist.Id} not found.");
+            .FirstOrDefaultAsync(s => s.Id == id, cancellationToken)
+            ?? throw new InvalidOperationException($"Setlist with ID {id} not found.");
 
         // Update setlist properties via domain method
-        existing.Update(setlist.Name, setlist.EventDate);
+        setlist.Update(name, eventDate);
 
         // Remove existing items and participants (EF will track deletions)
-        foreach (var item in existing.Items)
+        foreach (var item in setlist.Items)
         {
             _context.SetlistItemParticipants.RemoveRange(item.Participants);
         }
-        _context.SetlistItems.RemoveRange(existing.Items);
+        _context.SetlistItems.RemoveRange(setlist.Items);
 
         // Add new items with participants
-        foreach (var item in setlist.Items)
+        foreach (var itemData in items)
         {
             var newItem = SetlistItem.Create(
-                existing.Id,
-                item.SongId,
-                item.Order,
-                item.CenterMemberId
+                id,
+                itemData.SongId,
+                itemData.Order,
+                itemData.CenterMemberId
             );
 
-            foreach (var participant in item.Participants)
+            foreach (var memberId in itemData.ParticipantMemberIds)
             {
-                newItem.AddParticipant(participant.MemberId);
+                newItem.AddParticipant(memberId);
             }
 
             _context.SetlistItems.Add(newItem);

@@ -18,8 +18,7 @@ interface MergeSortState {
   mergedSoFar: Member[];
   currentLeft: Member[];
   currentRight: Member[];
-  // Total comparisons tracking
-  totalComparisons: number;
+  // Comparisons tracking
   completedComparisons: number;
   // Final result
   finalRanking: Member[];
@@ -31,6 +30,8 @@ export function MemberSortPage() {
   const [selectedGenerations, setSelectedGenerations] = useState<number[]>([]);
   const [includeGraduated, setIncludeGraduated] = useState(false);
   const [sortState, setSortState] = useState<MergeSortState | null>(null);
+  const [isSaving, setIsSaving] = useState(false);
+  const [saveMessage, setSaveMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
 
   const { data: members, isLoading: membersLoading } = useQuery({
@@ -85,6 +86,47 @@ export function MemberSortPage() {
     return Math.ceil(n * Math.log2(n));
   };
 
+  // Calculate remaining comparisons based on current state
+  const calculateRemainingComparisons = (state: MergeSortState): number => {
+    if (state.finalRanking.length > 0) return 0;
+
+    let remaining = 0;
+    const { segments, leftIndex, rightIndex, currentLeft, currentRight } = state;
+
+    // Current merge: remaining comparisons = min of remaining elements on each side
+    const leftRemaining = currentLeft.length - leftIndex;
+    const rightRemaining = currentRight.length - rightIndex;
+    // Worst case for current merge
+    remaining += Math.min(leftRemaining, rightRemaining);
+
+    // Future merges: estimate based on segment sizes
+    // Get sizes of all segments (excluding current pair being merged)
+    const futureSizes = segments
+      .filter(s => s !== currentLeft && s !== currentRight)
+      .map(s => s.length);
+    // Add the result of current merge
+    futureSizes.push(currentLeft.length + currentRight.length);
+
+    // Estimate remaining merge rounds
+    while (futureSizes.length > 1) {
+      const sorted = [...futureSizes].sort((a, b) => a - b);
+      const newSizes: number[] = [];
+      for (let i = 0; i < sorted.length; i += 2) {
+        if (i + 1 < sorted.length) {
+          // Merge two segments: worst case is min(size1, size2) comparisons
+          remaining += Math.min(sorted[i], sorted[i + 1]);
+          newSizes.push(sorted[i] + sorted[i + 1]);
+        } else {
+          newSizes.push(sorted[i]);
+        }
+      }
+      futureSizes.length = 0;
+      futureSizes.push(...newSizes);
+    }
+
+    return remaining;
+  };
+
   const startSort = () => {
     if (filteredMembers.length < 2) return;
 
@@ -99,7 +141,6 @@ export function MemberSortPage() {
       mergedSoFar: [],
       currentLeft: segments[0],
       currentRight: segments.length > 1 ? segments[1] : [],
-      totalComparisons: estimateComparisons(shuffled.length),
       completedComparisons: 0,
       finalRanking: [],
     });
@@ -199,24 +240,46 @@ export function MemberSortPage() {
     return [left, right];
   }, [sortState]);
 
-  const progressPercent = useMemo(() => {
-    if (!sortState || sortState.totalComparisons === 0) return 0;
-    return Math.min(100, (sortState.completedComparisons / sortState.totalComparisons) * 100);
+  // Calculate remaining comparisons dynamically
+  const remainingComparisons = useMemo(() => {
+    if (!sortState) return 0;
+    return calculateRemainingComparisons(sortState);
   }, [sortState]);
 
+  const totalEstimated = useMemo(() => {
+    if (!sortState) return 0;
+    return sortState.completedComparisons + remainingComparisons;
+  }, [sortState, remainingComparisons]);
+
+  const progressPercent = useMemo(() => {
+    if (!sortState || totalEstimated === 0) return 0;
+    return Math.min(100, (sortState.completedComparisons / totalEstimated) * 100);
+  }, [sortState, totalEstimated]);
+
   const handleSaveImage = async () => {
-    if (!resultRef.current) return;
+    if (!resultRef.current || isSaving) return;
+    setIsSaving(true);
+    setSaveMessage(null);
     try {
       const canvas = await html2canvas(resultRef.current, {
         backgroundColor: '#f8fafc',
         scale: 2,
+        useCORS: true,
+        allowTaint: false,
+        logging: false,
       });
       const link = document.createElement('a');
-      link.download = 'member-ranking.png';
-      link.href = canvas.toDataURL();
+      link.download = `member-ranking-${new Date().toISOString().slice(0, 10)}.png`;
+      link.href = canvas.toDataURL('image/png');
       link.click();
+      setSaveMessage({ type: 'success', text: '画像を保存しました' });
+      setTimeout(() => setSaveMessage(null), 3000);
     } catch (error) {
       console.error('Failed to save image:', error);
+      setSaveMessage({ type: 'error', text: '画像の保存に失敗しました' });
+      setTimeout(() => setSaveMessage(null), 5000);
+    } finally {
+      setIsSaving(false);
     }
   };
 
@@ -353,7 +416,7 @@ export function MemberSortPage() {
                   />
                 </div>
                 <p className="text-sm text-slate-500">
-                  {sortState?.completedComparisons} / 約{sortState?.totalComparisons} 比較
+                  {sortState?.completedComparisons}回完了 / 残り約{remainingComparisons}回
                 </p>
               </div>
 
@@ -421,7 +484,7 @@ export function MemberSortPage() {
               </div>
 
               <div ref={resultRef} className="bg-white rounded-2xl shadow-lg p-4 sm:p-6">
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {sortState.finalRanking.map((member, index) => {
                     const image = getPrimaryImage(member);
                     const isTop3 = index < 3;
@@ -436,13 +499,13 @@ export function MemberSortPage() {
                         key={member.id}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.05 }}
-                        className={`flex items-center gap-3 p-3 rounded-xl ${
+                        transition={{ delay: index * 0.03 }}
+                        className={`flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl ${
                           isTop3 ? 'bg-slate-50' : ''
                         }`}
                       >
                         <div
-                          className={`w-8 h-8 flex items-center justify-center rounded-full font-bold text-sm ${
+                          className={`w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0 flex items-center justify-center rounded-full font-bold text-xs sm:text-sm ${
                             isTop3
                               ? `bg-gradient-to-br ${rankColors[index]} text-white shadow-md`
                               : 'bg-slate-200 text-slate-600'
@@ -454,25 +517,26 @@ export function MemberSortPage() {
                           <img
                             src={image.url}
                             alt={member.name}
-                            className="w-12 h-12 rounded-full object-cover"
+                            crossOrigin="anonymous"
+                            className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-full object-cover"
                           />
                         ) : (
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white font-bold">
+                          <div className="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white font-bold text-xs sm:text-sm">
                             {member.name.charAt(0)}
                           </div>
                         )}
                         <div className="flex-1 min-w-0">
-                          <p className="font-semibold text-slate-800 truncate">
+                          <p className="font-semibold text-slate-800 truncate text-sm sm:text-base">
                             {member.name}
                           </p>
                           {member.generation && (
-                            <p className="text-sm text-slate-500">
+                            <p className="text-xs sm:text-sm text-slate-500">
                               {member.generation}期
                             </p>
                           )}
                         </div>
                         {member.isGraduated && (
-                          <span className="text-xs px-2 py-1 bg-slate-200 text-slate-600 rounded-full">
+                          <span className="text-xs px-2 py-0.5 bg-slate-200 text-slate-600 rounded-full flex-shrink-0">
                             卒業
                           </span>
                         )}
@@ -482,25 +546,62 @@ export function MemberSortPage() {
                 </div>
               </div>
 
+              {saveMessage && (
+                <div
+                  className={`text-center py-2 px-4 rounded-lg ${
+                    saveMessage.type === 'success'
+                      ? 'bg-green-100 text-green-700'
+                      : 'bg-red-100 text-red-700'
+                  }`}
+                >
+                  {saveMessage.text}
+                </div>
+              )}
+
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={handleSaveImage}
-                  className="px-6 py-3 bg-white text-slate-700 rounded-xl font-medium border border-slate-200 hover:bg-slate-50 transition-colors flex items-center justify-center gap-2"
+                  disabled={isSaving}
+                  className="px-6 py-3 bg-white text-slate-700 rounded-xl font-medium border border-slate-200 hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
                 >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                  画像を保存
+                  {isSaving ? (
+                    <>
+                      <svg className="animate-spin w-5 h-5" viewBox="0 0 24 24">
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                          fill="none"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
+                      </svg>
+                      保存中...
+                    </>
+                  ) : (
+                    <>
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                        />
+                      </svg>
+                      画像を保存
+                    </>
+                  )}
                 </button>
                 <button
                   onClick={handleReset}

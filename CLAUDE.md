@@ -110,6 +110,79 @@ tests/
 - **Infrastructure層**: Domain層のインターフェースを実装
 - **集約**: トランザクション整合性の境界。集約ルート経由でのみアクセス
 
+## Repository パターンと EF Core ガイドライン
+
+### Handler と Repository の責務分担
+
+| 層 | 責務 | やること | やらないこと |
+|----|------|----------|-------------|
+| **Handler** | ビジネスロジック調整 | 存在チェック、DTOからデータ構造への変換、結果の取得 | エンティティの Navigation Property を直接操作しない |
+| **Repository** | 永続化 | エンティティの取得・更新・子要素の削除/追加・SaveChanges | ChangeTracker を直接操作しない |
+
+### 子エンティティを持つ集約の更新パターン
+
+子エンティティ（例: Formation → Positions, Setlist → Items）を持つ集約を更新する場合：
+
+```csharp
+// ❌ NG: Handler でエンティティの Navigation Property を操作
+var formation = await _repository.GetByIdAsync(id);
+formation.ClearPositions();  // EF のトラッキングと競合する可能性
+formation.AddPosition(...);
+await _repository.UpdateAsync(formation);  // トラッキング問題発生
+
+// ✅ OK: Repository に必要なデータを渡して、Repository 内で完結
+// Handler
+var positions = dto.Positions.Select(p => new FormationPositionData(...));
+await _repository.UpdateAsync(id, name, groupId, positions);
+
+// Repository
+public async Task UpdateAsync(Guid id, string name, Guid groupId,
+    IEnumerable<FormationPositionData> positions, CancellationToken ct)
+{
+    var formation = await _context.Formations
+        .Include(f => f.Positions)
+        .FirstOrDefaultAsync(f => f.Id == id, ct);
+
+    formation.Update(name, groupId);
+    _context.FormationPositions.RemoveRange(formation.Positions);  // 取得したものを削除
+
+    foreach (var pos in positions)
+    {
+        _context.FormationPositions.Add(FormationPosition.Create(...));
+    }
+
+    await _context.SaveChangesAsync(ct);
+}
+```
+
+### EF Core トラッキングの注意点
+
+1. **同一 DbContext 内でのエンティティ競合を避ける**
+   - Handler で `GetByIdAsync` したエンティティを変更し、Repository で再度取得すると同じオブジェクトが返る
+   - Navigation Property の操作は Repository 内で完結させる
+
+2. **ChangeTracker を直接操作しない**
+   - `entry.State = EntityState.Detached` などの操作は避ける
+   - 必要な場合は設計を見直す
+
+3. **子エンティティの削除は Include で取得したものを使う**
+   ```csharp
+   // ✅ OK: Include で取得した子エンティティを RemoveRange
+   var parent = await _context.Parents.Include(p => p.Children).FirstAsync();
+   _context.Children.RemoveRange(parent.Children);
+
+   // ❌ NG: 別クエリで取得した子エンティティを削除（トラッキング競合の可能性）
+   var children = await _context.Children.Where(...).ToListAsync();
+   _context.Children.RemoveRange(children);
+   ```
+
+4. **データ構造用の record を Domain 層に定義**
+   - Repository の引数として使うデータ構造は Domain 層の Repositories フォルダに定義
+   ```csharp
+   // Domain/Formations/Repositories/IFormationRepository.cs
+   public record FormationPositionData(Guid MemberId, int PositionNumber, int Row, int Column);
+   ```
+
 ## 要件
 
 ### 概要

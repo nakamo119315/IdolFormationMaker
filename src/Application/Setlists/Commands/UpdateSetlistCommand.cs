@@ -17,27 +17,32 @@ public class UpdateSetlistHandler
 
     public async Task<SetlistDto?> HandleAsync(UpdateSetlistCommand command, CancellationToken cancellationToken = default)
     {
-        var setlist = await _setlistRepository.GetByIdAsync(command.Id, cancellationToken);
-        if (setlist == null)
+        // Check if setlist exists
+        var existing = await _setlistRepository.GetByIdAsync(command.Id, cancellationToken);
+        if (existing == null)
             return null;
 
-        setlist.Update(command.Dto.Name, command.Dto.EventDate);
-        setlist.ClearItems();
+        // Convert DTOs to repository data
+        var items = command.Dto.Items
+            .OrderBy(i => i.Order)
+            .Select(i => new SetlistItemData(
+                i.SongId,
+                i.Order,
+                i.CenterMemberId,
+                i.ParticipantMemberIds ?? Enumerable.Empty<Guid>()
+            ));
 
-        foreach (var itemDto in command.Dto.Items.OrderBy(i => i.Order))
-        {
-            var item = setlist.AddItem(itemDto.SongId, itemDto.Order, itemDto.CenterMemberId);
-            if (itemDto.ParticipantMemberIds != null)
-            {
-                foreach (var memberId in itemDto.ParticipantMemberIds)
-                {
-                    item.AddParticipant(memberId);
-                }
-            }
-        }
+        // Update via repository
+        await _setlistRepository.UpdateAsync(
+            command.Id,
+            command.Dto.Name,
+            command.Dto.EventDate,
+            items,
+            cancellationToken);
 
-        await _setlistRepository.UpdateAsync(setlist, cancellationToken);
-        return ToDto(setlist);
+        // Reload to get updated data
+        var updated = await _setlistRepository.GetByIdAsync(command.Id, cancellationToken);
+        return ToDto(updated!);
     }
 
     private static SetlistDto ToDto(Setlist setlist) => new(

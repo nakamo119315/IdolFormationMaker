@@ -1,5 +1,5 @@
-// Use /api which is proxied by Pages Functions in production
-const API_BASE = '/api';
+// Use VITE_API_URL env var for external API, fallback to /api for local dev
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 export class ApiError extends Error {
   status: number;

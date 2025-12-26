@@ -17,31 +17,31 @@ public class UpdateFormationHandler
 
     public async Task<FormationDto?> HandleAsync(UpdateFormationCommand command, CancellationToken cancellationToken = default)
     {
-        var formation = await _formationRepository.GetByIdAsync(command.Id, cancellationToken);
-        if (formation == null)
+        // Check if formation exists
+        var existing = await _formationRepository.GetByIdAsync(command.Id, cancellationToken);
+        if (existing == null)
             return null;
 
-        formation.Update(
+        // Convert DTOs to repository data
+        var positions = command.Dto.Positions
+            .Select(p => new FormationPositionData(
+                p.MemberId,
+                p.PositionNumber,
+                p.Row,
+                p.Column
+            ));
+
+        // Update via repository
+        await _formationRepository.UpdateAsync(
+            command.Id,
             command.Dto.Name,
-            command.Dto.GroupId
-        );
+            command.Dto.GroupId,
+            positions,
+            cancellationToken);
 
-        formation.ClearPositions();
-        foreach (var posDto in command.Dto.Positions)
-        {
-            var position = FormationPosition.Create(
-                formation.Id,
-                posDto.MemberId,
-                posDto.PositionNumber,
-                posDto.Row,
-                posDto.Column
-            );
-            formation.AddPosition(position);
-        }
-
-        await _formationRepository.UpdateAsync(formation, cancellationToken);
-
-        return ToDto(formation);
+        // Reload to get updated data
+        var updated = await _formationRepository.GetByIdAsync(command.Id, cancellationToken);
+        return ToDto(updated!);
     }
 
     private static FormationDto ToDto(Formation formation) => new(
