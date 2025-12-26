@@ -79,4 +79,42 @@ public class GroupTests
         // Assert
         Assert.Null(group.DebutDate);
     }
+
+    [Fact]
+    public void Create_WithHasGeneration_ShouldSetHasGeneration()
+    {
+        // Arrange
+        var name = "乃木坂46";
+        var debutDate = new DateOnly(2012, 2, 22);
+
+        // Act
+        var group = Group.Create(name, debutDate, hasGeneration: true);
+
+        // Assert
+        Assert.True(group.HasGeneration);
+    }
+
+    [Fact]
+    public void Create_WithoutHasGeneration_ShouldDefaultToFalse()
+    {
+        // Arrange & Act
+        var group = Group.Create("Test Group");
+
+        // Assert
+        Assert.False(group.HasGeneration);
+    }
+
+    [Fact]
+    public void Update_WithHasGeneration_ShouldUpdateHasGeneration()
+    {
+        // Arrange
+        var group = Group.Create("Test Group", hasGeneration: false);
+        Assert.False(group.HasGeneration);
+
+        // Act
+        group.Update("Test Group", null, hasGeneration: true);
+
+        // Assert
+        Assert.True(group.HasGeneration);
+    }
 }

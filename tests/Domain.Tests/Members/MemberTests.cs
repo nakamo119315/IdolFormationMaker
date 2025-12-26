@@ -125,4 +125,60 @@ public class MemberTests
         // Assert
         Assert.Single(member.Images);
     }
+
+    [Fact]
+    public void Create_WithGeneration_ShouldSetGeneration()
+    {
+        // Arrange
+        var name = "Test Member";
+        var birthDate = new DateOnly(2000, 1, 15);
+        var generation = 4;
+
+        // Act
+        var member = Member.Create(name, birthDate, generation: generation);
+
+        // Assert
+        Assert.Equal(generation, member.Generation);
+        Assert.False(member.IsGraduated);
+    }
+
+    [Fact]
+    public void Create_WithIsGraduated_ShouldSetIsGraduated()
+    {
+        // Arrange
+        var name = "Test Member";
+        var birthDate = new DateOnly(2000, 1, 15);
+
+        // Act
+        var member = Member.Create(name, birthDate, isGraduated: true);
+
+        // Assert
+        Assert.True(member.IsGraduated);
+    }
+
+    [Fact]
+    public void Update_WithGenerationAndIsGraduated_ShouldUpdateBothFields()
+    {
+        // Arrange
+        var member = Member.Create("Original Name", new DateOnly(2000, 1, 15), generation: 3);
+        Assert.Equal(3, member.Generation);
+        Assert.False(member.IsGraduated);
+
+        // Act
+        member.Update("Updated Name", new DateOnly(2000, 1, 15), null, null, null, null, 4, true);
+
+        // Assert
+        Assert.Equal(4, member.Generation);
+        Assert.True(member.IsGraduated);
+    }
+
+    [Fact]
+    public void Create_WithoutGeneration_ShouldHaveNullGeneration()
+    {
+        // Arrange & Act
+        var member = Member.Create("Test Member", new DateOnly(2000, 1, 15));
+
+        // Assert
+        Assert.Null(member.Generation);
+    }
 }

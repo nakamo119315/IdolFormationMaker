@@ -197,8 +197,13 @@ public async Task UpdateAsync(Guid id, string name, Guid groupId,
 | Id | Guid | メンバーID |
 | Name | string | 名前 |
 | BirthDate | DateOnly | 生年月日 |
-| Images | List<MemberImage> | 画像一覧 |
+| Birthplace | string? | 出身地 |
+| PenLightColor1 | string? | ペンライトカラー1 |
+| PenLightColor2 | string? | ペンライトカラー2 |
 | GroupId | Guid? | 所属グループID |
+| Generation | int? | 期（1期生、2期生など） |
+| IsGraduated | bool | 卒業済みフラグ |
+| Images | List<MemberImage> | 画像一覧 |
 | CreatedAt | DateTime | 作成日時 |
 | UpdatedAt | DateTime | 更新日時 |
 
@@ -217,6 +222,7 @@ public async Task UpdateAsync(Guid id, string name, Guid groupId,
 | Id | Guid | グループID |
 | Name | string | グループ名 |
 | DebutDate | DateOnly? | デビュー日 |
+| HasGeneration | bool | 期制度があるか |
 | Members | List<Member> | 所属メンバー一覧 |
 | CreatedAt | DateTime | 作成日時 |
 | UpdatedAt | DateTime | 更新日時 |
