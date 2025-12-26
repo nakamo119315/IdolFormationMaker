@@ -155,8 +155,8 @@ export function MemberSortPage() {
     const winnerIsLeft = winner.id === leftMember?.id;
 
     const newMerged = [...mergedSoFar, winner];
-    let newLeftIndex = winnerIsLeft ? leftIndex + 1 : leftIndex;
-    let newRightIndex = winnerIsLeft ? rightIndex : rightIndex + 1;
+    const newLeftIndex = winnerIsLeft ? leftIndex + 1 : leftIndex;
+    const newRightIndex = winnerIsLeft ? rightIndex : rightIndex + 1;
 
     // Check if one side is exhausted
     if (newLeftIndex >= currentLeft.length) {

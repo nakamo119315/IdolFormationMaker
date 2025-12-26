@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
@@ -14,6 +14,7 @@ export function FormationCreatePage() {
   const { id } = useParams<{ id: string }>();
   const queryClient = useQueryClient();
   const isEditing = !!id;
+  const initializedRef = useRef(false);
 
   const [name, setName] = useState('');
   const [groupId, setGroupId] = useState('');
@@ -35,9 +36,12 @@ export function FormationCreatePage() {
     enabled: isEditing,
   });
 
-  // Initialize form when formation data is loaded
+  // Initialize form when formation data is loaded (only once)
+  // This is a valid pattern for form initialization from async data
   useEffect(() => {
-    if (formation) {
+    if (formation && !initializedRef.current) {
+      initializedRef.current = true;
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Form initialization from loaded data
       setName(formation.name);
       setGroupId(formation.groupId);
       setPositions(
