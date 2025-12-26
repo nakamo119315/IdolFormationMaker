@@ -105,15 +105,27 @@ export function MemberDetailPage() {
             </h1>
 
             {group && (
-              <Link
-                to={`/groups/${group.id}`}
-                className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-8"
-              >
-                <span className="text-lg">{group.name}</span>
-                <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+              <div className="flex flex-wrap items-center gap-3 mb-8">
+                <Link
+                  to={`/groups/${group.id}`}
+                  className="inline-flex items-center text-primary-600 hover:text-primary-700"
+                >
+                  <span className="text-lg">{group.name}</span>
+                  <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                {member.generation && (
+                  <span className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">
+                    {member.generation}期生
+                  </span>
+                )}
+                {member.isGraduated && (
+                  <span className="px-3 py-1 bg-slate-200 text-slate-600 rounded-full text-sm font-medium">
+                    卒業
+                  </span>
+                )}
+              </div>
             )}
 
             <div className="space-y-6">
