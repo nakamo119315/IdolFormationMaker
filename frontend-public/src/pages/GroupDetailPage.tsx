@@ -1,3 +1,4 @@
+import { useState, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useQuery } from '@tanstack/react-query';
@@ -8,6 +9,7 @@ import { Loading } from '../components/common/Loading';
 
 export function GroupDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const [selectedGeneration, setSelectedGeneration] = useState<string>('');
 
   const { data: group, isLoading: groupLoading } = useQuery({
     queryKey: ['group', id],
@@ -20,10 +22,28 @@ export function GroupDetailPage() {
     queryFn: membersApi.getAll,
   });
 
+  // Get all members of this group
+  const groupMembers = useMemo(() => {
+    return members?.filter(m => m.groupId === group?.id) ?? [];
+  }, [members, group?.id]);
+
+  // Get available generations
+  const availableGenerations = useMemo(() => {
+    const generations = new Set<number>();
+    groupMembers
+      .filter(m => m.generation !== null)
+      .forEach(m => generations.add(m.generation!));
+    return Array.from(generations).sort((a, b) => a - b);
+  }, [groupMembers]);
+
+  // Filter members by generation
+  const filteredMembers = useMemo(() => {
+    if (!selectedGeneration) return groupMembers;
+    return groupMembers.filter(m => m.generation === parseInt(selectedGeneration));
+  }, [groupMembers, selectedGeneration]);
+
   if (groupLoading || membersLoading) return <Loading />;
   if (!group) return <div className="pt-24 text-center">グループが見つかりません</div>;
-
-  const groupMembers = members?.filter(m => m.groupId === group.id) ?? [];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
@@ -49,7 +69,7 @@ export function GroupDetailPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
             {group.name}
@@ -59,16 +79,42 @@ export function GroupDetailPage() {
           </p>
         </motion.div>
 
+        {/* 期別フィルター */}
+        {group.hasGeneration && availableGenerations.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="flex flex-wrap gap-4 justify-center mb-8"
+          >
+            <select
+              value={selectedGeneration}
+              onChange={(e) => setSelectedGeneration(e.target.value)}
+              className="px-4 py-2 rounded-xl border border-slate-200 bg-white shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+            >
+              <option value="">すべての期</option>
+              {availableGenerations.map((gen) => (
+                <option key={gen} value={gen}>
+                  {gen}期生
+                </option>
+              ))}
+            </select>
+            <span className="flex items-center text-slate-500 text-sm">
+              {filteredMembers.length}人のメンバー
+            </span>
+          </motion.div>
+        )}
+
         {/* メンバー一覧 */}
-        {groupMembers.length > 0 ? (
+        {filteredMembers.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {groupMembers.map((member, index) => (
+            {filteredMembers.map((member, index) => (
               <MemberCard key={member.id} member={member} index={index} />
             ))}
           </div>
         ) : (
           <div className="text-center py-20 text-slate-500">
-            このグループにはまだメンバーがいません
+            {selectedGeneration ? '該当するメンバーがいません' : 'このグループにはまだメンバーがいません'}
           </div>
         )}
       </div>
