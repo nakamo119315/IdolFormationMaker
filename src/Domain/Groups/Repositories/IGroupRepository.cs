@@ -6,6 +6,11 @@ public interface IGroupRepository
 {
     Task<Group?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
     Task<IEnumerable<Group>> GetAllAsync(CancellationToken cancellationToken = default);
+    Task<(IEnumerable<Group> Items, int TotalCount)> GetPagedAsync(
+        int page,
+        int pageSize,
+        string? search = null,
+        CancellationToken cancellationToken = default);
     Task<Group> AddAsync(Group group, CancellationToken cancellationToken = default);
     Task UpdateAsync(Group group, CancellationToken cancellationToken = default);
     Task DeleteAsync(Guid id, CancellationToken cancellationToken = default);

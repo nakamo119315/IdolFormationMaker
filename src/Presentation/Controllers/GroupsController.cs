@@ -1,6 +1,7 @@
 using IdolManagement.Application.Groups.Commands;
 using IdolManagement.Application.Groups.DTOs;
 using IdolManagement.Application.Groups.Queries;
+using IdolManagement.Application.Shared;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IdolManagement.Presentation.Controllers;
@@ -10,6 +11,7 @@ namespace IdolManagement.Presentation.Controllers;
 public class GroupsController : ControllerBase
 {
     private readonly GetAllGroupsHandler _getAllHandler;
+    private readonly GetGroupsPagedHandler _getPagedHandler;
     private readonly GetGroupHandler _getHandler;
     private readonly CreateGroupHandler _createHandler;
     private readonly UpdateGroupHandler _updateHandler;
@@ -17,12 +19,14 @@ public class GroupsController : ControllerBase
 
     public GroupsController(
         GetAllGroupsHandler getAllHandler,
+        GetGroupsPagedHandler getPagedHandler,
         GetGroupHandler getHandler,
         CreateGroupHandler createHandler,
         UpdateGroupHandler updateHandler,
         DeleteGroupHandler deleteHandler)
     {
         _getAllHandler = getAllHandler;
+        _getPagedHandler = getPagedHandler;
         _getHandler = getHandler;
         _createHandler = createHandler;
         _updateHandler = updateHandler;
@@ -34,6 +38,18 @@ public class GroupsController : ControllerBase
     {
         var groups = await _getAllHandler.HandleAsync(new GetAllGroupsQuery(), cancellationToken);
         return Ok(groups);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PagedResult<GroupSummaryDto>>> GetPaged(
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 20,
+        [FromQuery] string? search = null,
+        CancellationToken cancellationToken = default)
+    {
+        var query = new GetGroupsPagedQuery(page, pageSize, search);
+        var result = await _getPagedHandler.HandleAsync(query, cancellationToken);
+        return Ok(result);
     }
 
     [HttpGet("{id:guid}")]

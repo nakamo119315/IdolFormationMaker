@@ -41,6 +41,63 @@
 - html2canvas を使用してPNG形式でダウンロード
 - iOS Safari対応（Web Share API）
 
+### 3. バックエンド機能追加
+
+#### 3.1 ページングAPI
+- `GET /api/members/paged?page=1&pageSize=20` - メンバー一覧（ページング）
+- `GET /api/groups/paged?page=1&pageSize=20` - グループ一覧（ページング）
+- `GET /api/songs/paged?page=1&pageSize=20` - 楽曲一覧（ページング）
+
+**レスポンス形式:**
+```json
+{
+  "items": [...],
+  "totalCount": 100,
+  "page": 1,
+  "pageSize": 20,
+  "totalPages": 5,
+  "hasNextPage": true,
+  "hasPreviousPage": false
+}
+```
+
+#### 3.2 検索・フィルタリングAPI
+**メンバー検索パラメータ:**
+- `search` - 名前・出身地で検索
+- `groupId` - グループでフィルタ
+- `generation` - 期でフィルタ
+- `isGraduated` - 卒業フラグでフィルタ
+
+**楽曲検索パラメータ:**
+- `search` - タイトル・作詞・作曲で検索
+- `groupId` - グループでフィルタ
+
+#### 3.3 CSVエクスポートAPI
+- `GET /api/members/export` - メンバー一覧CSV
+- `GET /api/songs/export` - 楽曲一覧CSV
+- UTF-8 BOM付き（Excel互換）
+
+### 4. frontend-admin 機能追加
+
+#### 4.1 ページングUI
+- `src/components/common/Pagination.tsx` - ページネーションコンポーネント
+- 件数表示（○件中 1-20件を表示）
+- ページ番号ナビゲーション
+
+#### 4.2 検索フォーム
+- `src/components/common/SearchForm.tsx` - 検索コンポーネント
+- リアルタイム検索（エンターで実行）
+- クリアボタン
+
+#### 4.3 フィルタ機能
+- グループでフィルタ
+- 期別でフィルタ
+- フィルタ変更時に1ページ目に戻る
+
+#### 4.4 CSVエクスポートボタン
+- メンバー管理画面にCSVエクスポートボタン追加
+- ダウンロード中の状態表示
+
 ---
 
 ## 今後のTODO
@@ -53,22 +110,15 @@
 - [ ] CORS設定の厳格化（必要なメソッド/ヘッダのみに限定）
 - [ ] 入力バリデーション（FluentValidation導入）
 
-#### パフォーマンス
-- [ ] ページングAPI実装（`?page=1&pageSize=20`）
-- [ ] 検索・フィルタリングAPI実装（`?search=xxx&groupId=xxx`）
-- [ ] フロントエンドでのページングUI実装
-
 ### 優先度: 中
 
 #### 機能追加
 - [ ] 一括削除機能（複数選択削除）
-- [ ] CSVエクスポートAPI（`/api/members/export`等）
 - [ ] OGPメタデータ設定（frontend-public）
 - [ ] SNSシェア機能（Twitter, LINE等）
 
 #### UX改善
 - [ ] フォームバリデーション（Zod + React Hook Form）
-- [ ] 無限スクロール/ページングUI
 - [ ] スケルトンローディング
 
 ### 優先度: 低
@@ -88,77 +138,77 @@
 ## ファイル構成（追加分）
 
 ```
+src/
+├── Application/
+│   ├── Shared/
+│   │   └── PagedResult.cs           # ページング結果型
+│   ├── Members/
+│   │   └── Queries/
+│   │       ├── GetMembersPagedQuery.cs  # ページングクエリ
+│   │       └── ExportMembersCsvQuery.cs # CSVエクスポート
+│   ├── Groups/
+│   │   └── Queries/
+│   │       └── GetGroupsPagedQuery.cs   # ページングクエリ
+│   └── Songs/
+│       └── Queries/
+│           ├── GetSongsPagedQuery.cs    # ページングクエリ
+│           └── ExportSongsCsvQuery.cs   # CSVエクスポート
+
 frontend-admin/
 ├── src/
+│   ├── api/
+│   │   └── members.ts               # getPaged, exportCsv 追加
 │   ├── components/
 │   │   └── common/
-│   │       ├── Loading.tsx      # ローディングコンポーネント
-│   │       ├── ConfirmDialog.tsx # 削除確認モーダル
-│   │       └── Toast.tsx        # トースト通知
+│   │       ├── Loading.tsx          # ローディングコンポーネント
+│   │       ├── ConfirmDialog.tsx    # 削除確認モーダル
+│   │       ├── Toast.tsx            # トースト通知
+│   │       ├── Pagination.tsx       # ページネーション
+│   │       └── SearchForm.tsx       # 検索フォーム
+│   ├── types/
+│   │   └── index.ts                 # PagedResult 追加
 │   └── pages/
-│       ├── MembersPage.tsx      # 改善済み
-│       ├── GroupsPage.tsx       # 改善済み
-│       ├── SongsPage.tsx        # 改善済み
-│       ├── FormationsPage.tsx   # 改善済み
-│       └── HomePage.tsx         # ダッシュボード統計追加
+│       └── MembersPage.tsx          # ページング・検索対応
 
 frontend-public/
 ├── src/
 │   └── components/
 │       └── common/
-│           └── LazyImage.tsx    # 画像遅延読み込み
+│           └── LazyImage.tsx        # 画像遅延読み込み
 ```
 
 ---
 
-## 参考実装パターン
+## API エンドポイント一覧
 
-### ページングAPI実装例（バックエンド）
+### Members API
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | /api/members | メンバー一覧取得（全件） |
+| GET | /api/members/paged | メンバー一覧取得（ページング） |
+| GET | /api/members/export | メンバーCSVエクスポート |
+| GET | /api/members/{id} | メンバー詳細取得 |
+| POST | /api/members | メンバー登録 |
+| PUT | /api/members/{id} | メンバー更新 |
+| DELETE | /api/members/{id} | メンバー削除 |
 
-```csharp
-// Application/Members/Queries/GetMembersPagedQuery.cs
-public record GetMembersPagedQuery(
-    int Page = 1,
-    int PageSize = 20,
-    string? Search = null,
-    Guid? GroupId = null
-) : IRequest<PagedResult<MemberDto>>;
+### Groups API
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | /api/groups | グループ一覧取得（全件） |
+| GET | /api/groups/paged | グループ一覧取得（ページング） |
+| GET | /api/groups/{id} | グループ詳細取得 |
+| POST | /api/groups | グループ登録 |
+| PUT | /api/groups/{id} | グループ更新 |
+| DELETE | /api/groups/{id} | グループ削除 |
 
-public record PagedResult<T>(
-    IEnumerable<T> Items,
-    int TotalCount,
-    int Page,
-    int PageSize
-);
-```
-
-### CSVエクスポートAPI実装例
-
-```csharp
-// Presentation/Controllers/MembersController.cs
-[HttpGet("export")]
-public async Task<IActionResult> Export()
-{
-    var members = await _mediator.Send(new GetAllMembersQuery());
-    var csv = GenerateCsv(members);
-    return File(Encoding.UTF8.GetBytes(csv), "text/csv", "members.csv");
-}
-```
-
-### フロントエンドページング実装例
-
-```typescript
-// MembersPage.tsx
-const [page, setPage] = useState(1);
-const { data } = useQuery({
-  queryKey: ['members', page],
-  queryFn: () => membersApi.getPaged(page, 20),
-});
-
-// Pagination UI
-<Pagination
-  currentPage={data.page}
-  totalPages={Math.ceil(data.totalCount / data.pageSize)}
-  onPageChange={setPage}
-/>
-```
+### Songs API
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | /api/songs | 楽曲一覧取得（全件） |
+| GET | /api/songs/paged | 楽曲一覧取得（ページング） |
+| GET | /api/songs/export | 楽曲CSVエクスポート |
+| GET | /api/songs/{id} | 楽曲詳細取得 |
+| POST | /api/songs | 楽曲登録 |
+| PUT | /api/songs/{id} | 楽曲更新 |
+| DELETE | /api/songs/{id} | 楽曲削除 |

@@ -7,6 +7,14 @@ public interface IMemberRepository
     Task<Member?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
     Task<IEnumerable<Member>> GetAllAsync(CancellationToken cancellationToken = default);
     Task<IEnumerable<Member>> GetByGroupIdAsync(Guid groupId, CancellationToken cancellationToken = default);
+    Task<(IEnumerable<Member> Items, int TotalCount)> GetPagedAsync(
+        int page,
+        int pageSize,
+        string? search = null,
+        Guid? groupId = null,
+        int? generation = null,
+        bool? isGraduated = null,
+        CancellationToken cancellationToken = default);
     Task<Member> AddAsync(Member member, CancellationToken cancellationToken = default);
     Task UpdateAsync(Member member, CancellationToken cancellationToken = default);
     Task DeleteAsync(Guid id, CancellationToken cancellationToken = default);

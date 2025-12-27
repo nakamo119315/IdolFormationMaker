@@ -1,12 +1,16 @@
 import { useState, useCallback } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { membersApi } from '../api/members';
+import { membersApi, type MemberSearchParams } from '../api/members';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
 import { Loading } from '../components/common/Loading';
 import { ConfirmDialog } from '../components/common/ConfirmDialog';
 import { Toast, type ToastMessage } from '../components/common/Toast';
+import { Pagination } from '../components/common/Pagination';
+import { SearchForm } from '../components/common/SearchForm';
 import type { Member, CreateMemberDto, UpdateMemberDto, AddMemberImageDto } from '../types';
+
+const PAGE_SIZE = 20;
 
 export function MembersPage() {
   const queryClient = useQueryClient();
@@ -26,12 +30,19 @@ export function MembersPage() {
   });
   const [imageUrl, setImageUrl] = useState('');
 
+  // 検索・フィルタ
+  const [searchParams, setSearchParams] = useState<MemberSearchParams>({
+    page: 1,
+    pageSize: PAGE_SIZE,
+  });
+
   // 削除確認ダイアログ
   const [deleteTarget, setDeleteTarget] = useState<{ id: string; name: string } | null>(null);
   const [imageDeleteTarget, setImageDeleteTarget] = useState<{ memberId: string; imageId: string } | null>(null);
 
   // トースト
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
+  const [isExporting, setIsExporting] = useState(false);
 
   const addToast = useCallback((type: ToastMessage['type'], message: string) => {
     const id = Date.now().toString();
@@ -42,9 +53,9 @@ export function MembersPage() {
     setToasts((prev) => prev.filter((t) => t.id !== id));
   }, []);
 
-  const { data: members, isLoading, error } = useQuery({
-    queryKey: ['members'],
-    queryFn: membersApi.getAll,
+  const { data: pagedResult, isLoading, error } = useQuery({
+    queryKey: ['members', 'paged', searchParams],
+    queryFn: () => membersApi.getPaged(searchParams),
   });
 
   const { data: groups } = useQuery({
@@ -114,6 +125,34 @@ export function MembersPage() {
       addToast('error', '画像の削除に失敗しました');
     },
   });
+
+  const handleSearch = (search: string) => {
+    setSearchParams((prev) => ({ ...prev, page: 1, search: search || undefined }));
+  };
+
+  const handleGroupFilter = (groupId: string) => {
+    setSearchParams((prev) => ({ ...prev, page: 1, groupId: groupId || undefined }));
+  };
+
+  const handleGenerationFilter = (generation: string) => {
+    setSearchParams((prev) => ({ ...prev, page: 1, generation: generation ? parseInt(generation) : undefined }));
+  };
+
+  const handlePageChange = (page: number) => {
+    setSearchParams((prev) => ({ ...prev, page }));
+  };
+
+  const handleExport = async () => {
+    setIsExporting(true);
+    try {
+      await membersApi.exportCsv();
+      addToast('success', 'CSVをダウンロードしました');
+    } catch {
+      addToast('error', 'CSVのダウンロードに失敗しました');
+    } finally {
+      setIsExporting(false);
+    }
+  };
 
   const openCreateModal = () => {
     setEditingMember(null);
@@ -194,6 +233,15 @@ export function MembersPage() {
     return member.images.find(img => img.isPrimary) ?? member.images[0];
   };
 
+  // 期の選択肢を取得
+  const getGenerations = () => {
+    const generations = new Set<number>();
+    pagedResult?.items.forEach((m) => {
+      if (m.generation) generations.add(m.generation);
+    });
+    return Array.from(generations).sort((a, b) => a - b);
+  };
+
   if (isLoading) return <Loading message="メンバーを読み込み中..." />;
 
   if (error) {
@@ -209,15 +257,45 @@ export function MembersPage() {
     );
   }
 
+  const members = pagedResult?.items ?? [];
+
   return (
     <div className="page">
       <Toast toasts={toasts} onRemove={removeToast} />
 
       <div className="page-header">
         <h1>メンバー管理</h1>
-        <button className="btn btn-primary" onClick={openCreateModal}>
-          新規登録
-        </button>
+        <div className="page-toolbar">
+          <SearchForm
+            onSearch={handleSearch}
+            placeholder="名前・出身地で検索..."
+            initialValue={searchParams.search ?? ''}
+          />
+          <div className="filter-group">
+            <label>グループ:</label>
+            <select value={searchParams.groupId ?? ''} onChange={(e) => handleGroupFilter(e.target.value)}>
+              <option value="">すべて</option>
+              {groups?.map((g) => (
+                <option key={g.id} value={g.id}>{g.name}</option>
+              ))}
+            </select>
+          </div>
+          <div className="filter-group">
+            <label>期別:</label>
+            <select value={searchParams.generation ?? ''} onChange={(e) => handleGenerationFilter(e.target.value)}>
+              <option value="">すべて</option>
+              {getGenerations().map((g) => (
+                <option key={g} value={g}>{g}期</option>
+              ))}
+            </select>
+          </div>
+          <button className="btn btn-export" onClick={handleExport} disabled={isExporting}>
+            {isExporting ? 'エクスポート中...' : 'CSVエクスポート'}
+          </button>
+          <button className="btn btn-primary" onClick={openCreateModal}>
+            新規登録
+          </button>
+        </div>
       </div>
 
       <table className="data-table">
@@ -235,7 +313,7 @@ export function MembersPage() {
           </tr>
         </thead>
         <tbody>
-          {members?.map((member) => {
+          {members.map((member) => {
             const primaryImage = getPrimaryImage(member);
             return (
               <tr key={member.id}>
@@ -291,6 +369,16 @@ export function MembersPage() {
           })}
         </tbody>
       </table>
+
+      {pagedResult && (
+        <Pagination
+          currentPage={pagedResult.page}
+          totalPages={pagedResult.totalPages}
+          totalCount={pagedResult.totalCount}
+          pageSize={pagedResult.pageSize}
+          onPageChange={handlePageChange}
+        />
+      )}
 
       {/* 削除確認ダイアログ */}
       <ConfirmDialog

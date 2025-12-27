@@ -34,6 +34,38 @@ public class SongRepository : ISongRepository
             .ToListAsync(cancellationToken);
     }
 
+    public async Task<(IEnumerable<Song> Items, int TotalCount)> GetPagedAsync(
+        int page,
+        int pageSize,
+        string? search = null,
+        Guid? groupId = null,
+        CancellationToken cancellationToken = default)
+    {
+        var query = _context.Songs.AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            query = query.Where(s => s.Title.Contains(search) ||
+                                     s.Lyricist.Contains(search) ||
+                                     s.Composer.Contains(search));
+        }
+
+        if (groupId.HasValue)
+        {
+            query = query.Where(s => s.GroupId == groupId.Value);
+        }
+
+        var totalCount = await query.CountAsync(cancellationToken);
+
+        var items = await query
+            .OrderBy(s => s.Title)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync(cancellationToken);
+
+        return (items, totalCount);
+    }
+
     public async Task<Song> AddAsync(Song song, CancellationToken cancellationToken = default)
     {
         await _context.Songs.AddAsync(song, cancellationToken);

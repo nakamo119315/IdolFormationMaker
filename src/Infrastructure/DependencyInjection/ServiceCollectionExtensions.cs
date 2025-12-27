@@ -48,6 +48,8 @@ public static class ServiceCollectionExtensions
         services.AddScoped<DeleteMemberImageHandler>();
         services.AddScoped<GetMemberHandler>();
         services.AddScoped<GetAllMembersHandler>();
+        services.AddScoped<GetMembersPagedHandler>();
+        services.AddScoped<ExportMembersCsvHandler>();
 
         // Groups
         services.AddScoped<CreateGroupHandler>();
@@ -55,6 +57,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<DeleteGroupHandler>();
         services.AddScoped<GetGroupHandler>();
         services.AddScoped<GetAllGroupsHandler>();
+        services.AddScoped<GetGroupsPagedHandler>();
 
         // Formations
         services.AddScoped<CreateFormationHandler>();
@@ -70,6 +73,8 @@ public static class ServiceCollectionExtensions
         services.AddScoped<GetSongHandler>();
         services.AddScoped<GetAllSongsHandler>();
         services.AddScoped<GetSongsByGroupHandler>();
+        services.AddScoped<GetSongsPagedHandler>();
+        services.AddScoped<ExportSongsCsvHandler>();
 
         // Setlists
         services.AddScoped<CreateSetlistHandler>();

@@ -1,3 +1,4 @@
+using IdolManagement.Application.Shared;
 using IdolManagement.Application.Songs.Commands;
 using IdolManagement.Application.Songs.DTOs;
 using IdolManagement.Application.Songs.Queries;
@@ -10,26 +11,32 @@ namespace IdolManagement.Presentation.Controllers;
 public class SongsController : ControllerBase
 {
     private readonly GetAllSongsHandler _getAllHandler;
+    private readonly GetSongsPagedHandler _getPagedHandler;
     private readonly GetSongHandler _getHandler;
     private readonly GetSongsByGroupHandler _getByGroupHandler;
     private readonly CreateSongHandler _createHandler;
     private readonly UpdateSongHandler _updateHandler;
     private readonly DeleteSongHandler _deleteHandler;
+    private readonly ExportSongsCsvHandler _exportCsvHandler;
 
     public SongsController(
         GetAllSongsHandler getAllHandler,
+        GetSongsPagedHandler getPagedHandler,
         GetSongHandler getHandler,
         GetSongsByGroupHandler getByGroupHandler,
         CreateSongHandler createHandler,
         UpdateSongHandler updateHandler,
-        DeleteSongHandler deleteHandler)
+        DeleteSongHandler deleteHandler,
+        ExportSongsCsvHandler exportCsvHandler)
     {
         _getAllHandler = getAllHandler;
+        _getPagedHandler = getPagedHandler;
         _getHandler = getHandler;
         _getByGroupHandler = getByGroupHandler;
         _createHandler = createHandler;
         _updateHandler = updateHandler;
         _deleteHandler = deleteHandler;
+        _exportCsvHandler = exportCsvHandler;
     }
 
     [HttpGet]
@@ -37,6 +44,26 @@ public class SongsController : ControllerBase
     {
         var songs = await _getAllHandler.HandleAsync(new GetAllSongsQuery(), cancellationToken);
         return Ok(songs);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PagedResult<SongSummaryDto>>> GetPaged(
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 20,
+        [FromQuery] string? search = null,
+        [FromQuery] Guid? groupId = null,
+        CancellationToken cancellationToken = default)
+    {
+        var query = new GetSongsPagedQuery(page, pageSize, search, groupId);
+        var result = await _getPagedHandler.HandleAsync(query, cancellationToken);
+        return Ok(result);
+    }
+
+    [HttpGet("export")]
+    public async Task<IActionResult> ExportCsv(CancellationToken cancellationToken)
+    {
+        var csv = await _exportCsvHandler.HandleAsync(new ExportSongsCsvQuery(), cancellationToken);
+        return File(csv, "text/csv", $"songs_{DateTime.Now:yyyyMMdd_HHmmss}.csv");
     }
 
     [HttpGet("{id:guid}")]
