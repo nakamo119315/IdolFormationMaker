@@ -19,9 +19,8 @@ export function ShareButton({ title, text, url }: ShareButtonProps) {
           text: shareText,
           url: shareUrl,
         });
-      } catch (error) {
+      } catch {
         // User cancelled or share failed
-        console.log('Share cancelled or failed');
       }
     } else {
       setIsOpen(!isOpen);
