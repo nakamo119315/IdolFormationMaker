@@ -16,7 +16,7 @@ function fullWidthToHalfWidth(str: string): string {
     .replace(/[Ａ-Ｚａ-ｚ０-９]/g, (s) => {
       return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
     })
-    .replace(/　/g, ' '); // 全角スペースを半角に
+    .replace(/\u3000/g, ' '); // 全角スペースを半角に
 }
 
 // 特殊文字の正規化
@@ -49,10 +49,18 @@ export function normalizeForSearch(text: string): string {
 /**
  * 検索マッチング関数
  * query が target に含まれるかを正規化して判定
+ * スペース区切りで複数ワードAND検索対応
+ * 例: "青空 夏" → "青空"と"夏"の両方を含む曲にマッチ
  */
 export function matchesSearch(target: string, query: string): boolean {
   if (!query) return true;
   const normalizedTarget = normalizeForSearch(target);
-  const normalizedQuery = normalizeForSearch(query);
-  return normalizedTarget.includes(normalizedQuery);
+
+  // スペースで分割して各ワードがすべて含まれているかチェック
+  const words = query.trim().split(/\s+/).filter(w => w.length > 0);
+
+  return words.every(word => {
+    const normalizedWord = normalizeForSearch(word);
+    return normalizedTarget.includes(normalizedWord);
+  });
 }
