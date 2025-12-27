@@ -2,9 +2,12 @@ import { useState, useCallback } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
-import { Loading } from '../components/common/Loading';
 import { ConfirmDialog } from '../components/common/ConfirmDialog';
 import { Toast, type ToastMessage } from '../components/common/Toast';
+import { Pagination } from '../components/common/Pagination';
+import { SearchForm } from '../components/common/SearchForm';
+import { SkeletonTable } from '../components/common/Skeleton';
+import { createGroupSchema } from '../validation/schemas';
 import type { GroupSummary, CreateGroupDto, UpdateGroupDto } from '../types';
 
 export function GroupsPage() {
@@ -16,6 +19,12 @@ export function GroupsPage() {
     debutDate: null,
     hasGeneration: false,
   });
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+
+  // ページング・検索
+  const [page, setPage] = useState(1);
+  const [search, setSearch] = useState('');
+  const pageSize = 20;
 
   // 削除確認ダイアログ
   const [deleteTarget, setDeleteTarget] = useState<{ id: string; name: string } | null>(null);
@@ -32,10 +41,12 @@ export function GroupsPage() {
     setToasts((prev) => prev.filter((t) => t.id !== id));
   }, []);
 
-  const { data: groups, isLoading, error } = useQuery({
-    queryKey: ['groups'],
-    queryFn: groupsApi.getAll,
+  const { data: pagedData, isLoading, error } = useQuery({
+    queryKey: ['groups', 'paged', page, pageSize, search],
+    queryFn: () => groupsApi.getPaged({ page, pageSize, search }),
   });
+
+  const groups = pagedData?.items;
 
   const createMutation = useMutation({
     mutationFn: groupsApi.create,
@@ -77,6 +88,7 @@ export function GroupsPage() {
   const openCreateModal = () => {
     setEditingGroup(null);
     setFormData({ name: '', debutDate: null, hasGeneration: false });
+    setFormErrors({});
     setIsModalOpen(true);
   };
 
@@ -87,6 +99,7 @@ export function GroupsPage() {
       debutDate: group.debutDate,
       hasGeneration: group.hasGeneration,
     });
+    setFormErrors({});
     setIsModalOpen(true);
   };
 
@@ -97,6 +110,20 @@ export function GroupsPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const result = createGroupSchema.safeParse(formData);
+    if (!result.success) {
+      const errors: Record<string, string> = {};
+      result.error.issues.forEach((issue) => {
+        if (issue.path[0]) {
+          errors[issue.path[0] as string] = issue.message;
+        }
+      });
+      setFormErrors(errors);
+      return;
+    }
+
+    setFormErrors({});
     if (editingGroup) {
       updateMutation.mutate({ id: editingGroup.id, data: formData });
     } else {
@@ -114,8 +141,6 @@ export function GroupsPage() {
     }
   };
 
-  if (isLoading) return <Loading message="グループを読み込み中..." />;
-
   if (error) {
     return (
       <div className="page">
@@ -129,6 +154,11 @@ export function GroupsPage() {
     );
   }
 
+  const handleSearch = (value: string) => {
+    setSearch(value);
+    setPage(1);
+  };
+
   return (
     <div className="page">
       <Toast toasts={toasts} onRemove={removeToast} />
@@ -138,6 +168,14 @@ export function GroupsPage() {
         <button className="btn btn-primary" onClick={openCreateModal}>
           新規登録
         </button>
+      </div>
+
+      <div className="filter-section">
+        <SearchForm
+          initialValue={search}
+          onSearch={handleSearch}
+          placeholder="グループ名で検索..."
+        />
       </div>
 
       <table className="data-table">
@@ -150,31 +188,45 @@ export function GroupsPage() {
             <th>操作</th>
           </tr>
         </thead>
-        <tbody>
-          {groups?.map((group) => (
-            <tr key={group.id}>
-              <td>{group.name}</td>
-              <td>{group.debutDate ?? '-'}</td>
-              <td>{group.memberCount}</td>
-              <td>{group.hasGeneration ? 'あり' : '-'}</td>
-              <td>
-                <button
-                  className="btn btn-sm"
-                  onClick={() => openEditModal(group)}
-                >
-                  編集
-                </button>
-                <button
-                  className="btn btn-sm btn-danger"
-                  onClick={() => handleDelete(group)}
-                >
-                  削除
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
+        {isLoading ? (
+          <SkeletonTable rows={10} columns={5} />
+        ) : (
+          <tbody>
+            {groups?.map((group) => (
+              <tr key={group.id}>
+                <td>{group.name}</td>
+                <td>{group.debutDate ?? '-'}</td>
+                <td>{group.memberCount}</td>
+                <td>{group.hasGeneration ? 'あり' : '-'}</td>
+                <td>
+                  <button
+                    className="btn btn-sm"
+                    onClick={() => openEditModal(group)}
+                  >
+                    編集
+                  </button>
+                  <button
+                    className="btn btn-sm btn-danger"
+                    onClick={() => handleDelete(group)}
+                  >
+                    削除
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        )}
       </table>
+
+      {pagedData && (
+        <Pagination
+          currentPage={pagedData.page}
+          totalPages={pagedData.totalPages}
+          totalCount={pagedData.totalCount}
+          pageSize={pageSize}
+          onPageChange={setPage}
+        />
+      )}
 
       {/* 削除確認ダイアログ */}
       <ConfirmDialog
@@ -200,8 +252,9 @@ export function GroupsPage() {
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              required
+              className={formErrors.name ? 'input-error' : ''}
             />
+            {formErrors.name && <span className="error-text">{formErrors.name}</span>}
           </div>
           <div className="form-group">
             <label>デビュー日</label>

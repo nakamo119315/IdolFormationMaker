@@ -16,6 +16,7 @@ public class GroupsController : ControllerBase
     private readonly CreateGroupHandler _createHandler;
     private readonly UpdateGroupHandler _updateHandler;
     private readonly DeleteGroupHandler _deleteHandler;
+    private readonly DeleteGroupsBulkHandler _deleteBulkHandler;
 
     public GroupsController(
         GetAllGroupsHandler getAllHandler,
@@ -23,7 +24,8 @@ public class GroupsController : ControllerBase
         GetGroupHandler getHandler,
         CreateGroupHandler createHandler,
         UpdateGroupHandler updateHandler,
-        DeleteGroupHandler deleteHandler)
+        DeleteGroupHandler deleteHandler,
+        DeleteGroupsBulkHandler deleteBulkHandler)
     {
         _getAllHandler = getAllHandler;
         _getPagedHandler = getPagedHandler;
@@ -31,6 +33,7 @@ public class GroupsController : ControllerBase
         _createHandler = createHandler;
         _updateHandler = updateHandler;
         _deleteHandler = deleteHandler;
+        _deleteBulkHandler = deleteBulkHandler;
     }
 
     [HttpGet]
@@ -84,5 +87,13 @@ public class GroupsController : ControllerBase
         if (!result)
             return NotFound();
         return NoContent();
+    }
+
+    [HttpDelete("bulk")]
+    public async Task<ActionResult<object>> DeleteBulk([FromBody] BulkDeleteRequest request, CancellationToken cancellationToken)
+    {
+        var deletedCount = await _deleteBulkHandler.HandleAsync(
+            new DeleteGroupsBulkCommand(request.Ids), cancellationToken);
+        return Ok(new { deletedCount });
     }
 }

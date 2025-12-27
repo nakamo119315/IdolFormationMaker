@@ -104,3 +104,86 @@ body {
 .lazy-image.loaded {
   opacity: 1;
 }
+
+/* Share Button */
+.share-button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.share-button:hover {
+  background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-700));
+  transform: translateY(-1px);
+}
+
+.share-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.15);
+  z-index: 50;
+  min-width: 180px;
+  overflow: hidden;
+}
+
+.share-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.share-option:hover {
+  background: #f3f4f6;
+}
+
+.share-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.share-icon.twitter {
+  background: #000;
+  color: white;
+}
+
+.share-icon.line {
+  background: #00b900;
+  color: white;
+}
+
+.share-icon.facebook {
+  background: #1877f2;
+  color: white;
+}

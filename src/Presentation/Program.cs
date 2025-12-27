@@ -1,3 +1,6 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using IdolManagement.Application.Members.Validators;
 using IdolManagement.Infrastructure.DependencyInjection;
 using IdolManagement.Infrastructure.Persistence;
 
@@ -10,6 +13,8 @@ builder.Services.AddInfrastructure(connectionString);
 builder.Services.AddApplicationServices();
 
 builder.Services.AddControllers();
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateMemberDtoValidator>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

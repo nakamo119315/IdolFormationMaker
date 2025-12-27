@@ -16,6 +16,7 @@ public class MembersController : ControllerBase
     private readonly CreateMemberHandler _createHandler;
     private readonly UpdateMemberHandler _updateHandler;
     private readonly DeleteMemberHandler _deleteHandler;
+    private readonly DeleteMembersBulkHandler _deleteBulkHandler;
     private readonly AddMemberImageHandler _addImageHandler;
     private readonly DeleteMemberImageHandler _deleteImageHandler;
     private readonly ExportMembersCsvHandler _exportCsvHandler;
@@ -27,6 +28,7 @@ public class MembersController : ControllerBase
         CreateMemberHandler createHandler,
         UpdateMemberHandler updateHandler,
         DeleteMemberHandler deleteHandler,
+        DeleteMembersBulkHandler deleteBulkHandler,
         AddMemberImageHandler addImageHandler,
         DeleteMemberImageHandler deleteImageHandler,
         ExportMembersCsvHandler exportCsvHandler)
@@ -37,6 +39,7 @@ public class MembersController : ControllerBase
         _createHandler = createHandler;
         _updateHandler = updateHandler;
         _deleteHandler = deleteHandler;
+        _deleteBulkHandler = deleteBulkHandler;
         _addImageHandler = addImageHandler;
         _deleteImageHandler = deleteImageHandler;
         _exportCsvHandler = exportCsvHandler;
@@ -103,6 +106,14 @@ public class MembersController : ControllerBase
         if (!result)
             return NotFound();
         return NoContent();
+    }
+
+    [HttpDelete("bulk")]
+    public async Task<ActionResult<object>> DeleteBulk([FromBody] BulkDeleteRequest request, CancellationToken cancellationToken)
+    {
+        var deletedCount = await _deleteBulkHandler.HandleAsync(
+            new DeleteMembersBulkCommand(request.Ids), cancellationToken);
+        return Ok(new { deletedCount });
     }
 
     [HttpPost("{id:guid}/images")]

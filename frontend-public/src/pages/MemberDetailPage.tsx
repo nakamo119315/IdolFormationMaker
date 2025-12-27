@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { membersApi } from '../api/members';
 import { groupsApi } from '../api/groups';
 import { Loading } from '../components/common/Loading';
+import { ShareButton } from '../components/common/ShareButton';
 
 export function MemberDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -100,9 +101,15 @@ export function MemberDetailPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col justify-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
-              {member.name}
-            </h1>
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-slate-800">
+                {member.name}
+              </h1>
+              <ShareButton
+                title={`${member.name} | Idol Management`}
+                text={`${member.name}のプロフィールをチェック！`}
+              />
+            </div>
 
             {group && (
               <div className="flex flex-wrap items-center gap-3 mb-8">

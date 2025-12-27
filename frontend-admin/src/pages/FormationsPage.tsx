@@ -4,10 +4,11 @@ import { formationsApi } from '../api/formations';
 import { membersApi } from '../api/members';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
-import { Loading } from '../components/common/Loading';
 import { ConfirmDialog } from '../components/common/ConfirmDialog';
 import { Toast, type ToastMessage } from '../components/common/Toast';
 import { FormationEditor } from '../components/formations/FormationEditor';
+import { SkeletonTable } from '../components/common/Skeleton';
+import { createFormationSchema } from '../validation/schemas';
 import type { Formation, CreateFormationDto, UpdateFormationDto, Member } from '../types';
 
 export function FormationsPage() {
@@ -21,6 +22,7 @@ export function FormationsPage() {
     groupId: '',
     positions: [],
   });
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
 
   // 削除確認ダイアログ
   const [deleteTarget, setDeleteTarget] = useState<{ id: string; name: string } | null>(null);
@@ -92,6 +94,7 @@ export function FormationsPage() {
   const openCreateModal = () => {
     setEditingFormation(null);
     setFormData({ name: '', groupId: '', positions: [] });
+    setFormErrors({});
     setIsModalOpen(true);
   };
 
@@ -125,6 +128,7 @@ export function FormationsPage() {
       groupId: formation.groupId,
       positions: recalculatedPositions,
     });
+    setFormErrors({});
     setIsModalOpen(true);
   };
 
@@ -145,6 +149,20 @@ export function FormationsPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const result = createFormationSchema.safeParse(formData);
+    if (!result.success) {
+      const errors: Record<string, string> = {};
+      result.error.issues.forEach((issue) => {
+        if (issue.path[0]) {
+          errors[issue.path[0] as string] = issue.message;
+        }
+      });
+      setFormErrors(errors);
+      return;
+    }
+
+    setFormErrors({});
     if (editingFormation) {
       updateMutation.mutate({ id: editingFormation.id, data: formData });
     } else {
@@ -194,8 +212,6 @@ export function FormationsPage() {
     return primaryImage?.url ?? null;
   };
 
-  if (isLoading) return <Loading message="フォーメーションを読み込み中..." />;
-
   if (error) {
     return (
       <div className="page">
@@ -229,35 +245,39 @@ export function FormationsPage() {
             <th>操作</th>
           </tr>
         </thead>
-        <tbody>
-          {formations?.map((formation) => (
-            <tr key={formation.id}>
-              <td>{formation.name}</td>
-              <td>{groups?.find(g => g.id === formation.groupId)?.name ?? '-'}</td>
-              <td>{formation.positions.length}</td>
-              <td>
-                <button
-                  className="btn btn-sm"
-                  onClick={() => openDetailModal(formation)}
-                >
-                  詳細
-                </button>
-                <button
-                  className="btn btn-sm"
-                  onClick={() => openEditModal(formation)}
-                >
-                  編集
-                </button>
-                <button
-                  className="btn btn-sm btn-danger"
-                  onClick={() => handleDelete(formation)}
-                >
-                  削除
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
+        {isLoading ? (
+          <SkeletonTable rows={10} columns={4} />
+        ) : (
+          <tbody>
+            {formations?.map((formation) => (
+              <tr key={formation.id}>
+                <td>{formation.name}</td>
+                <td>{groups?.find(g => g.id === formation.groupId)?.name ?? '-'}</td>
+                <td>{formation.positions.length}</td>
+                <td>
+                  <button
+                    className="btn btn-sm"
+                    onClick={() => openDetailModal(formation)}
+                  >
+                    詳細
+                  </button>
+                  <button
+                    className="btn btn-sm"
+                    onClick={() => openEditModal(formation)}
+                  >
+                    編集
+                  </button>
+                  <button
+                    className="btn btn-sm btn-danger"
+                    onClick={() => handleDelete(formation)}
+                  >
+                    削除
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        )}
       </table>
 
       {/* 削除確認ダイアログ */}
@@ -329,8 +349,9 @@ export function FormationsPage() {
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              required
+              className={formErrors.name ? 'input-error' : ''}
             />
+            {formErrors.name && <span className="error-text">{formErrors.name}</span>}
           </div>
 
           <div className="form-group">
@@ -338,7 +359,7 @@ export function FormationsPage() {
             <select
               value={formData.groupId}
               onChange={(e) => setFormData({ ...formData, groupId: e.target.value })}
-              required
+              className={formErrors.groupId ? 'input-error' : ''}
             >
               <option value="">選択してください</option>
               {groups?.map((group) => (
@@ -347,7 +368,9 @@ export function FormationsPage() {
                 </option>
               ))}
             </select>
+            {formErrors.groupId && <span className="error-text">{formErrors.groupId}</span>}
           </div>
+          {formErrors.positions && <span className="error-text">{formErrors.positions}</span>}
 
           {formData.groupId && members && (
             <div className="form-group">

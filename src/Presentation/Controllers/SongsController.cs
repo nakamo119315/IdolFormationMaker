@@ -17,6 +17,7 @@ public class SongsController : ControllerBase
     private readonly CreateSongHandler _createHandler;
     private readonly UpdateSongHandler _updateHandler;
     private readonly DeleteSongHandler _deleteHandler;
+    private readonly DeleteSongsBulkHandler _deleteBulkHandler;
     private readonly ExportSongsCsvHandler _exportCsvHandler;
 
     public SongsController(
@@ -27,6 +28,7 @@ public class SongsController : ControllerBase
         CreateSongHandler createHandler,
         UpdateSongHandler updateHandler,
         DeleteSongHandler deleteHandler,
+        DeleteSongsBulkHandler deleteBulkHandler,
         ExportSongsCsvHandler exportCsvHandler)
     {
         _getAllHandler = getAllHandler;
@@ -36,6 +38,7 @@ public class SongsController : ControllerBase
         _createHandler = createHandler;
         _updateHandler = updateHandler;
         _deleteHandler = deleteHandler;
+        _deleteBulkHandler = deleteBulkHandler;
         _exportCsvHandler = exportCsvHandler;
     }
 
@@ -105,5 +108,13 @@ public class SongsController : ControllerBase
         if (!result)
             return NotFound();
         return NoContent();
+    }
+
+    [HttpDelete("bulk")]
+    public async Task<ActionResult<object>> DeleteBulk([FromBody] BulkDeleteRequest request, CancellationToken cancellationToken)
+    {
+        var deletedCount = await _deleteBulkHandler.HandleAsync(
+            new DeleteSongsBulkCommand(request.Ids), cancellationToken);
+        return Ok(new { deletedCount });
     }
 }

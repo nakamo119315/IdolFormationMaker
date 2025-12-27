@@ -44,6 +44,12 @@ export const membersApi = {
       method: 'DELETE',
     }),
 
+  deleteBulk: (ids: string[]) =>
+    apiClient<{ deletedCount: number }>('/members/bulk', {
+      method: 'DELETE',
+      body: JSON.stringify({ ids }),
+    }),
+
   addImage: (memberId: string, data: AddMemberImageDto) =>
     apiClient<MemberImage>(`/members/${memberId}/images`, {
       method: 'POST',

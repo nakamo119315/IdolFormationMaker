@@ -8,6 +8,7 @@ import { songsApi } from '../api/songs';
 import { groupsApi } from '../api/groups';
 import { membersApi } from '../api/members';
 import { Loading } from '../components/common/Loading';
+import { ShareButton } from '../components/common/ShareButton';
 
 export function SetlistDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -192,11 +193,17 @@ export function SetlistDetailPage() {
                 {setlist.name}
               </h1>
             </div>
-            <div className="text-right">
-              {setlist.eventDate && (
-                <p className="text-sm text-slate-500">{setlist.eventDate}</p>
-              )}
-              <p className="text-sm text-slate-400">{setlist.items.length}曲</p>
+            <div className="flex items-center gap-3">
+              <ShareButton
+                title={`${groupName} ${setlist.name} | Idol Management`}
+                text={`${groupName}のセットリスト「${setlist.name}」をチェック！`}
+              />
+              <div className="text-right">
+                {setlist.eventDate && (
+                  <p className="text-sm text-slate-500">{setlist.eventDate}</p>
+                )}
+                <p className="text-sm text-slate-400">{setlist.items.length}曲</p>
+              </div>
             </div>
           </div>
         </motion.div>

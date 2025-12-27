@@ -3,9 +3,12 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { songsApi } from '../api/songs';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
-import { Loading } from '../components/common/Loading';
 import { ConfirmDialog } from '../components/common/ConfirmDialog';
 import { Toast, type ToastMessage } from '../components/common/Toast';
+import { Pagination } from '../components/common/Pagination';
+import { SearchForm } from '../components/common/SearchForm';
+import { SkeletonTable } from '../components/common/Skeleton';
+import { createSongSchema, updateSongSchema } from '../validation/schemas';
 import type { SongSummary, CreateSongDto, UpdateSongDto } from '../types';
 
 export function SongsPage() {
@@ -23,6 +26,13 @@ export function SongsPage() {
     arranger: null,
     lyrics: null,
   });
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+
+  // ページング・検索
+  const [page, setPage] = useState(1);
+  const [search, setSearch] = useState('');
+  const [isExporting, setIsExporting] = useState(false);
+  const pageSize = 20;
 
   // 削除確認ダイアログ
   const [deleteTarget, setDeleteTarget] = useState<{ id: string; title: string } | null>(null);
@@ -44,10 +54,12 @@ export function SongsPage() {
     queryFn: groupsApi.getAll,
   });
 
-  const { data: songs, isLoading, error } = useQuery({
-    queryKey: ['songs', selectedGroupId],
-    queryFn: () => selectedGroupId ? songsApi.getByGroup(selectedGroupId) : songsApi.getAll(),
+  const { data: pagedData, isLoading, error } = useQuery({
+    queryKey: ['songs', 'paged', page, pageSize, search, selectedGroupId],
+    queryFn: () => songsApi.getPaged({ page, pageSize, search, groupId: selectedGroupId || undefined }),
   });
+
+  const songs = pagedData?.items;
 
   const createMutation = useMutation({
     mutationFn: songsApi.create,
@@ -96,6 +108,7 @@ export function SongsPage() {
       arranger: null,
       lyrics: null,
     });
+    setFormErrors({});
     setIsModalOpen(true);
   };
 
@@ -111,6 +124,7 @@ export function SongsPage() {
         arranger: fullSong.arranger,
         lyrics: fullSong.lyrics,
       });
+      setFormErrors({});
       setIsModalOpen(true);
     } catch {
       addToast('error', '楽曲情報の取得に失敗しました');
@@ -134,6 +148,26 @@ export function SongsPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // 編集時と新規作成時で異なるスキーマを使用
+    const schema = editingSong ? updateSongSchema : createSongSchema;
+    const dataToValidate = editingSong
+      ? { title: formData.title, lyricist: formData.lyricist, composer: formData.composer, arranger: formData.arranger, lyrics: formData.lyrics }
+      : formData;
+    const result = schema.safeParse(dataToValidate);
+
+    if (!result.success) {
+      const errors: Record<string, string> = {};
+      result.error.issues.forEach((issue) => {
+        if (issue.path[0]) {
+          errors[issue.path[0] as string] = issue.message;
+        }
+      });
+      setFormErrors(errors);
+      return;
+    }
+
+    setFormErrors({});
     if (editingSong) {
       updateMutation.mutate({
         id: editingSong.id,
@@ -164,8 +198,6 @@ export function SongsPage() {
     return groups?.find((g) => g.id === groupId)?.name ?? '-';
   };
 
-  if (isLoading) return <Loading message="楽曲を読み込み中..." />;
-
   if (error) {
     return (
       <div className="page">
@@ -179,6 +211,28 @@ export function SongsPage() {
     );
   }
 
+  const handleSearch = (value: string) => {
+    setSearch(value);
+    setPage(1);
+  };
+
+  const handleGroupFilter = (groupId: string) => {
+    setSelectedGroupId(groupId);
+    setPage(1);
+  };
+
+  const handleExportCsv = async () => {
+    setIsExporting(true);
+    try {
+      await songsApi.exportCsv();
+      addToast('success', 'CSVをダウンロードしました');
+    } catch {
+      addToast('error', 'CSVエクスポートに失敗しました');
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
   return (
     <div className="page">
       <Toast toasts={toasts} onRemove={removeToast} />
@@ -186,10 +240,30 @@ export function SongsPage() {
       <div className="page-header">
         <h1>楽曲管理</h1>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <button
+            className="btn"
+            onClick={handleExportCsv}
+            disabled={isExporting}
+          >
+            {isExporting ? 'エクスポート中...' : 'CSVエクスポート'}
+          </button>
+          <button className="btn btn-primary" onClick={openCreateModal}>
+            新規登録
+          </button>
+        </div>
+      </div>
+
+      <div className="filter-section">
+        <SearchForm
+          initialValue={search}
+          onSearch={handleSearch}
+          placeholder="曲名・作詞・作曲で検索..."
+        />
+        <div className="filter-group">
+          <label>グループ:</label>
           <select
             value={selectedGroupId}
-            onChange={(e) => setSelectedGroupId(e.target.value)}
-            style={{ padding: '0.5rem' }}
+            onChange={(e) => handleGroupFilter(e.target.value)}
           >
             <option value="">全グループ</option>
             {groups?.map((group) => (
@@ -198,9 +272,6 @@ export function SongsPage() {
               </option>
             ))}
           </select>
-          <button className="btn btn-primary" onClick={openCreateModal}>
-            新規登録
-          </button>
         </div>
       </div>
 
@@ -216,40 +287,54 @@ export function SongsPage() {
             <th>操作</th>
           </tr>
         </thead>
-        <tbody>
-          {songs?.map((song) => (
-            <tr key={song.id}>
-              <td>{song.title}</td>
-              <td>{getGroupName(song.groupId)}</td>
-              <td>{song.lyricist}</td>
-              <td>{song.composer}</td>
-              <td>{song.arranger ?? '-'}</td>
-              <td>
-                <button
-                  className="btn btn-sm"
-                  onClick={() => openLyricsModal(song)}
-                >
-                  表示
-                </button>
-              </td>
-              <td>
-                <button
-                  className="btn btn-sm"
-                  onClick={() => openEditModal(song)}
-                >
-                  編集
-                </button>
-                <button
-                  className="btn btn-sm btn-danger"
-                  onClick={() => handleDelete(song)}
-                >
-                  削除
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
+        {isLoading ? (
+          <SkeletonTable rows={10} columns={7} />
+        ) : (
+          <tbody>
+            {songs?.map((song) => (
+              <tr key={song.id}>
+                <td>{song.title}</td>
+                <td>{getGroupName(song.groupId)}</td>
+                <td>{song.lyricist}</td>
+                <td>{song.composer}</td>
+                <td>{song.arranger ?? '-'}</td>
+                <td>
+                  <button
+                    className="btn btn-sm"
+                    onClick={() => openLyricsModal(song)}
+                  >
+                    表示
+                  </button>
+                </td>
+                <td>
+                  <button
+                    className="btn btn-sm"
+                    onClick={() => openEditModal(song)}
+                  >
+                    編集
+                  </button>
+                  <button
+                    className="btn btn-sm btn-danger"
+                    onClick={() => handleDelete(song)}
+                  >
+                    削除
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        )}
       </table>
+
+      {pagedData && (
+        <Pagination
+          currentPage={pagedData.page}
+          totalPages={pagedData.totalPages}
+          totalCount={pagedData.totalCount}
+          pageSize={pageSize}
+          onPageChange={setPage}
+        />
+      )}
 
       {/* 削除確認ダイアログ */}
       <ConfirmDialog
@@ -275,7 +360,7 @@ export function SongsPage() {
               <select
                 value={formData.groupId}
                 onChange={(e) => setFormData({ ...formData, groupId: e.target.value })}
-                required
+                className={formErrors.groupId ? 'input-error' : ''}
               >
                 <option value="">選択してください</option>
                 {groups?.map((group) => (
@@ -284,6 +369,7 @@ export function SongsPage() {
                   </option>
                 ))}
               </select>
+              {formErrors.groupId && <span className="error-text">{formErrors.groupId}</span>}
             </div>
           )}
           <div className="form-group">
@@ -292,8 +378,9 @@ export function SongsPage() {
               type="text"
               value={formData.title}
               onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-              required
+              className={formErrors.title ? 'input-error' : ''}
             />
+            {formErrors.title && <span className="error-text">{formErrors.title}</span>}
           </div>
           <div className="form-group">
             <label>作詞</label>
@@ -301,8 +388,9 @@ export function SongsPage() {
               type="text"
               value={formData.lyricist}
               onChange={(e) => setFormData({ ...formData, lyricist: e.target.value })}
-              required
+              className={formErrors.lyricist ? 'input-error' : ''}
             />
+            {formErrors.lyricist && <span className="error-text">{formErrors.lyricist}</span>}
           </div>
           <div className="form-group">
             <label>作曲</label>
@@ -310,8 +398,9 @@ export function SongsPage() {
               type="text"
               value={formData.composer}
               onChange={(e) => setFormData({ ...formData, composer: e.target.value })}
-              required
+              className={formErrors.composer ? 'input-error' : ''}
             />
+            {formErrors.composer && <span className="error-text">{formErrors.composer}</span>}
           </div>
           <div className="form-group">
             <label>編曲（任意）</label>
@@ -319,7 +408,9 @@ export function SongsPage() {
               type="text"
               value={formData.arranger ?? ''}
               onChange={(e) => setFormData({ ...formData, arranger: e.target.value || null })}
+              className={formErrors.arranger ? 'input-error' : ''}
             />
+            {formErrors.arranger && <span className="error-text">{formErrors.arranger}</span>}
           </div>
           <div className="form-group">
             <label>歌詞（任意）</label>
@@ -328,7 +419,9 @@ export function SongsPage() {
               onChange={(e) => setFormData({ ...formData, lyrics: e.target.value || null })}
               rows={10}
               style={{ width: '100%', fontFamily: 'inherit' }}
+              className={formErrors.lyrics ? 'input-error' : ''}
             />
+            {formErrors.lyrics && <span className="error-text">{formErrors.lyrics}</span>}
           </div>
           <div className="form-actions">
             <button type="button" className="btn" onClick={closeModal}>

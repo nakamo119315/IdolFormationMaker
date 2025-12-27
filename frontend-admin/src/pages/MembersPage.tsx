@@ -3,11 +3,12 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { membersApi, type MemberSearchParams } from '../api/members';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
-import { Loading } from '../components/common/Loading';
 import { ConfirmDialog } from '../components/common/ConfirmDialog';
 import { Toast, type ToastMessage } from '../components/common/Toast';
 import { Pagination } from '../components/common/Pagination';
 import { SearchForm } from '../components/common/SearchForm';
+import { SkeletonTable } from '../components/common/Skeleton';
+import { createMemberSchema, addMemberImageSchema } from '../validation/schemas';
 import type { Member, CreateMemberDto, UpdateMemberDto, AddMemberImageDto } from '../types';
 
 const PAGE_SIZE = 20;
@@ -28,7 +29,9 @@ export function MembersPage() {
     generation: null,
     isGraduated: false,
   });
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [imageUrl, setImageUrl] = useState('');
+  const [imageUrlError, setImageUrlError] = useState<string | null>(null);
 
   // 検索・フィルタ
   const [searchParams, setSearchParams] = useState<MemberSearchParams>({
@@ -39,6 +42,10 @@ export function MembersPage() {
   // 削除確認ダイアログ
   const [deleteTarget, setDeleteTarget] = useState<{ id: string; name: string } | null>(null);
   const [imageDeleteTarget, setImageDeleteTarget] = useState<{ memberId: string; imageId: string } | null>(null);
+
+  // 一括削除
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [isBulkDeleteOpen, setIsBulkDeleteOpen] = useState(false);
 
   // トースト
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
@@ -126,6 +133,49 @@ export function MembersPage() {
     },
   });
 
+  const deleteBulkMutation = useMutation({
+    mutationFn: (ids: string[]) => membersApi.deleteBulk(ids),
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: ['members'] });
+      setSelectedIds(new Set());
+      setIsBulkDeleteOpen(false);
+      addToast('success', `${data.deletedCount}件のメンバーを削除しました`);
+    },
+    onError: () => {
+      addToast('error', '一括削除に失敗しました');
+    },
+  });
+
+  const handleToggleSelect = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const handleSelectAll = () => {
+    if (selectedIds.size === members.length) {
+      setSelectedIds(new Set());
+    } else {
+      setSelectedIds(new Set(members.map((m) => m.id)));
+    }
+  };
+
+  const handleBulkDelete = () => {
+    if (selectedIds.size > 0) {
+      setIsBulkDeleteOpen(true);
+    }
+  };
+
+  const confirmBulkDelete = () => {
+    deleteBulkMutation.mutate(Array.from(selectedIds));
+  };
+
   const handleSearch = (search: string) => {
     setSearchParams((prev) => ({ ...prev, page: 1, search: search || undefined }));
   };
@@ -157,6 +207,7 @@ export function MembersPage() {
   const openCreateModal = () => {
     setEditingMember(null);
     setFormData({ name: '', birthDate: '', birthplace: null, penLightColor1: null, penLightColor2: null, groupId: null, generation: null, isGraduated: false });
+    setFormErrors({});
     setIsModalOpen(true);
   };
 
@@ -172,6 +223,7 @@ export function MembersPage() {
       generation: member.generation,
       isGraduated: member.isGraduated,
     });
+    setFormErrors({});
     setIsModalOpen(true);
   };
 
@@ -193,6 +245,20 @@ export function MembersPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const result = createMemberSchema.safeParse(formData);
+    if (!result.success) {
+      const errors: Record<string, string> = {};
+      result.error.issues.forEach((issue) => {
+        if (issue.path[0]) {
+          errors[issue.path[0] as string] = issue.message;
+        }
+      });
+      setFormErrors(errors);
+      return;
+    }
+
+    setFormErrors({});
     if (editingMember) {
       updateMutation.mutate({ id: editingMember.id, data: formData });
     } else {
@@ -212,10 +278,20 @@ export function MembersPage() {
 
   const handleAddImage = (memberId: string) => {
     if (!imageUrl.trim()) return;
+
     const isPrimary = editingMember?.images.length === 0;
+    const imageData = { url: imageUrl.trim(), isPrimary };
+    const result = addMemberImageSchema.safeParse(imageData);
+
+    if (!result.success) {
+      setImageUrlError(result.error.issues[0]?.message ?? '無効なURLです');
+      return;
+    }
+
+    setImageUrlError(null);
     addImageMutation.mutate({
       memberId,
-      data: { url: imageUrl.trim(), isPrimary },
+      data: imageData,
     });
   };
 
@@ -241,8 +317,6 @@ export function MembersPage() {
     });
     return Array.from(generations).sort((a, b) => a - b);
   };
-
-  if (isLoading) return <Loading message="メンバーを読み込み中..." />;
 
   if (error) {
     return (
@@ -292,6 +366,13 @@ export function MembersPage() {
           <button className="btn btn-export" onClick={handleExport} disabled={isExporting}>
             {isExporting ? 'エクスポート中...' : 'CSVエクスポート'}
           </button>
+          <button
+            className="btn btn-danger"
+            onClick={handleBulkDelete}
+            disabled={selectedIds.size === 0}
+          >
+            一括削除 ({selectedIds.size})
+          </button>
           <button className="btn btn-primary" onClick={openCreateModal}>
             新規登録
           </button>
@@ -301,6 +382,13 @@ export function MembersPage() {
       <table className="data-table">
         <thead>
           <tr>
+            <th className="checkbox-col">
+              <input
+                type="checkbox"
+                checked={members.length > 0 && selectedIds.size === members.length}
+                onChange={handleSelectAll}
+              />
+            </th>
             <th>画像</th>
             <th>名前</th>
             <th>生年月日</th>
@@ -312,46 +400,56 @@ export function MembersPage() {
             <th>操作</th>
           </tr>
         </thead>
-        <tbody>
-          {members.map((member) => {
-            const primaryImage = getPrimaryImage(member);
-            return (
-              <tr key={member.id}>
-                <td>
-                  {primaryImage ? (
-                    <img
-                      src={primaryImage.url}
-                      alt={member.name}
-                      className="member-thumbnail"
-                      onClick={() => openDetailModal(member)}
+        {isLoading ? (
+          <SkeletonTable rows={10} columns={8} showCheckbox showImage />
+        ) : (
+          <tbody>
+            {members.map((member) => {
+              const primaryImage = getPrimaryImage(member);
+              return (
+                <tr key={member.id}>
+                  <td className="checkbox-col">
+                    <input
+                      type="checkbox"
+                      checked={selectedIds.has(member.id)}
+                      onChange={() => handleToggleSelect(member.id)}
                     />
-                  ) : (
-                    <div className="member-thumbnail-placeholder" onClick={() => openDetailModal(member)}>
-                      No Image
-                    </div>
-                  )}
-                </td>
-                <td>{member.name}</td>
-                <td>{member.birthDate}</td>
-                <td>{member.birthplace ?? '-'}</td>
-                <td>
-                  {member.penLightColor1 && member.penLightColor2
-                    ? `${member.penLightColor1}×${member.penLightColor2}`
-                    : '-'}
-                </td>
-                <td>
-                  {groups?.find((g) => g.id === member.groupId)?.name ?? '-'}
-                </td>
-                <td>{member.generation ? `${member.generation}期` : '-'}</td>
-                <td>{member.isGraduated ? '卒業' : '現役'}</td>
-                <td>
-                  <button
-                    className="btn btn-sm"
-                    onClick={() => openDetailModal(member)}
-                  >
-                    詳細
-                  </button>
-                  <button
+                  </td>
+                  <td>
+                    {primaryImage ? (
+                      <img
+                        src={primaryImage.url}
+                        alt={member.name}
+                        className="member-thumbnail"
+                        onClick={() => openDetailModal(member)}
+                      />
+                    ) : (
+                      <div className="member-thumbnail-placeholder" onClick={() => openDetailModal(member)}>
+                        No Image
+                      </div>
+                    )}
+                  </td>
+                  <td>{member.name}</td>
+                  <td>{member.birthDate}</td>
+                  <td>{member.birthplace ?? '-'}</td>
+                  <td>
+                    {member.penLightColor1 && member.penLightColor2
+                      ? `${member.penLightColor1}×${member.penLightColor2}`
+                      : '-'}
+                  </td>
+                  <td>
+                    {groups?.find((g) => g.id === member.groupId)?.name ?? '-'}
+                  </td>
+                  <td>{member.generation ? `${member.generation}期` : '-'}</td>
+                  <td>{member.isGraduated ? '卒業' : '現役'}</td>
+                  <td>
+                    <button
+                      className="btn btn-sm"
+                      onClick={() => openDetailModal(member)}
+                    >
+                      詳細
+                    </button>
+                    <button
                     className="btn btn-sm"
                     onClick={() => openEditModal(member)}
                   >
@@ -367,7 +465,8 @@ export function MembersPage() {
               </tr>
             );
           })}
-        </tbody>
+          </tbody>
+        )}
       </table>
 
       {pagedResult && (
@@ -401,6 +500,18 @@ export function MembersPage() {
         onConfirm={confirmDeleteImage}
         onCancel={() => setImageDeleteTarget(null)}
         isLoading={deleteImageMutation.isPending}
+        variant="danger"
+      />
+
+      {/* 一括削除確認ダイアログ */}
+      <ConfirmDialog
+        isOpen={isBulkDeleteOpen}
+        title="メンバーの一括削除"
+        message={`選択した${selectedIds.size}件のメンバーを削除してもよろしいですか？この操作は取り消せません。`}
+        confirmLabel="削除"
+        onConfirm={confirmBulkDelete}
+        onCancel={() => setIsBulkDeleteOpen(false)}
+        isLoading={deleteBulkMutation.isPending}
         variant="danger"
       />
 
@@ -453,8 +564,9 @@ export function MembersPage() {
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              required
+              className={formErrors.name ? 'input-error' : ''}
             />
+            {formErrors.name && <span className="error-text">{formErrors.name}</span>}
           </div>
           <div className="form-group">
             <label>生年月日</label>
@@ -462,8 +574,9 @@ export function MembersPage() {
               type="date"
               value={formData.birthDate}
               onChange={(e) => setFormData({ ...formData, birthDate: e.target.value })}
-              required
+              className={formErrors.birthDate ? 'input-error' : ''}
             />
+            {formErrors.birthDate && <span className="error-text">{formErrors.birthDate}</span>}
           </div>
           <div className="form-group">
             <label>出身地</label>
@@ -472,7 +585,9 @@ export function MembersPage() {
               value={formData.birthplace ?? ''}
               onChange={(e) => setFormData({ ...formData, birthplace: e.target.value || null })}
               placeholder="例: 東京都"
+              className={formErrors.birthplace ? 'input-error' : ''}
             />
+            {formErrors.birthplace && <span className="error-text">{formErrors.birthplace}</span>}
           </div>
           <div className="form-group">
             <label>サイリウムカラー1</label>
@@ -481,7 +596,9 @@ export function MembersPage() {
               value={formData.penLightColor1 ?? ''}
               onChange={(e) => setFormData({ ...formData, penLightColor1: e.target.value || null })}
               placeholder="例: ピンク"
+              className={formErrors.penLightColor1 ? 'input-error' : ''}
             />
+            {formErrors.penLightColor1 && <span className="error-text">{formErrors.penLightColor1}</span>}
           </div>
           <div className="form-group">
             <label>サイリウムカラー2</label>
@@ -490,7 +607,9 @@ export function MembersPage() {
               value={formData.penLightColor2 ?? ''}
               onChange={(e) => setFormData({ ...formData, penLightColor2: e.target.value || null })}
               placeholder="例: 白"
+              className={formErrors.penLightColor2 ? 'input-error' : ''}
             />
+            {formErrors.penLightColor2 && <span className="error-text">{formErrors.penLightColor2}</span>}
           </div>
           <div className="form-group">
             <label>所属グループ</label>
@@ -516,7 +635,9 @@ export function MembersPage() {
               value={formData.generation ?? ''}
               onChange={(e) => setFormData({ ...formData, generation: e.target.value ? parseInt(e.target.value) : null })}
               placeholder="例: 1"
+              className={formErrors.generation ? 'input-error' : ''}
             />
+            {formErrors.generation && <span className="error-text">{formErrors.generation}</span>}
           </div>
           <div className="form-group">
             <label className="checkbox-label">
@@ -548,12 +669,16 @@ export function MembersPage() {
                   </div>
                 ))}
                 <div className="image-add-form">
-                  <input
-                    type="url"
-                    placeholder="画像URLを入力"
-                    value={imageUrl}
-                    onChange={(e) => setImageUrl(e.target.value)}
-                  />
+                  <div className="image-url-input-wrapper">
+                    <input
+                      type="url"
+                      placeholder="画像URLを入力"
+                      value={imageUrl}
+                      onChange={(e) => { setImageUrl(e.target.value); setImageUrlError(null); }}
+                      className={imageUrlError ? 'input-error' : ''}
+                    />
+                    {imageUrlError && <span className="error-text">{imageUrlError}</span>}
+                  </div>
                   <button
                     type="button"
                     className="btn btn-sm"

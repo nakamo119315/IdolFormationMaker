@@ -44,6 +44,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<CreateMemberHandler>();
         services.AddScoped<UpdateMemberHandler>();
         services.AddScoped<DeleteMemberHandler>();
+        services.AddScoped<DeleteMembersBulkHandler>();
         services.AddScoped<AddMemberImageHandler>();
         services.AddScoped<DeleteMemberImageHandler>();
         services.AddScoped<GetMemberHandler>();
@@ -55,6 +56,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<CreateGroupHandler>();
         services.AddScoped<UpdateGroupHandler>();
         services.AddScoped<DeleteGroupHandler>();
+        services.AddScoped<DeleteGroupsBulkHandler>();
         services.AddScoped<GetGroupHandler>();
         services.AddScoped<GetAllGroupsHandler>();
         services.AddScoped<GetGroupsPagedHandler>();
@@ -70,6 +72,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<CreateSongHandler>();
         services.AddScoped<UpdateSongHandler>();
         services.AddScoped<DeleteSongHandler>();
+        services.AddScoped<DeleteSongsBulkHandler>();
         services.AddScoped<GetSongHandler>();
         services.AddScoped<GetAllSongsHandler>();
         services.AddScoped<GetSongsByGroupHandler>();
