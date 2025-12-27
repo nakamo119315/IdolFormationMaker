@@ -10,6 +10,7 @@ import { setlistsApi } from '../api/setlists';
 import { songsApi } from '../api/songs';
 import { groupsApi } from '../api/groups';
 import { Loading } from '../components/common/Loading';
+import { matchesSearch } from '../utils/textNormalize';
 import type { CreateSetlistItemDto, Member } from '../types';
 
 interface SetlistItemForm extends CreateSetlistItemDto {
@@ -153,9 +154,9 @@ export function SetlistCreatePage() {
   useEffect(() => {
     if (!songs || !songSearch) return;
     const filtered = songs.filter((s) => {
-      const matchesGroup = !groupId || s.groupId === groupId;
-      const matchesSearch = s.title.toLowerCase().includes(songSearch.toLowerCase());
-      return matchesGroup && matchesSearch;
+      const matchesGroupFilter = !groupId || s.groupId === groupId;
+      const matchesSearchQuery = matchesSearch(s.title, songSearch);
+      return matchesGroupFilter && matchesSearchQuery;
     });
     if (filtered.length > 0) {
       setSelectedSongId(filtered[0].id);
@@ -250,9 +251,9 @@ export function SetlistCreatePage() {
   if (isEdit && setlistLoading) return <Loading />;
 
   const filteredSongs = songs?.filter((s) => {
-    const matchesGroup = !groupId || s.groupId === groupId;
-    const matchesSearch = !songSearch || s.title.toLowerCase().includes(songSearch.toLowerCase());
-    return matchesGroup && matchesSearch;
+    const matchesGroupFilter = !groupId || s.groupId === groupId;
+    const matchesSearchQuery = !songSearch || matchesSearch(s.title, songSearch);
+    return matchesGroupFilter && matchesSearchQuery;
   }) || [];
 
   return (
