@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { membersApi } from '../api/members';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
+import { Loading } from '../components/common/Loading';
+import { ConfirmDialog } from '../components/common/ConfirmDialog';
+import { Toast, type ToastMessage } from '../components/common/Toast';
 import type { Member, CreateMemberDto, UpdateMemberDto, AddMemberImageDto } from '../types';
 
 export function MembersPage() {
@@ -23,7 +26,23 @@ export function MembersPage() {
   });
   const [imageUrl, setImageUrl] = useState('');
 
-  const { data: members, isLoading } = useQuery({
+  // 削除確認ダイアログ
+  const [deleteTarget, setDeleteTarget] = useState<{ id: string; name: string } | null>(null);
+  const [imageDeleteTarget, setImageDeleteTarget] = useState<{ memberId: string; imageId: string } | null>(null);
+
+  // トースト
+  const [toasts, setToasts] = useState<ToastMessage[]>([]);
+
+  const addToast = useCallback((type: ToastMessage['type'], message: string) => {
+    const id = Date.now().toString();
+    setToasts((prev) => [...prev, { id, type, message }]);
+  }, []);
+
+  const removeToast = useCallback((id: string) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id));
+  }, []);
+
+  const { data: members, isLoading, error } = useQuery({
     queryKey: ['members'],
     queryFn: membersApi.getAll,
   });
@@ -38,6 +57,10 @@ export function MembersPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['members'] });
       closeModal();
+      addToast('success', 'メンバーを登録しました');
+    },
+    onError: () => {
+      addToast('error', 'メンバーの登録に失敗しました');
     },
   });
 
@@ -47,6 +70,10 @@ export function MembersPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['members'] });
       closeModal();
+      addToast('success', 'メンバー情報を更新しました');
+    },
+    onError: () => {
+      addToast('error', 'メンバー情報の更新に失敗しました');
     },
   });
 
@@ -54,6 +81,11 @@ export function MembersPage() {
     mutationFn: membersApi.delete,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['members'] });
+      setDeleteTarget(null);
+      addToast('success', 'メンバーを削除しました');
+    },
+    onError: () => {
+      addToast('error', 'メンバーの削除に失敗しました');
     },
   });
 
@@ -63,6 +95,10 @@ export function MembersPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['members'] });
       setImageUrl('');
+      addToast('success', '画像を追加しました');
+    },
+    onError: () => {
+      addToast('error', '画像の追加に失敗しました');
     },
   });
 
@@ -71,6 +107,11 @@ export function MembersPage() {
       membersApi.deleteImage(memberId, imageId),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['members'] });
+      setImageDeleteTarget(null);
+      addToast('success', '画像を削除しました');
+    },
+    onError: () => {
+      addToast('error', '画像の削除に失敗しました');
     },
   });
 
@@ -120,9 +161,13 @@ export function MembersPage() {
     }
   };
 
-  const handleDelete = (id: string) => {
-    if (confirm('削除してもよろしいですか？')) {
-      deleteMutation.mutate(id);
+  const handleDelete = (member: Member) => {
+    setDeleteTarget({ id: member.id, name: member.name });
+  };
+
+  const confirmDelete = () => {
+    if (deleteTarget) {
+      deleteMutation.mutate(deleteTarget.id);
     }
   };
 
@@ -136,8 +181,12 @@ export function MembersPage() {
   };
 
   const handleDeleteImage = (memberId: string, imageId: string) => {
-    if (confirm('この画像を削除しますか？')) {
-      deleteImageMutation.mutate({ memberId, imageId });
+    setImageDeleteTarget({ memberId, imageId });
+  };
+
+  const confirmDeleteImage = () => {
+    if (imageDeleteTarget) {
+      deleteImageMutation.mutate(imageDeleteTarget);
     }
   };
 
@@ -145,10 +194,25 @@ export function MembersPage() {
     return member.images.find(img => img.isPrimary) ?? member.images[0];
   };
 
-  if (isLoading) return <div>読み込み中...</div>;
+  if (isLoading) return <Loading message="メンバーを読み込み中..." />;
+
+  if (error) {
+    return (
+      <div className="page">
+        <div className="error-message">
+          <p>データの読み込みに失敗しました</p>
+          <button className="btn btn-primary" onClick={() => queryClient.invalidateQueries({ queryKey: ['members'] })}>
+            再読み込み
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="page">
+      <Toast toasts={toasts} onRemove={removeToast} />
+
       <div className="page-header">
         <h1>メンバー管理</h1>
         <button className="btn btn-primary" onClick={openCreateModal}>
@@ -217,7 +281,7 @@ export function MembersPage() {
                   </button>
                   <button
                     className="btn btn-sm btn-danger"
-                    onClick={() => handleDelete(member.id)}
+                    onClick={() => handleDelete(member)}
                   >
                     削除
                   </button>
@@ -227,6 +291,30 @@ export function MembersPage() {
           })}
         </tbody>
       </table>
+
+      {/* 削除確認ダイアログ */}
+      <ConfirmDialog
+        isOpen={deleteTarget !== null}
+        title="メンバーの削除"
+        message={`「${deleteTarget?.name}」を削除してもよろしいですか？この操作は取り消せません。`}
+        confirmLabel="削除"
+        onConfirm={confirmDelete}
+        onCancel={() => setDeleteTarget(null)}
+        isLoading={deleteMutation.isPending}
+        variant="danger"
+      />
+
+      {/* 画像削除確認ダイアログ */}
+      <ConfirmDialog
+        isOpen={imageDeleteTarget !== null}
+        title="画像の削除"
+        message="この画像を削除してもよろしいですか？"
+        confirmLabel="削除"
+        onConfirm={confirmDeleteImage}
+        onCancel={() => setImageDeleteTarget(null)}
+        isLoading={deleteImageMutation.isPending}
+        variant="danger"
+      />
 
       {/* 詳細モーダル */}
       <Modal
@@ -382,9 +470,9 @@ export function MembersPage() {
                     type="button"
                     className="btn btn-sm"
                     onClick={() => handleAddImage(editingMember.id)}
-                    disabled={!imageUrl.trim()}
+                    disabled={!imageUrl.trim() || addImageMutation.isPending}
                   >
-                    追加
+                    {addImageMutation.isPending ? '追加中...' : '追加'}
                   </button>
                 </div>
               </div>
@@ -395,8 +483,12 @@ export function MembersPage() {
             <button type="button" className="btn" onClick={closeModal}>
               キャンセル
             </button>
-            <button type="submit" className="btn btn-primary">
-              {editingMember ? '更新' : '登録'}
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={createMutation.isPending || updateMutation.isPending}
+            >
+              {createMutation.isPending || updateMutation.isPending ? '保存中...' : (editingMember ? '更新' : '登録')}
             </button>
           </div>
         </form>

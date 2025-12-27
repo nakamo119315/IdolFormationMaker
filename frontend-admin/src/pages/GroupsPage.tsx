@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
+import { Loading } from '../components/common/Loading';
+import { ConfirmDialog } from '../components/common/ConfirmDialog';
+import { Toast, type ToastMessage } from '../components/common/Toast';
 import type { GroupSummary, CreateGroupDto, UpdateGroupDto } from '../types';
 
 export function GroupsPage() {
@@ -14,7 +17,22 @@ export function GroupsPage() {
     hasGeneration: false,
   });
 
-  const { data: groups, isLoading } = useQuery({
+  // 削除確認ダイアログ
+  const [deleteTarget, setDeleteTarget] = useState<{ id: string; name: string } | null>(null);
+
+  // トースト
+  const [toasts, setToasts] = useState<ToastMessage[]>([]);
+
+  const addToast = useCallback((type: ToastMessage['type'], message: string) => {
+    const id = Date.now().toString();
+    setToasts((prev) => [...prev, { id, type, message }]);
+  }, []);
+
+  const removeToast = useCallback((id: string) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id));
+  }, []);
+
+  const { data: groups, isLoading, error } = useQuery({
     queryKey: ['groups'],
     queryFn: groupsApi.getAll,
   });
@@ -24,6 +42,10 @@ export function GroupsPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['groups'] });
       closeModal();
+      addToast('success', 'グループを登録しました');
+    },
+    onError: () => {
+      addToast('error', 'グループの登録に失敗しました');
     },
   });
 
@@ -33,6 +55,10 @@ export function GroupsPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['groups'] });
       closeModal();
+      addToast('success', 'グループ情報を更新しました');
+    },
+    onError: () => {
+      addToast('error', 'グループ情報の更新に失敗しました');
     },
   });
 
@@ -40,6 +66,11 @@ export function GroupsPage() {
     mutationFn: groupsApi.delete,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['groups'] });
+      setDeleteTarget(null);
+      addToast('success', 'グループを削除しました');
+    },
+    onError: () => {
+      addToast('error', 'グループの削除に失敗しました');
     },
   });
 
@@ -73,16 +104,35 @@ export function GroupsPage() {
     }
   };
 
-  const handleDelete = (id: string) => {
-    if (confirm('削除してもよろしいですか？')) {
-      deleteMutation.mutate(id);
+  const handleDelete = (group: GroupSummary) => {
+    setDeleteTarget({ id: group.id, name: group.name });
+  };
+
+  const confirmDelete = () => {
+    if (deleteTarget) {
+      deleteMutation.mutate(deleteTarget.id);
     }
   };
 
-  if (isLoading) return <div>読み込み中...</div>;
+  if (isLoading) return <Loading message="グループを読み込み中..." />;
+
+  if (error) {
+    return (
+      <div className="page">
+        <div className="error-message">
+          <p>データの読み込みに失敗しました</p>
+          <button className="btn btn-primary" onClick={() => queryClient.invalidateQueries({ queryKey: ['groups'] })}>
+            再読み込み
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="page">
+      <Toast toasts={toasts} onRemove={removeToast} />
+
       <div className="page-header">
         <h1>グループ管理</h1>
         <button className="btn btn-primary" onClick={openCreateModal}>
@@ -116,7 +166,7 @@ export function GroupsPage() {
                 </button>
                 <button
                   className="btn btn-sm btn-danger"
-                  onClick={() => handleDelete(group.id)}
+                  onClick={() => handleDelete(group)}
                 >
                   削除
                 </button>
@@ -125,6 +175,18 @@ export function GroupsPage() {
           ))}
         </tbody>
       </table>
+
+      {/* 削除確認ダイアログ */}
+      <ConfirmDialog
+        isOpen={deleteTarget !== null}
+        title="グループの削除"
+        message={`「${deleteTarget?.name}」を削除してもよろしいですか？所属メンバーのグループ情報も解除されます。`}
+        confirmLabel="削除"
+        onConfirm={confirmDelete}
+        onCancel={() => setDeleteTarget(null)}
+        isLoading={deleteMutation.isPending}
+        variant="danger"
+      />
 
       <Modal
         isOpen={isModalOpen}
@@ -163,8 +225,12 @@ export function GroupsPage() {
             <button type="button" className="btn" onClick={closeModal}>
               キャンセル
             </button>
-            <button type="submit" className="btn btn-primary">
-              {editingGroup ? '更新' : '登録'}
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={createMutation.isPending || updateMutation.isPending}
+            >
+              {createMutation.isPending || updateMutation.isPending ? '保存中...' : (editingGroup ? '更新' : '登録')}
             </button>
           </div>
         </form>

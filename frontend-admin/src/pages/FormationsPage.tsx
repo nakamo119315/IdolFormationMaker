@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { formationsApi } from '../api/formations';
 import { membersApi } from '../api/members';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
+import { Loading } from '../components/common/Loading';
+import { ConfirmDialog } from '../components/common/ConfirmDialog';
+import { Toast, type ToastMessage } from '../components/common/Toast';
 import { FormationEditor } from '../components/formations/FormationEditor';
 import type { Formation, CreateFormationDto, UpdateFormationDto, Member } from '../types';
 
@@ -19,7 +22,22 @@ export function FormationsPage() {
     positions: [],
   });
 
-  const { data: formations, isLoading } = useQuery({
+  // 削除確認ダイアログ
+  const [deleteTarget, setDeleteTarget] = useState<{ id: string; name: string } | null>(null);
+
+  // トースト
+  const [toasts, setToasts] = useState<ToastMessage[]>([]);
+
+  const addToast = useCallback((type: ToastMessage['type'], message: string) => {
+    const id = Date.now().toString();
+    setToasts((prev) => [...prev, { id, type, message }]);
+  }, []);
+
+  const removeToast = useCallback((id: string) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id));
+  }, []);
+
+  const { data: formations, isLoading, error } = useQuery({
     queryKey: ['formations'],
     queryFn: formationsApi.getAll,
   });
@@ -39,6 +57,10 @@ export function FormationsPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['formations'] });
       closeModal();
+      addToast('success', 'フォーメーションを登録しました');
+    },
+    onError: () => {
+      addToast('error', 'フォーメーションの登録に失敗しました');
     },
   });
 
@@ -48,6 +70,10 @@ export function FormationsPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['formations'] });
       closeModal();
+      addToast('success', 'フォーメーションを更新しました');
+    },
+    onError: () => {
+      addToast('error', 'フォーメーションの更新に失敗しました');
     },
   });
 
@@ -55,6 +81,11 @@ export function FormationsPage() {
     mutationFn: formationsApi.delete,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['formations'] });
+      setDeleteTarget(null);
+      addToast('success', 'フォーメーションを削除しました');
+    },
+    onError: () => {
+      addToast('error', 'フォーメーションの削除に失敗しました');
     },
   });
 
@@ -84,7 +115,7 @@ export function FormationsPage() {
             memberId: p.memberId,
             positionNumber: p.positionNumber,
             row: p.row,
-            column: idx + 1,  // 行内で1から順に振り直す
+            column: idx + 1,
           }));
       })
       .sort((a, b) => a.positionNumber - b.positionNumber);
@@ -121,9 +152,13 @@ export function FormationsPage() {
     }
   };
 
-  const handleDelete = (id: string) => {
-    if (confirm('削除してもよろしいですか？')) {
-      deleteMutation.mutate(id);
+  const handleDelete = (formation: Formation) => {
+    setDeleteTarget({ id: formation.id, name: formation.name });
+  };
+
+  const confirmDelete = () => {
+    if (deleteTarget) {
+      deleteMutation.mutate(deleteTarget.id);
     }
   };
 
@@ -159,10 +194,25 @@ export function FormationsPage() {
     return primaryImage?.url ?? null;
   };
 
-  if (isLoading) return <div>読み込み中...</div>;
+  if (isLoading) return <Loading message="フォーメーションを読み込み中..." />;
+
+  if (error) {
+    return (
+      <div className="page">
+        <div className="error-message">
+          <p>データの読み込みに失敗しました</p>
+          <button className="btn btn-primary" onClick={() => queryClient.invalidateQueries({ queryKey: ['formations'] })}>
+            再読み込み
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="page">
+      <Toast toasts={toasts} onRemove={removeToast} />
+
       <div className="page-header">
         <h1>フォーメーション管理</h1>
         <button className="btn btn-primary" onClick={openCreateModal}>
@@ -200,7 +250,7 @@ export function FormationsPage() {
                 </button>
                 <button
                   className="btn btn-sm btn-danger"
-                  onClick={() => handleDelete(formation.id)}
+                  onClick={() => handleDelete(formation)}
                 >
                   削除
                 </button>
@@ -209,6 +259,18 @@ export function FormationsPage() {
           ))}
         </tbody>
       </table>
+
+      {/* 削除確認ダイアログ */}
+      <ConfirmDialog
+        isOpen={deleteTarget !== null}
+        title="フォーメーションの削除"
+        message={`「${deleteTarget?.name}」を削除してもよろしいですか？`}
+        confirmLabel="削除"
+        onConfirm={confirmDelete}
+        onCancel={() => setDeleteTarget(null)}
+        isLoading={deleteMutation.isPending}
+        variant="danger"
+      />
 
       {/* 詳細モーダル（フォーメーション図） */}
       <Modal
@@ -311,8 +373,12 @@ export function FormationsPage() {
             <button type="button" className="btn" onClick={closeModal}>
               キャンセル
             </button>
-            <button type="submit" className="btn btn-primary">
-              {editingFormation ? '更新' : '登録'}
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={createMutation.isPending || updateMutation.isPending}
+            >
+              {createMutation.isPending || updateMutation.isPending ? '保存中...' : (editingFormation ? '更新' : '登録')}
             </button>
           </div>
         </form>

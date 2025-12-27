@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { songsApi } from '../api/songs';
 import { groupsApi } from '../api/groups';
 import { Modal } from '../components/common/Modal';
+import { Loading } from '../components/common/Loading';
+import { ConfirmDialog } from '../components/common/ConfirmDialog';
+import { Toast, type ToastMessage } from '../components/common/Toast';
 import type { SongSummary, CreateSongDto, UpdateSongDto } from '../types';
 
 export function SongsPage() {
@@ -21,12 +24,27 @@ export function SongsPage() {
     lyrics: null,
   });
 
+  // 削除確認ダイアログ
+  const [deleteTarget, setDeleteTarget] = useState<{ id: string; title: string } | null>(null);
+
+  // トースト
+  const [toasts, setToasts] = useState<ToastMessage[]>([]);
+
+  const addToast = useCallback((type: ToastMessage['type'], message: string) => {
+    const id = Date.now().toString();
+    setToasts((prev) => [...prev, { id, type, message }]);
+  }, []);
+
+  const removeToast = useCallback((id: string) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id));
+  }, []);
+
   const { data: groups } = useQuery({
     queryKey: ['groups'],
     queryFn: groupsApi.getAll,
   });
 
-  const { data: songs, isLoading } = useQuery({
+  const { data: songs, isLoading, error } = useQuery({
     queryKey: ['songs', selectedGroupId],
     queryFn: () => selectedGroupId ? songsApi.getByGroup(selectedGroupId) : songsApi.getAll(),
   });
@@ -36,6 +54,10 @@ export function SongsPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['songs'] });
       closeModal();
+      addToast('success', '楽曲を登録しました');
+    },
+    onError: () => {
+      addToast('error', '楽曲の登録に失敗しました');
     },
   });
 
@@ -45,6 +67,10 @@ export function SongsPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['songs'] });
       closeModal();
+      addToast('success', '楽曲情報を更新しました');
+    },
+    onError: () => {
+      addToast('error', '楽曲情報の更新に失敗しました');
     },
   });
 
@@ -52,6 +78,11 @@ export function SongsPage() {
     mutationFn: songsApi.delete,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['songs'] });
+      setDeleteTarget(null);
+      addToast('success', '楽曲を削除しました');
+    },
+    onError: () => {
+      addToast('error', '楽曲の削除に失敗しました');
     },
   });
 
@@ -69,23 +100,31 @@ export function SongsPage() {
   };
 
   const openEditModal = async (song: SongSummary) => {
-    const fullSong = await songsApi.getById(song.id);
-    setEditingSong(song);
-    setFormData({
-      groupId: song.groupId,
-      title: fullSong.title,
-      lyricist: fullSong.lyricist,
-      composer: fullSong.composer,
-      arranger: fullSong.arranger,
-      lyrics: fullSong.lyrics,
-    });
-    setIsModalOpen(true);
+    try {
+      const fullSong = await songsApi.getById(song.id);
+      setEditingSong(song);
+      setFormData({
+        groupId: song.groupId,
+        title: fullSong.title,
+        lyricist: fullSong.lyricist,
+        composer: fullSong.composer,
+        arranger: fullSong.arranger,
+        lyrics: fullSong.lyrics,
+      });
+      setIsModalOpen(true);
+    } catch {
+      addToast('error', '楽曲情報の取得に失敗しました');
+    }
   };
 
   const openLyricsModal = async (song: SongSummary) => {
-    const fullSong = await songsApi.getById(song.id);
-    setCurrentLyrics({ title: fullSong.title, lyrics: fullSong.lyrics || '' });
-    setIsLyricsModalOpen(true);
+    try {
+      const fullSong = await songsApi.getById(song.id);
+      setCurrentLyrics({ title: fullSong.title, lyrics: fullSong.lyrics || '' });
+      setIsLyricsModalOpen(true);
+    } catch {
+      addToast('error', '歌詞の取得に失敗しました');
+    }
   };
 
   const closeModal = () => {
@@ -111,9 +150,13 @@ export function SongsPage() {
     }
   };
 
-  const handleDelete = (id: string) => {
-    if (confirm('削除してもよろしいですか？')) {
-      deleteMutation.mutate(id);
+  const handleDelete = (song: SongSummary) => {
+    setDeleteTarget({ id: song.id, title: song.title });
+  };
+
+  const confirmDelete = () => {
+    if (deleteTarget) {
+      deleteMutation.mutate(deleteTarget.id);
     }
   };
 
@@ -121,10 +164,25 @@ export function SongsPage() {
     return groups?.find((g) => g.id === groupId)?.name ?? '-';
   };
 
-  if (isLoading) return <div>読み込み中...</div>;
+  if (isLoading) return <Loading message="楽曲を読み込み中..." />;
+
+  if (error) {
+    return (
+      <div className="page">
+        <div className="error-message">
+          <p>データの読み込みに失敗しました</p>
+          <button className="btn btn-primary" onClick={() => queryClient.invalidateQueries({ queryKey: ['songs'] })}>
+            再読み込み
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="page">
+      <Toast toasts={toasts} onRemove={removeToast} />
+
       <div className="page-header">
         <h1>楽曲管理</h1>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -183,7 +241,7 @@ export function SongsPage() {
                 </button>
                 <button
                   className="btn btn-sm btn-danger"
-                  onClick={() => handleDelete(song.id)}
+                  onClick={() => handleDelete(song)}
                 >
                   削除
                 </button>
@@ -192,6 +250,18 @@ export function SongsPage() {
           ))}
         </tbody>
       </table>
+
+      {/* 削除確認ダイアログ */}
+      <ConfirmDialog
+        isOpen={deleteTarget !== null}
+        title="楽曲の削除"
+        message={`「${deleteTarget?.title}」を削除してもよろしいですか？`}
+        confirmLabel="削除"
+        onConfirm={confirmDelete}
+        onCancel={() => setDeleteTarget(null)}
+        isLoading={deleteMutation.isPending}
+        variant="danger"
+      />
 
       <Modal
         isOpen={isModalOpen}
@@ -264,8 +334,12 @@ export function SongsPage() {
             <button type="button" className="btn" onClick={closeModal}>
               キャンセル
             </button>
-            <button type="submit" className="btn btn-primary">
-              {editingSong ? '更新' : '登録'}
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={createMutation.isPending || updateMutation.isPending}
+            >
+              {createMutation.isPending || updateMutation.isPending ? '保存中...' : (editingSong ? '更新' : '登録')}
             </button>
           </div>
         </form>
