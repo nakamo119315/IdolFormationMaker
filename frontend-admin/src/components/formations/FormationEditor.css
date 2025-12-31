@@ -226,7 +226,7 @@
   left: -6px;
   width: 18px;
   height: 18px;
-  background: #666;
+  background: #999;
   color: white;
   border: none;
   border-radius: 50%;
@@ -235,13 +235,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 0.2s;
-  z-index: 2;
-}
-
-.placed-member:hover .remove-btn {
   opacity: 1;
+  transition: background 0.2s;
+  z-index: 2;
 }
 
 .remove-btn:hover {
