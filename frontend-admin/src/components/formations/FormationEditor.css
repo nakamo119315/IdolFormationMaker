@@ -168,18 +168,23 @@
 }
 
 /* 配置済みメンバー */
-.placed-member {
+.placed-member-wrapper {
   position: relative;
   width: 46px;
   height: 46px;
-  cursor: grab;
-  touch-action: none; /* タッチ操作でのスクロールを無効化 */
-  -webkit-user-select: none;
-  user-select: none;
 }
 
-.placed-member.dragging {
+.placed-member-wrapper.dragging {
   opacity: 0.5;
+}
+
+.placed-member {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .position-badge {
@@ -350,7 +355,7 @@
     height: 36px;
   }
 
-  .placed-member {
+  .placed-member-wrapper {
     width: 32px;
     height: 32px;
   }

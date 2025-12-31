@@ -71,32 +71,36 @@ function PlacedMember({
 
   const imageUrl = member.images.find(img => img.isPrimary)?.url ?? member.images[0]?.url;
 
+  const handleRemove = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onRemove();
+  };
+
   return (
-    <div
-      ref={setNodeRef}
-      {...listeners}
-      {...attributes}
-      className={`placed-member ${isDragging ? 'dragging' : ''}`}
-    >
-      <div className="position-badge">{positionNumber}</div>
-      {imageUrl ? (
-        <img src={imageUrl} alt={member.name} className="placed-thumb" />
-      ) : (
-        <div className="placed-thumb-placeholder">{member.name.charAt(0)}</div>
-      )}
+    <div className={`placed-member-wrapper ${isDragging ? 'dragging' : ''}`}>
+      {/* 削除ボタン - ドラッグ領域の外 */}
       <button
         type="button"
         className="remove-btn"
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          onRemove();
-        }}
-        onPointerDown={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-        }}
+        onClick={handleRemove}
+        onTouchEnd={handleRemove}
       >×</button>
+
+      {/* ドラッグ可能な領域 */}
+      <div
+        ref={setNodeRef}
+        {...listeners}
+        {...attributes}
+        className="placed-member"
+      >
+        <div className="position-badge">{positionNumber}</div>
+        {imageUrl ? (
+          <img src={imageUrl} alt={member.name} className="placed-thumb" draggable={false} />
+        ) : (
+          <div className="placed-thumb-placeholder">{member.name.charAt(0)}</div>
+        )}
+      </div>
     </div>
   );
 }
