@@ -3,6 +3,7 @@ using FluentValidation.AspNetCore;
 using IdolManagement.Application.Members.Validators;
 using IdolManagement.Infrastructure.DependencyInjection;
 using IdolManagement.Infrastructure.Persistence;
+using IdolManagement.Presentation.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,11 +13,18 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddInfrastructure(connectionString);
 builder.Services.AddApplicationServices();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+    });
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<CreateMemberDtoValidator>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// グローバル例外ハンドラー
+builder.Services.AddTransient<GlobalExceptionHandler>();
 
 // CORS設定: 環境変数 ALLOWED_ORIGINS でカンマ区切りで追加可能
 var allowedOrigins = builder.Configuration["AllowedOrigins"]?.Split(',') ?? [];
@@ -46,6 +54,9 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.EnsureCreated();
 }
+
+// グローバル例外ハンドラーを最初に配置
+app.UseMiddleware<GlobalExceptionHandler>();
 
 if (app.Environment.IsDevelopment())
 {
