@@ -458,7 +458,7 @@ function ConversationForm({ conversation, members, isNewMode, id }: Conversation
 
 export function ConversationDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const isNewMode = id === 'new';
+  const isNewMode = !id;
 
   const { data: conversation, isLoading } = useQuery({
     queryKey: ['conversation', id],
