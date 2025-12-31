@@ -30,7 +30,7 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, string connectionString)
     {
         services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlite(connectionString));
+            options.UseNpgsql(connectionString));
 
         services.AddScoped<IMemberRepository, MemberRepository>();
         services.AddScoped<IGroupRepository, GroupRepository>();

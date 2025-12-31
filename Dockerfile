@@ -23,15 +23,12 @@ RUN dotnet publish -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 
-# Create data directory for SQLite
-RUN mkdir -p /data
-
 COPY --from=build /app/publish .
 
 # Set environment variables
 ENV ASPNETCORE_URLS=http://+:10000
 ENV ASPNETCORE_ENVIRONMENT=Production
-ENV ConnectionStrings__DefaultConnection="Data Source=/data/idol.db"
+# CONNECTION_STRING is set via Render environment variables
 
 EXPOSE 10000
 
