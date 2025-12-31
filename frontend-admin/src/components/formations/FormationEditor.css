@@ -123,12 +123,14 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  overflow: visible;
 }
 
 .grid-row {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  overflow: visible;
 }
 
 .grid-row-label {
@@ -151,6 +153,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s;
+  overflow: visible;
 }
 
 .grid-cell.drag-over {
