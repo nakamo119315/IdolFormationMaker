@@ -29,6 +29,9 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
             .HasForeignKey(i => i.MemberId)
             .OnDelete(DeleteBehavior.Cascade);
 
+        builder.Navigation(m => m.Images)
+            .UsePropertyAccessMode(PropertyAccessMode.Field);
+
         builder.HasIndex(m => m.GroupId);
     }
 }

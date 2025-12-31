@@ -1,3 +1,4 @@
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Application.Songs.DTOs;
 using IdolManagement.Domain.Songs.Entities;
 using IdolManagement.Domain.Songs.Repositories;
@@ -27,18 +28,6 @@ public class CreateSongHandler
         );
 
         await _songRepository.AddAsync(song, cancellationToken);
-        return ToDto(song);
+        return SongMapper.ToDto(song);
     }
-
-    private static SongDto ToDto(Song song) => new(
-        song.Id,
-        song.GroupId,
-        song.Title,
-        song.Lyricist,
-        song.Composer,
-        song.Arranger,
-        song.Lyrics,
-        song.CreatedAt,
-        song.UpdatedAt
-    );
 }

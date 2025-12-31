@@ -1,6 +1,6 @@
 using IdolManagement.Application.Shared;
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Application.Songs.DTOs;
-using IdolManagement.Domain.Songs.Entities;
 using IdolManagement.Domain.Songs.Repositories;
 
 namespace IdolManagement.Application.Songs.Queries;
@@ -30,19 +30,8 @@ public class GetSongsPagedHandler
             query.GroupId,
             cancellationToken);
 
-        var items = songs.Select(ToDto);
+        var items = SongMapper.ToSummaryDto(songs);
 
         return new PagedResult<SongSummaryDto>(items, totalCount, query.Page, query.PageSize);
     }
-
-    private static SongSummaryDto ToDto(Song song) => new(
-        song.Id,
-        song.GroupId,
-        song.Title,
-        song.Lyricist,
-        song.Composer,
-        song.Arranger,
-        song.CreatedAt,
-        song.UpdatedAt
-    );
 }

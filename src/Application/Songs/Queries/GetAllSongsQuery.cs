@@ -1,5 +1,5 @@
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Application.Songs.DTOs;
-using IdolManagement.Domain.Songs.Entities;
 using IdolManagement.Domain.Songs.Repositories;
 
 namespace IdolManagement.Application.Songs.Queries;
@@ -18,17 +18,6 @@ public class GetAllSongsHandler
     public async Task<IEnumerable<SongSummaryDto>> HandleAsync(GetAllSongsQuery query, CancellationToken cancellationToken = default)
     {
         var songs = await _songRepository.GetAllAsync(cancellationToken);
-        return songs.Select(ToSummaryDto);
+        return SongMapper.ToSummaryDto(songs);
     }
-
-    private static SongSummaryDto ToSummaryDto(Song song) => new(
-        song.Id,
-        song.GroupId,
-        song.Title,
-        song.Lyricist,
-        song.Composer,
-        song.Arranger,
-        song.CreatedAt,
-        song.UpdatedAt
-    );
 }

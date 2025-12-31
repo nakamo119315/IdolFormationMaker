@@ -1,5 +1,6 @@
 using IdolManagement.Domain.Formations.Entities;
 using IdolManagement.Domain.Formations.Repositories;
+using IdolManagement.Domain.Shared.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace IdolManagement.Infrastructure.Persistence.Repositories;
@@ -48,7 +49,7 @@ public class FormationRepository : IFormationRepository
         var formation = await _context.Formations
             .Include(f => f.Positions)
             .FirstOrDefaultAsync(f => f.Id == id, cancellationToken)
-            ?? throw new InvalidOperationException($"Formation with ID {id} not found.");
+            ?? throw new NotFoundException("Formation", id);
 
         // Update formation properties
         formation.Update(name, groupId);

@@ -1,4 +1,5 @@
 using IdolManagement.Application.Setlists.DTOs;
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Domain.Setlists.Entities;
 using IdolManagement.Domain.Setlists.Repositories;
 
@@ -35,21 +36,6 @@ public class CreateSetlistHandler
         }
 
         await _setlistRepository.AddAsync(setlist, cancellationToken);
-        return ToDto(setlist);
+        return SetlistMapper.ToDto(setlist);
     }
-
-    private static SetlistDto ToDto(Setlist setlist) => new(
-        setlist.Id,
-        setlist.Name,
-        setlist.GroupId,
-        setlist.EventDate,
-        setlist.Items.Select(i => new SetlistItemDto(
-            i.Id,
-            i.SongId,
-            i.Order,
-            i.CenterMemberId,
-            i.Participants.Select(p => p.MemberId).ToList()
-        )).ToList(),
-        setlist.CreatedAt,
-        setlist.UpdatedAt);
 }

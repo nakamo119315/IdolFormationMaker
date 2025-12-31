@@ -19,7 +19,7 @@ public class ExportMembersCsvHandler
 
     public async Task<byte[]> HandleAsync(ExportMembersCsvQuery query, CancellationToken cancellationToken = default)
     {
-        var members = await _memberRepository.GetAllAsync(cancellationToken);
+        var members = await _memberRepository.GetAllAsync(null, null, null, cancellationToken);
         var groups = await _groupRepository.GetAllAsync(cancellationToken);
         var groupDict = groups.ToDictionary(g => g.Id, g => g.Name);
 

@@ -34,7 +34,7 @@ public class ExportDataHandler
     public async Task<ExportDataDto> HandleAsync(ExportDataQuery query, CancellationToken cancellationToken = default)
     {
         var groups = await _groupRepository.GetAllAsync(cancellationToken);
-        var members = await _memberRepository.GetAllAsync(cancellationToken);
+        var members = await _memberRepository.GetAllAsync(null, null, null, cancellationToken);
         var formations = await _formationRepository.GetAllAsync(cancellationToken);
         var songs = await _songRepository.GetAllAsync(cancellationToken);
         var setlists = await _setlistRepository.GetAllAsync(cancellationToken);

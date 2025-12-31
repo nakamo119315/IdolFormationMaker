@@ -1,5 +1,5 @@
 using IdolManagement.Application.Members.DTOs;
-using IdolManagement.Domain.Members.Entities;
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Domain.Members.Repositories;
 
 namespace IdolManagement.Application.Members.Queries;
@@ -21,21 +21,6 @@ public class GetMemberHandler
         if (member == null)
             return null;
 
-        return ToDto(member);
+        return MemberMapper.ToDto(member);
     }
-
-    private static MemberDto ToDto(Member member) => new(
-        member.Id,
-        member.Name,
-        member.BirthDate,
-        member.Birthplace,
-        member.PenLightColor1,
-        member.PenLightColor2,
-        member.GroupId,
-        member.Generation,
-        member.IsGraduated,
-        member.Images.Select(i => new MemberImageDto(i.Id, i.Url, i.IsPrimary, i.CreatedAt)),
-        member.CreatedAt,
-        member.UpdatedAt
-    );
 }

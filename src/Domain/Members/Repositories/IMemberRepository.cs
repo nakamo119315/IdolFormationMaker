@@ -5,7 +5,11 @@ namespace IdolManagement.Domain.Members.Repositories;
 public interface IMemberRepository
 {
     Task<Member?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
-    Task<IEnumerable<Member>> GetAllAsync(CancellationToken cancellationToken = default);
+    Task<IEnumerable<Member>> GetAllAsync(
+        Guid? groupId = null,
+        int? generation = null,
+        bool? isGraduated = null,
+        CancellationToken cancellationToken = default);
     Task<IEnumerable<Member>> GetByGroupIdAsync(Guid groupId, CancellationToken cancellationToken = default);
     Task<(IEnumerable<Member> Items, int TotalCount)> GetPagedAsync(
         int page,

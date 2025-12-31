@@ -143,4 +143,137 @@ public class SetlistItemTests
         // Assert
         Assert.Empty(item.Participants);
     }
+
+    #region 品質テスト - 不変条件とビジネスルール
+
+    [Fact]
+    public void Create_ShouldGenerateUniqueIds()
+    {
+        // Arrange & Act
+        var items = Enumerable.Range(0, 100)
+            .Select(_ => SetlistItem.Create(Guid.NewGuid(), Guid.NewGuid(), 1))
+            .ToList();
+
+        // Assert
+        var uniqueIds = items.Select(i => i.Id).Distinct().Count();
+        Assert.Equal(100, uniqueIds);
+    }
+
+    [Fact]
+    public void AddParticipant_MultipleDifferentMembers_ShouldAddAll()
+    {
+        // Arrange
+        var item = SetlistItem.Create(Guid.NewGuid(), Guid.NewGuid(), 1);
+
+        // Act
+        for (int i = 0; i < 20; i++)
+        {
+            item.AddParticipant(Guid.NewGuid());
+        }
+
+        // Assert
+        Assert.Equal(20, item.Participants.Count);
+    }
+
+    [Fact]
+    public void ClearParticipants_OnEmptyList_ShouldNotThrow()
+    {
+        // Arrange
+        var item = SetlistItem.Create(Guid.NewGuid(), Guid.NewGuid(), 1);
+
+        // Act & Assert
+        var exception = Record.Exception(() => item.ClearParticipants());
+        Assert.Null(exception);
+        Assert.Empty(item.Participants);
+    }
+
+    [Fact]
+    public void AddParticipant_AfterClear_ShouldAddNewParticipants()
+    {
+        // Arrange
+        var item = SetlistItem.Create(Guid.NewGuid(), Guid.NewGuid(), 1);
+        item.AddParticipant(Guid.NewGuid());
+        item.ClearParticipants();
+
+        // Act
+        var newMemberId = Guid.NewGuid();
+        item.AddParticipant(newMemberId);
+
+        // Assert
+        Assert.Single(item.Participants);
+        Assert.Equal(newMemberId, item.Participants.First().MemberId);
+    }
+
+    [Fact]
+    public void Update_ShouldNotChangeSetlistId()
+    {
+        // Arrange
+        var originalSetlistId = Guid.NewGuid();
+        var item = SetlistItem.Create(originalSetlistId, Guid.NewGuid(), 1);
+
+        // Act
+        item.Update(5, Guid.NewGuid());
+
+        // Assert - SetlistIdは変更されない
+        Assert.Equal(originalSetlistId, item.SetlistId);
+    }
+
+    [Fact]
+    public void Update_ShouldNotChangeSongId()
+    {
+        // Arrange
+        var originalSongId = Guid.NewGuid();
+        var item = SetlistItem.Create(Guid.NewGuid(), originalSongId, 1);
+
+        // Act
+        item.Update(5, Guid.NewGuid());
+
+        // Assert - SongIdは変更されない
+        Assert.Equal(originalSongId, item.SongId);
+    }
+
+    [Fact]
+    public void Update_WithNullCenter_ShouldClearCenter()
+    {
+        // Arrange
+        var item = SetlistItem.Create(Guid.NewGuid(), Guid.NewGuid(), 1, Guid.NewGuid());
+        Assert.NotNull(item.CenterMemberId);
+
+        // Act
+        item.Update(2, null);
+
+        // Assert
+        Assert.Null(item.CenterMemberId);
+    }
+
+    [Theory]
+    [InlineData(1)]
+    [InlineData(int.MaxValue)]
+    public void Create_WithValidOrderBoundary_ShouldSucceed(int order)
+    {
+        // Arrange & Act
+        var item = SetlistItem.Create(Guid.NewGuid(), Guid.NewGuid(), order);
+
+        // Assert
+        Assert.Equal(order, item.Order);
+    }
+
+    [Fact]
+    public void Update_WithInvalidOrder_ShouldNotModifyOriginalData()
+    {
+        // Arrange
+        var item = SetlistItem.Create(Guid.NewGuid(), Guid.NewGuid(), 5, Guid.NewGuid());
+        var originalOrder = item.Order;
+        var originalCenter = item.CenterMemberId;
+
+        // Act
+        try { item.Update(0, Guid.NewGuid()); }
+        catch { /* expected */ }
+
+        // Assert - 元のデータは変更されていない
+        Assert.Equal(originalOrder, item.Order);
+        Assert.Equal(originalCenter, item.CenterMemberId);
+    }
+
+    #endregion
 }

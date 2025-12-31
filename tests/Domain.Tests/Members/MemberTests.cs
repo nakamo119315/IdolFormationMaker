@@ -181,4 +181,234 @@ public class MemberTests
         // Assert
         Assert.Null(member.Generation);
     }
+
+    #region 品質テスト - 不変条件
+
+    [Fact]
+    public void Create_ShouldGenerateUniqueIds()
+    {
+        // Arrange & Act
+        var members = Enumerable.Range(0, 100)
+            .Select(_ => Member.Create("Test", new DateOnly(2000, 1, 1)))
+            .ToList();
+
+        // Assert - すべてのIDがユニークであること
+        var uniqueIds = members.Select(m => m.Id).Distinct().Count();
+        Assert.Equal(100, uniqueIds);
+    }
+
+    [Fact]
+    public void Create_CreatedAtAndUpdatedAt_ShouldBeVeryClose()
+    {
+        // Arrange & Act
+        var member = Member.Create("Test", new DateOnly(2000, 1, 1));
+
+        // Assert - 作成時はCreatedAtとUpdatedAtがほぼ同時刻であること（1ms以内）
+        var diff = Math.Abs((member.CreatedAt - member.UpdatedAt).TotalMilliseconds);
+        Assert.True(diff < 1, $"CreatedAt and UpdatedAt should be within 1ms, but diff was {diff}ms");
+    }
+
+    [Fact]
+    public void Update_CreatedAt_ShouldNotChange()
+    {
+        // Arrange
+        var member = Member.Create("Test", new DateOnly(2000, 1, 1));
+        var originalCreatedAt = member.CreatedAt;
+        System.Threading.Thread.Sleep(10);
+
+        // Act
+        member.Update("Updated", new DateOnly(2001, 1, 1), null, null, null, null, null, false);
+
+        // Assert - CreatedAtは変更されないこと
+        Assert.Equal(originalCreatedAt, member.CreatedAt);
+    }
+
+    [Fact]
+    public void AddImage_ShouldUpdateTimestamp()
+    {
+        // Arrange
+        var member = Member.Create("Test", new DateOnly(2000, 1, 1));
+        var originalUpdatedAt = member.UpdatedAt;
+        System.Threading.Thread.Sleep(10);
+
+        // Act
+        member.AddImage(MemberImage.Create(member.Id, "https://example.com/img.jpg", false));
+
+        // Assert
+        Assert.True(member.UpdatedAt > originalUpdatedAt);
+    }
+
+    [Fact]
+    public void RemoveImage_WhenImageExists_ShouldUpdateTimestamp()
+    {
+        // Arrange
+        var member = Member.Create("Test", new DateOnly(2000, 1, 1));
+        var image = MemberImage.Create(member.Id, "https://example.com/img.jpg", false);
+        member.AddImage(image);
+        var originalUpdatedAt = member.UpdatedAt;
+        System.Threading.Thread.Sleep(10);
+
+        // Act
+        member.RemoveImage(image.Id);
+
+        // Assert
+        Assert.True(member.UpdatedAt > originalUpdatedAt);
+    }
+
+    [Fact]
+    public void RemoveImage_WhenImageNotExists_ShouldNotUpdateTimestamp()
+    {
+        // Arrange
+        var member = Member.Create("Test", new DateOnly(2000, 1, 1));
+        var originalUpdatedAt = member.UpdatedAt;
+
+        // Act
+        member.RemoveImage(Guid.NewGuid());
+
+        // Assert - 存在しない画像の削除ではタイムスタンプは更新されない
+        Assert.Equal(originalUpdatedAt, member.UpdatedAt);
+    }
+
+    #endregion
+
+    #region 品質テスト - 境界値
+
+    [Theory]
+    [InlineData(1)]
+    [InlineData(99)]
+    public void Create_WithValidGeneration_ShouldSucceed(int generation)
+    {
+        // Arrange & Act
+        var member = Member.Create("Test", new DateOnly(2000, 1, 1), generation: generation);
+
+        // Assert
+        Assert.Equal(generation, member.Generation);
+    }
+
+    [Fact]
+    public void Create_WithFutureBirthDate_ShouldSucceed()
+    {
+        // ドメインルールとして未来の生年月日を許可するかは要件次第
+        // 現在の実装では許可しているのでテストで確認
+        var futureBirthDate = DateOnly.FromDateTime(DateTime.Today.AddYears(1));
+        var member = Member.Create("Test", futureBirthDate);
+
+        Assert.Equal(futureBirthDate, member.BirthDate);
+    }
+
+    [Fact]
+    public void Create_WithVeryOldBirthDate_ShouldSucceed()
+    {
+        // 極端に古い日付もドメインとして許可
+        var oldBirthDate = new DateOnly(1900, 1, 1);
+        var member = Member.Create("Test", oldBirthDate);
+
+        Assert.Equal(oldBirthDate, member.BirthDate);
+    }
+
+    [Fact]
+    public void Create_WithVeryLongName_ShouldSucceed()
+    {
+        // 長い名前のテスト
+        var longName = new string('あ', 1000);
+        var member = Member.Create(longName, new DateOnly(2000, 1, 1));
+
+        Assert.Equal(longName, member.Name);
+    }
+
+    [Fact]
+    public void Create_WithSpecialCharactersInName_ShouldSucceed()
+    {
+        // 特殊文字を含む名前
+        var specialName = "山田☆太郎 (Jr.)【公式】";
+        var member = Member.Create(specialName, new DateOnly(2000, 1, 1));
+
+        Assert.Equal(specialName, member.Name);
+    }
+
+    #endregion
+
+    #region 品質テスト - 画像コレクションの整合性
+
+    [Fact]
+    public void AddImage_MultipleTimes_ShouldAddAllImages()
+    {
+        // Arrange
+        var member = Member.Create("Test", new DateOnly(2000, 1, 1));
+
+        // Act
+        for (int i = 0; i < 10; i++)
+        {
+            member.AddImage(MemberImage.Create(member.Id, $"https://example.com/img{i}.jpg", i == 0));
+        }
+
+        // Assert
+        Assert.Equal(10, member.Images.Count);
+    }
+
+    [Fact]
+    public void SetImages_ShouldReplaceAllImages()
+    {
+        // Arrange
+        var member = Member.Create("Test", new DateOnly(2000, 1, 1));
+        member.AddImage(MemberImage.Create(member.Id, "https://example.com/old.jpg", true));
+        var newImages = new[]
+        {
+            MemberImage.Create(member.Id, "https://example.com/new1.jpg", true),
+            MemberImage.Create(member.Id, "https://example.com/new2.jpg", false)
+        };
+
+        // Act
+        member.SetImages(newImages);
+
+        // Assert
+        Assert.Equal(2, member.Images.Count);
+        Assert.All(member.Images, img => Assert.StartsWith("https://example.com/new", img.Url));
+    }
+
+    [Fact]
+    public void Images_ShouldBeReadOnly()
+    {
+        // Arrange
+        var member = Member.Create("Test", new DateOnly(2000, 1, 1));
+        member.AddImage(MemberImage.Create(member.Id, "https://example.com/img.jpg", true));
+
+        // Assert - IReadOnlyCollectionなので直接変更できない
+        Assert.IsAssignableFrom<IReadOnlyCollection<MemberImage>>(member.Images);
+    }
+
+    #endregion
+
+    #region 品質テスト - Update異常系
+
+    [Theory]
+    [InlineData(null)]
+    [InlineData("")]
+    [InlineData("   ")]
+    public void Update_WithInvalidName_ShouldThrowArgumentException(string? invalidName)
+    {
+        // Arrange
+        var member = Member.Create("Original", new DateOnly(2000, 1, 1));
+
+        // Act & Assert
+        Assert.Throws<ArgumentException>(() =>
+            member.Update(invalidName!, new DateOnly(2000, 1, 1), null, null, null, null, null, false));
+    }
+
+    [Fact]
+    public void Update_WithInvalidName_ShouldNotModifyOriginalData()
+    {
+        // Arrange
+        var member = Member.Create("Original", new DateOnly(2000, 1, 1));
+        var originalName = member.Name;
+
+        // Act
+        try { member.Update("", new DateOnly(2000, 1, 1), null, null, null, null, null, false); }
+        catch { /* expected */ }
+
+        // Assert - 元のデータは変更されていない
+        Assert.Equal(originalName, member.Name);
+    }
+
+    #endregion
 }

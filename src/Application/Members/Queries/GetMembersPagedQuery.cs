@@ -1,6 +1,6 @@
 using IdolManagement.Application.Members.DTOs;
 using IdolManagement.Application.Shared;
-using IdolManagement.Domain.Members.Entities;
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Domain.Members.Repositories;
 
 namespace IdolManagement.Application.Members.Queries;
@@ -34,23 +34,8 @@ public class GetMembersPagedHandler
             query.IsGraduated,
             cancellationToken);
 
-        var items = members.Select(ToDto);
+        var items = MemberMapper.ToDto(members);
 
         return new PagedResult<MemberDto>(items, totalCount, query.Page, query.PageSize);
     }
-
-    private static MemberDto ToDto(Member member) => new(
-        member.Id,
-        member.Name,
-        member.BirthDate,
-        member.Birthplace,
-        member.PenLightColor1,
-        member.PenLightColor2,
-        member.GroupId,
-        member.Generation,
-        member.IsGraduated,
-        member.Images.Select(i => new MemberImageDto(i.Id, i.Url, i.IsPrimary, i.CreatedAt)),
-        member.CreatedAt,
-        member.UpdatedAt
-    );
 }

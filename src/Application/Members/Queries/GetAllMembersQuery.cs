@@ -1,10 +1,14 @@
 using IdolManagement.Application.Members.DTOs;
-using IdolManagement.Domain.Members.Entities;
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Domain.Members.Repositories;
 
 namespace IdolManagement.Application.Members.Queries;
 
-public record GetAllMembersQuery;
+public record GetAllMembersQuery(
+    Guid? GroupId = null,
+    int? Generation = null,
+    bool? IsGraduated = null
+);
 
 public class GetAllMembersHandler
 {
@@ -17,22 +21,11 @@ public class GetAllMembersHandler
 
     public async Task<IEnumerable<MemberDto>> HandleAsync(GetAllMembersQuery query, CancellationToken cancellationToken = default)
     {
-        var members = await _memberRepository.GetAllAsync(cancellationToken);
-        return members.Select(ToDto);
+        var members = await _memberRepository.GetAllAsync(
+            query.GroupId,
+            query.Generation,
+            query.IsGraduated,
+            cancellationToken);
+        return MemberMapper.ToDto(members);
     }
-
-    private static MemberDto ToDto(Member member) => new(
-        member.Id,
-        member.Name,
-        member.BirthDate,
-        member.Birthplace,
-        member.PenLightColor1,
-        member.PenLightColor2,
-        member.GroupId,
-        member.Generation,
-        member.IsGraduated,
-        member.Images.Select(i => new MemberImageDto(i.Id, i.Url, i.IsPrimary, i.CreatedAt)),
-        member.CreatedAt,
-        member.UpdatedAt
-    );
 }

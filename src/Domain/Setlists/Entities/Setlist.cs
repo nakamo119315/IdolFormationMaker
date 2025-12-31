@@ -8,9 +8,11 @@ public class Setlist : IEntity
     public string Name { get; private set; } = string.Empty;
     public Guid GroupId { get; private set; }
     public DateOnly? EventDate { get; private set; }
-    public List<SetlistItem> Items { get; private set; } = new();
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; private set; }
+
+    private readonly List<SetlistItem> _items = new();
+    public IReadOnlyCollection<SetlistItem> Items => _items.AsReadOnly();
 
     private Setlist() { }
 
@@ -48,24 +50,31 @@ public class Setlist : IEntity
     public SetlistItem AddItem(Guid songId, int order, Guid? centerMemberId = null)
     {
         var item = SetlistItem.Create(Id, songId, order, centerMemberId);
-        Items.Add(item);
+        _items.Add(item);
         UpdatedAt = DateTime.UtcNow;
         return item;
     }
 
     public void RemoveItem(Guid itemId)
     {
-        var item = Items.FirstOrDefault(i => i.Id == itemId);
+        var item = _items.FirstOrDefault(i => i.Id == itemId);
         if (item != null)
         {
-            Items.Remove(item);
+            _items.Remove(item);
             UpdatedAt = DateTime.UtcNow;
         }
     }
 
     public void ClearItems()
     {
-        Items.Clear();
+        _items.Clear();
+        UpdatedAt = DateTime.UtcNow;
+    }
+
+    public void SetItems(IEnumerable<SetlistItem> items)
+    {
+        _items.Clear();
+        _items.AddRange(items);
         UpdatedAt = DateTime.UtcNow;
     }
 }

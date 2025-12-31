@@ -7,7 +7,9 @@ public class SetlistItem
     public Guid SongId { get; private set; }
     public int Order { get; private set; }
     public Guid? CenterMemberId { get; private set; }
-    public List<SetlistItemParticipant> Participants { get; private set; } = new();
+
+    private readonly List<SetlistItemParticipant> _participants = new();
+    public IReadOnlyCollection<SetlistItemParticipant> Participants => _participants.AsReadOnly();
 
     private SetlistItem() { }
 
@@ -48,14 +50,29 @@ public class SetlistItem
         if (memberId == Guid.Empty)
             throw new ArgumentException("MemberId cannot be empty", nameof(memberId));
 
-        if (Participants.Any(p => p.MemberId == memberId))
+        if (_participants.Any(p => p.MemberId == memberId))
             return;
 
-        Participants.Add(SetlistItemParticipant.Create(Id, memberId));
+        _participants.Add(SetlistItemParticipant.Create(Id, memberId));
+    }
+
+    public void RemoveParticipant(Guid memberId)
+    {
+        var participant = _participants.FirstOrDefault(p => p.MemberId == memberId);
+        if (participant != null)
+        {
+            _participants.Remove(participant);
+        }
     }
 
     public void ClearParticipants()
     {
-        Participants.Clear();
+        _participants.Clear();
+    }
+
+    public void SetParticipants(IEnumerable<SetlistItemParticipant> participants)
+    {
+        _participants.Clear();
+        _participants.AddRange(participants);
     }
 }

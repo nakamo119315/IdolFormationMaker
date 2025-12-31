@@ -1,5 +1,5 @@
 using IdolManagement.Application.Formations.DTOs;
-using IdolManagement.Domain.Formations.Entities;
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Domain.Formations.Repositories;
 
 namespace IdolManagement.Application.Formations.Commands;
@@ -41,18 +41,6 @@ public class UpdateFormationHandler
 
         // Reload to get updated data
         var updated = await _formationRepository.GetByIdAsync(command.Id, cancellationToken);
-        return ToDto(updated!);
+        return FormationMapper.ToDto(updated!);
     }
-
-    private static FormationDto ToDto(Formation formation) => new(
-        formation.Id,
-        formation.Name,
-        formation.GroupId,
-        formation.Positions
-            .OrderBy(p => p.PositionNumber)
-            .Select(p => new FormationPositionDto(
-                p.Id, p.MemberId, p.PositionNumber, p.Row, p.Column)),
-        formation.CreatedAt,
-        formation.UpdatedAt
-    );
 }

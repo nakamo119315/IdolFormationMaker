@@ -1,5 +1,5 @@
 using IdolManagement.Application.Groups.DTOs;
-using IdolManagement.Application.Members.DTOs;
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Domain.Groups.Entities;
 using IdolManagement.Domain.Groups.Repositories;
 
@@ -26,20 +26,6 @@ public class CreateGroupHandler
 
         await _groupRepository.AddAsync(group, cancellationToken);
 
-        return ToDto(group);
+        return GroupMapper.ToDto(group);
     }
-
-    private static GroupDto ToDto(Group group) => new(
-        group.Id,
-        group.Name,
-        group.DebutDate,
-        group.HasGeneration,
-        group.Members.Select(m => new MemberDto(
-            m.Id, m.Name, m.BirthDate, m.Birthplace, m.PenLightColor1, m.PenLightColor2, m.GroupId,
-            m.Generation, m.IsGraduated,
-            m.Images.Select(i => new MemberImageDto(i.Id, i.Url, i.IsPrimary, i.CreatedAt)),
-            m.CreatedAt, m.UpdatedAt)),
-        group.CreatedAt,
-        group.UpdatedAt
-    );
 }

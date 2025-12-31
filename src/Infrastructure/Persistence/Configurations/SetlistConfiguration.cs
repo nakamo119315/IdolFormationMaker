@@ -19,6 +19,9 @@ public class SetlistConfiguration : IEntityTypeConfiguration<Setlist>
             .HasForeignKey(i => i.SetlistId)
             .OnDelete(DeleteBehavior.Cascade);
 
+        builder.Navigation(s => s.Items)
+            .UsePropertyAccessMode(PropertyAccessMode.Field);
+
         builder.HasIndex(s => s.GroupId);
     }
 }
@@ -33,6 +36,9 @@ public class SetlistItemConfiguration : IEntityTypeConfiguration<SetlistItem>
             .WithOne()
             .HasForeignKey(p => p.SetlistItemId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        builder.Navigation(i => i.Participants)
+            .UsePropertyAccessMode(PropertyAccessMode.Field);
 
         builder.HasIndex(i => i.SetlistId);
         builder.HasIndex(i => i.SongId);

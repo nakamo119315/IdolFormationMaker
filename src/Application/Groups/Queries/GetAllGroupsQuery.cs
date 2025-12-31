@@ -1,5 +1,5 @@
 using IdolManagement.Application.Groups.DTOs;
-using IdolManagement.Domain.Groups.Entities;
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Domain.Groups.Repositories;
 
 namespace IdolManagement.Application.Groups.Queries;
@@ -18,16 +18,6 @@ public class GetAllGroupsHandler
     public async Task<IEnumerable<GroupSummaryDto>> HandleAsync(GetAllGroupsQuery query, CancellationToken cancellationToken = default)
     {
         var groups = await _groupRepository.GetAllAsync(cancellationToken);
-        return groups.Select(ToSummaryDto);
+        return GroupMapper.ToSummaryDto(groups);
     }
-
-    private static GroupSummaryDto ToSummaryDto(Group group) => new(
-        group.Id,
-        group.Name,
-        group.DebutDate,
-        group.HasGeneration,
-        group.Members.Count,
-        group.CreatedAt,
-        group.UpdatedAt
-    );
 }

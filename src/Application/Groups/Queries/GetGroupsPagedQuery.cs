@@ -1,6 +1,6 @@
 using IdolManagement.Application.Groups.DTOs;
 using IdolManagement.Application.Shared;
-using IdolManagement.Domain.Groups.Entities;
+using IdolManagement.Application.Shared.Mappers;
 using IdolManagement.Domain.Groups.Repositories;
 
 namespace IdolManagement.Application.Groups.Queries;
@@ -28,18 +28,8 @@ public class GetGroupsPagedHandler
             query.Search,
             cancellationToken);
 
-        var items = groups.Select(ToDto);
+        var items = GroupMapper.ToSummaryDto(groups);
 
         return new PagedResult<GroupSummaryDto>(items, totalCount, query.Page, query.PageSize);
     }
-
-    private static GroupSummaryDto ToDto(Group group) => new(
-        group.Id,
-        group.Name,
-        group.DebutDate,
-        group.HasGeneration,
-        group.Members.Count,
-        group.CreatedAt,
-        group.UpdatedAt
-    );
 }

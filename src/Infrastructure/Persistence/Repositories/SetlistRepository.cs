@@ -1,5 +1,6 @@
 using IdolManagement.Domain.Setlists.Entities;
 using IdolManagement.Domain.Setlists.Repositories;
+using IdolManagement.Domain.Shared.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace IdolManagement.Infrastructure.Persistence.Repositories;
@@ -53,7 +54,7 @@ public class SetlistRepository : ISetlistRepository
             .Include(s => s.Items)
                 .ThenInclude(i => i.Participants)
             .FirstOrDefaultAsync(s => s.Id == id, cancellationToken)
-            ?? throw new InvalidOperationException($"Setlist with ID {id} not found.");
+            ?? throw new NotFoundException("Setlist", id);
 
         // Update setlist properties via domain method
         setlist.Update(name, eventDate);

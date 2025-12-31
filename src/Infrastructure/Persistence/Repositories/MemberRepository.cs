@@ -20,11 +20,32 @@ public class MemberRepository : IMemberRepository
             .FirstOrDefaultAsync(m => m.Id == id, cancellationToken);
     }
 
-    public async Task<IEnumerable<Member>> GetAllAsync(CancellationToken cancellationToken = default)
+    public async Task<IEnumerable<Member>> GetAllAsync(
+        Guid? groupId = null,
+        int? generation = null,
+        bool? isGraduated = null,
+        CancellationToken cancellationToken = default)
     {
-        return await _context.Members
+        var query = _context.Members
             .Include(m => m.Images)
-            .ToListAsync(cancellationToken);
+            .AsQueryable();
+
+        if (groupId.HasValue)
+        {
+            query = query.Where(m => m.GroupId == groupId.Value);
+        }
+
+        if (generation.HasValue)
+        {
+            query = query.Where(m => m.Generation == generation.Value);
+        }
+
+        if (isGraduated.HasValue)
+        {
+            query = query.Where(m => m.IsGraduated == isGraduated.Value);
+        }
+
+        return await query.OrderBy(m => m.Name).ToListAsync(cancellationToken);
     }
 
     public async Task<IEnumerable<Member>> GetByGroupIdAsync(Guid groupId, CancellationToken cancellationToken = default)
