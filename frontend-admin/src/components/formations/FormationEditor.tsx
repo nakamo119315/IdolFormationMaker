@@ -84,7 +84,19 @@ function PlacedMember({
       ) : (
         <div className="placed-thumb-placeholder">{member.name.charAt(0)}</div>
       )}
-      <button className="remove-btn" onClick={(e) => { e.stopPropagation(); onRemove(); }}>×</button>
+      <button
+        type="button"
+        className="remove-btn"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          onRemove();
+        }}
+        onPointerDown={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }}
+      >×</button>
     </div>
   );
 }

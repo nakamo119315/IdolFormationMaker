@@ -146,8 +146,17 @@ http://localhost:5174
 
 | レイヤー | テスト数 | 対象 |
 |----------|---------|------|
-| Domain | 80 | エンティティ、値オブジェクト |
-| Application | 9 | ハンドラー |
+| Domain | 149 | エンティティ、値オブジェクト、ビジネスルール |
+| Application | 30 | ハンドラー、ページング、フィルタリング |
+
+**合計: 179テスト**
+
+テストは品質重視で設計されており、以下の観点を網羅しています：
+- 不変条件テスト（ID一意性、タイムスタンプ整合性など）
+- 境界値テスト（最大値、最小値、エッジケース）
+- エラーハンドリングテスト（例外発生、無効入力）
+- ビジネスルールテスト（ドメイン固有のルール検証）
+- 状態遷移テスト（更新による状態変化）
 
 ## Docker
 
@@ -218,49 +227,98 @@ GitHub Actionsでプッシュ/PR時に自動テスト:
 
 ## API エンドポイント
 
+Swagger UI: http://localhost:5059/swagger で詳細なAPI仕様を確認できます。
+
 ### Members
-- `GET /api/members` - メンバー一覧
-- `GET /api/members/{id}` - メンバー詳細
-- `POST /api/members` - メンバー作成
-- `PUT /api/members/{id}` - メンバー更新
-- `DELETE /api/members/{id}` - メンバー削除
-- `POST /api/members/{id}/images` - 画像追加
-- `DELETE /api/members/{memberId}/images/{imageId}` - 画像削除
-- `PUT /api/members/{memberId}/images/{imageId}/primary` - プライマリ画像設定
+
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | `/api/members` | メンバー一覧（フィルタリング対応） |
+| GET | `/api/members/paged` | メンバー一覧（ページング対応） |
+| GET | `/api/members/{id}` | メンバー詳細 |
+| POST | `/api/members` | メンバー作成 |
+| PUT | `/api/members/{id}` | メンバー更新 |
+| DELETE | `/api/members/{id}` | メンバー削除 |
+| GET | `/api/members/export` | CSV形式でエクスポート |
+| POST | `/api/members/{id}/images` | 画像追加 |
+| DELETE | `/api/members/{id}/images/{imageId}` | 画像削除 |
+| PUT | `/api/members/{id}/images/{imageId}/primary` | プライマリ画像設定 |
+
+**フィルタリングパラメータ:**
+```
+GET /api/members?groupId={guid}&generation={int}&isGraduated={bool}
+GET /api/members/paged?page=1&pageSize=20&search=田中&groupId={guid}
+```
 
 ### Groups
-- `GET /api/groups` - グループ一覧
-- `GET /api/groups/{id}` - グループ詳細
-- `POST /api/groups` - グループ作成
-- `PUT /api/groups/{id}` - グループ更新
-- `DELETE /api/groups/{id}` - グループ削除
+
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | `/api/groups` | グループ一覧 |
+| GET | `/api/groups/paged` | グループ一覧（ページング対応） |
+| GET | `/api/groups/{id}` | グループ詳細 |
+| POST | `/api/groups` | グループ作成 |
+| PUT | `/api/groups/{id}` | グループ更新 |
+| DELETE | `/api/groups/{id}` | グループ削除 |
 
 ### Formations
-- `GET /api/formations` - フォーメーション一覧
-- `GET /api/formations/{id}` - フォーメーション詳細
-- `POST /api/formations` - フォーメーション作成
-- `PUT /api/formations/{id}` - フォーメーション更新
-- `DELETE /api/formations/{id}` - フォーメーション削除
+
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | `/api/formations` | フォーメーション一覧 |
+| GET | `/api/formations/{id}` | フォーメーション詳細 |
+| POST | `/api/formations` | フォーメーション作成 |
+| PUT | `/api/formations/{id}` | フォーメーション更新 |
+| DELETE | `/api/formations/{id}` | フォーメーション削除 |
 
 ### Songs
-- `GET /api/songs` - 楽曲一覧
-- `GET /api/songs/{id}` - 楽曲詳細
-- `GET /api/songs/group/{groupId}` - グループ別楽曲一覧
-- `POST /api/songs` - 楽曲作成
-- `PUT /api/songs/{id}` - 楽曲更新
-- `DELETE /api/songs/{id}` - 楽曲削除
+
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | `/api/songs` | 楽曲一覧 |
+| GET | `/api/songs/paged` | 楽曲一覧（ページング対応） |
+| GET | `/api/songs/{id}` | 楽曲詳細 |
+| GET | `/api/songs/group/{groupId}` | グループ別楽曲一覧 |
+| POST | `/api/songs` | 楽曲作成 |
+| PUT | `/api/songs/{id}` | 楽曲更新 |
+| DELETE | `/api/songs/{id}` | 楽曲削除 |
+| GET | `/api/songs/export` | CSV形式でエクスポート |
+
+**検索パラメータ:**
+```
+GET /api/songs/paged?search=夏&groupId={guid}
+```
 
 ### Setlists
-- `GET /api/setlists` - セットリスト一覧
-- `GET /api/setlists/{id}` - セットリスト詳細
-- `GET /api/setlists/group/{groupId}` - グループ別セットリスト一覧
-- `POST /api/setlists` - セットリスト作成
-- `PUT /api/setlists/{id}` - セットリスト更新
-- `DELETE /api/setlists/{id}` - セットリスト削除
+
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | `/api/setlists` | セットリスト一覧 |
+| GET | `/api/setlists/{id}` | セットリスト詳細 |
+| GET | `/api/setlists/group/{groupId}` | グループ別セットリスト一覧 |
+| POST | `/api/setlists` | セットリスト作成 |
+| PUT | `/api/setlists/{id}` | セットリスト更新 |
+| DELETE | `/api/setlists/{id}` | セットリスト削除 |
 
 ### Data (エクスポート/インポート)
-- `GET /api/data/export` - 全データをJSON形式でエクスポート
-- `POST /api/data/import?clearExisting=false` - JSONデータをインポート
+
+| メソッド | エンドポイント | 説明 |
+|---------|---------------|------|
+| GET | `/api/data/export` | 全データをJSON形式でエクスポート |
+| POST | `/api/data/import?clearExisting=false` | JSONデータをインポート |
+
+**ページングレスポンス形式:**
+```json
+{
+  "items": [...],
+  "totalCount": 100,
+  "page": 1,
+  "pageSize": 20,
+  "totalPages": 5,
+  "hasNextPage": true,
+  "hasPreviousPage": false
+}
+```
 
 ## Cloudflare Pages デプロイ
 

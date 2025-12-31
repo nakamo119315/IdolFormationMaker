@@ -1,0 +1,5710 @@
+{
+  "version": "1.0",
+  "exportedAt": "2025-12-26T09:29:45.031933Z",
+  "groups": [
+    {
+      "id": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "name": "≒JOY",
+      "debutDate": "2022-12-14"
+    },
+    {
+      "id": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "name": "乃木坂46",
+      "debutDate": "2012-02-22"
+    },
+    {
+      "id": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "name": "≠ME",
+      "debutDate": "2021-04-07"
+    },
+    {
+      "id": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "name": "=LOVE",
+      "debutDate": "2017-09-06"
+    }
+  ],
+  "members": [
+    {
+      "id": "04fe2e8a-08bc-4c29-a598-b6323cb89a20",
+      "name": "菅波美玲",
+      "birthDate": "2001-04-13",
+      "birthplace": "東京都",
+      "penLightColor1": "水色",
+      "penLightColor2": "水色",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "87bcfa1c-dd74-4e4d-9a22-7b557d3ebf48",
+          "url": "https://not-equal-me.jp/image/profile/suganami_mirei.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "0684fec8-37a9-475c-bce0-92b34ff01367",
+      "name": "小津 玲奈",
+      "birthDate": "2007-04-17",
+      "birthplace": "東京都",
+      "penLightColor1": "紫",
+      "penLightColor2": "ターコイズ",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "0f862a00-d097-4fd5-ae2f-600cf89c8c8c",
+          "url": "https://www.nogizaka46.com/images/46/59c/974b3199023a021b45c9d1b5a7635.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "0868466f-9207-4d4c-8b89-6afbceb9a2c2",
+      "name": "永田詩央里",
+      "birthDate": "2004-04-02",
+      "birthplace": "広島県",
+      "penLightColor1": "青",
+      "penLightColor2": "青",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "1620b0ef-a4b7-4d69-9a3c-86a3ccc67a47",
+          "url": "https://not-equal-me.jp/image/profile/nagata_shiori.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "0aa92856-b01a-44bf-9be2-d28dd0869d2a",
+      "name": "鈴木 佑捺",
+      "birthDate": "2006-05-18",
+      "birthplace": "山梨県",
+      "penLightColor1": "水色",
+      "penLightColor2": "白",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "f1d743a9-1f12-426c-8bb9-e63f73ee112a",
+          "url": "https://www.nogizaka46.com/images/46/4f9/78599b601e4a5abe702f5c84241ae.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "0f898c2f-6366-447b-b9c5-c636aa1e787c",
+      "name": "佐々木舞香",
+      "birthDate": "2000-01-21",
+      "birthplace": "愛知県",
+      "penLightColor1": "白",
+      "penLightColor2": null,
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "images": [
+        {
+          "id": "025d3c06-9699-4b01-886a-4baa6949219c",
+          "url": "https://equal-love.jp/image/profile/sasaki_maika.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "1fe341a0-8e8e-42e6-8717-2beb03f008b5",
+      "name": "一ノ瀬 美空",
+      "birthDate": "2003-05-24",
+      "birthplace": "福岡県",
+      "penLightColor1": "水色",
+      "penLightColor2": "水色",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "5c803e1e-f257-4c69-b7c2-f27058fb48ec",
+          "url": "https://www.nogizaka46.com/images/46/d21/1d87f2203680137df7346b7551ed0.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "232cab09-0013-4f03-bb35-4915af39c51b",
+      "name": "音嶋莉沙",
+      "birthDate": "1998-08-11",
+      "birthplace": "福岡県",
+      "penLightColor1": "水色",
+      "penLightColor2": "ピンク",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "images": [
+        {
+          "id": "85da6157-a63b-43bc-9152-d6275b806364",
+          "url": "https://equal-love.jp/image/profile/otoshima_risa.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "23f6a040-c7b7-4cd3-afa3-9a5c929e844b",
+      "name": "鈴木瞳美",
+      "birthDate": "2001-04-13",
+      "birthplace": "東京都",
+      "penLightColor1": "薄ピンク",
+      "penLightColor2": "薄ピンク",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "c7541f6f-4160-4c95-94fe-2e138c7e637d",
+          "url": "https://not-equal-me.jp/image/profile/suzuki_hitomi.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "2418fdba-c5e6-4221-90d4-870ddf0e7943",
+      "name": "本田珠由記",
+      "birthDate": "2004-02-27",
+      "birthplace": "栃木県",
+      "penLightColor1": "薄紫",
+      "penLightColor2": "水色",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "aaa815b7-9299-4ff9-ad9f-21127e7ec7d2",
+          "url": "https://not-equal-me.jp/image/profile/honda_miyuki.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "29cc4ee8-14a1-46f6-ae1b-45f31c077af2",
+      "name": "林 瑠奈",
+      "birthDate": "2003-10-02",
+      "birthplace": "神奈川県",
+      "penLightColor1": "ピンク",
+      "penLightColor2": "ピンク",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "adc01ffb-fc9f-4bd6-98ad-7922b9e61621",
+          "url": "https://www.nogizaka46.com/images/46/cb1/f34ad14ecbf7be125b2f2f243f841.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "2c7bc17f-c62e-413d-bf7d-726cb455a247",
+      "name": "髙松瞳",
+      "birthDate": "2001-01-19",
+      "birthplace": "東京都",
+      "penLightColor1": "赤",
+      "penLightColor2": null,
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "images": [
+        {
+          "id": "3e68bf63-5b11-4c75-9d8a-6b6446e9ab0e",
+          "url": "https://equal-love.jp/image/profile/takamatsu_hitomi.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "2de37f6b-9394-49db-9f9b-1747e69d1e19",
+      "name": "金川 紗耶",
+      "birthDate": "2001-10-31",
+      "birthplace": "北海道",
+      "penLightColor1": "水色",
+      "penLightColor2": "赤",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "968ea251-37dc-4acd-9564-8d98adfa62ef",
+          "url": "https://www.nogizaka46.com/images/46/880/87280a20095abdde1ffcd122d8d42.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "2f4711ce-a761-4c95-9448-5676bdbd4e72",
+      "name": "佐藤 璃果",
+      "birthDate": "2001-08-09",
+      "birthplace": "岩手県",
+      "penLightColor1": "ピンク",
+      "penLightColor2": "ターコイズ",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "1923ecef-5644-43e8-8f25-30c0fd01cf8d",
+          "url": "https://www.nogizaka46.com/images/46/d5c/22cbd1c9536b89d66fb470e34f51e.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "34241355-eefd-49a1-b456-981c8d49d553",
+      "name": "大谷映美里",
+      "birthDate": "1998-03-15",
+      "birthplace": "東京都",
+      "penLightColor1": "白",
+      "penLightColor2": "紫",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "images": [
+        {
+          "id": "1761536d-40e6-4bf0-97c5-156e88d12abe",
+          "url": "https://equal-love.jp/image/profile/otani_emiri.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "370c4f5c-34a2-4166-ab08-bc5bacbaae2c",
+      "name": "冨里 奈央",
+      "birthDate": "2006-09-18",
+      "birthplace": "千葉県",
+      "penLightColor1": "ターコイズ",
+      "penLightColor2": "ターコイズ",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "ff430304-314b-480e-bd2e-291c00db2f40",
+          "url": "https://www.nogizaka46.com/images/46/e27/66bd6c894d1a96288bb9dfaf8809f.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "3ad91a10-5444-42f3-9aa2-d9684942e660",
+      "name": "菅原 咲月",
+      "birthDate": "2005-10-31",
+      "birthplace": "千葉県",
+      "penLightColor1": "ピンク",
+      "penLightColor2": "水色",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "b5effb7c-1b2e-441a-996a-f60edcac7fb3",
+          "url": "https://www.nogizaka46.com/images/46/c09/dfacda505809637c8214da8a8432f.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "438b3e3e-359c-43fd-8b4c-490d38c0b4c6",
+      "name": "賀喜 遥香",
+      "birthDate": "2001-08-08",
+      "birthplace": "栃木県",
+      "penLightColor1": "オレンジ",
+      "penLightColor2": "緑",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "78a0a71b-f65b-44f6-9f71-60f09d964883",
+          "url": "https://www.nogizaka46.com/images/46/9e1/b4f576fdc288cc8cc68320f657a5d.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "4db60551-05bd-4e8c-8b53-136e4a7ba974",
+      "name": "岩本 蓮加",
+      "birthDate": "2004-02-02",
+      "birthplace": "東京都",
+      "penLightColor1": "赤",
+      "penLightColor2": "ピンク",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "5e8eae24-547e-4473-ae42-64ab8c22837d",
+          "url": "https://www.nogizaka46.com/images/46/4a8/fa2fc4b3c75b9568ce9adbc16d4bd.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "532d8950-ac9e-463d-8ee5-237ed3faf0c2",
+      "name": "逢田珠里依",
+      "birthDate": "2005-09-13",
+      "birthplace": "東京都",
+      "penLightColor1": "黄",
+      "penLightColor2": "赤",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "845d00b3-bf70-440a-bb44-0a911a94d160",
+          "url": "https://nearly-equal-joy.jp/image/profile/aida_jurii.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "59a8f897-f697-42c1-911c-35f91663cd0a",
+      "name": "小澤愛実",
+      "birthDate": "2003-04-09",
+      "birthplace": "神奈川県",
+      "penLightColor1": "薄黄",
+      "penLightColor2": "薄黄",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "0e123825-10ed-4642-b1f2-3dbda71fc887",
+          "url": "https://nearly-equal-joy.jp/image/profile/ozawa_aimi.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "5a3e51b1-60c7-4e94-aebf-f3177e30a9fc",
+      "name": "弓木 奈於",
+      "birthDate": "1999-02-03",
+      "birthplace": "京都府",
+      "penLightColor1": "赤",
+      "penLightColor2": "黄緑",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "48b6a0ee-0733-4daa-be8a-1abd9d2a9900",
+          "url": "https://www.nogizaka46.com/images/46/f75/2ec1740de010cde723653a4794af2.jpg",
+          "isPrimary": true
+        },
+        {
+          "id": "ad2a799b-e5b9-458d-8b7d-5025601f9909",
+          "url": "https://www.nogizaka46.com/images/46/f75/2ec1740de010cde723653a4794af2.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "5a6bda47-9ea1-46d8-9a5a-d7738df2e414",
+      "name": "森平 麗心",
+      "birthDate": "2008-10-05",
+      "birthplace": "東京都",
+      "penLightColor1": "黄",
+      "penLightColor2": "黄",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "21e46f28-b100-4f5a-b5de-1ac525199c97",
+          "url": "https://www.nogizaka46.com/images/46/035/aca8b6dccc829b810d24d6fbfc7c3.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "5b100146-ea72-42eb-b695-56e9c44a336f",
+      "name": "矢久保 美緒",
+      "birthDate": "2002-08-14",
+      "birthplace": "東京都",
+      "penLightColor1": "ピンク",
+      "penLightColor2": "黄",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "abb21501-63aa-4457-86ea-205329e4ad7d",
+          "url": "https://www.nogizaka46.com/images/46/c7c/c19487b659717498f8ed992b08fce.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "5d0cd37f-e125-463b-9868-9c59825507ac",
+      "name": "大越 ひなの",
+      "birthDate": "2004-12-01",
+      "birthplace": "静岡県",
+      "penLightColor1": "白",
+      "penLightColor2": "黄",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "f6f64d80-19e5-4cb1-aec9-d313d688071e",
+          "url": "https://www.nogizaka46.com/images/46/e94/f1e863935213cd18a7c25e87795f6.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "60d788d8-961b-4960-abc3-e0fd87fd0755",
+      "name": "髙橋舞",
+      "birthDate": "2004-10-22",
+      "birthplace": "神奈川県",
+      "penLightColor1": "オレンジ",
+      "penLightColor2": "赤",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "c5eeaf56-8ad8-40dc-a42d-dc8dba8d0a6c",
+          "url": "https://nearly-equal-joy.jp/image/profile/takahashi_mai.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "63e27a1d-fa3f-4efa-b3c1-24f56121d962",
+      "name": "谷崎早耶",
+      "birthDate": "1999-10-07",
+      "birthplace": "熊本県",
+      "penLightColor1": "白",
+      "penLightColor2": "ピンク",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "a96ba945-7760-4745-8a1b-4f665ca65674",
+          "url": "https://not-equal-me.jp/image/profile/tanizaki_saya.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "68fd2f72-3d00-40af-8ce0-32522efe93cb",
+      "name": "五百城 茉央",
+      "birthDate": "2005-07-29",
+      "birthplace": "兵庫県",
+      "penLightColor1": "ターコイズ",
+      "penLightColor2": "青",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "9f95b38b-1e35-46d3-bee7-80740b5c8539",
+          "url": "https://www.nogizaka46.com/images/46/ec1/9c670b4ade367a2f551f26eef4450.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "69a88d9a-c47f-45ec-8b5c-807d91f5dcb1",
+      "name": "柴田 柚菜",
+      "birthDate": "2003-03-03",
+      "birthplace": "千葉県",
+      "penLightColor1": "青",
+      "penLightColor2": "黄緑",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "693131b6-bc36-4317-8af0-818b1b159345",
+          "url": "https://www.nogizaka46.com/images/46/6d8/4643f09fc585a92576513888606c2.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "7008eb0b-ff36-4ff1-a847-4f876537c843",
+      "name": "松尾 美佑",
+      "birthDate": "2004-01-03",
+      "birthplace": "千葉県",
+      "penLightColor1": "ターコイズ",
+      "penLightColor2": "白",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "6e2d99d8-cbdd-48b3-90b4-a319c6c773cd",
+          "url": "https://www.nogizaka46.com/images/46/3bd/51a432d9b74ca8b45bbc0e07d34df.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "700a89d9-a494-411c-94cf-28cec42cda36",
+      "name": "蟹沢萌子",
+      "birthDate": "1999-10-25",
+      "birthplace": "神奈川県",
+      "penLightColor1": "赤",
+      "penLightColor2": "水色",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "939c59db-2488-478c-b34e-9af083a864ad",
+          "url": "https://not-equal-me.jp/image/profile/kanisawa_moeko.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "7422e2c5-4078-4310-8b67-9fbf7523ee9e",
+      "name": "岡本 姫奈",
+      "birthDate": "2003-12-17",
+      "birthplace": "愛知県",
+      "penLightColor1": "紫",
+      "penLightColor2": "青",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "bce84560-2486-4df6-8a91-c45b88ac7c3f",
+          "url": "https://www.nogizaka46.com/images/46/0b4/6e7b29737ae59929b3b5d54901df9.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "75999fe8-d0ad-4c5c-8ea3-e7d9fffeac6c",
+      "name": "天野香乃愛",
+      "birthDate": "2007-01-21",
+      "birthplace": "埼玉県",
+      "penLightColor1": "薄紫",
+      "penLightColor2": "黄",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "8168200b-f113-48f0-bb9e-c24bfb27a504",
+          "url": "https://nearly-equal-joy.jp/image/profile/amano_konoa.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "78b84f17-b4c0-4626-8d37-bdede61dcc33",
+      "name": "市原愛弓",
+      "birthDate": "2003-08-21",
+      "birthplace": "福岡県",
+      "penLightColor1": "紫",
+      "penLightColor2": "紫",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "5a50eb06-3d36-44a9-832e-649cbcc4be01",
+          "url": "https://nearly-equal-joy.jp/image/profile/ichihara_ayumi.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "79a3095e-993f-4b79-91b1-0758cbf60807",
+      "name": "山野愛月",
+      "birthDate": "2006-10-21",
+      "birthplace": "大阪府",
+      "penLightColor1": "水色",
+      "penLightColor2": "黄緑",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "4a0aa3e0-ccc9-4379-b6c5-8ddcb3a09d89",
+          "url": "https://nearly-equal-joy.jp/image/profile/yamano_arisu.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "7c2db424-4d47-4338-a7f2-b1597dddb9d6",
+      "name": "野口衣織",
+      "birthDate": "2000-04-26",
+      "birthplace": "茨城県",
+      "penLightColor1": "紫",
+      "penLightColor2": null,
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "images": [
+        {
+          "id": "1c0729aa-71d4-4744-9372-a49f3641ad64",
+          "url": "https://equal-love.jp/image/profile/noguchi_iori.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "7f7f46cc-286a-4039-8253-af2f2379ff86",
+      "name": "川﨑 桜",
+      "birthDate": "2003-04-17",
+      "birthplace": "神奈川県",
+      "penLightColor1": "ピンク",
+      "penLightColor2": "緑",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "04187e74-b7cc-4747-9a85-90deb2780d88",
+          "url": "https://www.nogizaka46.com/images/46/b4e/2a4faecdf5e257fa5e8aae4672f82.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "82324560-c8ed-44cb-8c1b-7cba505b21fd",
+      "name": "川中子奈月心",
+      "birthDate": "2005-09-26",
+      "birthplace": "東京都",
+      "penLightColor1": "黒",
+      "penLightColor2": "ミントグリーン",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "d6466a63-fca8-41ff-ac6e-982ac739ece7",
+          "url": "https://not-equal-me.jp/image/profile/kawanago_natsumi.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "82bcbe66-c698-484d-95fc-c316f2107af0",
+      "name": "大西葵",
+      "birthDate": "2005-02-22",
+      "birthplace": "兵庫県",
+      "penLightColor1": "ピンク",
+      "penLightColor2": "青",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "9b7ea33f-ac86-4ffe-a202-0ff1797fb146",
+          "url": "https://nearly-equal-joy.jp/image/profile/onishi_aoi.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "86021c57-f197-408d-b94b-8f43a72be25d",
+      "name": "遠藤 さくら",
+      "birthDate": "2001-10-03",
+      "birthplace": "愛知県",
+      "penLightColor1": "ピンク",
+      "penLightColor2": "白",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "4ec85018-bd14-4a67-bcea-9bb048609b53",
+          "url": "https://www.nogizaka46.com/images/46/d90/5ca63b14dde51e680517af2216408.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "866680f5-10c7-46d6-9720-c4649ae82797",
+      "name": "齋藤樹愛羅",
+      "birthDate": "2004-11-26",
+      "birthplace": "栃木県",
+      "penLightColor1": "ピンク",
+      "penLightColor2": null,
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "images": [
+        {
+          "id": "f5beac0e-2d3c-4429-a349-cbb2597addfa",
+          "url": "https://equal-love.jp/image/profile/saito_kiara.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "86ebc1a3-c486-4154-b45a-b5fe4815913d",
+      "name": "中西 アルノ",
+      "birthDate": "2003-03-17",
+      "birthplace": "千葉県",
+      "penLightColor1": "水色",
+      "penLightColor2": "ターコイズ",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "64de8a9e-12cf-4dd3-8e71-abc747e4463e",
+          "url": "https://www.nogizaka46.com/images/46/605/fde6153cac131c43a2e8e0ac0bfcb.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "878d2e69-eb3b-4eab-99ae-d7b5aff7e6d7",
+      "name": "愛宕 心響",
+      "birthDate": "2005-09-17",
+      "birthplace": "兵庫県",
+      "penLightColor1": "ピンク",
+      "penLightColor2": "青",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "0bca7b99-19a6-4cd0-b4da-2845768114c9",
+          "url": "https://www.nogizaka46.com/images/46/abd/4779c6d304e1c50c16d3f08e6e818.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "8c1a96cc-47ba-40fc-9cd2-4b4f674eb9fa",
+      "name": "海邉 朱莉",
+      "birthDate": "2007-02-14",
+      "birthplace": "兵庫県",
+      "penLightColor1": "青",
+      "penLightColor2": "赤",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "d7055865-0450-4595-ac35-ad6e434208ab",
+          "url": "https://www.nogizaka46.com/images/46/9f0/a5e7a663deb87b228ebded01540be.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "8c972bfb-b819-4e99-bba8-8590184da936",
+      "name": "吉田 綾乃クリスティー",
+      "birthDate": "1995-09-06",
+      "birthplace": "大分県",
+      "penLightColor1": "ピンク",
+      "penLightColor2": "紫",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "c1d75dc0-cb4d-4e94-8246-0d0d1bd6c618",
+          "url": "https://www.nogizaka46.com/images/46/7ae/b1038e6c3ecb60b9941b6aed7c276.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "9206e9f7-4d68-4cbc-95af-5308ec5cf729",
+      "name": "久保 史緒里",
+      "birthDate": "2001-07-14",
+      "birthplace": "宮城県",
+      "penLightColor1": "水色",
+      "penLightColor2": "黄",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "c9035b9f-0723-4b26-8a8b-0dfb2ab7bb76",
+          "url": "https://www.nogizaka46.com/images/46/445/60cae08cc551e45e9d8aa008f871c.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "93dbe148-d8e6-4e80-81ae-4b74461d5305",
+      "name": "田村 真佑",
+      "birthDate": "1999-01-12",
+      "birthplace": "埼玉県",
+      "penLightColor1": "水色",
+      "penLightColor2": "紫",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "80e05782-e526-496e-96d1-cb06d9222cbd",
+          "url": "https://www.nogizaka46.com/images/46/de5/915861e02d78a55180a5d58ea5c80.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "942545f8-a04c-496a-9bae-d7c497f39dc0",
+      "name": "井上 和",
+      "birthDate": "2005-02-17",
+      "birthplace": "神奈川県",
+      "penLightColor1": "赤",
+      "penLightColor2": "白",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "b83678a8-1178-4c4e-b93e-f081067d1852",
+          "url": "https://www.nogizaka46.com/images/46/540/61c907a38e56dced12a57ab544fd3.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "9a501b84-b559-4170-8a0f-2fb5e892cba2",
+      "name": "藤沢莉子",
+      "birthDate": "2004-01-16",
+      "birthplace": "埼玉県",
+      "penLightColor1": "緑",
+      "penLightColor2": "白",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "ac3be7a3-88ef-441a-aefa-6e7243bf2e9c",
+          "url": "https://nearly-equal-joy.jp/image/profile/fujisawa_riko.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "9c271471-c307-4217-a2ec-45094c8f1648",
+      "name": "冨田菜々風",
+      "birthDate": "2000-07-17",
+      "birthplace": "鹿児島県",
+      "penLightColor1": "黄",
+      "penLightColor2": "緑",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "7dd14f94-6f56-4ed7-9d79-96a82eb39432",
+          "url": "https://not-equal-me.jp/image/profile/tomita_nanaka.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "9fc1242c-1da9-426f-9e1e-e61882207614",
+      "name": "櫻井もも",
+      "birthDate": "2004-04-13",
+      "birthplace": "神奈川県",
+      "penLightColor1": "さくら",
+      "penLightColor2": "もも",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "18e9c59c-5bdf-4f9f-a842-0adcde9d84e1",
+          "url": "https://not-equal-me.jp/image/profile/sakurai_momo.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "a2bc7ac4-00d2-4092-9b3f-093647cb5c6d",
+      "name": "奥田 いろは",
+      "birthDate": "2005-08-20",
+      "birthplace": "千葉県",
+      "penLightColor1": "黄緑",
+      "penLightColor2": "ピンク",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "56bf172e-b414-49f9-bb8a-85ba5fbfa0c6",
+          "url": "https://www.nogizaka46.com/images/46/c2f/3eeaa463de1b7c93ce62b62270ec8.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "a6c25afe-22bf-4091-a11f-b07458b49a12",
+      "name": "山田杏佳",
+      "birthDate": "2006-02-02",
+      "birthplace": "神奈川県",
+      "penLightColor1": "薄紫",
+      "penLightColor2": "薄ピンク",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "d098a7e0-003b-42d3-947a-c3234eed046f",
+          "url": "https://nearly-equal-joy.jp/image/profile/yamada_momoka.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "a6d0443a-18ae-4180-ae25-b4108558b66d",
+      "name": "尾木波菜",
+      "birthDate": "2003-05-08",
+      "birthplace": "千葉県",
+      "penLightColor1": "青",
+      "penLightColor2": "白",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "4497d846-16ae-44a6-a679-74ee340fa732",
+          "url": "https://not-equal-me.jp/image/profile/ogi_hana.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "ab5f225f-ceb5-4531-8a71-3d18c197b9f5",
+      "name": "梅澤 美波",
+      "birthDate": "1999-01-06",
+      "birthplace": "神奈川県",
+      "penLightColor1": "水色",
+      "penLightColor2": "青",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "bb8d6d6e-91c0-465c-b3da-a5de3186852f",
+          "url": "https://www.nogizaka46.com/images/46/8c7/646b36a936a7b4502c3020bbc090a.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "b2887852-3423-42f7-a1df-bbcefeca0e62",
+      "name": "河口夏音",
+      "birthDate": "2001-07-29",
+      "birthplace": "広島県",
+      "penLightColor1": "白",
+      "penLightColor2": "オレンジ",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "2546d680-2f6d-4e9e-9732-b4d2e83da75a",
+          "url": "https://not-equal-me.jp/image/profile/kawaguchi_natsune.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "b32b9299-9702-4085-a9d9-1155c5d97058",
+      "name": "池田 瑛紗",
+      "birthDate": "2002-05-12",
+      "birthplace": "東京都",
+      "penLightColor1": "緑",
+      "penLightColor2": "白",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "d6b30160-c561-4f07-b190-0ad1e23f878e",
+          "url": "https://www.nogizaka46.com/images/46/3cd/248094368f7aab375f1900195098a.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "bc1d0bee-5064-490e-a0e5-af8f31d634e2",
+      "name": "大信田美月",
+      "birthDate": "2005-08-06",
+      "birthplace": "東京都",
+      "penLightColor1": "白",
+      "penLightColor2": "水色",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "508a37aa-6c81-4548-9882-fde78704078b",
+          "url": "https://nearly-equal-joy.jp/image/profile/oshida_mitsuki.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "bd83ae06-e838-48a3-a77e-a978722d4e42",
+      "name": "山下美月",
+      "birthDate": "1999-07-26",
+      "birthplace": "東京都",
+      "penLightColor1": "青",
+      "penLightColor2": "黄",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "19402919-cf0c-4e0e-acd5-9e0dc1609bd3",
+          "url": "https://mizukiyamashita.com/images/36/684/dba925e0e23f873ae452de1fb27ad.jpg",
+          "isPrimary": false
+        }
+      ]
+    },
+    {
+      "id": "c29c17c5-c011-41d6-92a3-9cecb41f63b5",
+      "name": "増田 三莉音",
+      "birthDate": "2009-11-01",
+      "birthplace": "大阪府",
+      "penLightColor1": "青",
+      "penLightColor2": "青",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "10ce9ca1-967b-4637-99e8-ca9f1c60a912",
+          "url": "https://www.nogizaka46.com/images/46/86b/0333e9148ad78d217822ccde31db8.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "c4206bf0-ac33-49f3-815b-64b3567ce0ce",
+      "name": "瀧脇笙古",
+      "birthDate": "2001-07-09",
+      "birthplace": "神奈川県",
+      "penLightColor1": "黄",
+      "penLightColor2": "オレンジ",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "images": [
+        {
+          "id": "9a570f50-6e55-4da4-99dd-fec81e8f110e",
+          "url": "https://equal-love.jp/image/profile/takiwaki_shoko.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "cad46700-bff2-4e1b-8408-85e12f4db0af",
+      "name": "山本杏奈",
+      "birthDate": "1997-11-30",
+      "birthplace": "広島県",
+      "penLightColor1": "青",
+      "penLightColor2": "黄",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "images": [
+        {
+          "id": "f738e42b-0a90-4567-9565-aa4bd8f0f8eb",
+          "url": "https://equal-love.jp/image/profile/yamamoto_anna.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "ccd67e39-db83-4586-afbf-97b28cce8f54",
+      "name": "川端 晃菜",
+      "birthDate": "2011-01-14",
+      "birthplace": "東京都",
+      "penLightColor1": "水色",
+      "penLightColor2": "緑",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "97c41acf-7373-462a-b7d4-cf566951a133",
+          "url": "https://www.nogizaka46.com/images/46/c95/5958d930809c5a57bf2e1b29a8354.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "ced9ec91-59a5-4771-8bef-a987da6b55e2",
+      "name": "村山結香",
+      "birthDate": "2004-02-15",
+      "birthplace": "福岡県",
+      "penLightColor1": "赤",
+      "penLightColor2": "赤",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "000fb1f3-b999-4b31-82b4-0f2a31ad28bb",
+          "url": "https://nearly-equal-joy.jp/image/profile/murayama_yuuka.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "d109079d-6527-42bf-96c1-28e310d40dba",
+      "name": "瀬戸口 心月",
+      "birthDate": "2005-07-16",
+      "birthplace": "鹿児島県",
+      "penLightColor1": "青",
+      "penLightColor2": "黄",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "b876d997-0cd6-4ea0-a911-f3897970e5b3",
+          "url": "https://www.nogizaka46.com/images/46/4b1/dbd952eb8141c36fae23b5b3b6098.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "d3031814-c545-450e-84d2-3f0aeafe8ba6",
+      "name": "伊藤 理々杏",
+      "birthDate": "2002-10-08",
+      "birthplace": "沖縄県",
+      "penLightColor1": "赤",
+      "penLightColor2": "紫",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "f58132be-3574-4160-8705-319e07bc9b17",
+          "url": "https://www.nogizaka46.com/images/46/1d1/b0f71982a410acda6e979d41cfb51.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "d705c71f-f928-420e-8499-b442dffc6160",
+      "name": "筒井 あやめ",
+      "birthDate": "2004-06-08",
+      "birthplace": "愛知県",
+      "penLightColor1": "紫",
+      "penLightColor2": "紫",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "e36d9453-93e0-4f66-b1a3-7d374dc63a8f",
+          "url": "https://www.nogizaka46.com/images/46/9db/414579921f85d8dd289e573c96dc3.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "dad10f29-e40c-4525-a443-3653958c1ba3",
+      "name": "落合希来里",
+      "birthDate": "2001-05-22",
+      "birthplace": "栃木県",
+      "penLightColor1": "黄",
+      "penLightColor2": "黄",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "images": [
+        {
+          "id": "1a42d45d-de72-4569-b80a-b3cfd1d48b7a",
+          "url": "https://not-equal-me.jp/image/profile/ochiai_kirari.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "e76b1500-0129-4215-917c-ce87faa5de31",
+      "name": "黒見 明香",
+      "birthDate": "2004-01-19",
+      "birthplace": "東京都",
+      "penLightColor1": "紫",
+      "penLightColor2": "緑",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "07a0d96a-4fcd-4468-be72-228ce48554bf",
+          "url": "https://www.nogizaka46.com/images/46/143/57bc0bef04a325148a8a7c62541e1.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "e82fa36c-d2be-4fd8-95e4-d315b0869b36",
+      "name": "矢田 萌華",
+      "birthDate": "2008-01-27",
+      "birthplace": "秋田県",
+      "penLightColor1": "白",
+      "penLightColor2": "紫",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "47990491-e1a9-4245-8329-80c8445fb1e2",
+          "url": "https://www.nogizaka46.com/images/46/1b6/eb145a98c28698e68696ed7deeab0.jpg",
+          "isPrimary": true
+        },
+        {
+          "id": "074634ab-8067-4d1b-9d9d-64458575c051",
+          "url": "https://www.nogizaka46.com/images/46/1b6/eb145a98c28698e68696ed7deeab0.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "eae1a1d0-5403-418c-9629-6fa16e8bab9d",
+      "name": "小川 彩",
+      "birthDate": "2007-06-27",
+      "birthplace": "千葉県",
+      "penLightColor1": "白",
+      "penLightColor2": "白",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "e487434b-c330-4589-b70c-ad52fcd97482",
+          "url": "https://www.nogizaka46.com/images/46/e8f/d4b6b2c5802a42f04de0b62f4ab7f.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "eb9dac1a-a22e-46f1-ae22-337fc5fc5f40",
+      "name": "大場花菜",
+      "birthDate": "2000-02-04",
+      "birthplace": "埼玉県",
+      "penLightColor1": "青",
+      "penLightColor2": "オレンジ",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "images": [
+        {
+          "id": "f0a4f578-54e7-4fe3-a46d-3f003a2ae4db",
+          "url": "https://equal-love.jp/image/profile/oba_hana.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "ebe44eca-f21e-461b-b333-a1179ddff938",
+      "name": "長嶋 凛桜",
+      "birthDate": "2007-05-25",
+      "birthplace": "北海道",
+      "penLightColor1": "ピンク",
+      "penLightColor2": "オレンジ",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "images": [
+        {
+          "id": "785430fc-3949-4dc5-b5f0-6388e7884144",
+          "url": "https://www.nogizaka46.com/images/46/c1d/2368d8afc850d797155f7d93d0569.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "f976226d-ad9b-436c-9e4d-f2fbc1f3e277",
+      "name": "諸橋沙夏",
+      "birthDate": "1996-08-03",
+      "birthplace": "福島県",
+      "penLightColor1": "黄緑",
+      "penLightColor2": null,
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "images": [
+        {
+          "id": "55dddad4-841c-4074-93d2-39101bc44cea",
+          "url": "https://equal-love.jp/image/profile/morohashi_sana.jpg",
+          "isPrimary": true
+        }
+      ]
+    },
+    {
+      "id": "fac38c2d-7154-4476-84fe-58f15a93b398",
+      "name": "江角怜音",
+      "birthDate": "2005-04-26",
+      "birthplace": "大阪府",
+      "penLightColor1": "青",
+      "penLightColor2": "青",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "images": [
+        {
+          "id": "f4e3e11d-5765-46fb-ad4a-516497684f0d",
+          "url": "https://nearly-equal-joy.jp/image/profile/esumi_renon.jpg",
+          "isPrimary": true
+        }
+      ]
+    }
+  ],
+  "formations": [
+    {
+      "id": "19eab778-cf92-4112-acf2-ca3a00455636",
+      "name": "テスト",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "positions": [
+        {
+          "id": "062a7060-e1ba-400b-bb5b-490354456169",
+          "memberId": "438b3e3e-359c-43fd-8b4c-490d38c0b4c6",
+          "positionNumber": 4,
+          "row": 1,
+          "column": 4
+        },
+        {
+          "id": "30e32264-2f3a-4d60-a7d9-1355d2fdc831",
+          "memberId": "942545f8-a04c-496a-9bae-d7c497f39dc0",
+          "positionNumber": 6,
+          "row": 2,
+          "column": 2
+        },
+        {
+          "id": "55c81b12-6b42-4eec-8d93-9b5001dcff1d",
+          "memberId": "4db60551-05bd-4e8c-8b53-136e4a7ba974",
+          "positionNumber": 3,
+          "row": 1,
+          "column": 3
+        },
+        {
+          "id": "6d1a32c8-05d9-4ab1-8cb5-d95e32effcd4",
+          "memberId": "bd83ae06-e838-48a3-a77e-a978722d4e42",
+          "positionNumber": 1,
+          "row": 1,
+          "column": 1
+        },
+        {
+          "id": "7c4d5c2c-fdce-4ab7-89b6-c76384629f76",
+          "memberId": "1fe341a0-8e8e-42e6-8717-2beb03f008b5",
+          "positionNumber": 2,
+          "row": 1,
+          "column": 2
+        },
+        {
+          "id": "7fee6ffd-42cf-45c8-b7fa-9a4484d3a23a",
+          "memberId": "93dbe148-d8e6-4e80-81ae-4b74461d5305",
+          "positionNumber": 5,
+          "row": 2,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "id": "2e97f3f2-4409-42c6-86f6-f5933b62c3ae",
+      "name": "選抜予想",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "positions": [
+        {
+          "id": "09c81bbb-ccc8-4a3f-b9d2-4ef1f16d1885",
+          "memberId": "7422e2c5-4078-4310-8b67-9fbf7523ee9e",
+          "positionNumber": 18,
+          "row": 3,
+          "column": 7
+        },
+        {
+          "id": "0ee6a0c7-5cf3-40eb-88be-37793980a24b",
+          "memberId": "d705c71f-f928-420e-8499-b442dffc6160",
+          "positionNumber": 17,
+          "row": 3,
+          "column": 6
+        },
+        {
+          "id": "1b874d6a-aaf8-4df1-8ffe-9bdaaa6c4a25",
+          "memberId": "438b3e3e-359c-43fd-8b4c-490d38c0b4c6",
+          "positionNumber": 5,
+          "row": 1,
+          "column": 5
+        },
+        {
+          "id": "23ac558a-aa68-4798-86ca-fc3e6e415b8b",
+          "memberId": "29cc4ee8-14a1-46f6-ae1b-45f31c077af2",
+          "positionNumber": 13,
+          "row": 3,
+          "column": 2
+        },
+        {
+          "id": "3e903e52-0ac0-4a66-a7f3-f391bcbe24b4",
+          "memberId": "ab5f225f-ceb5-4531-8a71-3d18c197b9f5",
+          "positionNumber": 6,
+          "row": 2,
+          "column": 1
+        },
+        {
+          "id": "513b319f-7c14-430a-98cf-a40df2422101",
+          "memberId": "1fe341a0-8e8e-42e6-8717-2beb03f008b5",
+          "positionNumber": 3,
+          "row": 1,
+          "column": 3
+        },
+        {
+          "id": "62661934-7abd-4bc6-9ad3-afd1078868ae",
+          "memberId": "5a3e51b1-60c7-4e94-aebf-f3177e30a9fc",
+          "positionNumber": 14,
+          "row": 3,
+          "column": 3
+        },
+        {
+          "id": "641f8596-5789-4662-8241-0677624e9594",
+          "memberId": "68fd2f72-3d00-40af-8ce0-32522efe93cb",
+          "positionNumber": 12,
+          "row": 3,
+          "column": 1
+        },
+        {
+          "id": "64480f91-a2b3-4a4c-ba9f-67d23f8c827c",
+          "memberId": "86ebc1a3-c486-4154-b45a-b5fe4815913d",
+          "positionNumber": 11,
+          "row": 2,
+          "column": 6
+        },
+        {
+          "id": "6c8b8e54-2da5-4759-8cc4-21bfe7ece8c9",
+          "memberId": "942545f8-a04c-496a-9bae-d7c497f39dc0",
+          "positionNumber": 9,
+          "row": 2,
+          "column": 4
+        },
+        {
+          "id": "76e6783c-9c38-4a55-8c56-da08e25f4646",
+          "memberId": "d109079d-6527-42bf-96c1-28e310d40dba",
+          "positionNumber": 7,
+          "row": 2,
+          "column": 2
+        },
+        {
+          "id": "792902d6-5f4e-4182-9e4e-ac8ec2f0dbe9",
+          "memberId": "7f7f46cc-286a-4039-8253-af2f2379ff86",
+          "positionNumber": 2,
+          "row": 1,
+          "column": 2
+        },
+        {
+          "id": "7a7fea9a-7baf-4424-b4a8-bd82ea998011",
+          "memberId": "86021c57-f197-408d-b94b-8f43a72be25d",
+          "positionNumber": 1,
+          "row": 1,
+          "column": 1
+        },
+        {
+          "id": "8fa16734-96f8-4939-95f4-37b543c3a813",
+          "memberId": "eae1a1d0-5403-418c-9629-6fa16e8bab9d",
+          "positionNumber": 16,
+          "row": 3,
+          "column": 5
+        },
+        {
+          "id": "a2d135fc-17c0-4920-9b8a-45576e8929f0",
+          "memberId": "3ad91a10-5444-42f3-9aa2-d9684942e660",
+          "positionNumber": 8,
+          "row": 2,
+          "column": 3
+        },
+        {
+          "id": "bb708084-071e-48d2-bcf6-d997f314f411",
+          "memberId": "e82fa36c-d2be-4fd8-95e4-d315b0869b36",
+          "positionNumber": 10,
+          "row": 2,
+          "column": 5
+        },
+        {
+          "id": "efe9e586-bcc2-42d4-b27f-cd57179cc3f7",
+          "memberId": "b32b9299-9702-4085-a9d9-1155c5d97058",
+          "positionNumber": 4,
+          "row": 1,
+          "column": 4
+        },
+        {
+          "id": "f3fbc381-36e6-4fa2-b41a-fb9d894d43e7",
+          "memberId": "5a6bda47-9ea1-46d8-9a5a-d7738df2e414",
+          "positionNumber": 15,
+          "row": 3,
+          "column": 4
+        }
+      ]
+    }
+  ],
+  "songs": [
+    {
+      "id": "b6d1e4dd-642e-456f-a845-7458531e43e4",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "#おふしょるにっと",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "89210630-def3-4ae8-aae3-fb600112d060",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "0120お助け屋さん",
+      "lyricist": "指原莉乃",
+      "composer": "めんま",
+      "arranger": "めんま",
+      "lyrics": null
+    },
+    {
+      "id": "a9de3613-10d9-43a3-b40f-0385c01cd8a0",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "100日目",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "5bacb24a-8b01-41ef-8042-1a684b08928c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "13日の金曜日",
+      "lyricist": "秋元康",
+      "composer": "中谷あつこ",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "1fa68f75-9bd7-4ce4-b769-07411ab350d2",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "17分間",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "cb461685-fec3-48e7-b8b3-4b2273450418",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "24/7",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "03b49849-883d-4df3-9453-2d566faa3129",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "2度目のキスから",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "6a3e88e7-b836-468a-9584-a1aa94ad5b37",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "2時半ろけんろー",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "03ad288f-ef10-46f1-b7e4-ffe45f8605a3",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "4番目の光",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "25f8be1e-a513-4a24-a3a1-37944654a43d",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Actually...",
+      "lyricist": "秋元康",
+      "composer": "NAMITO",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "ca31772c-def8-4a23-9bfe-940da211f282",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Against",
+      "lyricist": "秋元康",
+      "composer": "古川貴浩",
+      "arranger": "古川貴浩",
+      "lyrics": null
+    },
+    {
+      "id": "7ece2711-78ee-45f0-a01b-6e1a96cd6762",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Am I Loving?",
+      "lyricist": "秋元康",
+      "composer": "山田智和",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "1624ffc5-c831-4cd4-8370-554abbec8762",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Another Ghost",
+      "lyricist": "秋元康",
+      "composer": "前迫潤哉・Yasutaka.Ishio",
+      "arranger": "Yasutaka.Ishio",
+      "lyrics": null
+    },
+    {
+      "id": "35b3c829-7e3a-4d08-b163-f70cee9fc112",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "CAMEO",
+      "lyricist": "指原莉乃",
+      "composer": "田尻知之・本澤尚之",
+      "arranger": "田尻知之・本澤尚之",
+      "lyrics": null
+    },
+    {
+      "id": "d991b369-47de-4831-9047-1f74a98cd0a9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Fake Doctor",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "9c806d30-5712-4a85-ae3b-96f01a7888f9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Hard to say",
+      "lyricist": "秋元康",
+      "composer": "石川陽泉",
+      "arranger": "野中\"まさ\"雄一",
+      "lyrics": null
+    },
+    {
+      "id": "90c2a08e-c038-4558-8229-c2e9767dd8a5",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "I see...",
+      "lyricist": "秋元康",
+      "composer": "youth case",
+      "arranger": "佐々木博史",
+      "lyrics": null
+    },
+    {
+      "id": "d30561f2-d115-4ea4-be8a-7d683ccfea17",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "Junkies",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "8d3c34a5-43a7-40a9-addb-2cbdf9ff7cd8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Just a sec.",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4b49bb26-df3c-49d1-819b-589da1221010",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Keep in touch",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "eb29faac-c28e-44e8-9d72-5a077a0ff96c",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "Love or love",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2a7f8eaa-c222-4109-b85b-1dce2e1eaa4c",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "Marcato",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "cd7e4f5f-53c6-4e63-937c-017ea8a85b3b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Monopoly",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "9f4ad8a8-d434-4835-9217-2d23af2d6a31",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "My respect",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "54a6a074-53b9-45e4-92ed-e2ed13adae11",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "My rule",
+      "lyricist": "秋元康",
+      "composer": "藤田卓也",
+      "arranger": "藤田卓也",
+      "lyrics": null
+    },
+    {
+      "id": "25505485-306e-47a3-a930-ae9965eb3661",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Never say never",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "be65d001-7de7-4247-acb6-5b8980b39d2f",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "Oh! Darling",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "710397fc-df9f-45d4-857b-383ef7b8fa7c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Out of the blue",
+      "lyricist": "秋元康",
+      "composer": "youth case",
+      "arranger": "Ishizuka tomoo",
+      "lyrics": null
+    },
+    {
+      "id": "d00d6609-31be-4704-b397-78a42018bb2f",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "P.I.C.",
+      "lyricist": "指原莉乃",
+      "composer": "NA.ZU.NA・Yu-ki Kokubo・YHANAEL",
+      "arranger": "NA.ZU.NA・Yu-ki Kokubo・YHANAEL",
+      "lyrics": null
+    },
+    {
+      "id": "5681b21e-e427-4d8f-b457-c343de472ad8",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "Queens",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "f790db08-7bc2-4d5e-be4b-a42e444c04ba",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Rewindあの日",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "95769b3d-5e81-49d0-baba-d0bb39879596",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Route 246",
+      "lyricist": "秋元康",
+      "composer": "小室哲哉",
+      "arranger": "小室哲哉・Music Design",
+      "lyrics": null
+    },
+    {
+      "id": "f162ef3a-a05b-4df4-88cc-5d2866fcc4e2",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Same numbers",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "391da90f-53c6-43d7-b765-cd0da544b470",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Sing Out!",
+      "lyricist": "秋元康",
+      "composer": "Ryota Saito・TETTA",
+      "arranger": "野中\"まさ\"雄一",
+      "lyrics": null
+    },
+    {
+      "id": "f7f01405-cc51-4de4-8e3d-a7b2499f93f8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Spark a revolution!",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "43a317ee-9e88-4c64-bb1a-984f651e142a",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "Sweetest girl",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "21a58af4-c1c2-4a4d-9e36-0c23ce6eb2f3",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Tender days",
+      "lyricist": "秋元康",
+      "composer": "SoichiroK・Nozomu.S",
+      "arranger": "SoichiroK・Nozomu.S",
+      "lyrics": null
+    },
+    {
+      "id": "cc332300-ffa2-444a-8922-f844eae0a957",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "The 5th！",
+      "lyricist": "指原莉乃",
+      "composer": "ArmySlick・Yu-ki Kokubo・YUU for YOU・YHANAEL",
+      "arranger": "ArmySlick・YUU for YOU",
+      "lyrics": null
+    },
+    {
+      "id": "085cde66-d6bf-4fd4-b62c-088aa900ce0a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Threefold choice",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "37b2d017-51d8-425e-b8ce-dad48b23a34a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Under's Love",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "1e920283-f8a9-4f9a-9544-0c16151d03b9",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "Want you！Want you！",
+      "lyricist": "指原莉乃",
+      "composer": "ArmySlick・Yu-ki Kokubo・YUU for YOU・YHANAEL",
+      "arranger": "ArmySlick・YUU for YOU",
+      "lyrics": null
+    },
+    {
+      "id": "f02a6ed3-f098-44f1-945e-eeac237baebe",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "Wilderness world",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "f1506287-ff2e-44e7-8eef-c8a0a8a1dbac",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "cinema",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "055ed79a-6e85-4bd0-91af-c2015d8ef0b5",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "≒JOY",
+      "lyricist": "指原莉乃",
+      "composer": "鈴木裕明",
+      "arranger": "古川貴浩",
+      "lyrics": null
+    },
+    {
+      "id": "b679b7c0-32c1-4da7-8d8d-09a34f811254",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "≠ME",
+      "lyricist": "指原莉乃",
+      "composer": "バグベア",
+      "arranger": "バグベア",
+      "lyrics": null
+    },
+    {
+      "id": "24f422ad-3433-4f98-827c-02bd599903f4",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "♡3ヶ月♡",
+      "lyricist": "指原莉乃",
+      "composer": "Yu-ki Kokubo, YUU for YOU",
+      "arranger": "YUU for YOU",
+      "lyrics": null
+    },
+    {
+      "id": "f2d98d59-37fd-42c5-98d9-a16ac47e7194",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "「じゃあね」が切ない",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "6e2169e5-c263-46ae-ac96-a49a089b755b",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "「ドライブ デート 都内」",
+      "lyricist": "指原莉乃",
+      "composer": "本多友紀",
+      "arranger": "脇眞富",
+      "lyrics": null
+    },
+    {
+      "id": "f76fc438-705f-4da0-bd6c-727eb124aeb0",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "〜Do my best〜じゃ意味はない",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "25f46253-ec4b-42bd-9c13-b3057664a385",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "あと７曲",
+      "lyricist": "秋元康",
+      "composer": "久保卓人・齋藤奏太",
+      "arranger": "齋藤奏太",
+      "lyrics": null
+    },
+    {
+      "id": "c6e52e54-de31-4594-8ce7-01fc741afe03",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "あなたからの卒業",
+      "lyricist": "秋元康",
+      "composer": "Tony23",
+      "arranger": "野中\"まさ\"雄一",
+      "lyrics": null
+    },
+    {
+      "id": "d844e65e-4a38-4b0c-a445-398cb986cb91",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "あなたのために弾きたい",
+      "lyricist": "秋元康",
+      "composer": "近藤圭一",
+      "arranger": "樫原伸彦",
+      "lyrics": null
+    },
+    {
+      "id": "c8dede6a-8b62-487f-aab2-dee058a5d5b4",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "あの光",
+      "lyricist": "秋元康",
+      "composer": "BASEMINT",
+      "arranger": "BASEMINT",
+      "lyrics": null
+    },
+    {
+      "id": "492bd956-5f13-4afd-8d0e-688e769c12e2",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "あの子コンプレックス",
+      "lyricist": "指原莉乃",
+      "composer": "高橋涼",
+      "arranger": "湯浅篤",
+      "lyrics": null
+    },
+    {
+      "id": "9e045901-59e8-4cc3-9c71-dd31051bbab6",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "あの教室",
+      "lyricist": "秋元康",
+      "composer": "カワノミチオ",
+      "arranger": "カワノミチオ",
+      "lyrics": null
+    },
+    {
+      "id": "b2827759-fc4a-48c0-b3a0-5a5ae36414f9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "あの日 僕は咄嗟に嘘をついた",
+      "lyricist": "秋元康",
+      "composer": "三輪智也",
+      "arranger": "京田誠一",
+      "lyrics": null
+    },
+    {
+      "id": "8e3663a3-43a3-4593-ae8e-08341e426efa",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "あの歌を…",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c2be3f96-9141-4271-848a-e47f853e29c8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "あの頃におかえり",
+      "lyricist": "秋元康",
+      "composer": "youth case",
+      "arranger": "遠藤ナオキ",
+      "lyrics": null
+    },
+    {
+      "id": "187955b6-2f84-48df-b5d0-4894e09b59ca",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "あらかじめ語られるロマンス",
+      "lyricist": "秋元康",
+      "composer": "SoichiroK・Nozomu.S",
+      "arranger": "SoichiroK・Nozomu.S",
+      "lyrics": null
+    },
+    {
+      "id": "65065945-05fc-424f-9dcb-ace5e68a7988",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ありがちな恋愛",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": "野中\"まさ\"雄一",
+      "lyrics": null
+    },
+    {
+      "id": "cd882e8a-7ff4-43e1-80b8-066b8dad5355",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "あんなに好きだったのに…",
+      "lyricist": "秋元康",
+      "composer": "木下めろん",
+      "arranger": "",
+      "lyrics": null
+    },
+    {
+      "id": "35057c2e-0eee-4b41-8713-0e52f105bbca",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "いつかできるから今日できる",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset・京田誠一",
+      "arranger": "Akira Sunset・京田誠一",
+      "lyrics": null
+    },
+    {
+      "id": "caf8a984-7809-48ff-81d1-cf6b4a8b25bd",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "いつの日にか、あの歌を…",
+      "lyricist": "秋元康",
+      "composer": "松尾一真",
+      "arranger": "松尾一真",
+      "lyrics": null
+    },
+    {
+      "id": "1f34f095-5c4b-4d27-ad42-2d4b7aa7924d",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "いま、月は満ちる",
+      "lyricist": "指原莉乃",
+      "composer": "島軒瑠",
+      "arranger": "野中\"まさ\"雄一",
+      "lyrics": null
+    },
+    {
+      "id": "64c20e00-a38e-4b68-b647-bab7ebf14818",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "いらない ツインテール",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "39f06203-d1f5-4cbe-bab1-c84affd1bbbe",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "おいでシャンプー",
+      "lyricist": "秋元康",
+      "composer": "小田切大",
+      "arranger": "TATOO",
+      "lyrics": null
+    },
+    {
+      "id": "90fa6179-9339-4350-95b1-b1465c2d5a19",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "おひとりさま天国",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset・丸谷マナブ・ha-j・遠藤ナオキ",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "181a8ba6-61ae-4796-9161-e897a6a6309c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "お別れタコス",
+      "lyricist": "秋元康",
+      "composer": "中谷信行",
+      "arranger": "中谷信行",
+      "lyrics": null
+    },
+    {
+      "id": "d0b07450-83cd-4b72-a96a-816e723325e3",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "お姉さんじゃダメですか？",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "2e4d3bb0-5d3f-4675-a53f-12a54dfa120a",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "お姫様にしてよ！",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "6544b542-6aec-4fc2-a206-9697aa7a9b4e",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "かき氷の片想い",
+      "lyricist": "秋元康",
+      "composer": "白須賀悟",
+      "arranger": "白須賀悟",
+      "lyrics": null
+    },
+    {
+      "id": "e79cf1c6-fd1a-4dd5-95d7-332297337bc6",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "きっかけ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": "有木竜郎・杉山勝彦",
+      "lyrics": null
+    },
+    {
+      "id": "4c4ce95e-fa91-413b-ae9c-8764f46a7769",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "きっと、青い",
+      "lyricist": "指原莉乃",
+      "composer": "ヤナガワタカオ",
+      "arranger": "ヤナガワタカオ",
+      "lyrics": null
+    },
+    {
+      "id": "49199596-0cc6-432d-9143-4a86a6736d83",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "きゅんかわ人生",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "70c46af3-ca83-46fa-a5f0-65bd8bfc3c7b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ぐるぐるカーテン",
+      "lyricist": "秋元康",
+      "composer": "黒須克彦",
+      "arranger": "湯浅篤",
+      "lyrics": null
+    },
+    {
+      "id": "aedb8355-cb81-4cb8-85f0-b82cc17ac3eb",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ぐるぐるカーテン（6期生ver.）",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "46dff994-f14c-4510-9005-43a008448a8b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ここじゃないどこか",
+      "lyricist": "秋元康",
+      "composer": "大藤史",
+      "arranger": "京田誠一",
+      "lyrics": null
+    },
+    {
+      "id": "4a5d699e-5b68-4c1a-92f3-d8599ead9229",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ここにいる理由",
+      "lyricist": "秋元康",
+      "composer": "長谷川湊",
+      "arranger": "Carlos K.",
+      "lyrics": null
+    },
+    {
+      "id": "b61cd39d-3981-431c-be7d-24d5c71ce425",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ここにはないもの",
+      "lyricist": "秋元康",
+      "composer": "ナスカ",
+      "arranger": "ナスカ",
+      "lyrics": null
+    },
+    {
+      "id": "1f1cdcb3-990f-4ff9-8b62-837ce670dcc0",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "こちらハッピー探検隊",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "95a5b4ea-b0ba-45e7-967c-95f36241c6c9",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "このままでモーメンタリ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "9259f1d2-9da4-4898-ae91-cc2661eaa420",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "この空がトリガー！",
+      "lyricist": "指原莉乃",
+      "composer": "塚田耕平",
+      "arranger": "古川貴浩",
+      "lyrics": null
+    },
+    {
+      "id": "de4bc12f-293c-4bd8-a001-5543794b6ce4",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "これから",
+      "lyricist": "秋元康",
+      "composer": "浦島健太・菊池博人",
+      "arranger": "菊池博人",
+      "lyrics": null
+    },
+    {
+      "id": "3a5f50e4-fc13-4a82-ab4a-b6142ef044b3",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "ごめん、マジで",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "1869a1a7-4770-4851-97ba-7f2b7bcd7639",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ごめんね",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c359b8e5-0c01-4abf-ace1-760877ee0add",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ごめんね ずっと…",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "f55d3c91-2429-424b-b705-351409daf95a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ごめんねFingers crossed",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦・APAZZI",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "54ac2041-08b3-4547-afa1-1d7968abb504",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "さ〜ゆ〜Ready?",
+      "lyricist": "秋元康",
+      "composer": "Masayoshi Kawabata",
+      "arranger": "Masayoshi Kawabata",
+      "lyrics": null
+    },
+    {
+      "id": "0abe072c-dff2-4367-83a1-8e3ef037f70f",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "さざ波は戻らない",
+      "lyricist": "秋元康",
+      "composer": "伊藤心太郎",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "12228b70-cc55-4593-a9b5-c160b9a67efe",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "さゆりんご募集中",
+      "lyricist": "秋元康",
+      "composer": "浦島健太・菊池博人",
+      "arranger": "浦島健太・菊池博人",
+      "lyrics": null
+    },
+    {
+      "id": "d5c90cc3-6eec-4b77-b955-1ecc734688e5",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ざぶんざざぶん",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "29fb2b16-a7d3-410e-bcbd-7932ba4e7760",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "しあわせの保護色",
+      "lyricist": "秋元康",
+      "composer": "MASANORI URA",
+      "arranger": "大岡晋平",
+      "lyrics": null
+    },
+    {
+      "id": "59d9d5b2-d1d4-445b-b148-01a37b06f158",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "しゅきぴ！",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "93a823d3-9712-46e3-bd4f-73534117eda4",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "じゃあね。",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "982f472e-d72d-4031-a8f1-88725a7106bd",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "す、好きじゃない！",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "04e9f153-0395-4b8c-ad25-3c5941fc3773",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "せっかちなかたつむり",
+      "lyricist": "秋元康",
+      "composer": "山本加津彦",
+      "arranger": "湯浅篤",
+      "lyrics": null
+    },
+    {
+      "id": "f18c1825-9016-4861-b168-17b6bddc5ac9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "その先の出口",
+      "lyricist": "秋元康",
+      "composer": "Carlos K.",
+      "arranger": "Carlos K.",
+      "lyrics": null
+    },
+    {
+      "id": "44777f33-4c42-4ad4-ba72-a3cd53f26ca7",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "その先はイグザルト",
+      "lyricist": "指原莉乃",
+      "composer": "高木龍一",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "63372e8b-123b-4258-a5fb-2a1b55e7b6b9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "その女",
+      "lyricist": "秋元康",
+      "composer": "HRK",
+      "arranger": "",
+      "lyrics": null
+    },
+    {
+      "id": "158ecdd6-59cb-413b-a83b-3b3c71b44b0a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "それまでの猶予",
+      "lyricist": "秋元康",
+      "composer": "フジノタカフミ",
+      "arranger": "玉木千尋",
+      "lyrics": null
+    },
+    {
+      "id": "98dc9fb6-cc2d-44a1-819f-4b76f3b405e1",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "そんなバカな・・・",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset",
+      "arranger": "Akira Sunset",
+      "lyrics": null
+    },
+    {
+      "id": "9b5ddaf6-29a3-4e29-a07e-b18eeab96e28",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "だからとて",
+      "lyricist": "指原莉乃",
+      "composer": "高橋リュウセイ",
+      "arranger": "脇眞富",
+      "lyrics": null
+    },
+    {
+      "id": "5501335b-7511-4501-bb73-5ef054892d51",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "だだだ、だって。",
+      "lyricist": "指原莉乃",
+      "composer": "中村歩, 齋藤奏太",
+      "arranger": "中村歩, 齋藤奏太",
+      "lyrics": null
+    },
+    {
+      "id": "8de3c78b-bb26-46f0-b802-bf117aeb0ee1",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ってかさ",
+      "lyricist": "秋元康",
+      "composer": "長沢知亜紀・永野小織・Myko ISLAND",
+      "arranger": "Myko ISLAND",
+      "lyrics": null
+    },
+    {
+      "id": "6ff6b78c-e9b2-4199-9d45-de6956311b97",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "つづく",
+      "lyricist": "秋元康",
+      "composer": "若田部誠",
+      "arranger": "若田部誠",
+      "lyrics": null
+    },
+    {
+      "id": "0350770c-d9a5-4125-9772-8bd6c0c57616",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "てゆーか、みるてんって何？",
+      "lyricist": "指原莉乃",
+      "composer": "yuma",
+      "arranger": "yuma",
+      "lyrics": null
+    },
+    {
+      "id": "17aa35dc-bc4d-4a36-9590-df49a2a9038c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "でこぴん",
+      "lyricist": "秋元康",
+      "composer": "中土智博",
+      "arranger": "中土智博",
+      "lyrics": null
+    },
+    {
+      "id": "5950d6b3-035c-449b-a2b5-88db9b3e2a8c",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "とくべチュ、して！",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "52ceb0a9-a259-40aa-8e08-ab9cc9171523",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "どこが好きか言って",
+      "lyricist": "指原莉乃",
+      "composer": "齋藤奏太",
+      "arranger": "齋藤奏太",
+      "lyrics": null
+    },
+    {
+      "id": "f9b11a0d-c4eb-40e3-bd6b-6bc66dc042f1",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ないものねだり",
+      "lyricist": "秋元康",
+      "composer": "丸谷マナブ",
+      "arranger": "福田貴史・丸谷マナブ",
+      "lyrics": null
+    },
+    {
+      "id": "b3e001da-9840-48b0-97ef-b6a0ed3dd3a3",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "なぜ　僕たちは走るのか？",
+      "lyricist": "秋元康",
+      "composer": "賀佐泰洋",
+      "arranger": "賀佐泰洋",
+      "lyrics": null
+    },
+    {
+      "id": "16bdcd6c-92a7-4796-bc10-dae88a31c4a9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "なぞの落書き",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "312866a3-5180-468a-992d-1d4a3dfe19d1",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "のような存在",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "91ed7381-35b6-44da-b99e-7b178edba270",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "はにかみショート",
+      "lyricist": "指原莉乃",
+      "composer": "中村歩・野口大志",
+      "arranger": "中村歩・野口大志",
+      "lyrics": null
+    },
+    {
+      "id": "91a62ac5-1096-4b1b-824d-82eacd7a28d2",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "はんぶんこクリスマス",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "7959e9b4-aeb3-4f29-8002-baa002f866eb",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ひとりよがり",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": "杉山勝彦・有木竜郎",
+      "lyrics": null
+    },
+    {
+      "id": "d00ab372-b5fe-486d-b62b-a719a17fd2fa",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ひと夏の長さより…",
+      "lyricist": "秋元康",
+      "composer": "aokado",
+      "arranger": "aokado",
+      "lyrics": null
+    },
+    {
+      "id": "7893fddd-710a-4f85-8db4-08a9fa398389",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ぶんぶくちゃがま",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "793c1fa0-6bc9-432c-aa0f-3d2c782073f3",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ぼっち党",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "cbbc4f5f-9e9d-488a-b8ba-e239e47e5684",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "まあいいか?",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "a16f5419-bcbc-4661-b185-79dabe56a753",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "まほろばアスタリスク",
+      "lyricist": "指原莉乃",
+      "composer": "本多友紀",
+      "arranger": "脇眞富",
+      "lyrics": null
+    },
+    {
+      "id": "81ca2cf7-8c90-4a79-9a86-1d5dc897e171",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "もうすぐ〜ザンビ伝説〜",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "bdceae1c-0869-4a02-a3af-37ebc1c44853",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "もう少しの夢",
+      "lyricist": "秋元康",
+      "composer": "丸谷マナブ",
+      "arranger": "野中\"まさ\"雄一",
+      "lyrics": null
+    },
+    {
+      "id": "e0a4069a-0d2d-42a8-8f2e-6aa19df2af50",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "もしも心が透明なら",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d1b7b475-9791-4c0a-8ac9-acd776ee475f",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "もし君がいなければ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "fe191deb-6539-453b-93d0-4c4cb1036fcb",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "もっと好きになる",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "8527e63c-cb82-4853-a74a-1a325d420c00",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "やさしいだけなら",
+      "lyricist": "秋元康",
+      "composer": "平賀伸明",
+      "arranger": "野中\"まさ\"雄一",
+      "lyrics": null
+    },
+    {
+      "id": "9dbffd0c-5747-46dd-a455-eb046cdf85bf",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "やさしさとは",
+      "lyricist": "秋元康",
+      "composer": "古川貴浩",
+      "arranger": "古川貴浩",
+      "lyrics": null
+    },
+    {
+      "id": "a03f3fe2-b8f6-4519-97b4-c04620e993d4",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "やさしさなら間に合ってる",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b7865d77-bd9e-4017-85ee-a61b6830f830",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ゆっくりと咲く花",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2e70bc25-6eaf-4d04-8476-ec481f2325f4",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "アイカツハッピーエンド",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "82783a16-1960-421f-a3f4-db70833b97c7",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "アトノマツリ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "14ea3e6f-301a-44e9-9bb5-b320e9717428",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "アナスターシャ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "1398d161-333d-4a28-bf01-8c0846531967",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "アンダー",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "8216ecea-86ff-462c-bb83-98c7f5a13f5b",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "アンチコンフィチュール",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "ffe99501-f84b-42c6-ba1c-dba0800896af",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "インフルエンサー",
+      "lyricist": "秋元康",
+      "composer": "すみだしんや",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "41b561cd-f496-4d3d-83c8-2912ff583928",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "ウィークエンドシトロン",
+      "lyricist": "指原莉乃",
+      "composer": "ArmySlick・Yu-ki Kokubo・YUU for YOU",
+      "arranger": "ArmySlick・YUU for YOU",
+      "lyrics": null
+    },
+    {
+      "id": "7c45760d-ec1c-421a-8eed-4c3ccf092cf3",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "ウルトラレアキッスガチャガチャ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "437afd82-7151-4669-ac3e-fbb7509264a0",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "オフショアガール",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "fb54d3f4-fded-4f8c-a7b4-c85c6d42a35c",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "カフェ樂園",
+      "lyricist": "指原莉乃",
+      "composer": "古川貴浩",
+      "arranger": "古川貴浩",
+      "lyrics": null
+    },
+    {
+      "id": "1cc52a15-27d3-4311-8e15-1ef7e24fb7c8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ガールズルール",
+      "lyricist": "秋元康",
+      "composer": "後藤康二（ck510）",
+      "arranger": "後藤康二（ck510）",
+      "lyrics": null
+    },
+    {
+      "id": "d74a2ef4-b610-41d8-8a6a-d599a2593204",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "キスのシルエット",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d48d99db-9ffc-4c5e-8a71-7c35737fec21",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "キスの手裏剣",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "104f43b1-1827-4491-9035-8406401c270b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "キャラバンは眠らない",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "44723783-ac40-4535-a0ae-3f184092b1e8",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "クルクルかき氷",
+      "lyricist": "指原莉乃",
+      "composer": "HaggyRock",
+      "arranger": "HaggyRock",
+      "lyrics": null
+    },
+    {
+      "id": "3c58ee1f-a46c-4697-b477-6f68570dfb53",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "コウモリよ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "48037b2e-d73f-46d2-9654-d88ffead50cf",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ゴルゴンゾーラ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "ac238508-20ab-491d-b58a-89c53e6efc3a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "サイコキネシスの可能性",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "0d4554dd-7724-4f3b-bf49-4303f5839269",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "サマーチョコレート",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "33988355-c4d4-4b48-8cd5-06e1f662c1e7",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "サヨナラ Stay with me",
+      "lyricist": "秋元康",
+      "composer": "中村泰輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "23c6dc6d-490f-4461-b233-89df614e9b74",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "サヨナラの意味",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": "若田部誠",
+      "lyrics": null
+    },
+    {
+      "id": "ee5fbb17-d358-4c9f-812c-abd76fc1eb6a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "サルビアの花を覚えているかい？",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "973f01b0-ca53-4d97-9c13-258bd645e6e8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "シャキイズム",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4ac39d58-5570-4c1b-a81d-5dd6d6deea81",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ショパンの嘘つき",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "6c81d685-746d-448e-bccc-52bca8205bd4",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "シンクロニシティ",
+      "lyricist": "秋元康",
+      "composer": "シライシ紗トリ",
+      "arranger": "シライシ紗トリ",
+      "lyrics": null
+    },
+    {
+      "id": "cbb5d393-4add-41af-ae2f-e749ad406028",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "シークレットグラフィティー",
+      "lyricist": "秋元康",
+      "composer": "中村泰輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "5fbdae26-be5e-4938-b14f-3f12e26808e1",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ジコチューで行こう!",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "584ebb0b-e3f4-4474-befd-e1ab1718f975",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ジャンピングジョーカーフラッシュ",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "01e2138e-340a-47b5-8336-729692596c34",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "スイートシックスティーン",
+      "lyricist": "指原莉乃",
+      "composer": "中村歩, 菊池博人",
+      "arranger": "中村歩, 菊池博人",
+      "lyrics": null
+    },
+    {
+      "id": "3bd0371a-e419-4db8-999c-0bf9be18741f",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "スカイダイビング",
+      "lyricist": "秋元康",
+      "composer": "中村泰輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "a0969643-8bc6-422a-849e-5820bf9b0da7",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "スカウトマン",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "20f0fe48-b009-48a8-8bdb-90ed7dbacd08",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "スタイリッシュ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b8a14cfc-42e9-4e8e-99c1-6c07ef4bc182",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "スタート！",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "13666a65-902f-45aa-ab66-1f4b0473bd34",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "スムージー",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "8b0f1876-94d9-4098-8da6-5e2589617eda",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "ズッ友案件",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "23a286d5-c253-4c3b-89e5-76450e47296d",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "ズルいよ ズルいね！",
+      "lyricist": "指原莉乃",
+      "composer": "長沢知亜紀・永野小織",
+      "arranger": "湯浅篤",
+      "lyrics": null
+    },
+    {
+      "id": "6944c724-cebd-4c7d-913f-257f9c3a6124",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "セノビーインラブ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "7497779d-9a3f-43bf-9a31-041829954696",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "タイムリミット片想い",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "e701d19c-b038-4a92-ac25-bf3ec1ef298d",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ダンケシェーン",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "15e56543-929b-4bc8-9d91-00ef38c9c458",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "チャンスは平等",
+      "lyricist": "秋元康",
+      "composer": "中村泰輔",
+      "arranger": "中村泰輔",
+      "lyrics": null
+    },
+    {
+      "id": "1fcbeb2a-3280-4db8-9df9-e0bc07a8ae4c",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "チョコレートメランコリー",
+      "lyricist": "指原莉乃",
+      "composer": "桑原佑介",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "78bd719a-fc89-48fd-a1a1-fa8bc2bc448a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "チートデイ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "a44b05e3-4407-43f4-8c08-64bae57947c7",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "デートの後、22時",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "f52c7156-9e7f-4f66-8b96-6d91915aa1ca",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "デート前夜レクイエム",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "279b436f-d0a1-4431-857f-d5ea10bb37a8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "トキトキメキメキ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2dd4ab85-7df9-4207-8066-2e6b69bf4a89",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "ナツマトペ",
+      "lyricist": "指原莉乃",
+      "composer": "庄司夏葵",
+      "arranger": "庄司夏葵",
+      "lyrics": null
+    },
+    {
+      "id": "e1a66cba-baf3-4961-98a7-446fd72e137e",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "ニアジョイ音頭",
+      "lyricist": "指原莉乃",
+      "composer": "YUU for YOU, Yu-ki Kokubo",
+      "arranger": "YUU for YOU",
+      "lyrics": null
+    },
+    {
+      "id": "6b7f5e5f-d809-434d-b798-c31029cdaff3",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "ネバギバ！生きろ",
+      "lyricist": "指原莉乃",
+      "composer": "金山秀士",
+      "arranger": "めんま",
+      "lyrics": null
+    },
+    {
+      "id": "0bb0a045-b69a-4388-a975-0b701698f47a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ネーブルオレンジ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "70bc9fb0-ad9f-404c-a5dd-faa1d5d05d40",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ハウス！",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c4c304f7-e9a5-4761-be68-ec38697caa2e",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ハルジオンが咲く頃",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset・APAZZI",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "fb10846d-3bc3-4b98-b0d7-a54bb3d8e094",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "バレッタ",
+      "lyricist": "秋元康",
+      "composer": "サイトウヨシヒロ",
+      "arranger": "若田部誠",
+      "lyrics": null
+    },
+    {
+      "id": "b2f339fa-32eb-47aa-a2f5-292abe8f226a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "バンドエイド剥がすような別れ方",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c3529ca3-6dee-43a0-bde8-2b62c1c5782d",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "バンドワゴン",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "3a6ee185-0fe6-42f0-9106-ee702d15ec69",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "パッションフルーツの食べ方",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "972bbd9b-f1e9-4bb5-9807-abb0f791aea2",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "ヒロインとオオカミ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "743225e7-354d-4485-b7af-bb4e2a41bf24",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "ヒロインズ",
+      "lyricist": "指原莉乃",
+      "composer": "Yu-ki Kokubo・YUU for YOU",
+      "arranger": "YUU for YOU",
+      "lyrics": null
+    },
+    {
+      "id": "48083ddd-30a8-4473-885d-84ef8c96d462",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ビリヤニ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "da0b0f1e-778f-4189-b139-9e16a34c1cce",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "ピオニーズ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "6dc582fe-e11b-4baa-a4b3-1f4ac9711a34",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "ピーチティーとピーチパイ",
+      "lyricist": "指原莉乃",
+      "composer": "本田正樹",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "ad291687-ea77-43d6-b041-2fcac8adebcb",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ファンタスティック3色パン",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "226b1037-ce96-422a-9d75-4d2adf5e1936",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "フロアキラー",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "713fa00a-fad4-4d87-b67d-b33209fc78ff",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ブランコ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "afaf245f-560e-4e2c-a5be-0b4a3ceefcc7",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "ブルーハワイレモン",
+      "lyricist": "指原莉乃",
+      "composer": "杉山勝彦, 尾上榛",
+      "arranger": "尾上榛, 杉山勝彦",
+      "lyrics": null
+    },
+    {
+      "id": "fa6dc385-7910-48b8-8f97-b3979d265ad2",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ボーダー",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "9b766f0a-6d94-45e6-90a1-cb8704698fe4",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "ポニーテール キュルン",
+      "lyricist": "指原莉乃",
+      "composer": "野井洋児",
+      "arranger": "家原正樹",
+      "lyrics": null
+    },
+    {
+      "id": "4ef26f0a-b653-42b1-bc9f-a14abcf33544",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ポピパッパパー",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "aab4fed2-ea3f-42ac-9e68-013bc1f14dc6",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "マグカップとシンク",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "47226f7d-72c8-4582-b536-acbb3e512049",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "マシュマロフロート",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "8116d851-04c9-4c69-b781-0b5dd00436d9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "マシンガンレイン",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d5fd0867-29ed-491a-88a7-8ebb6bd976c9",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "ミステリアスなボーイ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "c6e5d638-1055-43e1-b3a3-be48c36ec6ea",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "ミラクル！",
+      "lyricist": "指原莉乃",
+      "composer": "YUU for YOU・Yu-ki Kokubo",
+      "arranger": "YUU for YOU",
+      "lyrics": null
+    },
+    {
+      "id": "98cac154-b498-457d-a5aa-c26452e75900",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "メロン",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "42687b4f-e942-4919-a5b8-1bd83a129483",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "モブノデレラ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "2f1536da-6525-4e60-8014-856439cec82a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ライブ神",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "0dca26a0-b356-42f3-be72-97d9b0584c61",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "ラストチャンス、ラストダンス",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "ca7b3dc7-e2bc-412e-b04a-6c1a8f20e2a2",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "ラストノートしか知らない",
+      "lyricist": "指原莉乃",
+      "composer": "塚田耕平",
+      "arranger": "湯浅篤",
+      "lyrics": null
+    },
+    {
+      "id": "3daf10e4-39ed-4a54-9f88-9299cd5583f2",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "ラブソングに襲われる",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "0f0123d4-9a42-4c0c-b3e9-4792a663198b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ロマンスのスタート",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "8747d33f-9588-4775-b257-f66ce411379a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ロマンティックいか焼き",
+      "lyricist": "秋元康",
+      "composer": "中村泰輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d034e321-9bea-44b8-bb65-75ab423ca8b4",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "ワタボコリ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d2c0432e-c179-4a50-9212-20c84e41092a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "三番目の風",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2578ce30-25d4-4c4d-8c63-0352c1b663e1",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "三角の空き地",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "a5f52204-a7a6-44c1-9cb6-9e076d9ee42a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "不眠症",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "5986b4c3-3010-493b-aac9-33f81fb76231",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "不等号",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "70236da2-5713-49b9-ad7d-13cecb302fe9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "不道徳な夏",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "6007c8d0-5313-44dd-a37a-dde2ccdf461a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "世界で一番 孤独なLover",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "de045476-1448-4aad-a167-c59eed64a112",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "世界はここにある",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2f184d01-b53e-43cb-836d-addd78112173",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "世界一のダイヤモンド",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2d4e5e3d-79d6-4619-97f8-75ee9705ef02",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "世界中の隣人よ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "dd5e70e9-b4fe-4651-aec3-860ccf340e84",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "乃木坂の詩",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "aff0b3f5-bd7e-45a3-a8ef-a4e4862cce16",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "乃木坂饅頭",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "80044665-00b2-4684-9211-190f47f31c87",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "交感神経優位",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "33f1b316-4d97-495b-a50f-7a766157406c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "人はなぜ走るのか?",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "f3ad2efe-8a37-47fb-9865-7d47c65e725d",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "人は夢を二度見る",
+      "lyricist": "秋元康",
+      "composer": "松尾一真",
+      "arranger": "松尾一真",
+      "lyrics": null
+    },
+    {
+      "id": "1829662a-d871-4fb5-83f3-f29a288a6c16",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "人生を考えたくなる",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "8d5890b8-e5c4-41bb-ab90-5d2fe4d624f0",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "人間という楽器",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "f38c06c0-3d2c-4009-9836-260dd2cedd4e",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "今",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "a10f8a1e-0cc8-4c02-bc8e-cb3fe9bef732",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "今、この船に乗れ！",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "58488182-c1ac-4f15-82d2-3535f39b46a5",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "今、恋をしている",
+      "lyricist": "指原莉乃",
+      "composer": "森絵カエル",
+      "arranger": "横山広稀",
+      "lyrics": null
+    },
+    {
+      "id": "e8f87ab4-cd95-4534-9acb-1f1460cf8fdf",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "今日も君の夢を見たんだ",
+      "lyricist": "指原莉乃",
+      "composer": "本多友紀 (Arte Refact)",
+      "arranger": "脇眞富 (Arte Refact)",
+      "lyrics": null
+    },
+    {
+      "id": "239f625d-6f38-467f-be1c-786883895c4a",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "今日君を見かけた",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d8d77914-f295-452f-9121-a3c2178a72f1",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "他の星から",
+      "lyricist": "秋元康",
+      "composer": "Jam9",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "3d0ff3c2-b1d7-485f-b76c-ae1f08b0377b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "他人のそら似",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "275fd884-7963-4bd5-991e-c7fe66246f87",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "仲直りシュークリーム",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "dd0c2a67-164b-406c-ba0a-e3160bfca875",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "会いたかったかもしれない",
+      "lyricist": "秋元康",
+      "composer": "黒須克彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c6abe8d7-abfa-41de-8e55-3115ca8a3e06",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "低体温のキス",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "e7e48a7b-5352-41a7-80f5-6de46be2730d",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "体育館ディスコ",
+      "lyricist": "指原莉乃",
+      "composer": "後藤康二 (ck510)",
+      "arranger": "Keisuke Koyama",
+      "lyrics": null
+    },
+    {
+      "id": "ac0b73f6-8998-4381-91dd-10273c6d4deb",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "何もできずにそばにいる",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "a5f84848-e535-41dc-9ace-cf82d0849140",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "何度目の青空か?",
+      "lyricist": "秋元康",
+      "composer": "川浦正大",
+      "arranger": "百石元",
+      "lyrics": null
+    },
+    {
+      "id": "27728cb0-6b7a-4bcb-967f-d0602da5666c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "価値あるもの",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4f8746c3-bb90-4801-9e5e-78fe6a07f4c2",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "偶然を言い訳にして",
+      "lyricist": "秋元康",
+      "composer": "前迫潤哉",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "723098c8-2dc1-4f8e-9d6c-431559744d5e",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "偶然シンフォニー",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "8fcae6d5-0ed5-4e48-97ef-2ff65083d968",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "傾斜する",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "0944bf67-b35f-416d-8d28-fc563af1e187",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "僕がいる場所",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "3549f387-8a15-426e-8d03-4b9e047b8c19",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "僕が手を叩く方へ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "60a23501-6983-46b7-a75b-f59aad2669c8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "僕が行かなきゃ誰が行くんだ?",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "cf17c277-1606-48a0-ba94-e2a424be27e5",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "僕たちのイマージュ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "29366f4b-d95d-4ba5-9730-29f250fbcaae",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "僕たちのサヨナラ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "649913d6-d7f5-4481-810e-e348bf391d1d",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "僕だけの光",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "96e08a5b-566a-4b39-8562-c101f2221b5f",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "僕のこと",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "78fcb2c2-f2c0-4090-acee-949fd2de91cc",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "僕の思い込み",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "401808eb-e1dd-40ed-bf54-79867347f74d",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "僕の衝動",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4eaad150-cc4c-4339-bd5e-5b4dc6aa027d",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "僕は僕を好きになる",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": "石原剛志・杉山勝彦",
+      "lyrics": null
+    },
+    {
+      "id": "936c4089-6f01-40f3-ad75-af288756827d",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "僕らの制服クリスマス",
+      "lyricist": "指原莉乃",
+      "composer": "加藤大和",
+      "arranger": "湯浅篤",
+      "lyrics": null
+    },
+    {
+      "id": "57152579-00e8-49ec-88c2-36eb37efad3d",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "光合成希望",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2818ebb7-1e36-436e-93f7-91624d0fea07",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "全力ラップタイム",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "1751d656-4c24-49a1-80d3-52abd5a72dba",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "全部 夢のまま",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "7683bd63-d2cb-42c4-a3de-355abf2deb6d",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "内緒バナシ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "47260f80-e621-41ff-9148-60cf4813c4c6",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "冷たい水の中",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "26bb2a0d-8b6f-48a4-9a2e-3cbdb34be066",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "初恋の人を今でも",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b5126888-f9c8-42b8-b6f5-53f54c4f151c",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "初恋カムバック",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "d788bf2a-5e2b-4199-bdae-4abee91d3fcd",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "初恋シンデレラ",
+      "lyricist": "指原莉乃",
+      "composer": "齋藤奏太",
+      "arranger": "齋藤奏太",
+      "lyrics": null
+    },
+    {
+      "id": "89beda8a-5fdb-4841-a2a1-027181a25759",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "別れ際",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "aa581d67-7f42-4de1-9a2a-5a2edcba51a6",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "制服のマネキン",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": "百石元",
+      "lyrics": null
+    },
+    {
+      "id": "ef5b33fb-4a11-4046-9e53-80b08107e739",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "制服を脱いでサヨナラを…",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "e2e4a64c-fc3b-4fc0-9f79-53b7050d5656",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "助手席をずっと空けていた",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b62d51ee-8197-49ce-bc97-a0101d78efed",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "友情ピアス",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d7e812f0-a4b1-4cc5-8e1d-0d2d38df6123",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "口ほどにもないKISS",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b50b87fd-9be0-4f8d-917e-293991a8b20d",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "口約束",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2fedf543-6de6-4394-b01e-b08575312e06",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "吐息のメソッド",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "cb7d263e-15a9-4342-a5b7-e29e3eb74c7a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "君が扇いでくれた",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "cef7f9fb-ca97-40dd-b7cc-1fb0b1375a4a",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "君と僕の歌",
+      "lyricist": "指原莉乃",
+      "composer": "バグベア",
+      "arranger": "バグベア",
+      "lyrics": null
+    },
+    {
+      "id": "997e937e-82f6-4dcc-a6ec-6dbd15b39aae",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "君と猫",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "feb5cc0b-5470-4a7a-80ad-05aae9aeb7be",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "君と私の歌！",
+      "lyricist": "指原莉乃",
+      "composer": "塚田耕平",
+      "arranger": "古川貴浩",
+      "lyrics": null
+    },
+    {
+      "id": "f4d8ed08-e073-474b-bc0b-5303d59d09f3",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "君にDitto",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "142d1db3-cab5-4df1-888e-9b12b2c2d4d8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "君に叱られた",
+      "lyricist": "秋元康",
+      "composer": "youth case",
+      "arranger": "youth case・野中\"まさ\"雄一",
+      "lyrics": null
+    },
+    {
+      "id": "99a88548-8bdf-4cc2-b529-43842b120b4f",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "君に贈る花がない",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "49463617-f4aa-46a5-909a-e8d90e76c8c6",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "君の名は希望",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": "杉山勝彦・有木竜郎",
+      "lyrics": null
+    },
+    {
+      "id": "5e66497b-c33c-43b5-a2b9-6405e5fe0f4a",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "君の第3ボタン",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "8bb7ac82-b278-47d2-9e5f-74f6bcdb98d9",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "君の音だったんだ",
+      "lyricist": "指原莉乃",
+      "composer": "バグベア",
+      "arranger": "バグベア",
+      "lyrics": null
+    },
+    {
+      "id": "475926d9-9de9-4b6f-875b-7adcdf9f3ab4",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "君はこの夏、恋をする",
+      "lyricist": "指原莉乃",
+      "composer": "バグベア",
+      "arranger": "バグベア",
+      "lyrics": null
+    },
+    {
+      "id": "ad98fe8f-f2ea-4040-846d-f1e57909fc79",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "君はスパークル",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "7ed3026a-802b-4bcf-990d-cc46469c6bc0",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "君は僕と会わない方がよかったのかな",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "02ac6cd7-f8bf-4a23-8944-4b40bf744253",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "告白の順番",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "90c12d89-14f9-4260-9d39-de8ffbc9a8c4",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "命の冒涜",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "e09032ff-cb03-4f9b-a045-ac1b94f12009",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "命の真実 ミュージカル「林檎売りとカメムシ」",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4805594e-60ef-47ca-9040-9a02768ec07c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "命は美しい",
+      "lyricist": "秋元康",
+      "composer": "Hiroki Sagawa",
+      "arranger": "Hiroki Sagawa",
+      "lyrics": null
+    },
+    {
+      "id": "4fd53426-1688-435e-abc0-56cc1ae187f6",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "図書室の君へ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "e8858565-0094-401f-ae68-f16e4f7b25f5",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "地球が丸いなら",
+      "lyricist": "秋元康",
+      "composer": "渡辺翔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d801887f-51a4-4b61-9f5b-c57fb44812fe",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "夏が来たから",
+      "lyricist": "指原莉乃",
+      "composer": "バグベア",
+      "arranger": "yamazo",
+      "lyrics": null
+    },
+    {
+      "id": "5c46724c-df2f-4561-b3ce-d95fbe551f45",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "夏のFree&Easy",
+      "lyricist": "秋元康",
+      "composer": "井上トモノリ",
+      "arranger": "橋本幸太",
+      "lyrics": null
+    },
+    {
+      "id": "faaed494-d462-441e-b314-0a1ca299d343",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "夏桜",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "3c574820-8799-46d6-b078-c310cc12420c",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "夏祭り",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "c342f6d3-293a-4290-b405-73d8692c03f2",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "夕陽は何色か？",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "0ca92350-971f-444f-9a4e-838379a4a489",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "夜明けまで強がらなくてもいい",
+      "lyricist": "秋元康",
+      "composer": "山田裕介",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "77376b8b-8161-464c-9942-b6f93c5b2129",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "夢についていこう",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "fc674df2-76ef-4487-9967-71acf5169005",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "夢の匂い",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "ef42618d-bc46-4030-839d-2592108f57d9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "夢を見る筋肉",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "98278077-3b22-4607-adad-96bd481ac175",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "夢見る♡アイドル",
+      "lyricist": "指原莉乃",
+      "composer": "塚田耕平",
+      "arranger": "塚田耕平",
+      "lyrics": null
+    },
+    {
+      "id": "b965e502-9cb7-434e-8932-fedacad5fba2",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "大人たちには指示されない",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2bfac78a-b470-446a-a376-7e005c0fc764",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "大人への近道",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "544a08b2-8f9c-4d43-9ffb-4a330a3e4215",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "大空、ビュンと",
+      "lyricist": "指原莉乃",
+      "composer": "yuma",
+      "arranger": "めんま",
+      "lyrics": null
+    },
+    {
+      "id": "17f79cf4-c8d8-46e2-8ac8-19118b0f57cf",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "天使は何処へ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "01fbc120-1bd8-4597-8add-3faf01b9e262",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "天空の豆の木",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "6f1112da-efdc-4322-907e-3c50c86a38c9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "太陽に口説かれて",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "0537fd5e-6769-419c-9182-2c3e9fbf31a3",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "太陽ノック",
+      "lyricist": "秋元康",
+      "composer": "黒須克彦",
+      "arranger": "長田直之",
+      "lyrics": null
+    },
+    {
+      "id": "f4ae539e-1b45-4ee1-98c9-ce935a919b35",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "失いたくないから",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c26312fe-068c-48fb-b921-c8e3323e4a17",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "失恋お掃除人",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "e886374a-bf02-4d47-adce-54b72dd9ef4c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "失恋したら",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "323ce1cc-5260-4e68-8136-e0f85765e1b8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "女は一人じゃ眠れない",
+      "lyricist": "秋元康",
+      "composer": "井上ヨシマサ",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4520f5a6-3923-4d7b-b0f5-199edfb7ca95",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "好きだ！！！",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b910d8d2-a45c-41a9-b53a-0b7425db8888",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "好きって、言えなかった",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "92cc1e32-082b-4f80-bdc4-ecce0c395470",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "好きというのはロックだぜ!",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "ca06ec5c-420e-4d7e-897e-7286f45a7b8b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "好きになってみた",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "65bbb51d-4482-4a2d-bacc-ba0f56b14277",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "嫉妬の権利",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "7b5bb9c6-7dc1-44f7-9017-fd70225f523f",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "孤独な青空",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "5c245ce7-d641-4da3-bb38-d954c5bf1040",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "孤独兄弟",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "163f6d81-43aa-4d0c-9174-be559f9e713c",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "届いてLOVE YOU",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "c72d1d5b-2725-4c51-b32c-7ca35dfa49c7",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "届かなくたって...",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "f51fbb12-97ee-46a7-b878-46c26c9a4e67",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "左胸の勇気",
+      "lyricist": "秋元康",
+      "composer": "黒須克彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "3c7491c1-cf6d-401e-86b9-ac0aa12d3395",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "市営ダンスホール",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "f2593cd9-d983-433f-bfe0-cea22c9cc60b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "帰り道は遠回りしたくなる",
+      "lyricist": "秋元康",
+      "composer": "渡邉俊彦",
+      "arranger": "渡邉俊彦・早川博隆",
+      "lyrics": null
+    },
+    {
+      "id": "26b94f80-b3a3-4bee-9afb-a0569474572a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "平行線",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "f177ba04-d063-4293-b110-72e5fa085630",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "強がる蕾",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c548a00a-84fb-43bb-bce0-07357ea7b153",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "当たり障りのない話",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "7f3eca1f-57b6-4e98-8e11-4359003fbc6c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "心にもないこと",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "0ab7f52b-22a1-4d51-ab9f-84864b0fb115",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "心のモノローグ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b5c3d6a1-0519-4e46-9a10-ff151b7f2ff2",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "心の薬",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "afc799ff-474f-4cb2-a11e-1e2d73a4d331",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "忘れないといいな",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "14aabfcf-24de-44d7-9c87-5e26be527e89",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "忘却と美学",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "7dcb4962-17a1-40ac-8f1f-fbca6b4b834b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "思い出が止まらなくなる",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "6e23ce4f-a4c0-4c06-83c1-c3618b58a602",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "思い出ファースト",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "ffb7226f-8a2c-44c5-af41-73393aeb0373",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "急斜面",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "0be1e71d-c0d2-4e04-bb32-968e54d52084",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "恋人以上、好き未満",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "e3e1e512-1f73-4d02-8f3c-f0ddbf1d26f0",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "悪い成分",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d42b7a93-b252-47ae-9357-6fc22d312ccf",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "悲しみの忘れ方",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2fb73d3b-cdcc-4a70-8a86-2fc237635797",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "想わせぶりっこ",
+      "lyricist": "指原莉乃",
+      "composer": "ヤナガワタカオ",
+      "arranger": "ヤナガワタカオ",
+      "lyrics": null
+    },
+    {
+      "id": "07884076-9616-4f33-b06e-f8297fa22287",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "意外BREAK",
+      "lyricist": "秋元康",
+      "composer": "中村泰輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d8d57b0e-e4eb-4eb5-9bd0-03c9136aa03b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "憂鬱と風船ガム",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "9a4ba255-40e5-4d44-b6a9-d56ebbd587d2",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "憧れてきたんだ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "f1b438e1-c076-4c77-9d71-088c578183bc",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "懐かしさの先",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "96acab07-1f8d-41ac-8dc3-aad3f2d7f566",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "懐かない仔猫",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "daba51ff-5c6e-434a-9ba8-03bebd249e0e",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "扇風機",
+      "lyricist": "秋元康",
+      "composer": "白戸佑輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b62f5a25-07a7-40f8-a397-cf1c245042c2",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "手ごねハンバーグ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "83e7f7ee-7abc-43a3-89f0-b546cdd22861",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "手遅れ caution",
+      "lyricist": "指原莉乃",
+      "composer": "今井ひろし",
+      "arranger": "倉内達矢",
+      "lyrics": null
+    },
+    {
+      "id": "e4a3db2d-7a9f-4b97-b90e-90d589d27474",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "指望遠鏡",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "ddb6e736-2c81-4678-b7ba-327fd129e952",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "排他的ファイター",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "e5d83da5-0ad6-4bbe-9499-21bf66f3fc9b",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "探せ ダイヤモンドリリー",
+      "lyricist": "指原莉乃",
+      "composer": "ArmySlick・Yu-ki Kokubo・YUU for YOU・YHANAEL",
+      "arranger": "ArmySlick・YUU for YOU",
+      "lyrics": null
+    },
+    {
+      "id": "d3d6468f-3b97-4383-b886-282e76506db5",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "推しのいる世界！",
+      "lyricist": "指原莉乃",
+      "composer": "田畑健",
+      "arranger": "古川貴浩",
+      "lyrics": null
+    },
+    {
+      "id": "c3b586d8-321b-49a2-823c-2c22f2b8f3ad",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "新しい世界",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "a57ea22b-9013-42f6-886e-249e8f33de35",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "新しい花粉〜ミュージカル「見知らぬ世界」より〜",
+      "lyricist": "秋元康",
+      "composer": "新田目翔",
+      "arranger": "若田部誠",
+      "lyrics": null
+    },
+    {
+      "id": "e7a43fb6-556c-415c-a0b4-794d14c89ced",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "新宿バックオフ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "bd1e87a3-ea73-43e2-aeae-068a3a623606",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "日常",
+      "lyricist": "秋元康",
+      "composer": "Youth Case",
+      "arranger": "Youth Case",
+      "lyrics": null
+    },
+    {
+      "id": "81eccbda-dde3-46fe-bd5e-8a8b6703cc39",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "明日がある理由",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2a6f3fe4-9837-4bcf-bbdc-3037b66d1045",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "春のメロディー",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "a7ae9946-48aa-42bf-b2bb-30cc2e7ceb80",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "春の恋人",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "44ba02b7-2280-4d80-96cf-7fd28ba58f71",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "時々 思い出してください",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "f34718ba-b8cb-437a-84df-dfc71f0d1d24",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "曖昧",
+      "lyricist": "秋元康",
+      "composer": "Youth Case",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "796cbace-02a8-4541-a73b-ee206a14f249",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "最強のラブソング",
+      "lyricist": "指原莉乃",
+      "composer": "中村歩・菊池博人",
+      "arranger": "菊池博人・中村歩",
+      "lyrics": null
+    },
+    {
+      "id": "c80031f1-6db0-4147-9c9f-37f34e58853f",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "最後のTight Hug",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d72e6df9-ff77-4412-af51-809aa3f0b717",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "月の大きさ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "1fc669d6-3cc0-43d3-9cbf-e0d5ef25041c",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "月下美人",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "abbc9911-30c8-43f7-8730-1fcea48771b1",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "木漏れ日メゾフォルテ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "32586cde-d0c5-4805-a2e0-9cd55a8212ec",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "未来の答え",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "09fea1eb-c67b-4f87-9748-f16833a0be66",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "本当の自分",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "4cd9479f-56ab-4190-8cec-c8cf18437a65",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "桃色デイブレイク",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "2c1a5b72-fb75-4154-96b7-3d03ba818044",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "桜の咲く音がした",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "51c71c10-0bab-4f19-9254-e14c4e6bfcc8",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "樹愛羅、助けに来たぞ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "8d8260c9-42df-49b5-a675-10233e63f2ca",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "檻を飛び出た動物",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "13114a30-6808-43bd-923e-b163ffc231c7",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "欲望のリインカーネーション",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "8760bbc1-680d-4be3-ad00-d499abcbe2f7",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "歩道橋",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": "ササノマリイ",
+      "lyrics": null
+    },
+    {
+      "id": "253410cf-a42d-4233-80ea-e76c13b1bab9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "歳月の轍",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "7ea4b8e0-50a7-491f-8c1a-b8aca3ad9146",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "毎日がBrand new day",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "a06da15d-fcd1-4111-95bb-49f0a98fa5f5",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "気づいたら片想い",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset",
+      "arranger": "湯浅篤",
+      "lyrics": null
+    },
+    {
+      "id": "08740914-1cb5-4999-b9e0-00ebe0aa1765",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "水玉模様",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "7fd1acfc-73f4-451b-90c5-00be586b29cd",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "泣いたっていいじゃないか？",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "1f8c689f-7d15-49d9-b089-15da77b1d41e",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "泥だらけ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "1dc129d7-5d08-4475-94a0-9749f1b05154",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "流星ディスコティック",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "cce5a659-be0b-4276-aef9-4ef81a5f5c47",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "海とレモンティー",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "ac92f44d-8f8f-40b2-9951-29a7ce30e696",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "海流の島よ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4fadec64-7257-4c85-b399-93d9db72854f",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "涙がまだ悲しみだった頃",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "28bf2b0b-d883-4b18-9c02-0bf1448cadb5",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "涙の滑り台",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "1fb493b9-8409-41d8-bd46-4add585c968d",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "深読み",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "74cef6a2-bd7d-4a56-b1de-16d7ffdc9529",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "渋谷ブルース",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "6f5ccf8c-fdaa-4908-9c41-bcb8c30f5311",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "満月が消えた",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "6c5e31f8-3ff0-473f-8726-eec73b6c5fb0",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "滑走路",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "da794d24-061e-4987-adf9-924a8cbdadcc",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "無口なライオン",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4a983033-169d-4483-a3de-044ef31a11de",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "無表情",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4f9d81bd-a19d-4957-8446-30db684e4a63",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "無謀人",
+      "lyricist": "指原莉乃",
+      "composer": "YU-JIN",
+      "arranger": "",
+      "lyrics": null
+    },
+    {
+      "id": "3ac9cb06-4399-40e2-9197-4ff89a9737d8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "熱狂の捌け口",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "90d755dc-6da0-4961-afb3-d32bf912f87d",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "狂想カタストロフィ",
+      "lyricist": "指原莉乃",
+      "composer": "古川貴浩",
+      "arranger": "古川貴浩",
+      "lyrics": null
+    },
+    {
+      "id": "82c1135f-bfd6-466e-8f0c-694e19e6b793",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "狼に口笛を",
+      "lyricist": "秋元康",
+      "composer": "Shusui",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "cfb805e6-2753-4957-855d-1c50bcf5bc7b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "猫舌カモミールティー",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4aa909f2-de93-40ec-9f09-a01c873d9ad4",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "環状六号線",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "41a4722b-27bc-4977-813f-236cea75c4a3",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "甘いエビデンス",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "fe1276dd-6e79-4229-8897-b5aeeae67afe",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "生まれたままで",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "eb5f35ad-8e56-4238-8aaf-d9c6287514ff",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "白い雲にのって",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "12ada804-d182-4351-ba76-3d4efd5fc1d9",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "白米様",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "73ca5ca9-5b5d-471c-a706-c851e959cbcb",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "相対性理論に異議を唱える",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "37b5acf3-ccc4-485b-ba3c-8717b37dffe4",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "真夏日よ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "03e2eb53-9f8f-4af5-a18c-78721d1f3aad",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "真夜中のカノン",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "4ad275e0-4c18-4f5b-8d09-fd34d9095955",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "知ってる？",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "410f8fb9-c1b3-497b-839b-a90297380f07",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "知らんけど",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "318cf904-d569-40e5-8937-ccb1275b19c3",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "知りたいこと",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c0140c9f-5e52-454d-a576-20478fff7094",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "硬い殻のように抱きしめたい",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "f57d4a3f-c05f-44d9-ba71-b2e0c97018b0",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "祝祭",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "beb0bfdf-1f7a-4bb2-b650-65b4590604d2",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "神様の言うとーり！",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "78640481-f466-46f6-b635-9dc7369adfdd",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "私",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b2b1c7b2-4f7f-41de-a1f7-95d205db8ea8",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "私のために 誰かのために",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "2d84736d-e713-495f-9b98-1494cb49c763",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "私の色",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "df0740da-efca-42e3-8596-6c0c05a3e523",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "秘密インシデント",
+      "lyricist": "指原莉乃",
+      "composer": "宮川麿・M!SATO",
+      "arranger": "宮川麿",
+      "lyrics": null
+    },
+    {
+      "id": "86edc103-1faf-4d22-a778-c36132a55b13",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "空扉",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "98b2be1e-f293-4a99-bb3e-f26df49b8c43",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "空気感",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "5a1d45ad-b789-4bf8-93ac-96ce1e9591c7",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "空白の花",
+      "lyricist": "指原莉乃",
+      "composer": "長浜駿平",
+      "arranger": "若田部誠",
+      "lyrics": null
+    },
+    {
+      "id": "232b3c06-ea80-4ca4-9958-0fbea286827d",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "立ち直り中",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "079d0275-5a5d-4ee9-a1ac-72ff689a79f1",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "笑って フラジール",
+      "lyricist": "指原莉乃",
+      "composer": "Haggy Rock",
+      "arranger": "佐藤厚仁",
+      "lyrics": null
+    },
+    {
+      "id": "0ebbcf3f-d824-48bd-aa5c-1df6541b90dd",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "笑顔のレシピ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "235e27f7-db23-432c-9a86-615b343232b4",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "純粋とは何か？",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "31046673-3f67-4ef4-9587-3f4e2c7db0df",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "絶対アイドル辞めないで！",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "660330e8-f58e-4753-ae71-d826e336e0a7",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "絶望の一秒前",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "5d88fe6c-b232-4d71-8a12-45dd70ece742",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "羊飼いよ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b6d3370e-2ae5-4c75-bf18-fe34b4e327fb",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "羽根の記憶",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "410ab580-ec1e-42b7-972b-685878685233",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "考えないようにする",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c06c3396-d3bc-4044-88bb-993737b04dac",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "自分じゃない感じ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "e98b7e10-2f95-4727-a057-60904140126e",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "自分のこと",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "0a7a75bd-2030-4ef8-a489-c09f1ce38e03",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "自分賛歌",
+      "lyricist": "指原莉乃",
+      "composer": "長沢知亜紀・永野小織",
+      "arranger": "めんま",
+      "lyrics": null
+    },
+    {
+      "id": "03ed7830-ddda-423c-b18b-97c5694b4159",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "自惚れビーチ",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4ac72114-393b-4b78-be4a-743cb2d5a015",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "自由の彼方",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "3d78fe96-86ba-4f5b-8f0c-637d2c1c7e13",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "落とし物",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "b6d980c1-cddc-407f-8e54-125628dd4cb9",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "薄明光線",
+      "lyricist": "指原莉乃",
+      "composer": "成本智美",
+      "arranger": "賀佐泰洋",
+      "lyrics": null
+    },
+    {
+      "id": "2cca429e-932a-42da-abe3-75fe78dbc8e1",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "虹が架かる瞬間",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "3b5aaa97-fe94-4304-a749-206395696e3a",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "虹色プロパガンダ",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "a828ca4e-3772-43cb-88b0-b336fa455cac",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "行くあてのない僕たち",
+      "lyricist": "秋元康",
+      "composer": "近藤圭一",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "fe24800a-9fc9-44de-8b35-a0cd1ae22fce",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "裸足でSummer",
+      "lyricist": "秋元康",
+      "composer": "福森秀敏",
+      "arranger": "APAZZI",
+      "lyrics": null
+    },
+    {
+      "id": "3b8625f5-b8d0-473a-99ef-4401d9e932aa",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "言霊砲",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c791d843-8c60-403d-8ff7-3d613a77e2d2",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "記憶のどこかで",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "cdcf9e83-fa24-4059-bed7-c00105242fab",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "設定温度",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "3a23756b-1dc8-4f31-828a-54eacbd009fd",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "話したい誰かがいる",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "3859ccf2-7c65-41c5-b5ad-bfd3e4fb149a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "誰かの肩",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "81c57720-7b2a-4660-9ef3-00a7c9b5aae1",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "誰かは味方",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "5ed79fa7-5237-47b1-b17e-2dfb02698d0d",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "誰にもバレずに",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "ffb233ec-95b7-4017-be11-192fe9a30ee6",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "誰よりそばにいたい",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c8ceda4e-dcd1-4581-af99-9f2c8b306f3b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "走れ!Bicycle",
+      "lyricist": "秋元康",
+      "composer": "Shusui・伊藤涼・木村篤史・ヒロイズム",
+      "arranger": "湯浅篤",
+      "lyrics": null
+    },
+    {
+      "id": "c72dc4e4-334a-453e-b904-98fd63ac735f",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "起きる。",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "93c9d6ea-62e9-4a5f-9865-cd939bf8fd2c",
+      "groupId": "1a3aed95-88dc-4ef9-ba50-7bca3a2e5887",
+      "title": "超孤独ライオン",
+      "lyricist": "指原莉乃",
+      "composer": "鈴木裕明",
+      "arranger": "鈴木裕明",
+      "lyrics": null
+    },
+    {
+      "id": "049000b7-340b-4d57-98fb-f9c16d69b03b",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "超特急 ≠ME行き",
+      "lyricist": "指原莉乃",
+      "composer": "バグベア",
+      "arranger": "バグベア",
+      "lyrics": null
+    },
+    {
+      "id": "a7e1cf39-24ba-4ec0-8ec7-572bdd9c2e2a",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "超特急逃走中！",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "730b2bbd-0688-442a-bf8c-1c65de848702",
+      "groupId": "a975d251-cb11-4951-9b47-844b369a37e3",
+      "title": "超絶ヒロイン",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "e0f4f95b-4ab8-4fb6-84cd-0642da01a36e",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "路面電車の街",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "4b4af4b6-a62c-488b-88e3-d994286fd061",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "踏んでしまった",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "22d6de95-e79e-4b81-b5b8-a5174c60d004",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "車道側",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "503804a0-c8df-42f6-b26e-b4ba1b8972ed",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "転がった鐘を鳴らせ!",
+      "lyricist": "秋元康",
+      "composer": "Akira Sunset",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "5ba30eb4-0bdd-47e8-94cd-10e4745ed0c1",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "逃げ水",
+      "lyricist": "秋元康",
+      "composer": "谷村庸平",
+      "arranger": "谷村庸平",
+      "lyrics": null
+    },
+    {
+      "id": "12132468-6cb4-4868-9840-81ce3c7d5303",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "遠回りの愛情",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "aab295b3-aa5b-400f-acaf-8c0ae4cb41ee",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "遥かなるブータン",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "fe037a34-ceac-4809-886f-6b6b6a198d03",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "部活中に関わらず",
+      "lyricist": "指原莉乃",
+      "composer": "外山大輔",
+      "arranger": "外山大輔",
+      "lyrics": null
+    },
+    {
+      "id": "40e23270-bf7c-4183-9e2f-dec7612b5b2c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "醜い私",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "f296c268-3847-4b13-80bb-598a1c10d226",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "釣り堀",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "067a5568-8f81-4dc6-9b99-c4b20c5a8db0",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "銭湯ラプソディー",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "998b6cf8-9bac-4992-9a35-0650cc63e183",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "錆びたコンパス",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "c807c2ef-8ac1-46b9-b83e-550e0ff9f158",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "隙間",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "e27c8aee-721a-4305-b1e1-7f834355122a",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "雪が降る日にまた会おう",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "91d8aea7-6d47-4292-8e0a-9c31583d302c",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "雲になればいい",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "10ae372f-c5ee-4192-bd49-4f35e701b5f3",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "青春\"サブリミナル\"！",
+      "lyricist": "指原莉乃",
+      "composer": "塚田耕平",
+      "arranger": "古川貴浩",
+      "lyrics": null
+    },
+    {
+      "id": "a7e34266-1bd3-46f2-b4f0-e020878cd1fb",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "革命の馬",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d135b557-02d7-47e7-ab23-b8d21580d079",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "音が出ないギター",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "dfdd6f01-9954-43be-8669-5f76f6c2bf7b",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "頬杖をついては眠れない",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "77e6e8dd-8bd7-4574-b0fd-422fc036d692",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "顔を洗え!",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "40a5b06a-c7a1-4dc1-881c-d7208c8f77e7",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "風船は生きている",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "3da90a26-a2f5-4dbc-8388-e872865257a7",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "魚たちのLOVE SONG",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "49698edd-c73c-4645-8a7e-401d8e18df9f",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "title": "黄昏はいつも",
+      "lyricist": "秋元康",
+      "composer": "杉山勝彦",
+      "arranger": null,
+      "lyrics": null
+    },
+    {
+      "id": "d624c5c1-f21e-48cd-a9ca-70385ed4823d",
+      "groupId": "c7a32dcf-8d92-41ab-aa74-c11e7c81e375",
+      "title": "＝LOVE",
+      "lyricist": "指原莉乃",
+      "composer": "渡辺尚",
+      "arranger": "古川貴浩",
+      "lyrics": null
+    }
+  ],
+  "setlists": [
+    {
+      "id": "c67fcf24-6b09-4ef7-bbc9-a280a7de5ff6",
+      "name": "テスト",
+      "groupId": "8a6511ea-15fc-4fd1-b3f2-6815230fe63c",
+      "eventDate": "2025-12-23",
+      "items": [
+        {
+          "id": "21652b0f-8089-484f-84a4-cab93888a981",
+          "songId": "b2f339fa-32eb-47aa-a2f5-292abe8f226a",
+          "order": 4,
+          "centerMemberId": "3ad91a10-5444-42f3-9aa2-d9684942e660",
+          "participantMemberIds": []
+        },
+        {
+          "id": "3470bd5a-a291-4b99-9f48-dac3e68f4d92",
+          "songId": "5986b4c3-3010-493b-aac9-33f81fb76231",
+          "order": 5,
+          "centerMemberId": "eae1a1d0-5403-418c-9629-6fa16e8bab9d",
+          "participantMemberIds": []
+        },
+        {
+          "id": "3e6e3a48-61ac-4781-9f74-a3b3da0eca6c",
+          "songId": "1fa68f75-9bd7-4ce4-b769-07411ab350d2",
+          "order": 3,
+          "centerMemberId": "7f7f46cc-286a-4039-8253-af2f2379ff86",
+          "participantMemberIds": []
+        },
+        {
+          "id": "6ba4c59f-68f6-44fc-881c-92f60948d3ba",
+          "songId": "0537fd5e-6769-419c-9182-2c3e9fbf31a3",
+          "order": 1,
+          "centerMemberId": "86021c57-f197-408d-b94b-8f43a72be25d",
+          "participantMemberIds": []
+        },
+        {
+          "id": "9f81c2ae-0989-43e9-acd9-7e40ff9fe7f4",
+          "songId": "92cc1e32-082b-4f80-bdc4-ecce0c395470",
+          "order": 2,
+          "centerMemberId": "438b3e3e-359c-43fd-8b4c-490d38c0b4c6",
+          "participantMemberIds": []
+        }
+      ]
+    }
+  ]
+}

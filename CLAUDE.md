@@ -183,6 +183,40 @@ public async Task UpdateAsync(Guid id, string name, Guid groupId,
    public record FormationPositionData(Guid MemberId, int PositionNumber, int Row, int Column);
    ```
 
+### データベースマイグレーション規則（重要）
+
+**⚠️ 絶対にやってはいけないこと:**
+- 既存のデータベースファイル（.db）を削除してはならない
+- `EnsureDeleted()` を本番環境で使用してはならない
+
+**✅ 新しいテーブルやカラムを追加する場合:**
+
+1. **EF Core マイグレーションを使用する**
+   ```bash
+   # マイグレーション作成
+   dotnet ef migrations add AddNewTable --project src/Infrastructure --startup-project src/Presentation
+
+   # マイグレーション適用
+   dotnet ef database update --project src/Infrastructure --startup-project src/Presentation
+   ```
+
+2. **マイグレーションが使えない場合（dotnet-ef未インストール等）:**
+   - SQLiteの場合、手動でALTER TABLEを実行
+   ```sql
+   -- 新テーブル追加
+   CREATE TABLE IF NOT EXISTS NewTable (...);
+
+   -- 新カラム追加
+   ALTER TABLE ExistingTable ADD COLUMN NewColumn TEXT;
+   ```
+
+3. **EnsureCreated()の注意:**
+   - 既存DBがある場合、新しいテーブルは作成されない
+   - 新規開発初期のみ使用可
+   - 本番や既存データがある環境では使用禁止
+
+**理由:** データベース削除は全データの喪失を意味する。本番環境では致命的な問題となる。
+
 ## 要件
 
 ### 概要
@@ -626,3 +660,10 @@ frontend-public/         # 顧客向け参照アプリ（新規作成）
 - **アニメーション**: ページ遷移、スクロールアニメーション、ホバーエフェクト
 - **レスポンシブ**: モバイルファースト設計
 - **画像表示**: 高品質な画像表示、遅延読み込み、プレースホルダー
+
+## Active Technologies
+- C# / .NET 10 (backend), TypeScript / React 18 (frontend) + ASP.NET Core Minimal API, Entity Framework Core, TanStack Query, React Router v6, html2canvas (画像エクスポート用) (001-meetgreet-chat)
+- SQLite (既存DBに新テーブル追加) (001-meetgreet-chat)
+
+## Recent Changes
+- 001-meetgreet-chat: Added C# / .NET 10 (backend), TypeScript / React 18 (frontend) + ASP.NET Core Minimal API, Entity Framework Core, TanStack Query, React Router v6, html2canvas (画像エクスポート用)

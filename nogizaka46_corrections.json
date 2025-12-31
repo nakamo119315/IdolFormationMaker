@@ -1,0 +1,58 @@
+[
+  {
+    "id": "f2b27fcd-fee2-4d6a-90fe-ab6f422d8bbd",
+    "name": "ジコチューで行こう!",
+    "composer": "ナスカ",
+    "arranger": "ナスカ",
+    "note": "Currently: composer=杉山勝彦, arranger=null"
+  },
+  {
+    "id": "d5121e97-597d-4e85-9026-6b70df93451c",
+    "name": "好きというのはロックだぜ!",
+    "composer": "野村陽一郎",
+    "arranger": "野村陽一郎",
+    "note": "Currently: composer=杉山勝彦, arranger=null"
+  },
+  {
+    "id": "d26a2206-9851-4656-95e6-dba67686ba01",
+    "name": "Same numbers",
+    "composer": "川浦正大",
+    "arranger": "川浦正大",
+    "note": "Currently: composer=杉山勝彦, arranger=null"
+  },
+  {
+    "id": "48e2ca29-5a5d-4b99-a34f-a97a083bbf81",
+    "name": "ネーブルオレンジ",
+    "composer": "中村泰輔",
+    "arranger": "中村泰輔",
+    "note": "Currently: composer=杉山勝彦, arranger=null"
+  },
+  {
+    "id": "5ea0f9c6-60e6-4070-93ae-8cb444598b64",
+    "name": "Monopoly",
+    "composer": "杉山勝彦",
+    "arranger": "杉山勝彦・谷地学・尾上榛",
+    "note": "Currently: composer=杉山勝彦 (correct), arranger=null (needs update)"
+  },
+  {
+    "id": "fb6bfae0-e385-491d-a641-f95a73ca347d",
+    "name": "人は夢を二度見る",
+    "composer": "松尾一真",
+    "arranger": "APAZZI",
+    "note": "Currently: composer=松尾一真 (correct), arranger=松尾一真 (needs update to APAZZI)"
+  },
+  {
+    "id": "c1ddd48f-63c3-40de-99ba-1809b3ec20d4",
+    "name": "チートデイ",
+    "composer": "川浦正大",
+    "arranger": "野中\"まさ\"雄一",
+    "note": "Currently: composer=杉山勝彦, arranger=null"
+  },
+  {
+    "id": "a3773f81-fafb-4c36-a597-3ce2f2b6a14c",
+    "name": "歩道橋",
+    "composer": "杉山勝彦",
+    "arranger": "石原剛志・杉山勝彦・麻尾悠太",
+    "note": "Currently: composer=杉山勝彦 (correct), arranger=ササノマリイ (needs update)"
+  }
+]

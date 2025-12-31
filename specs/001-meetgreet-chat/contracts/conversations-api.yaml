@@ -1,0 +1,317 @@
+openapi: 3.0.3
+info:
+  title: Conversations API
+  description: ミーグリ会話記録API
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:5059/api
+    description: Development server
+
+paths:
+  /conversations:
+    get:
+      summary: 会話一覧取得
+      operationId: getConversations
+      parameters:
+        - name: memberId
+          in: query
+          description: メンバーIDでフィルタ
+          required: false
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ConversationSummary'
+
+    post:
+      summary: 会話新規作成
+      operationId: createConversation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateConversationDto'
+      responses:
+        '201':
+          description: 作成成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeetGreetConversation'
+        '400':
+          description: バリデーションエラー
+
+  /conversations/{id}:
+    get:
+      summary: 会話詳細取得
+      operationId: getConversation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: 成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeetGreetConversation'
+        '404':
+          description: 会話が見つからない
+
+    put:
+      summary: 会話更新
+      operationId: updateConversation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateConversationDto'
+      responses:
+        '200':
+          description: 更新成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeetGreetConversation'
+        '400':
+          description: バリデーションエラー
+        '404':
+          description: 会話が見つからない
+
+    delete:
+      summary: 会話削除
+      operationId: deleteConversation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: 削除成功
+        '404':
+          description: 会話が見つからない
+
+  /conversations/{id}/messages:
+    post:
+      summary: メッセージ追加
+      operationId: addMessage
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddMessageDto'
+      responses:
+        '201':
+          description: 追加成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConversationMessage'
+        '400':
+          description: バリデーションエラー
+        '404':
+          description: 会話が見つからない
+
+components:
+  schemas:
+    MeetGreetConversation:
+      type: object
+      required:
+        - id
+        - title
+        - conversationDate
+        - messages
+        - createdAt
+        - updatedAt
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+          maxLength: 100
+        memberId:
+          type: string
+          format: uuid
+          nullable: true
+        memberName:
+          type: string
+          nullable: true
+        conversationDate:
+          type: string
+          format: date-time
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConversationMessage'
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    ConversationSummary:
+      type: object
+      required:
+        - id
+        - title
+        - conversationDate
+        - messageCount
+        - previewText
+        - createdAt
+        - updatedAt
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        memberId:
+          type: string
+          format: uuid
+          nullable: true
+        memberName:
+          type: string
+          nullable: true
+        conversationDate:
+          type: string
+          format: date-time
+        messageCount:
+          type: integer
+        previewText:
+          type: string
+          description: 最初の2件程度のメッセージを連結したプレビュー
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    ConversationMessage:
+      type: object
+      required:
+        - id
+        - speakerType
+        - content
+        - order
+        - createdAt
+      properties:
+        id:
+          type: string
+          format: uuid
+        speakerType:
+          $ref: '#/components/schemas/SpeakerType'
+        content:
+          type: string
+          maxLength: 1000
+        order:
+          type: integer
+          minimum: 1
+        createdAt:
+          type: string
+          format: date-time
+
+    SpeakerType:
+      type: string
+      enum:
+        - Self
+        - Partner
+
+    CreateConversationDto:
+      type: object
+      required:
+        - title
+        - messages
+      properties:
+        title:
+          type: string
+          maxLength: 100
+        memberId:
+          type: string
+          format: uuid
+          nullable: true
+        conversationDate:
+          type: string
+          format: date-time
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/CreateMessageDto'
+          minItems: 1
+
+    CreateMessageDto:
+      type: object
+      required:
+        - speakerType
+        - content
+        - order
+      properties:
+        speakerType:
+          $ref: '#/components/schemas/SpeakerType'
+        content:
+          type: string
+          maxLength: 1000
+        order:
+          type: integer
+          minimum: 1
+
+    UpdateConversationDto:
+      type: object
+      required:
+        - title
+        - messages
+      properties:
+        title:
+          type: string
+          maxLength: 100
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/CreateMessageDto'
+          minItems: 1
+
+    AddMessageDto:
+      type: object
+      required:
+        - speakerType
+        - content
+      properties:
+        speakerType:
+          $ref: '#/components/schemas/SpeakerType'
+        content:
+          type: string
+          maxLength: 1000

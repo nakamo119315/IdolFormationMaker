@@ -1,0 +1,572 @@
+[
+  {
+    "id": "c0a3c3e6-660a-4500-84d2-cf4315b99c49",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "#おふしょるにっと",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:21.999357",
+    "updatedAt": "2025-12-30T06:58:21.999496"
+  },
+  {
+    "id": "00d7efea-5ddb-4d5c-aa95-52ac606fff16",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "2時半ろけんろー",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.117572",
+    "updatedAt": "2025-12-30T06:58:22.117572"
+  },
+  {
+    "id": "9a61e177-d612-4f45-9963-9694f82831ea",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "Love or love",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.237947",
+    "updatedAt": "2025-12-30T06:58:22.237947"
+  },
+  {
+    "id": "db8b79a1-e951-416b-828c-041e39addec1",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "Marcato",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.243618",
+    "updatedAt": "2025-12-30T06:58:22.243618"
+  },
+  {
+    "id": "ba155920-afad-43e5-bbb3-33e3e84dacaa",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "P.I.C.",
+    "lyricist": "指原莉乃",
+    "composer": "NA.ZU.NA・Yu-ki Kokubo・YHANAEL",
+    "arranger": "NA.ZU.NA・Yu-ki Kokubo・YHANAEL",
+    "createdAt": "2025-12-30T06:58:22.30165",
+    "updatedAt": "2025-12-30T06:58:22.301651"
+  },
+  {
+    "id": "1bea5de9-3cc2-4511-b4d0-6dcd273ef2ff",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "≠ME",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "バグベア",
+    "createdAt": "2025-12-30T06:58:22.489274",
+    "updatedAt": "2025-12-30T06:58:22.489274"
+  },
+  {
+    "id": "8faea8b3-ddf9-401d-9c40-2e4ce5a2e5c9",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "きゅんかわ人生",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.746584",
+    "updatedAt": "2025-12-30T06:58:22.746585"
+  },
+  {
+    "id": "8edc0484-510e-466e-9017-948e4f43a258",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "こちらハッピー探検隊",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.774782",
+    "updatedAt": "2025-12-30T06:58:22.774782"
+  },
+  {
+    "id": "5f51b50e-062b-42b9-914f-8a0141fb0fd0",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "このままでモーメンタリ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.781298",
+    "updatedAt": "2025-12-30T06:58:22.781298"
+  },
+  {
+    "id": "e221aa89-3488-449d-acf9-87926aaf124e",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ごめん、マジで",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.803518",
+    "updatedAt": "2025-12-30T06:58:22.803518"
+  },
+  {
+    "id": "dbbfeb45-13c6-4cdf-b3c6-d12badd98c4f",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "す、好きじゃない！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.944219",
+    "updatedAt": "2025-12-30T06:58:22.944219"
+  },
+  {
+    "id": "6ad62c32-18bc-4aab-849d-5ddd33f1566e",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "てゆーか、みるてんって何？",
+    "lyricist": "指原莉乃",
+    "composer": "yuma",
+    "arranger": "yuma",
+    "createdAt": "2025-12-30T06:58:23.040867",
+    "updatedAt": "2025-12-30T06:58:23.040867"
+  },
+  {
+    "id": "ad796c02-ad39-4b8a-97c6-df73e66c5f2e",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "はにかみショート",
+    "lyricist": "指原莉乃",
+    "composer": "中村歩・野口大志",
+    "arranger": "中村歩・野口大志",
+    "createdAt": "2025-12-30T06:58:23.108028",
+    "updatedAt": "2025-12-30T06:58:23.108028"
+  },
+  {
+    "id": "8a5c6aad-bdba-49b3-9243-50189ba01755",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "はんぶんこクリスマス",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.114485",
+    "updatedAt": "2025-12-30T06:58:23.114485"
+  },
+  {
+    "id": "97f2d982-7f28-4a85-b0cf-51e789b98ced",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "まほろばアスタリスク",
+    "lyricist": "指原莉乃",
+    "composer": "本多友紀",
+    "arranger": "脇眞富",
+    "createdAt": "2025-12-30T06:58:23.158142",
+    "updatedAt": "2025-12-30T06:58:23.158142"
+  },
+  {
+    "id": "43cdfa29-fb8d-42cb-a8a4-451134c1810d",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "アンチコンフィチュール",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.272624",
+    "updatedAt": "2025-12-30T06:58:23.272624"
+  },
+  {
+    "id": "da989678-2ed4-4fb5-af0b-ee37579f57f7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ウルトラレアキッスガチャガチャ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.489426",
+    "updatedAt": "2025-12-30T06:58:23.489426"
+  },
+  {
+    "id": "89d6b9b5-c3ee-4107-b4a4-7bd4a9e36a41",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "カフェ樂園",
+    "lyricist": "指原莉乃",
+    "composer": "古川貴浩",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:23.502651",
+    "updatedAt": "2025-12-30T06:58:23.502651"
+  },
+  {
+    "id": "c4e3e9c5-345a-4cc1-ae89-e1ff4b6b15e8",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "クルクルかき氷",
+    "lyricist": "指原莉乃",
+    "composer": "HaggyRock",
+    "arranger": "HaggyRock",
+    "createdAt": "2025-12-30T06:58:23.541868",
+    "updatedAt": "2025-12-30T06:58:23.541868"
+  },
+  {
+    "id": "a5c7ee57-affa-45ce-9a83-e70f5bd3acbe",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "サマーチョコレート",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.575122",
+    "updatedAt": "2025-12-30T06:58:23.575122"
+  },
+  {
+    "id": "8c543b20-c0f5-4553-ae53-53ad8e3829d7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "チョコレートメランコリー",
+    "lyricist": "指原莉乃",
+    "composer": "桑原佑介",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:23.815129",
+    "updatedAt": "2025-12-30T06:58:23.815129"
+  },
+  {
+    "id": "17f7be62-63c6-4970-ba1d-5d3b5b2cd25d",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "デートの後、22時",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.837346",
+    "updatedAt": "2025-12-30T06:58:23.837346"
+  },
+  {
+    "id": "c56d5fab-9f05-45f0-aa63-02009ff2d192",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "デート前夜レクイエム",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.851591",
+    "updatedAt": "2025-12-30T06:58:23.851591"
+  },
+  {
+    "id": "b0339102-2630-4088-93a1-1b03cbacc44b",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ヒロインとオオカミ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.15604",
+    "updatedAt": "2025-12-30T06:58:24.15604"
+  },
+  {
+    "id": "aadce971-be92-4631-b82f-51135f74a449",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ピオニーズ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.184641",
+    "updatedAt": "2025-12-30T06:58:24.184641"
+  },
+  {
+    "id": "80a9f7b1-fcbe-4baa-a397-2d9dbee4b0ec",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "フロアキラー",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.207763",
+    "updatedAt": "2025-12-30T06:58:24.207763"
+  },
+  {
+    "id": "8cab2ce3-83bb-4ab4-bdd7-380048c9a6f4",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ポニーテール キュルン",
+    "lyricist": "指原莉乃",
+    "composer": "野井洋児",
+    "arranger": "家原正樹",
+    "createdAt": "2025-12-30T06:58:24.290706",
+    "updatedAt": "2025-12-30T06:58:24.290706"
+  },
+  {
+    "id": "563bc391-cac6-4a6f-91b9-ca9fe464a11f",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "マシュマロフロート",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.313551",
+    "updatedAt": "2025-12-30T06:58:24.313551"
+  },
+  {
+    "id": "9b9e7c06-2135-4b69-a2a6-d65a64a2fff7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ミラクル！",
+    "lyricist": "指原莉乃",
+    "composer": "YUU for YOU・Yu-ki Kokubo",
+    "arranger": "YUU for YOU",
+    "createdAt": "2025-12-30T06:58:24.343429",
+    "updatedAt": "2025-12-30T06:58:24.343429"
+  },
+  {
+    "id": "17e5dc4b-c8ef-462f-8363-970e94e72fd6",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "モブノデレラ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.360006",
+    "updatedAt": "2025-12-30T06:58:24.360007"
+  },
+  {
+    "id": "eb969d46-be88-4121-a73a-09e424b4266c",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ラストチャンス、ラストダンス",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.375705",
+    "updatedAt": "2025-12-30T06:58:24.375706"
+  },
+  {
+    "id": "c2c7ad24-2bc7-4954-84ea-4cc5fc021966",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "今日君を見かけた",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.67569",
+    "updatedAt": "2025-12-30T06:58:24.67569"
+  },
+  {
+    "id": "a1741312-f8eb-4db7-95d5-4864940509af",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "偶然シンフォニー",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.748663",
+    "updatedAt": "2025-12-30T06:58:24.748663"
+  },
+  {
+    "id": "a89c77d0-9ed3-4922-a7d8-1f768e368abd",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "僕たちのイマージュ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.780839",
+    "updatedAt": "2025-12-30T06:58:24.78084"
+  },
+  {
+    "id": "1e280e1e-c354-4ccc-bae0-6d6c309c4ec7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "初恋カムバック",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.985075",
+    "updatedAt": "2025-12-30T06:58:24.985075"
+  },
+  {
+    "id": "cd137cd9-8391-46ff-bf1f-a1f21cf7edc7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "君と僕の歌",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "バグベア",
+    "createdAt": "2025-12-30T06:58:25.057182",
+    "updatedAt": "2025-12-30T06:58:25.057182"
+  },
+  {
+    "id": "b164669e-9f65-4d71-8a39-fb75477bd879",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "君の音だったんだ",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "バグベア",
+    "createdAt": "2025-12-30T06:58:25.108731",
+    "updatedAt": "2025-12-30T06:58:25.108731"
+  },
+  {
+    "id": "7ffb43a2-d934-4e0c-a22c-59d0c57c5b5d",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "君はこの夏、恋をする",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "バグベア",
+    "createdAt": "2025-12-30T06:58:25.117056",
+    "updatedAt": "2025-12-30T06:58:25.117056"
+  },
+  {
+    "id": "7ff22353-7447-4104-b194-9c20220ca3eb",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "君はスパークル",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.121069",
+    "updatedAt": "2025-12-30T06:58:25.121069"
+  },
+  {
+    "id": "97f80e72-4894-42b5-8d61-ea97ee60cec3",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "夏が来たから",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "yamazo",
+    "createdAt": "2025-12-30T06:58:25.181094",
+    "updatedAt": "2025-12-30T06:58:25.181094"
+  },
+  {
+    "id": "00900d03-0ecb-4052-8c18-bab82fa8f209",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "天使は何処へ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.352776",
+    "updatedAt": "2025-12-30T06:58:25.352777"
+  },
+  {
+    "id": "50872090-55f9-482c-a00e-894057fee8b6",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "好きだ！！！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.508916",
+    "updatedAt": "2025-12-30T06:58:25.508916"
+  },
+  {
+    "id": "22882237-3acc-4c05-8deb-526def7f7a8d",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "想わせぶりっこ",
+    "lyricist": "指原莉乃",
+    "composer": "ヤナガワタカオ",
+    "arranger": "ヤナガワタカオ",
+    "createdAt": "2025-12-30T06:58:25.869189",
+    "updatedAt": "2025-12-30T06:58:25.869189"
+  },
+  {
+    "id": "294ce030-56ec-4e9c-a626-7a0fcb40001d",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "排他的ファイター",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.950784",
+    "updatedAt": "2025-12-30T06:58:25.950784"
+  },
+  {
+    "id": "08997d48-23d0-400f-8034-cf7f036c3cd8",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "春の恋人",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.166979",
+    "updatedAt": "2025-12-30T06:58:26.166979"
+  },
+  {
+    "id": "5c6f2162-a682-447f-ba1f-489d2e5cf064",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "最強のラブソング",
+    "lyricist": "指原莉乃",
+    "composer": "中村歩・菊池博人",
+    "arranger": "菊池博人・中村歩",
+    "createdAt": "2025-12-30T06:58:26.188568",
+    "updatedAt": "2025-12-30T06:58:26.188569"
+  },
+  {
+    "id": "a6d693a3-9a18-4996-a99d-401fb34bfd26",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "月下美人",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.220031",
+    "updatedAt": "2025-12-30T06:58:26.220031"
+  },
+  {
+    "id": "74ab96d5-f8e5-423b-bad6-7bc8e59fa580",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "桃色デイブレイク",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.288213",
+    "updatedAt": "2025-12-30T06:58:26.288213"
+  },
+  {
+    "id": "950827a9-d020-4108-9fd5-3391e8635ce1",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "檻を飛び出た動物",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.322553",
+    "updatedAt": "2025-12-30T06:58:26.322554"
+  },
+  {
+    "id": "a2116dff-af7f-48a5-9765-71b66e994c27",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "神様の言うとーり！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.767485",
+    "updatedAt": "2025-12-30T06:58:26.767485"
+  },
+  {
+    "id": "f2673cc8-61a2-41d7-9a82-42a3fe7b9415",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "秘密インシデント",
+    "lyricist": "指原莉乃",
+    "composer": "宮川麿・M!SATO",
+    "arranger": "宮川麿",
+    "createdAt": "2025-12-30T06:58:26.799338",
+    "updatedAt": "2025-12-30T06:58:26.799338"
+  },
+  {
+    "id": "1dec95ca-defc-4a72-a61d-b18fae04c4aa",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "空白の花",
+    "lyricist": "指原莉乃",
+    "composer": "長浜駿平",
+    "arranger": "若田部誠",
+    "createdAt": "2025-12-30T06:58:26.821868",
+    "updatedAt": "2025-12-30T06:58:26.821868"
+  },
+  {
+    "id": "15f5ce54-4877-4506-a230-0560efd7553f",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "自分賛歌",
+    "lyricist": "指原莉乃",
+    "composer": "長沢知亜紀・永野小織",
+    "arranger": "めんま",
+    "createdAt": "2025-12-30T06:58:26.942584",
+    "updatedAt": "2025-12-30T06:58:26.942584"
+  },
+  {
+    "id": "5884c78f-c796-435d-9698-7403796f6ef7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "薄明光線",
+    "lyricist": "指原莉乃",
+    "composer": "成本智美",
+    "arranger": "賀佐泰洋",
+    "createdAt": "2025-12-30T06:58:27.014724",
+    "updatedAt": "2025-12-30T06:58:27.014724"
+  },
+  {
+    "id": "081b8c9c-8001-4d28-80f6-a5abd3c4d7f6",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "虹が架かる瞬間",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:27.021669",
+    "updatedAt": "2025-12-30T06:58:27.021669"
+  },
+  {
+    "id": "3b4d73b1-f130-4f56-97ea-05e9e657e916",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "超特急 ≠ME行き",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "バグベア",
+    "createdAt": "2025-12-30T06:58:27.203028",
+    "updatedAt": "2025-12-30T06:58:27.203028"
+  },
+  {
+    "id": "42558121-71aa-4ba6-a288-35fe1d4bbcbc",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "超絶ヒロイン",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:27.221684",
+    "updatedAt": "2025-12-30T06:58:27.221684"
+  }
+]

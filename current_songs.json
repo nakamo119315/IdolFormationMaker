@@ -1,0 +1,4732 @@
+[
+  {
+    "id": "c0a3c3e6-660a-4500-84d2-cf4315b99c49",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "#おふしょるにっと",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:21.999357",
+    "updatedAt": "2025-12-30T06:58:21.999496"
+  },
+  {
+    "id": "e4657246-0d6e-4ad0-a782-d74377fda6cf",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "0120お助け屋さん",
+    "lyricist": "指原莉乃",
+    "composer": "めんま",
+    "arranger": "めんま",
+    "createdAt": "2025-12-30T06:58:22.066099",
+    "updatedAt": "2025-12-30T06:58:22.066099"
+  },
+  {
+    "id": "8b250259-ead0-4e75-a4ac-bb43a49b1556",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "100日目",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.071466",
+    "updatedAt": "2025-12-30T06:58:22.071466"
+  },
+  {
+    "id": "df4f748e-6e01-411d-84cc-08c8388838f2",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "13日の金曜日",
+    "lyricist": "秋元康",
+    "composer": "中谷あつこ",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.077732",
+    "updatedAt": "2025-12-30T06:58:22.077732"
+  },
+  {
+    "id": "69dd11a6-c196-45d2-bd59-6d26cd06ed0a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "17分間",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.089576",
+    "updatedAt": "2025-12-30T06:58:22.089576"
+  },
+  {
+    "id": "3012c006-4d62-41fa-9453-ac1c2151fe79",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "24/7",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.101964",
+    "updatedAt": "2025-12-30T06:58:22.101964"
+  },
+  {
+    "id": "334e266f-0092-459f-ad7d-9bb617dc5576",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "2度目のキスから",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.110658",
+    "updatedAt": "2025-12-30T06:58:22.110658"
+  },
+  {
+    "id": "00d7efea-5ddb-4d5c-aa95-52ac606fff16",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "2時半ろけんろー",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.117572",
+    "updatedAt": "2025-12-30T06:58:22.117572"
+  },
+  {
+    "id": "270caca6-ce65-4b94-b765-a74034c4c586",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "4番目の光",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.123624",
+    "updatedAt": "2025-12-30T06:58:22.123624"
+  },
+  {
+    "id": "d1b13ec0-49e7-4f49-b734-b46e8ac4125a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Actually...",
+    "lyricist": "秋元康",
+    "composer": "NAMITO",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:22.130882",
+    "updatedAt": "2025-12-30T06:58:22.130883"
+  },
+  {
+    "id": "82cd8a11-12f1-412f-a7bb-242834b7339b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Against",
+    "lyricist": "秋元康",
+    "composer": "古川貴浩",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:22.136106",
+    "updatedAt": "2025-12-30T06:58:22.136106"
+  },
+  {
+    "id": "78b1e163-1d1b-456c-ae03-989615292d67",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Am I Loving?",
+    "lyricist": "秋元康",
+    "composer": "山田智和",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:22.141183",
+    "updatedAt": "2025-12-30T06:58:22.141183"
+  },
+  {
+    "id": "b2eb54f6-d46a-4a5a-984a-baef2c0c2c1d",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Another Ghost",
+    "lyricist": "秋元康",
+    "composer": "前迫潤哉・Yasutaka.Ishio",
+    "arranger": "Yasutaka.Ishio",
+    "createdAt": "2025-12-30T06:58:22.147695",
+    "updatedAt": "2025-12-30T06:58:22.147695"
+  },
+  {
+    "id": "c2f798ae-f877-4511-b017-c1be8315d791",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "CAMEO",
+    "lyricist": "指原莉乃",
+    "composer": "田尻知之・本澤尚之",
+    "arranger": "田尻知之・本澤尚之",
+    "createdAt": "2025-12-30T06:58:22.152835",
+    "updatedAt": "2025-12-30T06:58:22.152835"
+  },
+  {
+    "id": "c687a5cd-81eb-457e-8fa0-f0269f24d991",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Fake Doctor",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.157883",
+    "updatedAt": "2025-12-30T06:58:22.157883"
+  },
+  {
+    "id": "213949c1-7b11-4e6a-867e-1f2ee94b7141",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Hard to say",
+    "lyricist": "秋元康",
+    "composer": "石川陽泉",
+    "arranger": "野中\"まさ\"雄一",
+    "createdAt": "2025-12-30T06:58:22.165971",
+    "updatedAt": "2025-12-30T06:58:22.165971"
+  },
+  {
+    "id": "ba1435ce-fcb8-4472-a09f-e6fba026fd11",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "I see...",
+    "lyricist": "秋元康",
+    "composer": "youth case",
+    "arranger": "佐々木博史",
+    "createdAt": "2025-12-30T06:58:22.21021",
+    "updatedAt": "2025-12-30T06:58:22.21021"
+  },
+  {
+    "id": "5a2347be-d824-41b6-8f63-e30258d8e9bf",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "Junkies",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.215871",
+    "updatedAt": "2025-12-30T06:58:22.215871"
+  },
+  {
+    "id": "511e2c8b-42fb-4ede-8c95-96c215517911",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Just a sec.",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.224354",
+    "updatedAt": "2025-12-30T06:58:22.224354"
+  },
+  {
+    "id": "4a73b887-22d7-45fd-94f7-d670217236f8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Keep in touch",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.231889",
+    "updatedAt": "2025-12-30T06:58:22.23189"
+  },
+  {
+    "id": "9a61e177-d612-4f45-9963-9694f82831ea",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "Love or love",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.237947",
+    "updatedAt": "2025-12-30T06:58:22.237947"
+  },
+  {
+    "id": "db8b79a1-e951-416b-828c-041e39addec1",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "Marcato",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.243618",
+    "updatedAt": "2025-12-30T06:58:22.243618"
+  },
+  {
+    "id": "5ea0f9c6-60e6-4070-93ae-8cb444598b64",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Monopoly",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.252245",
+    "updatedAt": "2025-12-30T06:58:22.252245"
+  },
+  {
+    "id": "a9bbc566-3669-4ee3-acb0-15c0abb65ff6",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "My respect",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.258413",
+    "updatedAt": "2025-12-30T06:58:22.258413"
+  },
+  {
+    "id": "44008966-ac8a-47dd-b9d4-8db9ca7e5295",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "My rule",
+    "lyricist": "秋元康",
+    "composer": "藤田卓也",
+    "arranger": "藤田卓也",
+    "createdAt": "2025-12-30T06:58:22.266468",
+    "updatedAt": "2025-12-30T06:58:22.266468"
+  },
+  {
+    "id": "0bae0254-0110-48a0-8586-85cd9b1db480",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Never say never",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.276302",
+    "updatedAt": "2025-12-30T06:58:22.276302"
+  },
+  {
+    "id": "317a28a6-e26a-4aa5-a731-b1282ebaefd1",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "Oh! Darling",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.286792",
+    "updatedAt": "2025-12-30T06:58:22.286792"
+  },
+  {
+    "id": "33255119-0353-4a34-be56-82777757685d",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Out of the blue",
+    "lyricist": "秋元康",
+    "composer": "youth case",
+    "arranger": "Ishizuka tomoo",
+    "createdAt": "2025-12-30T06:58:22.292962",
+    "updatedAt": "2025-12-30T06:58:22.292962"
+  },
+  {
+    "id": "ba155920-afad-43e5-bbb3-33e3e84dacaa",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "P.I.C.",
+    "lyricist": "指原莉乃",
+    "composer": "NA.ZU.NA・Yu-ki Kokubo・YHANAEL",
+    "arranger": "NA.ZU.NA・Yu-ki Kokubo・YHANAEL",
+    "createdAt": "2025-12-30T06:58:22.30165",
+    "updatedAt": "2025-12-30T06:58:22.301651"
+  },
+  {
+    "id": "51c1035f-8984-46a5-8996-bc8d10eed53b",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "Queens",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.30953",
+    "updatedAt": "2025-12-30T06:58:22.30953"
+  },
+  {
+    "id": "2023ddcc-b102-4444-a440-b2bfe6da134f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Rewindあの日",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.320089",
+    "updatedAt": "2025-12-30T06:58:22.320089"
+  },
+  {
+    "id": "215582c9-15cf-4aa8-9f9d-6b51341f503a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Route 246",
+    "lyricist": "秋元康",
+    "composer": "小室哲哉",
+    "arranger": "小室哲哉・Music Design",
+    "createdAt": "2025-12-30T06:58:22.34897",
+    "updatedAt": "2025-12-30T06:58:22.34897"
+  },
+  {
+    "id": "d26a2206-9851-4656-95e6-dba67686ba01",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Same numbers",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.387185",
+    "updatedAt": "2025-12-30T06:58:22.387185"
+  },
+  {
+    "id": "b0afd010-cca1-4c72-8402-498f92a35ddf",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Sing Out!",
+    "lyricist": "秋元康",
+    "composer": "Ryota Saito・TETTA",
+    "arranger": "野中\"まさ\"雄一",
+    "createdAt": "2025-12-30T06:58:22.395956",
+    "updatedAt": "2025-12-30T06:58:22.395956"
+  },
+  {
+    "id": "5e58779c-79fa-4421-b3ad-7c42704a5df3",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Spark a revolution!",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.400995",
+    "updatedAt": "2025-12-30T06:58:22.400995"
+  },
+  {
+    "id": "b4f83319-0f91-44e0-a6cf-88bde6ecacde",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "Sweetest girl",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.407076",
+    "updatedAt": "2025-12-30T06:58:22.407077"
+  },
+  {
+    "id": "1d8c8a82-1d6b-48b9-a0ab-7d82c0a02f62",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Tender days",
+    "lyricist": "秋元康",
+    "composer": "SoichiroK・Nozomu.S",
+    "arranger": "SoichiroK・Nozomu.S",
+    "createdAt": "2025-12-30T06:58:22.422204",
+    "updatedAt": "2025-12-30T06:58:22.422204"
+  },
+  {
+    "id": "22356141-0e21-4baf-9d81-d8fdc81cc098",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "The 5th！",
+    "lyricist": "指原莉乃",
+    "composer": "ArmySlick・Yu-ki Kokubo・YUU for YOU・YHANAEL",
+    "arranger": "ArmySlick・YUU for YOU",
+    "createdAt": "2025-12-30T06:58:22.433364",
+    "updatedAt": "2025-12-30T06:58:22.433364"
+  },
+  {
+    "id": "b0dcf3a4-1695-48f2-896f-221ec1ed14f0",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Threefold choice",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.43929",
+    "updatedAt": "2025-12-30T06:58:22.439291"
+  },
+  {
+    "id": "26e95394-15fe-44d3-9de8-b3cbb852450b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Under's Love",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.447324",
+    "updatedAt": "2025-12-30T06:58:22.447324"
+  },
+  {
+    "id": "9ce63b95-ba21-40ca-8f3f-16dc2450f8b9",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "Want you！Want you！",
+    "lyricist": "指原莉乃",
+    "composer": "ArmySlick・Yu-ki Kokubo・YUU for YOU・YHANAEL",
+    "arranger": "ArmySlick・YUU for YOU",
+    "createdAt": "2025-12-30T06:58:22.452819",
+    "updatedAt": "2025-12-30T06:58:22.45282"
+  },
+  {
+    "id": "86639330-7709-4efb-a342-47c897eefd6c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "Wilderness world",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.461318",
+    "updatedAt": "2025-12-30T06:58:22.461318"
+  },
+  {
+    "id": "9ff799ef-2afb-49a3-9d74-7c3e41a79a7e",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "cinema",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.471427",
+    "updatedAt": "2025-12-30T06:58:22.471427"
+  },
+  {
+    "id": "70da7a3e-0590-46a6-9762-7e1c75889926",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "≒JOY",
+    "lyricist": "指原莉乃",
+    "composer": "鈴木裕明",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:22.480208",
+    "updatedAt": "2025-12-30T06:58:22.480208"
+  },
+  {
+    "id": "1bea5de9-3cc2-4511-b4d0-6dcd273ef2ff",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "≠ME",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "バグベア",
+    "createdAt": "2025-12-30T06:58:22.489274",
+    "updatedAt": "2025-12-30T06:58:22.489274"
+  },
+  {
+    "id": "c269fc80-1f1f-4474-95b5-6f54d8c9d405",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "♡3ヶ月♡",
+    "lyricist": "指原莉乃",
+    "composer": "Yu-ki Kokubo, YUU for YOU",
+    "arranger": "YUU for YOU",
+    "createdAt": "2025-12-30T06:58:22.496322",
+    "updatedAt": "2025-12-30T06:58:22.496322"
+  },
+  {
+    "id": "954e1cbb-3062-422f-8fef-b9a025679183",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "「じゃあね」が切ない",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.500749",
+    "updatedAt": "2025-12-30T06:58:22.50075"
+  },
+  {
+    "id": "6b10d2b6-8ec8-4aca-86c1-d305e61c3b01",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "「ドライブ デート 都内」",
+    "lyricist": "指原莉乃",
+    "composer": "本多友紀",
+    "arranger": "脇眞富",
+    "createdAt": "2025-12-30T06:58:22.507729",
+    "updatedAt": "2025-12-30T06:58:22.507729"
+  },
+  {
+    "id": "7ab53138-e074-4f1d-94c6-6c84121e4df7",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "〜Do my best〜じゃ意味はない",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.516898",
+    "updatedAt": "2025-12-30T06:58:22.516898"
+  },
+  {
+    "id": "08363201-1e63-4b75-a520-579fb09c1112",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "あと７曲",
+    "lyricist": "秋元康",
+    "composer": "久保卓人・齋藤奏太",
+    "arranger": "齋藤奏太",
+    "createdAt": "2025-12-30T06:58:22.522887",
+    "updatedAt": "2025-12-30T06:58:22.522887"
+  },
+  {
+    "id": "d7722d70-c8af-4b2d-b829-52469b10b96d",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "あなたからの卒業",
+    "lyricist": "秋元康",
+    "composer": "Tony23",
+    "arranger": "野中\"まさ\"雄一",
+    "createdAt": "2025-12-30T06:58:22.530217",
+    "updatedAt": "2025-12-30T06:58:22.530217"
+  },
+  {
+    "id": "13b4974d-5d2c-4690-b53f-33fd5ce28d44",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "あなたのために弾きたい",
+    "lyricist": "秋元康",
+    "composer": "近藤圭一",
+    "arranger": "樫原伸彦",
+    "createdAt": "2025-12-30T06:58:22.536036",
+    "updatedAt": "2025-12-30T06:58:22.536037"
+  },
+  {
+    "id": "e833e3b3-24bd-486c-a7aa-f5755ad3db0f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "あの光",
+    "lyricist": "秋元康",
+    "composer": "BASEMINT",
+    "arranger": "BASEMINT",
+    "createdAt": "2025-12-30T06:58:22.541005",
+    "updatedAt": "2025-12-30T06:58:22.541006"
+  },
+  {
+    "id": "73f76f6a-aeb6-4944-9c57-2c056f591803",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "あの子コンプレックス",
+    "lyricist": "指原莉乃",
+    "composer": "高橋涼",
+    "arranger": "湯浅篤",
+    "createdAt": "2025-12-30T06:58:22.548966",
+    "updatedAt": "2025-12-30T06:58:22.548967"
+  },
+  {
+    "id": "a365bd35-a725-4d6d-a932-71df58eb3fc9",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "あの教室",
+    "lyricist": "秋元康",
+    "composer": "カワノミチオ",
+    "arranger": "カワノミチオ",
+    "createdAt": "2025-12-30T06:58:22.55472",
+    "updatedAt": "2025-12-30T06:58:22.55472"
+  },
+  {
+    "id": "39d1e1be-6fcb-4493-9a1d-164d309f1243",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "あの日 僕は咄嗟に嘘をついた",
+    "lyricist": "秋元康",
+    "composer": "三輪智也",
+    "arranger": "京田誠一",
+    "createdAt": "2025-12-30T06:58:22.562206",
+    "updatedAt": "2025-12-30T06:58:22.562207"
+  },
+  {
+    "id": "6b6a5a88-eb25-43be-8848-3c592055be20",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "あの歌を…",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.568528",
+    "updatedAt": "2025-12-30T06:58:22.568528"
+  },
+  {
+    "id": "d8486ba2-4d10-4aa9-8941-0d5e372525b9",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "あの頃におかえり",
+    "lyricist": "秋元康",
+    "composer": "youth case",
+    "arranger": "遠藤ナオキ",
+    "createdAt": "2025-12-30T06:58:22.573762",
+    "updatedAt": "2025-12-30T06:58:22.573762"
+  },
+  {
+    "id": "d4c35a31-03e0-4ef8-b0d3-7c43aaf3586d",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "あらかじめ語られるロマンス",
+    "lyricist": "秋元康",
+    "composer": "SoichiroK・Nozomu.S",
+    "arranger": "SoichiroK・Nozomu.S",
+    "createdAt": "2025-12-30T06:58:22.579307",
+    "updatedAt": "2025-12-30T06:58:22.579307"
+  },
+  {
+    "id": "e7a5fb16-01fe-4e5b-94a2-a655b5e34e68",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ありがちな恋愛",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": "野中\"まさ\"雄一",
+    "createdAt": "2025-12-30T06:58:22.585502",
+    "updatedAt": "2025-12-30T06:58:22.585502"
+  },
+  {
+    "id": "27afc71e-9588-48c0-adfc-4dc17a9d007c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "あんなに好きだったのに…",
+    "lyricist": "秋元康",
+    "composer": "木下めろん",
+    "arranger": "",
+    "createdAt": "2025-12-30T06:58:22.59259",
+    "updatedAt": "2025-12-30T06:58:22.59259"
+  },
+  {
+    "id": "afa40f89-7656-4900-bfca-0d5eefbc33ee",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "いつかできるから今日できる",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset・京田誠一",
+    "arranger": "Akira Sunset・京田誠一",
+    "createdAt": "2025-12-30T06:58:22.600109",
+    "updatedAt": "2025-12-30T06:58:22.600109"
+  },
+  {
+    "id": "e5ac3465-f565-450e-bdaa-fc0b9566dae2",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "いつの日にか、あの歌を…",
+    "lyricist": "秋元康",
+    "composer": "松尾一真",
+    "arranger": "松尾一真",
+    "createdAt": "2025-12-30T06:58:22.606481",
+    "updatedAt": "2025-12-30T06:58:22.606481"
+  },
+  {
+    "id": "bbbe6751-8667-4a0b-a378-30a377b99473",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "いま、月は満ちる",
+    "lyricist": "指原莉乃",
+    "composer": "島軒瑠",
+    "arranger": "野中\"まさ\"雄一",
+    "createdAt": "2025-12-30T06:58:22.689802",
+    "updatedAt": "2025-12-30T06:58:22.689803"
+  },
+  {
+    "id": "291c61b6-79eb-4040-b907-1560327bfa8a",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "いらない ツインテール",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.693758",
+    "updatedAt": "2025-12-30T06:58:22.693759"
+  },
+  {
+    "id": "47a742f3-17fe-44f8-a067-bf8d8918e435",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "おいでシャンプー",
+    "lyricist": "秋元康",
+    "composer": "小田切大",
+    "arranger": "TATOO",
+    "createdAt": "2025-12-30T06:58:22.700297",
+    "updatedAt": "2025-12-30T06:58:22.700297"
+  },
+  {
+    "id": "e2f036ee-7b96-4073-9acb-c4efe489abad",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "おひとりさま天国",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset・丸谷マナブ・ha-j・遠藤ナオキ",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:22.70615",
+    "updatedAt": "2025-12-30T06:58:22.70615"
+  },
+  {
+    "id": "20859ded-09e8-4340-993b-a17b0a869615",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "お別れタコス",
+    "lyricist": "秋元康",
+    "composer": "中谷信行",
+    "arranger": "中谷信行",
+    "createdAt": "2025-12-30T06:58:22.710036",
+    "updatedAt": "2025-12-30T06:58:22.710036"
+  },
+  {
+    "id": "6b38ce0a-303e-4bc1-83db-64ed343ef6f7",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "お姉さんじゃダメですか？",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.715887",
+    "updatedAt": "2025-12-30T06:58:22.715888"
+  },
+  {
+    "id": "0d085972-0090-4d1c-ba1a-5afdd6139258",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "お姫様にしてよ！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.722721",
+    "updatedAt": "2025-12-30T06:58:22.722721"
+  },
+  {
+    "id": "16679a9a-1470-4b44-a421-ee2849b47673",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "かき氷の片想い",
+    "lyricist": "秋元康",
+    "composer": "白須賀悟",
+    "arranger": "白須賀悟",
+    "createdAt": "2025-12-30T06:58:22.730254",
+    "updatedAt": "2025-12-30T06:58:22.730254"
+  },
+  {
+    "id": "ef716c7b-9d37-49d4-b778-afe4b77e0a47",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "きっかけ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": "有木竜郎・杉山勝彦",
+    "createdAt": "2025-12-30T06:58:22.736156",
+    "updatedAt": "2025-12-30T06:58:22.736156"
+  },
+  {
+    "id": "eba9a68b-038d-43ea-8675-3395d2a94e5d",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "きっと、青い",
+    "lyricist": "指原莉乃",
+    "composer": "ヤナガワタカオ",
+    "arranger": "ヤナガワタカオ",
+    "createdAt": "2025-12-30T06:58:22.740089",
+    "updatedAt": "2025-12-30T06:58:22.740089"
+  },
+  {
+    "id": "8faea8b3-ddf9-401d-9c40-2e4ce5a2e5c9",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "きゅんかわ人生",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.746584",
+    "updatedAt": "2025-12-30T06:58:22.746585"
+  },
+  {
+    "id": "7373aaeb-fd3e-4a46-9bd4-fd61238593e6",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ぐるぐるカーテン",
+    "lyricist": "秋元康",
+    "composer": "黒須克彦",
+    "arranger": "湯浅篤",
+    "createdAt": "2025-12-30T06:58:22.752497",
+    "updatedAt": "2025-12-30T06:58:22.752497"
+  },
+  {
+    "id": "1af3521e-2714-40c8-b150-d37f409fadd4",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ぐるぐるカーテン（6期生ver.）",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.756725",
+    "updatedAt": "2025-12-30T06:58:22.756725"
+  },
+  {
+    "id": "9b5f1b73-4b00-46f1-a41c-4e767d8e47a2",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ここじゃないどこか",
+    "lyricist": "秋元康",
+    "composer": "大藤史",
+    "arranger": "京田誠一",
+    "createdAt": "2025-12-30T06:58:22.76114",
+    "updatedAt": "2025-12-30T06:58:22.76114"
+  },
+  {
+    "id": "47b90376-f46a-4819-8d62-5949664a5574",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ここにいる理由",
+    "lyricist": "秋元康",
+    "composer": "長谷川湊",
+    "arranger": "Carlos K.",
+    "createdAt": "2025-12-30T06:58:22.766654",
+    "updatedAt": "2025-12-30T06:58:22.766654"
+  },
+  {
+    "id": "6f1420fd-f298-42c8-a0a3-1b07e330a6b5",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ここにはないもの",
+    "lyricist": "秋元康",
+    "composer": "ナスカ",
+    "arranger": "ナスカ",
+    "createdAt": "2025-12-30T06:58:22.770772",
+    "updatedAt": "2025-12-30T06:58:22.770772"
+  },
+  {
+    "id": "8edc0484-510e-466e-9017-948e4f43a258",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "こちらハッピー探検隊",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.774782",
+    "updatedAt": "2025-12-30T06:58:22.774782"
+  },
+  {
+    "id": "5f51b50e-062b-42b9-914f-8a0141fb0fd0",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "このままでモーメンタリ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.781298",
+    "updatedAt": "2025-12-30T06:58:22.781298"
+  },
+  {
+    "id": "6e819d87-7c31-4edd-a47b-b379d8138f25",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "この空がトリガー！",
+    "lyricist": "指原莉乃",
+    "composer": "塚田耕平",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:22.787781",
+    "updatedAt": "2025-12-30T06:58:22.787781"
+  },
+  {
+    "id": "73ce9228-377f-4257-a491-0806e25b040b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "これから",
+    "lyricist": "秋元康",
+    "composer": "浦島健太・菊池博人",
+    "arranger": "菊池博人",
+    "createdAt": "2025-12-30T06:58:22.797967",
+    "updatedAt": "2025-12-30T06:58:22.797968"
+  },
+  {
+    "id": "e221aa89-3488-449d-acf9-87926aaf124e",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ごめん、マジで",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.803518",
+    "updatedAt": "2025-12-30T06:58:22.803518"
+  },
+  {
+    "id": "d3959c39-d1b4-46e2-af81-299a50c9b227",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ごめんね",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.87609",
+    "updatedAt": "2025-12-30T06:58:22.87609"
+  },
+  {
+    "id": "d502f066-ecea-434b-ba78-ed609ae2aa2f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ごめんね ずっと…",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.883071",
+    "updatedAt": "2025-12-30T06:58:22.883071"
+  },
+  {
+    "id": "e35e0493-982a-4c45-8de4-da6d79acab3b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ごめんねFingers crossed",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦・APAZZI",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:22.886674",
+    "updatedAt": "2025-12-30T06:58:22.886674"
+  },
+  {
+    "id": "185d2bf0-8476-4351-84aa-cf3a8abd347f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "さ〜ゆ〜Ready?",
+    "lyricist": "秋元康",
+    "composer": "Masayoshi Kawabata",
+    "arranger": "Masayoshi Kawabata",
+    "createdAt": "2025-12-30T06:58:22.891508",
+    "updatedAt": "2025-12-30T06:58:22.891509"
+  },
+  {
+    "id": "8dd4da7b-856d-4093-aa3d-46d3d218caeb",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "さざ波は戻らない",
+    "lyricist": "秋元康",
+    "composer": "伊藤心太郎",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:22.897679",
+    "updatedAt": "2025-12-30T06:58:22.897679"
+  },
+  {
+    "id": "afe4981e-e14d-450c-9d34-2fcf9116edf0",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "さゆりんご募集中",
+    "lyricist": "秋元康",
+    "composer": "浦島健太・菊池博人",
+    "arranger": "浦島健太・菊池博人",
+    "createdAt": "2025-12-30T06:58:22.903008",
+    "updatedAt": "2025-12-30T06:58:22.903008"
+  },
+  {
+    "id": "c6256e9e-8133-4f3a-974e-444b2e0c3743",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ざぶんざざぶん",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.91169",
+    "updatedAt": "2025-12-30T06:58:22.91169"
+  },
+  {
+    "id": "066e1382-ce9f-4ef0-b3dc-303e09b83520",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "しあわせの保護色",
+    "lyricist": "秋元康",
+    "composer": "MASANORI URA",
+    "arranger": "大岡晋平",
+    "createdAt": "2025-12-30T06:58:22.919349",
+    "updatedAt": "2025-12-30T06:58:22.919349"
+  },
+  {
+    "id": "60a9d5eb-58fb-4e0f-8525-8b0744c7ccec",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "しゅきぴ！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:22.925677",
+    "updatedAt": "2025-12-30T06:58:22.925677"
+  },
+  {
+    "id": "727ac8ae-1e49-43d4-9bc3-7914a20d8b6a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "じゃあね。",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.933828",
+    "updatedAt": "2025-12-30T06:58:22.933828"
+  },
+  {
+    "id": "dbbfeb45-13c6-4cdf-b3c6-d12badd98c4f",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "す、好きじゃない！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:22.944219",
+    "updatedAt": "2025-12-30T06:58:22.944219"
+  },
+  {
+    "id": "a8aa0346-bf0c-4144-9821-74d053c46c98",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "せっかちなかたつむり",
+    "lyricist": "秋元康",
+    "composer": "山本加津彦",
+    "arranger": "湯浅篤",
+    "createdAt": "2025-12-30T06:58:22.953915",
+    "updatedAt": "2025-12-30T06:58:22.953916"
+  },
+  {
+    "id": "80528521-27d4-49f1-bcef-6de8834bf435",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "その先の出口",
+    "lyricist": "秋元康",
+    "composer": "Carlos K.",
+    "arranger": "Carlos K.",
+    "createdAt": "2025-12-30T06:58:22.969508",
+    "updatedAt": "2025-12-30T06:58:22.969508"
+  },
+  {
+    "id": "d4bb2b3e-a974-42df-a504-c7751e90509b",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "その先はイグザルト",
+    "lyricist": "指原莉乃",
+    "composer": "高木龍一",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:22.97616",
+    "updatedAt": "2025-12-30T06:58:22.97616"
+  },
+  {
+    "id": "3aefc1cb-a661-4264-8b8b-e166ea6b18fb",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "その女",
+    "lyricist": "秋元康",
+    "composer": "HRK",
+    "arranger": "",
+    "createdAt": "2025-12-30T06:58:22.984039",
+    "updatedAt": "2025-12-30T06:58:22.984039"
+  },
+  {
+    "id": "c5ff02a6-4626-4a06-b7d8-9f5f75137aa0",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "それまでの猶予",
+    "lyricist": "秋元康",
+    "composer": "フジノタカフミ",
+    "arranger": "玉木千尋",
+    "createdAt": "2025-12-30T06:58:22.991396",
+    "updatedAt": "2025-12-30T06:58:22.991396"
+  },
+  {
+    "id": "3d05f52a-f651-467b-8a1b-10d874dcb549",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "そんなバカな・・・",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset",
+    "arranger": "Akira Sunset",
+    "createdAt": "2025-12-30T06:58:22.99842",
+    "updatedAt": "2025-12-30T06:58:22.99842"
+  },
+  {
+    "id": "24747b2a-2f16-4c1a-9a28-ce02b69f3270",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "だからとて",
+    "lyricist": "指原莉乃",
+    "composer": "高橋リュウセイ",
+    "arranger": "脇眞富",
+    "createdAt": "2025-12-30T06:58:23.006058",
+    "updatedAt": "2025-12-30T06:58:23.006058"
+  },
+  {
+    "id": "5f64232d-36c4-4db3-a329-818df96b3769",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "だだだ、だって。",
+    "lyricist": "指原莉乃",
+    "composer": "中村歩, 齋藤奏太",
+    "arranger": "中村歩, 齋藤奏太",
+    "createdAt": "2025-12-30T06:58:23.016218",
+    "updatedAt": "2025-12-30T06:58:23.016218"
+  },
+  {
+    "id": "ccbb7217-4275-4eb5-a663-00f4e828e5a2",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ってかさ",
+    "lyricist": "秋元康",
+    "composer": "長沢知亜紀・永野小織・Myko ISLAND",
+    "arranger": "Myko ISLAND",
+    "createdAt": "2025-12-30T06:58:23.023822",
+    "updatedAt": "2025-12-30T06:58:23.023822"
+  },
+  {
+    "id": "06c1a6f1-9bfe-4167-b01c-4cab4b15d586",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "つづく",
+    "lyricist": "秋元康",
+    "composer": "若田部誠",
+    "arranger": "若田部誠",
+    "createdAt": "2025-12-30T06:58:23.032291",
+    "updatedAt": "2025-12-30T06:58:23.032291"
+  },
+  {
+    "id": "6ad62c32-18bc-4aab-849d-5ddd33f1566e",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "てゆーか、みるてんって何？",
+    "lyricist": "指原莉乃",
+    "composer": "yuma",
+    "arranger": "yuma",
+    "createdAt": "2025-12-30T06:58:23.040867",
+    "updatedAt": "2025-12-30T06:58:23.040867"
+  },
+  {
+    "id": "0d5465df-b33b-43ab-9ff0-68ad81d23abd",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "でこぴん",
+    "lyricist": "秋元康",
+    "composer": "中土智博",
+    "arranger": "中土智博",
+    "createdAt": "2025-12-30T06:58:23.049186",
+    "updatedAt": "2025-12-30T06:58:23.049187"
+  },
+  {
+    "id": "6dcd9776-184c-43fd-b0d0-d5c30f84a9ad",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "とくべチュ、して！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.055259",
+    "updatedAt": "2025-12-30T06:58:23.05526"
+  },
+  {
+    "id": "fa765fb5-1259-42cc-a5a6-e24b3eef661e",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "どこが好きか言って",
+    "lyricist": "指原莉乃",
+    "composer": "齋藤奏太",
+    "arranger": "齋藤奏太",
+    "createdAt": "2025-12-30T06:58:23.063819",
+    "updatedAt": "2025-12-30T06:58:23.063819"
+  },
+  {
+    "id": "42848b7a-075c-4a55-a7ea-adc042cfef1e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ないものねだり",
+    "lyricist": "秋元康",
+    "composer": "丸谷マナブ",
+    "arranger": "福田貴史・丸谷マナブ",
+    "createdAt": "2025-12-30T06:58:23.072116",
+    "updatedAt": "2025-12-30T06:58:23.072117"
+  },
+  {
+    "id": "db32418b-b16d-48e6-807c-0264fc2553b6",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "なぜ　僕たちは走るのか？",
+    "lyricist": "秋元康",
+    "composer": "賀佐泰洋",
+    "arranger": "賀佐泰洋",
+    "createdAt": "2025-12-30T06:58:23.085165",
+    "updatedAt": "2025-12-30T06:58:23.085166"
+  },
+  {
+    "id": "8a9a6037-8e2a-43cd-8e4b-e91d7a790bcf",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "なぞの落書き",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.092108",
+    "updatedAt": "2025-12-30T06:58:23.092109"
+  },
+  {
+    "id": "879f4f5e-97bb-4a7c-84bb-c7e71ea73cb8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "のような存在",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.101837",
+    "updatedAt": "2025-12-30T06:58:23.101837"
+  },
+  {
+    "id": "ad796c02-ad39-4b8a-97c6-df73e66c5f2e",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "はにかみショート",
+    "lyricist": "指原莉乃",
+    "composer": "中村歩・野口大志",
+    "arranger": "中村歩・野口大志",
+    "createdAt": "2025-12-30T06:58:23.108028",
+    "updatedAt": "2025-12-30T06:58:23.108028"
+  },
+  {
+    "id": "8a5c6aad-bdba-49b3-9243-50189ba01755",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "はんぶんこクリスマス",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.114485",
+    "updatedAt": "2025-12-30T06:58:23.114485"
+  },
+  {
+    "id": "efae9338-5005-4cd7-952f-5dada273bceb",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ひとりよがり",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": "杉山勝彦・有木竜郎",
+    "createdAt": "2025-12-30T06:58:23.121443",
+    "updatedAt": "2025-12-30T06:58:23.121443"
+  },
+  {
+    "id": "e9c5b3ae-4aa0-4250-ace3-dddb91ad5738",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ひと夏の長さより…",
+    "lyricist": "秋元康",
+    "composer": "aokado",
+    "arranger": "aokado",
+    "createdAt": "2025-12-30T06:58:23.129669",
+    "updatedAt": "2025-12-30T06:58:23.129669"
+  },
+  {
+    "id": "13a6c227-ca8b-42e3-8a2d-fd5069dbefcd",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ぶんぶくちゃがま",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.136094",
+    "updatedAt": "2025-12-30T06:58:23.136094"
+  },
+  {
+    "id": "853fe717-386f-4c1f-9c79-2a1e4fc939e0",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ぼっち党",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.143394",
+    "updatedAt": "2025-12-30T06:58:23.143394"
+  },
+  {
+    "id": "568994eb-461d-430f-950d-2b878111129f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "まあいいか?",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.151145",
+    "updatedAt": "2025-12-30T06:58:23.151145"
+  },
+  {
+    "id": "97f2d982-7f28-4a85-b0cf-51e789b98ced",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "まほろばアスタリスク",
+    "lyricist": "指原莉乃",
+    "composer": "本多友紀",
+    "arranger": "脇眞富",
+    "createdAt": "2025-12-30T06:58:23.158142",
+    "updatedAt": "2025-12-30T06:58:23.158142"
+  },
+  {
+    "id": "53677c52-0aea-44a9-a125-11cb84ead326",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "もうすぐ〜ザンビ伝説〜",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.164773",
+    "updatedAt": "2025-12-30T06:58:23.164774"
+  },
+  {
+    "id": "12a8b83c-5af3-4337-9470-2d6487b515ef",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "もう少しの夢",
+    "lyricist": "秋元康",
+    "composer": "丸谷マナブ",
+    "arranger": "野中\"まさ\"雄一",
+    "createdAt": "2025-12-30T06:58:23.172909",
+    "updatedAt": "2025-12-30T06:58:23.172909"
+  },
+  {
+    "id": "264f1901-ddc0-4f3c-83ff-a5a0999f64b7",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "もしも心が透明なら",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.182812",
+    "updatedAt": "2025-12-30T06:58:23.182812"
+  },
+  {
+    "id": "4e9f99e4-d9e5-4012-b3b5-313bfa6fc846",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "もし君がいなければ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.189962",
+    "updatedAt": "2025-12-30T06:58:23.189962"
+  },
+  {
+    "id": "c7603d87-894b-4ed0-a82e-2e3b79a3ac59",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "もっと好きになる",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.197366",
+    "updatedAt": "2025-12-30T06:58:23.197367"
+  },
+  {
+    "id": "ab770259-20af-4bd9-aa6b-406e5e18739d",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "やさしいだけなら",
+    "lyricist": "秋元康",
+    "composer": "平賀伸明",
+    "arranger": "野中\"まさ\"雄一",
+    "createdAt": "2025-12-30T06:58:23.205743",
+    "updatedAt": "2025-12-30T06:58:23.205743"
+  },
+  {
+    "id": "303e131b-a603-4222-9058-822e81762f0f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "やさしさとは",
+    "lyricist": "秋元康",
+    "composer": "古川貴浩",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:23.216733",
+    "updatedAt": "2025-12-30T06:58:23.216734"
+  },
+  {
+    "id": "eb1f5c67-d2a8-40d1-b48c-09dd44908b62",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "やさしさなら間に合ってる",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.226303",
+    "updatedAt": "2025-12-30T06:58:23.226304"
+  },
+  {
+    "id": "cae71335-5336-4388-b856-de880b63e31f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ゆっくりと咲く花",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.233964",
+    "updatedAt": "2025-12-30T06:58:23.233964"
+  },
+  {
+    "id": "03201653-c20a-4535-b2f9-13ecff8bbd9b",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "アイカツハッピーエンド",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.240709",
+    "updatedAt": "2025-12-30T06:58:23.240709"
+  },
+  {
+    "id": "ff2e804f-fd7d-49b5-8bd1-e5521161e12e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "アトノマツリ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.247698",
+    "updatedAt": "2025-12-30T06:58:23.247698"
+  },
+  {
+    "id": "12fdee01-af69-45e2-b99b-5777d13d788b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "アナスターシャ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.254835",
+    "updatedAt": "2025-12-30T06:58:23.254835"
+  },
+  {
+    "id": "745fdc53-aa04-47c6-9422-fe61f0775eae",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "アンダー",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.2642",
+    "updatedAt": "2025-12-30T06:58:23.2642"
+  },
+  {
+    "id": "43cdfa29-fb8d-42cb-a8a4-451134c1810d",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "アンチコンフィチュール",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.272624",
+    "updatedAt": "2025-12-30T06:58:23.272624"
+  },
+  {
+    "id": "e94e3c0c-e63b-4fa8-ac4a-719da19a82ec",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "インフルエンサー",
+    "lyricist": "秋元康",
+    "composer": "すみだしんや",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:23.280353",
+    "updatedAt": "2025-12-30T06:58:23.280353"
+  },
+  {
+    "id": "a673fd32-a129-448d-81a4-c97e4394069e",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "ウィークエンドシトロン",
+    "lyricist": "指原莉乃",
+    "composer": "ArmySlick・Yu-ki Kokubo・YUU for YOU",
+    "arranger": "ArmySlick・YUU for YOU",
+    "createdAt": "2025-12-30T06:58:23.482706",
+    "updatedAt": "2025-12-30T06:58:23.482706"
+  },
+  {
+    "id": "da989678-2ed4-4fb5-af0b-ee37579f57f7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ウルトラレアキッスガチャガチャ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.489426",
+    "updatedAt": "2025-12-30T06:58:23.489426"
+  },
+  {
+    "id": "5fd918c6-d826-485a-ac24-73401253be07",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "オフショアガール",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.494787",
+    "updatedAt": "2025-12-30T06:58:23.494787"
+  },
+  {
+    "id": "89d6b9b5-c3ee-4107-b4a4-7bd4a9e36a41",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "カフェ樂園",
+    "lyricist": "指原莉乃",
+    "composer": "古川貴浩",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:23.502651",
+    "updatedAt": "2025-12-30T06:58:23.502651"
+  },
+  {
+    "id": "d08e579b-3b11-4ff4-80df-1bbac256e0b8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ガールズルール",
+    "lyricist": "秋元康",
+    "composer": "後藤康二（ck510）",
+    "arranger": "後藤康二（ck510）",
+    "createdAt": "2025-12-30T06:58:23.509141",
+    "updatedAt": "2025-12-30T06:58:23.509141"
+  },
+  {
+    "id": "30f9a2e2-398d-473c-9eea-00425b39139a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "キスのシルエット",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.516086",
+    "updatedAt": "2025-12-30T06:58:23.516086"
+  },
+  {
+    "id": "a36da4df-2d10-49ea-a3c0-ab1054042871",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "キスの手裏剣",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.522446",
+    "updatedAt": "2025-12-30T06:58:23.522446"
+  },
+  {
+    "id": "86e98387-3d7a-485a-a702-33c1caf07f6b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "キャラバンは眠らない",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.530427",
+    "updatedAt": "2025-12-30T06:58:23.530427"
+  },
+  {
+    "id": "c4e3e9c5-345a-4cc1-ae89-e1ff4b6b15e8",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "クルクルかき氷",
+    "lyricist": "指原莉乃",
+    "composer": "HaggyRock",
+    "arranger": "HaggyRock",
+    "createdAt": "2025-12-30T06:58:23.541868",
+    "updatedAt": "2025-12-30T06:58:23.541868"
+  },
+  {
+    "id": "ce334ed8-85f5-417e-8910-977febe19f0f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "コウモリよ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.551964",
+    "updatedAt": "2025-12-30T06:58:23.551964"
+  },
+  {
+    "id": "fdbc5b09-394b-4015-a6ce-a537bccec69b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ゴルゴンゾーラ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.559789",
+    "updatedAt": "2025-12-30T06:58:23.559789"
+  },
+  {
+    "id": "b4f6c84c-0fcc-456f-ad53-404034ce497e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "サイコキネシスの可能性",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.567959",
+    "updatedAt": "2025-12-30T06:58:23.567959"
+  },
+  {
+    "id": "a5c7ee57-affa-45ce-9a83-e70f5bd3acbe",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "サマーチョコレート",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.575122",
+    "updatedAt": "2025-12-30T06:58:23.575122"
+  },
+  {
+    "id": "8b398324-1269-4eb4-a59a-d21fe11f175f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "サヨナラ Stay with me",
+    "lyricist": "秋元康",
+    "composer": "中村泰輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.58538",
+    "updatedAt": "2025-12-30T06:58:23.58538"
+  },
+  {
+    "id": "12abd577-708c-4826-8441-01d847d2a00a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "サヨナラの意味",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": "若田部誠",
+    "createdAt": "2025-12-30T06:58:23.596608",
+    "updatedAt": "2025-12-30T06:58:23.596608"
+  },
+  {
+    "id": "9ef5649d-6f14-47fa-b4f0-e878de3d924b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "サルビアの花を覚えているかい？",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.603411",
+    "updatedAt": "2025-12-30T06:58:23.603412"
+  },
+  {
+    "id": "ea735cde-1ff5-4f1f-a33d-27c09ba2ed64",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "シャキイズム",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.65854",
+    "updatedAt": "2025-12-30T06:58:23.65854"
+  },
+  {
+    "id": "6fd13d0a-ca28-493e-afbc-f2e4296e0119",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ショパンの嘘つき",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.667046",
+    "updatedAt": "2025-12-30T06:58:23.667046"
+  },
+  {
+    "id": "ec496d91-2afa-4869-a7e9-7cfaf5683cfe",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "シンクロニシティ",
+    "lyricist": "秋元康",
+    "composer": "シライシ紗トリ",
+    "arranger": "シライシ紗トリ",
+    "createdAt": "2025-12-30T06:58:23.673285",
+    "updatedAt": "2025-12-30T06:58:23.673286"
+  },
+  {
+    "id": "978a8684-b8f4-4ce3-a1b3-41e67e0ae6e8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "シークレットグラフィティー",
+    "lyricist": "秋元康",
+    "composer": "中村泰輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.684736",
+    "updatedAt": "2025-12-30T06:58:23.684736"
+  },
+  {
+    "id": "f2b27fcd-fee2-4d6a-90fe-ab6f422d8bbd",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ジコチューで行こう!",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.692302",
+    "updatedAt": "2025-12-30T06:58:23.692302"
+  },
+  {
+    "id": "e320ab49-59bc-4032-b934-b633c0614586",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ジャンピングジョーカーフラッシュ",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.701796",
+    "updatedAt": "2025-12-30T06:58:23.701796"
+  },
+  {
+    "id": "1240608a-9f4d-40ec-b8dc-b0cefa902bef",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "スイートシックスティーン",
+    "lyricist": "指原莉乃",
+    "composer": "中村歩, 菊池博人",
+    "arranger": "中村歩, 菊池博人",
+    "createdAt": "2025-12-30T06:58:23.711566",
+    "updatedAt": "2025-12-30T06:58:23.711566"
+  },
+  {
+    "id": "b0d69bf3-52ea-4aaf-b8d1-360801d8c5fa",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "スカイダイビング",
+    "lyricist": "秋元康",
+    "composer": "中村泰輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.720906",
+    "updatedAt": "2025-12-30T06:58:23.720906"
+  },
+  {
+    "id": "06678ce6-2d57-4d0a-a1fe-d1c52db7bb92",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "スカウトマン",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.729497",
+    "updatedAt": "2025-12-30T06:58:23.729498"
+  },
+  {
+    "id": "49b1c1ce-6688-4a9c-b1c9-64cdde9132fd",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "スタイリッシュ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.737418",
+    "updatedAt": "2025-12-30T06:58:23.737418"
+  },
+  {
+    "id": "9e515bb3-e539-4615-9654-98130d4a4732",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "スタート！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.744674",
+    "updatedAt": "2025-12-30T06:58:23.744674"
+  },
+  {
+    "id": "a4922d61-9bcb-4d8a-8c86-fe4f1ea026e8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "スムージー",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.7556",
+    "updatedAt": "2025-12-30T06:58:23.7556"
+  },
+  {
+    "id": "5f6ccb24-11d4-4173-b0da-63d7ac0f6e1b",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "ズッ友案件",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.764288",
+    "updatedAt": "2025-12-30T06:58:23.764288"
+  },
+  {
+    "id": "41fc41b2-ea8b-476c-8ab3-3f9a48483ff1",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "ズルいよ ズルいね！",
+    "lyricist": "指原莉乃",
+    "composer": "長沢知亜紀・永野小織",
+    "arranger": "湯浅篤",
+    "createdAt": "2025-12-30T06:58:23.772947",
+    "updatedAt": "2025-12-30T06:58:23.772948"
+  },
+  {
+    "id": "216e27ae-5968-43b2-b174-1f90a55a3703",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "セノビーインラブ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.782379",
+    "updatedAt": "2025-12-30T06:58:23.782379"
+  },
+  {
+    "id": "97d38eb9-b597-4e2a-b2bb-97a1339fc975",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "タイムリミット片想い",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.790868",
+    "updatedAt": "2025-12-30T06:58:23.790869"
+  },
+  {
+    "id": "6a408fbe-9c9d-4c65-a840-9300e5fb1fcb",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ダンケシェーン",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.798516",
+    "updatedAt": "2025-12-30T06:58:23.798516"
+  },
+  {
+    "id": "b77c2da2-5749-4fc3-b231-6c06f43c78e1",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "チャンスは平等",
+    "lyricist": "秋元康",
+    "composer": "中村泰輔",
+    "arranger": "中村泰輔",
+    "createdAt": "2025-12-30T06:58:23.806794",
+    "updatedAt": "2025-12-30T06:58:23.806794"
+  },
+  {
+    "id": "8c543b20-c0f5-4553-ae53-53ad8e3829d7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "チョコレートメランコリー",
+    "lyricist": "指原莉乃",
+    "composer": "桑原佑介",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:23.815129",
+    "updatedAt": "2025-12-30T06:58:23.815129"
+  },
+  {
+    "id": "c1ddd48f-63c3-40de-99ba-1809b3ec20d4",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "チートデイ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.82684",
+    "updatedAt": "2025-12-30T06:58:23.82684"
+  },
+  {
+    "id": "17f7be62-63c6-4970-ba1d-5d3b5b2cd25d",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "デートの後、22時",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.837346",
+    "updatedAt": "2025-12-30T06:58:23.837346"
+  },
+  {
+    "id": "c56d5fab-9f05-45f0-aa63-02009ff2d192",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "デート前夜レクイエム",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:23.851591",
+    "updatedAt": "2025-12-30T06:58:23.851591"
+  },
+  {
+    "id": "42a87e6a-6a17-4b13-b403-78b68e434423",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "トキトキメキメキ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:23.945532",
+    "updatedAt": "2025-12-30T06:58:23.945532"
+  },
+  {
+    "id": "1eb02eac-9815-4f5a-962a-49a061ee0e01",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "ナツマトペ",
+    "lyricist": "指原莉乃",
+    "composer": "庄司夏葵",
+    "arranger": "庄司夏葵",
+    "createdAt": "2025-12-30T06:58:23.952789",
+    "updatedAt": "2025-12-30T06:58:23.952789"
+  },
+  {
+    "id": "07c0203d-dd55-4bda-824f-fde9192f7717",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "ニアジョイ音頭",
+    "lyricist": "指原莉乃",
+    "composer": "YUU for YOU, Yu-ki Kokubo",
+    "arranger": "YUU for YOU",
+    "createdAt": "2025-12-30T06:58:23.971089",
+    "updatedAt": "2025-12-30T06:58:23.971089"
+  },
+  {
+    "id": "1e62082d-605f-429b-acc9-41f7e9bf2f87",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "ネバギバ！生きろ",
+    "lyricist": "指原莉乃",
+    "composer": "金山秀士",
+    "arranger": "めんま",
+    "createdAt": "2025-12-30T06:58:23.990525",
+    "updatedAt": "2025-12-30T06:58:23.990526"
+  },
+  {
+    "id": "48e2ca29-5a5d-4b99-a34f-a97a083bbf81",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ネーブルオレンジ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.020253",
+    "updatedAt": "2025-12-30T06:58:24.020254"
+  },
+  {
+    "id": "203ebe6c-d414-47d3-9ccf-930d694b2119",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ハウス！",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.035575",
+    "updatedAt": "2025-12-30T06:58:24.035575"
+  },
+  {
+    "id": "2b2f7c39-b23a-4804-95bc-500f37762899",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ハルジオンが咲く頃",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset・APAZZI",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:24.044502",
+    "updatedAt": "2025-12-30T06:58:24.044502"
+  },
+  {
+    "id": "e1d249e5-7b63-42cb-bc9f-bf4bc4a34773",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "バレッタ",
+    "lyricist": "秋元康",
+    "composer": "サイトウヨシヒロ",
+    "arranger": "若田部誠",
+    "createdAt": "2025-12-30T06:58:24.086213",
+    "updatedAt": "2025-12-30T06:58:24.086213"
+  },
+  {
+    "id": "3f9d6637-f074-46c8-b492-3b9c363fd413",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "バンドエイド剥がすような別れ方",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.124444",
+    "updatedAt": "2025-12-30T06:58:24.124444"
+  },
+  {
+    "id": "eb942e9c-389a-4ba1-ac8d-8efba0012dc4",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "バンドワゴン",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.137712",
+    "updatedAt": "2025-12-30T06:58:24.137712"
+  },
+  {
+    "id": "2a094fe1-c5ed-4017-9423-9c82b43aeca6",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "パッションフルーツの食べ方",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.146556",
+    "updatedAt": "2025-12-30T06:58:24.146556"
+  },
+  {
+    "id": "b0339102-2630-4088-93a1-1b03cbacc44b",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ヒロインとオオカミ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.15604",
+    "updatedAt": "2025-12-30T06:58:24.15604"
+  },
+  {
+    "id": "5faf5a46-f63b-444a-b05b-e8f62af2c523",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "ヒロインズ",
+    "lyricist": "指原莉乃",
+    "composer": "Yu-ki Kokubo・YUU for YOU",
+    "arranger": "YUU for YOU",
+    "createdAt": "2025-12-30T06:58:24.165019",
+    "updatedAt": "2025-12-30T06:58:24.165019"
+  },
+  {
+    "id": "8ed2d9c3-efe2-45ac-a39f-8443dae6858e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ビリヤニ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.173215",
+    "updatedAt": "2025-12-30T06:58:24.173215"
+  },
+  {
+    "id": "aadce971-be92-4631-b82f-51135f74a449",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ピオニーズ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.184641",
+    "updatedAt": "2025-12-30T06:58:24.184641"
+  },
+  {
+    "id": "cfe97126-f211-4a29-a779-b900f2b06ebb",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "ピーチティーとピーチパイ",
+    "lyricist": "指原莉乃",
+    "composer": "本田正樹",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:24.192471",
+    "updatedAt": "2025-12-30T06:58:24.192472"
+  },
+  {
+    "id": "f3c161e1-02cb-406a-bb0b-e62150a2905c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ファンタスティック3色パン",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.201817",
+    "updatedAt": "2025-12-30T06:58:24.201817"
+  },
+  {
+    "id": "80a9f7b1-fcbe-4baa-a397-2d9dbee4b0ec",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "フロアキラー",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.207763",
+    "updatedAt": "2025-12-30T06:58:24.207763"
+  },
+  {
+    "id": "17621bf4-5831-4173-a16f-98affe236acf",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ブランコ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.215849",
+    "updatedAt": "2025-12-30T06:58:24.215849"
+  },
+  {
+    "id": "38d9f809-ab36-4ac6-9b69-cef8ccbe4ae9",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "ブルーハワイレモン",
+    "lyricist": "指原莉乃",
+    "composer": "杉山勝彦, 尾上榛",
+    "arranger": "尾上榛, 杉山勝彦",
+    "createdAt": "2025-12-30T06:58:24.275035",
+    "updatedAt": "2025-12-30T06:58:24.275035"
+  },
+  {
+    "id": "c0f9b7f7-bcbe-4616-9170-d7b5d2b04b37",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ボーダー",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.284273",
+    "updatedAt": "2025-12-30T06:58:24.284273"
+  },
+  {
+    "id": "8cab2ce3-83bb-4ab4-bdd7-380048c9a6f4",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ポニーテール キュルン",
+    "lyricist": "指原莉乃",
+    "composer": "野井洋児",
+    "arranger": "家原正樹",
+    "createdAt": "2025-12-30T06:58:24.290706",
+    "updatedAt": "2025-12-30T06:58:24.290706"
+  },
+  {
+    "id": "34e88236-c69b-4397-8bbe-8202c439a356",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ポピパッパパー",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.298356",
+    "updatedAt": "2025-12-30T06:58:24.298356"
+  },
+  {
+    "id": "818d4c4d-e621-45bd-8e2e-3725cf74c3ed",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "マグカップとシンク",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.304142",
+    "updatedAt": "2025-12-30T06:58:24.304142"
+  },
+  {
+    "id": "563bc391-cac6-4a6f-91b9-ca9fe464a11f",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "マシュマロフロート",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.313551",
+    "updatedAt": "2025-12-30T06:58:24.313551"
+  },
+  {
+    "id": "d936bf2d-4c14-48c7-a257-84cd800f4fee",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "マシンガンレイン",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.321853",
+    "updatedAt": "2025-12-30T06:58:24.321853"
+  },
+  {
+    "id": "2fbc6e39-4586-4716-9223-12e73c6a8c9c",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "ミステリアスなボーイ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.334782",
+    "updatedAt": "2025-12-30T06:58:24.334782"
+  },
+  {
+    "id": "9b9e7c06-2135-4b69-a2a6-d65a64a2fff7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ミラクル！",
+    "lyricist": "指原莉乃",
+    "composer": "YUU for YOU・Yu-ki Kokubo",
+    "arranger": "YUU for YOU",
+    "createdAt": "2025-12-30T06:58:24.343429",
+    "updatedAt": "2025-12-30T06:58:24.343429"
+  },
+  {
+    "id": "f0624d50-7fa3-43e0-8141-dab5e10b7ee2",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "メロン",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.352489",
+    "updatedAt": "2025-12-30T06:58:24.35249"
+  },
+  {
+    "id": "17e5dc4b-c8ef-462f-8363-970e94e72fd6",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "モブノデレラ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.360006",
+    "updatedAt": "2025-12-30T06:58:24.360007"
+  },
+  {
+    "id": "e42a5d81-16f0-4a6f-82b6-a979ba6ffdc1",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ライブ神",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.368239",
+    "updatedAt": "2025-12-30T06:58:24.368239"
+  },
+  {
+    "id": "eb969d46-be88-4121-a73a-09e424b4266c",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "ラストチャンス、ラストダンス",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.375705",
+    "updatedAt": "2025-12-30T06:58:24.375706"
+  },
+  {
+    "id": "46c68bee-56c8-4cf9-be04-203de2665596",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "ラストノートしか知らない",
+    "lyricist": "指原莉乃",
+    "composer": "塚田耕平",
+    "arranger": "湯浅篤",
+    "createdAt": "2025-12-30T06:58:24.385955",
+    "updatedAt": "2025-12-30T06:58:24.385955"
+  },
+  {
+    "id": "847db61c-533b-4c26-8283-74d0011329cf",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "ラブソングに襲われる",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.394236",
+    "updatedAt": "2025-12-30T06:58:24.394236"
+  },
+  {
+    "id": "1015406e-59d1-47b2-9391-3c5420e809e1",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ロマンスのスタート",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.404689",
+    "updatedAt": "2025-12-30T06:58:24.404689"
+  },
+  {
+    "id": "e3dbf56b-75d6-496a-b8cf-9a37a4da8437",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ロマンティックいか焼き",
+    "lyricist": "秋元康",
+    "composer": "中村泰輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.469558",
+    "updatedAt": "2025-12-30T06:58:24.469558"
+  },
+  {
+    "id": "971fc0df-37b2-4481-938e-821ac93dd951",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "ワタボコリ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.479687",
+    "updatedAt": "2025-12-30T06:58:24.479688"
+  },
+  {
+    "id": "bd53feea-8db9-41ac-835c-19eb1226c77e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "三番目の風",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.484661",
+    "updatedAt": "2025-12-30T06:58:24.484661"
+  },
+  {
+    "id": "2b0bddc1-79d0-464a-ad1d-a7168c2fd8f6",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "三角の空き地",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.489869",
+    "updatedAt": "2025-12-30T06:58:24.489869"
+  },
+  {
+    "id": "b9451d96-be45-46e4-adb7-955bf0266c77",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "不眠症",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.495263",
+    "updatedAt": "2025-12-30T06:58:24.495264"
+  },
+  {
+    "id": "0534f0b2-0c7e-4e61-9598-21dcf81f3521",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "不等号",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.500677",
+    "updatedAt": "2025-12-30T06:58:24.500677"
+  },
+  {
+    "id": "9dcd2d2c-5a2a-4398-8a5d-7e09850bbae9",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "不道徳な夏",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.512437",
+    "updatedAt": "2025-12-30T06:58:24.512437"
+  },
+  {
+    "id": "6ed600e2-d868-485f-816e-58d5d915dc0d",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "世界で一番 孤独なLover",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.520741",
+    "updatedAt": "2025-12-30T06:58:24.520741"
+  },
+  {
+    "id": "23619c5d-af48-4a68-9036-0cac69b8c7b5",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "世界はここにある",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.52943",
+    "updatedAt": "2025-12-30T06:58:24.52943"
+  },
+  {
+    "id": "ae3e2b15-9ba7-4996-92f0-a945a170c9c8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "世界一のダイヤモンド",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.539093",
+    "updatedAt": "2025-12-30T06:58:24.539093"
+  },
+  {
+    "id": "44f90b54-c784-4810-84d8-706c05c00b57",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "世界中の隣人よ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.545767",
+    "updatedAt": "2025-12-30T06:58:24.545767"
+  },
+  {
+    "id": "251b2154-609f-4b00-9864-db308b6c8ded",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "乃木坂の詩",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.578459",
+    "updatedAt": "2025-12-30T06:58:24.578459"
+  },
+  {
+    "id": "3f95dae1-2407-45d1-92ec-f8e1816c4f51",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "乃木坂饅頭",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.584071",
+    "updatedAt": "2025-12-30T06:58:24.584071"
+  },
+  {
+    "id": "9524f662-2ba2-4107-9783-0a07c8fa9bae",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "交感神経優位",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.589016",
+    "updatedAt": "2025-12-30T06:58:24.589016"
+  },
+  {
+    "id": "24364797-fbe7-472f-99f0-08628725b905",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "人はなぜ走るのか?",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.594336",
+    "updatedAt": "2025-12-30T06:58:24.594336"
+  },
+  {
+    "id": "fb6bfae0-e385-491d-a641-f95a73ca347d",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "人は夢を二度見る",
+    "lyricist": "秋元康",
+    "composer": "松尾一真",
+    "arranger": "松尾一真",
+    "createdAt": "2025-12-30T06:58:24.601585",
+    "updatedAt": "2025-12-30T06:58:24.601585"
+  },
+  {
+    "id": "3bcbdc3f-a03a-43f4-8af1-13ca8456d01a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "人生を考えたくなる",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.609182",
+    "updatedAt": "2025-12-30T06:58:24.609182"
+  },
+  {
+    "id": "103a0384-cf3b-49b6-9c29-9b989f67e983",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "人間という楽器",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.615618",
+    "updatedAt": "2025-12-30T06:58:24.615618"
+  },
+  {
+    "id": "4475930f-cc93-49c4-9407-ae372621266c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "今",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.620505",
+    "updatedAt": "2025-12-30T06:58:24.620505"
+  },
+  {
+    "id": "21dfc7ff-ba62-41ad-be3d-2e64942c1305",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "今、この船に乗れ！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.625264",
+    "updatedAt": "2025-12-30T06:58:24.625264"
+  },
+  {
+    "id": "1a2c11ad-4d21-4c5f-8db5-242b438806f2",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "今、恋をしている",
+    "lyricist": "指原莉乃",
+    "composer": "森絵カエル",
+    "arranger": "横山広稀",
+    "createdAt": "2025-12-30T06:58:24.632218",
+    "updatedAt": "2025-12-30T06:58:24.632219"
+  },
+  {
+    "id": "f9a8c7ee-fdc2-454e-bfff-96049d8a6d82",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "今日も君の夢を見たんだ",
+    "lyricist": "指原莉乃",
+    "composer": "本多友紀 (Arte Refact)",
+    "arranger": "脇眞富 (Arte Refact)",
+    "createdAt": "2025-12-30T06:58:24.66981",
+    "updatedAt": "2025-12-30T06:58:24.66981"
+  },
+  {
+    "id": "c2c7ad24-2bc7-4954-84ea-4cc5fc021966",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "今日君を見かけた",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.67569",
+    "updatedAt": "2025-12-30T06:58:24.67569"
+  },
+  {
+    "id": "1fb2d8e5-f09c-422e-8ab1-2cf7b182bf65",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "他の星から",
+    "lyricist": "秋元康",
+    "composer": "Jam9",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.681406",
+    "updatedAt": "2025-12-30T06:58:24.681406"
+  },
+  {
+    "id": "5a2638b2-f61b-482d-a05b-f2cb5c1da9fd",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "他人のそら似",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.685084",
+    "updatedAt": "2025-12-30T06:58:24.685084"
+  },
+  {
+    "id": "15a04e0f-530b-4d57-9257-d62c6cf2ad5a",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "仲直りシュークリーム",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.691381",
+    "updatedAt": "2025-12-30T06:58:24.691381"
+  },
+  {
+    "id": "e53b7457-7c89-4913-b8e7-01642f09c8d6",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "会いたかったかもしれない",
+    "lyricist": "秋元康",
+    "composer": "黒須克彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.699092",
+    "updatedAt": "2025-12-30T06:58:24.699092"
+  },
+  {
+    "id": "6734525a-baab-43b2-91f8-fcb40307915e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "低体温のキス",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.706274",
+    "updatedAt": "2025-12-30T06:58:24.706274"
+  },
+  {
+    "id": "e827bd42-0be6-41f2-a640-380405cdb26c",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "体育館ディスコ",
+    "lyricist": "指原莉乃",
+    "composer": "後藤康二 (ck510)",
+    "arranger": "Keisuke Koyama",
+    "createdAt": "2025-12-30T06:58:24.712566",
+    "updatedAt": "2025-12-30T06:58:24.712566"
+  },
+  {
+    "id": "5d678bc3-2391-45f2-ab7b-ea7ef3fb86d3",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "何もできずにそばにいる",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.718501",
+    "updatedAt": "2025-12-30T06:58:24.718501"
+  },
+  {
+    "id": "b9d03d7b-fc2f-4291-bfaf-fda322998020",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "何度目の青空か?",
+    "lyricist": "秋元康",
+    "composer": "川浦正大",
+    "arranger": "百石元",
+    "createdAt": "2025-12-30T06:58:24.724272",
+    "updatedAt": "2025-12-30T06:58:24.724272"
+  },
+  {
+    "id": "8e1a727d-8d51-4022-b772-37ee69b14b08",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "価値あるもの",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.729116",
+    "updatedAt": "2025-12-30T06:58:24.729116"
+  },
+  {
+    "id": "4550afb5-d52a-4760-8d56-887c595f97a8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "偶然を言い訳にして",
+    "lyricist": "秋元康",
+    "composer": "前迫潤哉",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.739166",
+    "updatedAt": "2025-12-30T06:58:24.739166"
+  },
+  {
+    "id": "a1741312-f8eb-4db7-95d5-4864940509af",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "偶然シンフォニー",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.748663",
+    "updatedAt": "2025-12-30T06:58:24.748663"
+  },
+  {
+    "id": "d3369022-52b6-429a-bb50-c5e292a75179",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "傾斜する",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.755141",
+    "updatedAt": "2025-12-30T06:58:24.755141"
+  },
+  {
+    "id": "708a72f4-29ab-4a84-a4c7-4a16b45ef1fb",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "僕がいる場所",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.761767",
+    "updatedAt": "2025-12-30T06:58:24.761767"
+  },
+  {
+    "id": "8f85592a-990a-4af7-b9b1-fa284fdbcff4",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "僕が手を叩く方へ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.768359",
+    "updatedAt": "2025-12-30T06:58:24.768359"
+  },
+  {
+    "id": "376e0e35-695d-465b-9f4c-f70c2ca52843",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "僕が行かなきゃ誰が行くんだ?",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.7739",
+    "updatedAt": "2025-12-30T06:58:24.7739"
+  },
+  {
+    "id": "a89c77d0-9ed3-4922-a7d8-1f768e368abd",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "僕たちのイマージュ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.780839",
+    "updatedAt": "2025-12-30T06:58:24.78084"
+  },
+  {
+    "id": "ff8eb43a-d3d8-4997-a60c-a11ef2de8f4f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "僕たちのサヨナラ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.786573",
+    "updatedAt": "2025-12-30T06:58:24.786573"
+  },
+  {
+    "id": "1153c56a-d20f-4308-91c4-59edc7161723",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "僕だけの光",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.798485",
+    "updatedAt": "2025-12-30T06:58:24.798485"
+  },
+  {
+    "id": "9d581218-6039-4257-b5e2-4d8c83b614e7",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "僕のこと",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.807084",
+    "updatedAt": "2025-12-30T06:58:24.807084"
+  },
+  {
+    "id": "2da96b48-02f8-43ee-9e41-b86da904ec11",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "僕の思い込み",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.814735",
+    "updatedAt": "2025-12-30T06:58:24.814735"
+  },
+  {
+    "id": "3c18ab74-50a9-41a0-92e2-963bb847cc99",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "僕の衝動",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.824702",
+    "updatedAt": "2025-12-30T06:58:24.824702"
+  },
+  {
+    "id": "4629118e-2b9a-48fa-8446-d83aa39dbd0d",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "僕は僕を好きになる",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": "石原剛志・杉山勝彦",
+    "createdAt": "2025-12-30T06:58:24.834854",
+    "updatedAt": "2025-12-30T06:58:24.834854"
+  },
+  {
+    "id": "7547c754-951c-490c-a7c5-6c33387bcb13",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "僕らの制服クリスマス",
+    "lyricist": "指原莉乃",
+    "composer": "加藤大和",
+    "arranger": "湯浅篤",
+    "createdAt": "2025-12-30T06:58:24.841755",
+    "updatedAt": "2025-12-30T06:58:24.841755"
+  },
+  {
+    "id": "59b579d1-8a67-4faa-b4e7-b33ea7e28a6f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "光合成希望",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.857844",
+    "updatedAt": "2025-12-30T06:58:24.857844"
+  },
+  {
+    "id": "751a770c-3c46-4611-a0ce-d19830d27366",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "全力ラップタイム",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.864478",
+    "updatedAt": "2025-12-30T06:58:24.864478"
+  },
+  {
+    "id": "f9deafdd-42c4-4428-a39a-3a1ec64d87d3",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "全部 夢のまま",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.87301",
+    "updatedAt": "2025-12-30T06:58:24.87301"
+  },
+  {
+    "id": "e7c58bb2-e852-4612-867e-499976707887",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "内緒バナシ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.964954",
+    "updatedAt": "2025-12-30T06:58:24.964954"
+  },
+  {
+    "id": "2182d48f-0adb-49cc-9489-65429459927e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "冷たい水の中",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.972359",
+    "updatedAt": "2025-12-30T06:58:24.972359"
+  },
+  {
+    "id": "2aa24ae1-afa8-41ac-ad44-22b022da1828",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "初恋の人を今でも",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:24.979071",
+    "updatedAt": "2025-12-30T06:58:24.979071"
+  },
+  {
+    "id": "1e280e1e-c354-4ccc-bae0-6d6c309c4ec7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "初恋カムバック",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:24.985075",
+    "updatedAt": "2025-12-30T06:58:24.985075"
+  },
+  {
+    "id": "41caa8ad-e75b-4d2a-b017-0e2cda636b07",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "初恋シンデレラ",
+    "lyricist": "指原莉乃",
+    "composer": "齋藤奏太",
+    "arranger": "齋藤奏太",
+    "createdAt": "2025-12-30T06:58:24.992015",
+    "updatedAt": "2025-12-30T06:58:24.992015"
+  },
+  {
+    "id": "f76511e8-ee80-45dc-93d7-f3414c5a6fba",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "別れ際",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.00076",
+    "updatedAt": "2025-12-30T06:58:25.00076"
+  },
+  {
+    "id": "02284512-f87d-4111-9436-9252734328ce",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "制服のマネキン",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": "百石元",
+    "createdAt": "2025-12-30T06:58:25.00623",
+    "updatedAt": "2025-12-30T06:58:25.00623"
+  },
+  {
+    "id": "ff94e998-64f3-451f-a445-88a7a95cd12c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "制服を脱いでサヨナラを…",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.012344",
+    "updatedAt": "2025-12-30T06:58:25.012344"
+  },
+  {
+    "id": "7e195441-7d1e-491c-b8bc-8f083d491a61",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "助手席をずっと空けていた",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.017982",
+    "updatedAt": "2025-12-30T06:58:25.017982"
+  },
+  {
+    "id": "5971ffa9-056e-4184-b790-d00f4350d549",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "友情ピアス",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.023582",
+    "updatedAt": "2025-12-30T06:58:25.023582"
+  },
+  {
+    "id": "c6b1bd85-4d2b-41af-b17f-0f0942465ca5",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "口ほどにもないKISS",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.029539",
+    "updatedAt": "2025-12-30T06:58:25.029539"
+  },
+  {
+    "id": "5ec8a7cf-0841-411c-8ba8-4cc39210987e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "口約束",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.035494",
+    "updatedAt": "2025-12-30T06:58:25.035494"
+  },
+  {
+    "id": "b8886737-e0a1-47b4-b418-dc7d590f716f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "吐息のメソッド",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.042805",
+    "updatedAt": "2025-12-30T06:58:25.042805"
+  },
+  {
+    "id": "9c34aa0f-288a-4ec9-89f7-e9bb0298d09f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "君が扇いでくれた",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.05113",
+    "updatedAt": "2025-12-30T06:58:25.05113"
+  },
+  {
+    "id": "cd137cd9-8391-46ff-bf1f-a1f21cf7edc7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "君と僕の歌",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "バグベア",
+    "createdAt": "2025-12-30T06:58:25.057182",
+    "updatedAt": "2025-12-30T06:58:25.057182"
+  },
+  {
+    "id": "7546aedc-fbe6-4aeb-80ba-066edee08801",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "君と猫",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.063587",
+    "updatedAt": "2025-12-30T06:58:25.063587"
+  },
+  {
+    "id": "e8c086fa-4e95-473f-a6da-4e72fe7c3b6f",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "君と私の歌！",
+    "lyricist": "指原莉乃",
+    "composer": "塚田耕平",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:25.070933",
+    "updatedAt": "2025-12-30T06:58:25.070934"
+  },
+  {
+    "id": "a36318c2-e86e-4e67-9068-a0262e38f81a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "君にDitto",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.076853",
+    "updatedAt": "2025-12-30T06:58:25.076853"
+  },
+  {
+    "id": "0f743614-80c6-4c22-85d5-9801cd01e649",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "君に叱られた",
+    "lyricist": "秋元康",
+    "composer": "youth case",
+    "arranger": "youth case・野中\"まさ\"雄一",
+    "createdAt": "2025-12-30T06:58:25.083622",
+    "updatedAt": "2025-12-30T06:58:25.083622"
+  },
+  {
+    "id": "f320c696-9ad8-4f9e-b862-1b159540dc9c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "君に贈る花がない",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.09021",
+    "updatedAt": "2025-12-30T06:58:25.09021"
+  },
+  {
+    "id": "6744b02f-4140-4dc4-815c-75f23e1196eb",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "君の名は希望",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": "杉山勝彦・有木竜郎",
+    "createdAt": "2025-12-30T06:58:25.097204",
+    "updatedAt": "2025-12-30T06:58:25.097204"
+  },
+  {
+    "id": "a5379ce9-0480-4461-bbe2-a768ed135bb4",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "君の第3ボタン",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.104723",
+    "updatedAt": "2025-12-30T06:58:25.104723"
+  },
+  {
+    "id": "b164669e-9f65-4d71-8a39-fb75477bd879",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "君の音だったんだ",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "バグベア",
+    "createdAt": "2025-12-30T06:58:25.108731",
+    "updatedAt": "2025-12-30T06:58:25.108731"
+  },
+  {
+    "id": "7ffb43a2-d934-4e0c-a22c-59d0c57c5b5d",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "君はこの夏、恋をする",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "バグベア",
+    "createdAt": "2025-12-30T06:58:25.117056",
+    "updatedAt": "2025-12-30T06:58:25.117056"
+  },
+  {
+    "id": "7ff22353-7447-4104-b194-9c20220ca3eb",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "君はスパークル",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.121069",
+    "updatedAt": "2025-12-30T06:58:25.121069"
+  },
+  {
+    "id": "d63431e6-220b-474d-b6d5-184f501662b9",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "君は僕と会わない方がよかったのかな",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.126676",
+    "updatedAt": "2025-12-30T06:58:25.126676"
+  },
+  {
+    "id": "50ee080d-b45c-4c71-9a43-3245ea315fd6",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "告白の順番",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.133304",
+    "updatedAt": "2025-12-30T06:58:25.133304"
+  },
+  {
+    "id": "a3acfde2-92e3-4804-a75a-ec64b79061d3",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "命の冒涜",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.138714",
+    "updatedAt": "2025-12-30T06:58:25.138714"
+  },
+  {
+    "id": "da3bfc1c-50ed-481f-b01a-68db23d1f032",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "命の真実 ミュージカル「林檎売りとカメムシ」",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.14665",
+    "updatedAt": "2025-12-30T06:58:25.14665"
+  },
+  {
+    "id": "c91eedfd-9280-49a5-850d-90053d22a787",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "命は美しい",
+    "lyricist": "秋元康",
+    "composer": "Hiroki Sagawa",
+    "arranger": "Hiroki Sagawa",
+    "createdAt": "2025-12-30T06:58:25.154911",
+    "updatedAt": "2025-12-30T06:58:25.154911"
+  },
+  {
+    "id": "27a6bb3e-ea40-4db2-89ef-40bf384c7eff",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "図書室の君へ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.164088",
+    "updatedAt": "2025-12-30T06:58:25.164088"
+  },
+  {
+    "id": "1147193f-ed02-4fa9-b305-1f4e652a909a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "地球が丸いなら",
+    "lyricist": "秋元康",
+    "composer": "渡辺翔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.173784",
+    "updatedAt": "2025-12-30T06:58:25.173784"
+  },
+  {
+    "id": "97f80e72-4894-42b5-8d61-ea97ee60cec3",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "夏が来たから",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "yamazo",
+    "createdAt": "2025-12-30T06:58:25.181094",
+    "updatedAt": "2025-12-30T06:58:25.181094"
+  },
+  {
+    "id": "5e1f4037-5195-49e2-941a-8678748e41b0",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "夏のFree&Easy",
+    "lyricist": "秋元康",
+    "composer": "井上トモノリ",
+    "arranger": "橋本幸太",
+    "createdAt": "2025-12-30T06:58:25.187012",
+    "updatedAt": "2025-12-30T06:58:25.187012"
+  },
+  {
+    "id": "6b9c6771-b499-4825-9b3e-9af92bafdb8a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "夏桜",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.272488",
+    "updatedAt": "2025-12-30T06:58:25.272488"
+  },
+  {
+    "id": "dbf757c7-707b-4681-9d07-bfcc400c6658",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "夏祭り",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.281829",
+    "updatedAt": "2025-12-30T06:58:25.281829"
+  },
+  {
+    "id": "c2a9453e-c95f-4d8a-bf88-bbf03d5d84d8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "夕陽は何色か？",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.287609",
+    "updatedAt": "2025-12-30T06:58:25.287609"
+  },
+  {
+    "id": "05c793e7-a2cb-44cc-86cc-7eb927817470",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "夜明けまで強がらなくてもいい",
+    "lyricist": "秋元康",
+    "composer": "山田裕介",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:25.29385",
+    "updatedAt": "2025-12-30T06:58:25.29385"
+  },
+  {
+    "id": "5952e95f-3743-49bb-91b0-b417ef8e4784",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "夢についていこう",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.300297",
+    "updatedAt": "2025-12-30T06:58:25.300297"
+  },
+  {
+    "id": "51926665-409c-4644-b67e-9577b222a6dd",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "夢の匂い",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.312186",
+    "updatedAt": "2025-12-30T06:58:25.312186"
+  },
+  {
+    "id": "8d6acb9a-6295-435c-b63a-5c9c34e8900e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "夢を見る筋肉",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.318843",
+    "updatedAt": "2025-12-30T06:58:25.318843"
+  },
+  {
+    "id": "59dcd9fd-961c-4ab0-b194-07f932e3c5a9",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "夢見る♡アイドル",
+    "lyricist": "指原莉乃",
+    "composer": "塚田耕平",
+    "arranger": "塚田耕平",
+    "createdAt": "2025-12-30T06:58:25.326671",
+    "updatedAt": "2025-12-30T06:58:25.326671"
+  },
+  {
+    "id": "36064503-6c0a-4d7e-97d2-d71c099f5540",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "大人たちには指示されない",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.334424",
+    "updatedAt": "2025-12-30T06:58:25.334424"
+  },
+  {
+    "id": "8ce43646-457b-465a-9fae-60d95dcb5cca",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "大人への近道",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.339541",
+    "updatedAt": "2025-12-30T06:58:25.339541"
+  },
+  {
+    "id": "4b4f644e-86f4-44d6-b278-eaf75e995e94",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "大空、ビュンと",
+    "lyricist": "指原莉乃",
+    "composer": "yuma",
+    "arranger": "めんま",
+    "createdAt": "2025-12-30T06:58:25.347774",
+    "updatedAt": "2025-12-30T06:58:25.347774"
+  },
+  {
+    "id": "00900d03-0ecb-4052-8c18-bab82fa8f209",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "天使は何処へ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.352776",
+    "updatedAt": "2025-12-30T06:58:25.352777"
+  },
+  {
+    "id": "8228d835-45d6-4ff1-afdb-bd925810c941",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "天空の豆の木",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.358723",
+    "updatedAt": "2025-12-30T06:58:25.358724"
+  },
+  {
+    "id": "2bce2f21-0579-49af-94ac-418ef94ef07d",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "太陽に口説かれて",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.366376",
+    "updatedAt": "2025-12-30T06:58:25.366376"
+  },
+  {
+    "id": "25775d68-736f-47f9-9676-48efea04784a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "太陽ノック",
+    "lyricist": "秋元康",
+    "composer": "黒須克彦",
+    "arranger": "長田直之",
+    "createdAt": "2025-12-30T06:58:25.376746",
+    "updatedAt": "2025-12-30T06:58:25.376746"
+  },
+  {
+    "id": "29d26097-25d7-4b89-8421-33fcf6dfe3c3",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "失いたくないから",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.383864",
+    "updatedAt": "2025-12-30T06:58:25.383864"
+  },
+  {
+    "id": "c24cdae9-ec3b-4f6e-b23b-14b7b89920ee",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "失恋お掃除人",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.455099",
+    "updatedAt": "2025-12-30T06:58:25.455099"
+  },
+  {
+    "id": "3218b3df-59c1-4796-8579-ec02d69adb30",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "失恋したら",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.467069",
+    "updatedAt": "2025-12-30T06:58:25.467069"
+  },
+  {
+    "id": "b8b8b636-8a7d-40ab-858e-f02c161e9562",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "女は一人じゃ眠れない",
+    "lyricist": "秋元康",
+    "composer": "井上ヨシマサ",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.488224",
+    "updatedAt": "2025-12-30T06:58:25.488224"
+  },
+  {
+    "id": "50872090-55f9-482c-a00e-894057fee8b6",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "好きだ！！！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.508916",
+    "updatedAt": "2025-12-30T06:58:25.508916"
+  },
+  {
+    "id": "53ab5950-177c-42b1-9b15-0ae3c469d322",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "好きって、言えなかった",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.537046",
+    "updatedAt": "2025-12-30T06:58:25.537046"
+  },
+  {
+    "id": "d5121e97-597d-4e85-9026-6b70df93451c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "好きというのはロックだぜ!",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.59666",
+    "updatedAt": "2025-12-30T06:58:25.59666"
+  },
+  {
+    "id": "d9cd8db9-8806-415f-8d01-7eb4aa091b51",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "好きになってみた",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.611118",
+    "updatedAt": "2025-12-30T06:58:25.611118"
+  },
+  {
+    "id": "ce41de75-093d-4379-a4ad-470cf715402c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "嫉妬の権利",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.621616",
+    "updatedAt": "2025-12-30T06:58:25.621616"
+  },
+  {
+    "id": "8a6ea745-0555-4991-8b89-833fc3a2406c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "孤独な青空",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.626484",
+    "updatedAt": "2025-12-30T06:58:25.626484"
+  },
+  {
+    "id": "c5412e9b-1546-4264-9091-8865eae156c9",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "孤独兄弟",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.638028",
+    "updatedAt": "2025-12-30T06:58:25.638028"
+  },
+  {
+    "id": "5e84d744-7f29-4c1e-b2c3-6569fcc71d41",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "届いてLOVE YOU",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.647816",
+    "updatedAt": "2025-12-30T06:58:25.647816"
+  },
+  {
+    "id": "124e8eb8-6552-41a2-81ec-f4c68f3fc2bd",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "届かなくたって...",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.661894",
+    "updatedAt": "2025-12-30T06:58:25.661894"
+  },
+  {
+    "id": "a11c4816-d0e9-49d5-b795-56bd37ccdbaf",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "左胸の勇気",
+    "lyricist": "秋元康",
+    "composer": "黒須克彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.669911",
+    "updatedAt": "2025-12-30T06:58:25.669911"
+  },
+  {
+    "id": "d3ebe6bc-62a5-4318-bbf4-f65bb981b95a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "市営ダンスホール",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.681852",
+    "updatedAt": "2025-12-30T06:58:25.681852"
+  },
+  {
+    "id": "d19c450c-b4cf-4036-b19e-986dc8b4724b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "帰り道は遠回りしたくなる",
+    "lyricist": "秋元康",
+    "composer": "渡邉俊彦",
+    "arranger": "渡邉俊彦・早川博隆",
+    "createdAt": "2025-12-30T06:58:25.690567",
+    "updatedAt": "2025-12-30T06:58:25.690567"
+  },
+  {
+    "id": "0015e7fa-924b-44e3-890c-c9b982431c57",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "平行線",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.698715",
+    "updatedAt": "2025-12-30T06:58:25.698715"
+  },
+  {
+    "id": "e2b4730c-bb8b-45ba-85b1-d4e29dc77eb0",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "強がる蕾",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.704078",
+    "updatedAt": "2025-12-30T06:58:25.704078"
+  },
+  {
+    "id": "41c7f653-c974-4462-b3cc-73e0c30edd25",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "当たり障りのない話",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.749793",
+    "updatedAt": "2025-12-30T06:58:25.749793"
+  },
+  {
+    "id": "29a5e078-6731-4588-89fe-914d518f0158",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "心にもないこと",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.758221",
+    "updatedAt": "2025-12-30T06:58:25.758221"
+  },
+  {
+    "id": "297892fd-9ea7-4791-a481-6d34d73c3907",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "心のモノローグ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.769282",
+    "updatedAt": "2025-12-30T06:58:25.769282"
+  },
+  {
+    "id": "b4eadca3-983f-4c16-91ba-a3d0957e7d06",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "心の薬",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.785092",
+    "updatedAt": "2025-12-30T06:58:25.785092"
+  },
+  {
+    "id": "cb956be1-045a-4e51-9183-60a5daa770cc",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "忘れないといいな",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.79383",
+    "updatedAt": "2025-12-30T06:58:25.79383"
+  },
+  {
+    "id": "0e90e30d-00b8-47a8-8d52-ba877853b694",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "忘却と美学",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.808435",
+    "updatedAt": "2025-12-30T06:58:25.808435"
+  },
+  {
+    "id": "bfd5a810-23bd-40e1-8c52-8d9eeb08a338",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "思い出が止まらなくなる",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.815408",
+    "updatedAt": "2025-12-30T06:58:25.815408"
+  },
+  {
+    "id": "c7ed79f6-a48a-467f-bc76-f2b03eab222b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "思い出ファースト",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.824231",
+    "updatedAt": "2025-12-30T06:58:25.824231"
+  },
+  {
+    "id": "f1aca43b-3efc-4591-84ca-407252671d99",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "急斜面",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.832281",
+    "updatedAt": "2025-12-30T06:58:25.832281"
+  },
+  {
+    "id": "7459175a-841e-47ab-9fa7-8ef6f8bcbf2f",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "恋人以上、好き未満",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.841843",
+    "updatedAt": "2025-12-30T06:58:25.841843"
+  },
+  {
+    "id": "425629c8-9864-4509-9605-a5cce80878ce",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "悪い成分",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.850229",
+    "updatedAt": "2025-12-30T06:58:25.850229"
+  },
+  {
+    "id": "cc51ebe5-2033-4b50-9807-f22f5df0a888",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "悲しみの忘れ方",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.859855",
+    "updatedAt": "2025-12-30T06:58:25.859855"
+  },
+  {
+    "id": "22882237-3acc-4c05-8deb-526def7f7a8d",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "想わせぶりっこ",
+    "lyricist": "指原莉乃",
+    "composer": "ヤナガワタカオ",
+    "arranger": "ヤナガワタカオ",
+    "createdAt": "2025-12-30T06:58:25.869189",
+    "updatedAt": "2025-12-30T06:58:25.869189"
+  },
+  {
+    "id": "de3f9854-c86a-48c7-b227-d7bcab337184",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "意外BREAK",
+    "lyricist": "秋元康",
+    "composer": "中村泰輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.874437",
+    "updatedAt": "2025-12-30T06:58:25.874437"
+  },
+  {
+    "id": "7e4da027-8df5-4299-90d4-59b796574443",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "憂鬱と風船ガム",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.880726",
+    "updatedAt": "2025-12-30T06:58:25.880726"
+  },
+  {
+    "id": "8bbbe464-40e9-4e7e-a2ee-d60bd72fee55",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "憧れてきたんだ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.887716",
+    "updatedAt": "2025-12-30T06:58:25.887716"
+  },
+  {
+    "id": "88f463bd-55fb-48eb-a098-2222f6a01345",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "懐かしさの先",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.897387",
+    "updatedAt": "2025-12-30T06:58:25.897387"
+  },
+  {
+    "id": "f12adecb-2e44-43b7-b0c9-ca4c65a65a79",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "懐かない仔猫",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.905214",
+    "updatedAt": "2025-12-30T06:58:25.905214"
+  },
+  {
+    "id": "39ed10d1-f78d-4d66-9f19-048ff91bf3de",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "扇風機",
+    "lyricist": "秋元康",
+    "composer": "白戸佑輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.913721",
+    "updatedAt": "2025-12-30T06:58:25.913721"
+  },
+  {
+    "id": "cc284a7f-dc6b-4267-9ec2-1785dd89f819",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "手ごねハンバーグ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.921979",
+    "updatedAt": "2025-12-30T06:58:25.921979"
+  },
+  {
+    "id": "1db2ac16-00ae-40b7-bdb8-9cf5e0955437",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "手遅れ caution",
+    "lyricist": "指原莉乃",
+    "composer": "今井ひろし",
+    "arranger": "倉内達矢",
+    "createdAt": "2025-12-30T06:58:25.931112",
+    "updatedAt": "2025-12-30T06:58:25.931112"
+  },
+  {
+    "id": "fa5d5c70-4cdb-4dab-8be9-595e4eb339dd",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "指望遠鏡",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.939146",
+    "updatedAt": "2025-12-30T06:58:25.939146"
+  },
+  {
+    "id": "294ce030-56ec-4e9c-a626-7a0fcb40001d",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "排他的ファイター",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:25.950784",
+    "updatedAt": "2025-12-30T06:58:25.950784"
+  },
+  {
+    "id": "d20617d9-bb71-4e66-b9b1-4e81a70fa25c",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "探せ ダイヤモンドリリー",
+    "lyricist": "指原莉乃",
+    "composer": "ArmySlick・Yu-ki Kokubo・YUU for YOU・YHANAEL",
+    "arranger": "ArmySlick・YUU for YOU",
+    "createdAt": "2025-12-30T06:58:25.957611",
+    "updatedAt": "2025-12-30T06:58:25.957611"
+  },
+  {
+    "id": "f5aec8a0-affa-4626-b497-ab0d5c6e6d65",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "推しのいる世界！",
+    "lyricist": "指原莉乃",
+    "composer": "田畑健",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:25.967519",
+    "updatedAt": "2025-12-30T06:58:25.967519"
+  },
+  {
+    "id": "d141e3e7-4129-468e-90c4-3a4ba0dbe16e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "新しい世界",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:25.990001",
+    "updatedAt": "2025-12-30T06:58:25.990001"
+  },
+  {
+    "id": "cb81d46d-7d4b-47b6-9af8-6bbef25cf683",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "新しい花粉〜ミュージカル「見知らぬ世界」より〜",
+    "lyricist": "秋元康",
+    "composer": "新田目翔",
+    "arranger": "若田部誠",
+    "createdAt": "2025-12-30T06:58:25.997825",
+    "updatedAt": "2025-12-30T06:58:25.997825"
+  },
+  {
+    "id": "0c795813-3913-4492-bfbe-8f54d681eb8e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "新宿バックオフ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.10118",
+    "updatedAt": "2025-12-30T06:58:26.10118"
+  },
+  {
+    "id": "6cad1adb-1d43-4f7b-83b2-c6aef492f54e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "日常",
+    "lyricist": "秋元康",
+    "composer": "Youth Case",
+    "arranger": "Youth Case",
+    "createdAt": "2025-12-30T06:58:26.121728",
+    "updatedAt": "2025-12-30T06:58:26.121729"
+  },
+  {
+    "id": "4ef75f38-4b37-4127-a25d-2ec490caff19",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "明日がある理由",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.139923",
+    "updatedAt": "2025-12-30T06:58:26.139923"
+  },
+  {
+    "id": "d02c974b-ab82-4628-babb-b996f2014cb8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "春のメロディー",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.154906",
+    "updatedAt": "2025-12-30T06:58:26.154907"
+  },
+  {
+    "id": "08997d48-23d0-400f-8034-cf7f036c3cd8",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "春の恋人",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.166979",
+    "updatedAt": "2025-12-30T06:58:26.166979"
+  },
+  {
+    "id": "01098731-bd65-464c-8661-d51ebaaf6228",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "時々 思い出してください",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.172204",
+    "updatedAt": "2025-12-30T06:58:26.172204"
+  },
+  {
+    "id": "f91fb5ac-814d-4de7-85fb-3fb21c3df76e",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "曖昧",
+    "lyricist": "秋元康",
+    "composer": "Youth Case",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.178484",
+    "updatedAt": "2025-12-30T06:58:26.178484"
+  },
+  {
+    "id": "5c6f2162-a682-447f-ba1f-489d2e5cf064",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "最強のラブソング",
+    "lyricist": "指原莉乃",
+    "composer": "中村歩・菊池博人",
+    "arranger": "菊池博人・中村歩",
+    "createdAt": "2025-12-30T06:58:26.188568",
+    "updatedAt": "2025-12-30T06:58:26.188569"
+  },
+  {
+    "id": "9a5a2c6b-4744-4d82-82e2-09253f4cb3fb",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "最後のTight Hug",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.200892",
+    "updatedAt": "2025-12-30T06:58:26.200892"
+  },
+  {
+    "id": "883560b7-e8c3-4bee-bb08-fe226cd11f92",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "月の大きさ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.211502",
+    "updatedAt": "2025-12-30T06:58:26.211502"
+  },
+  {
+    "id": "a6d693a3-9a18-4996-a99d-401fb34bfd26",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "月下美人",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.220031",
+    "updatedAt": "2025-12-30T06:58:26.220031"
+  },
+  {
+    "id": "4ab2cfb8-525b-4f57-b5bf-52aa03a809d7",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "木漏れ日メゾフォルテ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.231876",
+    "updatedAt": "2025-12-30T06:58:26.231876"
+  },
+  {
+    "id": "0ddca39f-f803-4e82-b63a-5951e4f1ac08",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "未来の答え",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.272133",
+    "updatedAt": "2025-12-30T06:58:26.272134"
+  },
+  {
+    "id": "8a99d501-32e4-4fe9-a996-600b8bb65144",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "本当の自分",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.280854",
+    "updatedAt": "2025-12-30T06:58:26.280854"
+  },
+  {
+    "id": "74ab96d5-f8e5-423b-bad6-7bc8e59fa580",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "桃色デイブレイク",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.288213",
+    "updatedAt": "2025-12-30T06:58:26.288213"
+  },
+  {
+    "id": "8cb90e4a-4ab1-4a95-9c2f-4c09523f2a22",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "桜の咲く音がした",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.300203",
+    "updatedAt": "2025-12-30T06:58:26.300203"
+  },
+  {
+    "id": "93028ef6-00bd-42d9-a3ab-ec8db67c66e0",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "樹愛羅、助けに来たぞ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.312997",
+    "updatedAt": "2025-12-30T06:58:26.312998"
+  },
+  {
+    "id": "950827a9-d020-4108-9fd5-3391e8635ce1",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "檻を飛び出た動物",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.322553",
+    "updatedAt": "2025-12-30T06:58:26.322554"
+  },
+  {
+    "id": "cdcc3d50-d778-4406-9fc7-8dc47c4ce5a5",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "欲望のリインカーネーション",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.33309",
+    "updatedAt": "2025-12-30T06:58:26.33309"
+  },
+  {
+    "id": "a3773f81-fafb-4c36-a597-3ce2f2b6a14c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "歩道橋",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": "ササノマリイ",
+    "createdAt": "2025-12-30T06:58:26.341337",
+    "updatedAt": "2025-12-30T06:58:26.341337"
+  },
+  {
+    "id": "c777746e-58f3-422b-a620-cc1c7f2849f8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "歳月の轍",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.349509",
+    "updatedAt": "2025-12-30T06:58:26.349509"
+  },
+  {
+    "id": "9eda2d7a-5908-4ab7-a3f5-35c400006c84",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "毎日がBrand new day",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.356448",
+    "updatedAt": "2025-12-30T06:58:26.356448"
+  },
+  {
+    "id": "d6e33154-8818-40e6-9449-1aee56e1c6d3",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "気づいたら片想い",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset",
+    "arranger": "湯浅篤",
+    "createdAt": "2025-12-30T06:58:26.364341",
+    "updatedAt": "2025-12-30T06:58:26.364341"
+  },
+  {
+    "id": "d16a91cd-6bbc-4bb0-b880-0503eff4f101",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "水玉模様",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.371521",
+    "updatedAt": "2025-12-30T06:58:26.371521"
+  },
+  {
+    "id": "7397c831-ba8d-45dd-b0e4-93e2f93cd9ce",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "泣いたっていいじゃないか？",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.383678",
+    "updatedAt": "2025-12-30T06:58:26.383678"
+  },
+  {
+    "id": "c55b94ea-32e5-49b1-866a-2ae7b0236aa8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "泥だらけ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.392999",
+    "updatedAt": "2025-12-30T06:58:26.392999"
+  },
+  {
+    "id": "eb99a833-b912-412f-b1e7-f45fb59c44a9",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "流星ディスコティック",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.401675",
+    "updatedAt": "2025-12-30T06:58:26.401675"
+  },
+  {
+    "id": "fdec3ad0-2c1a-4cd3-b4d3-4d40afdccdf0",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "海とレモンティー",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.411102",
+    "updatedAt": "2025-12-30T06:58:26.411102"
+  },
+  {
+    "id": "63e863c0-8bef-4bec-8c72-f7859d3f2222",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "海流の島よ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.420252",
+    "updatedAt": "2025-12-30T06:58:26.420253"
+  },
+  {
+    "id": "ffee6a3e-cac2-4a8a-9ffd-43ece13c2d3b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "涙がまだ悲しみだった頃",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.427207",
+    "updatedAt": "2025-12-30T06:58:26.427207"
+  },
+  {
+    "id": "fcb69a28-cdb4-4f5b-8ecb-1df545c06f7d",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "涙の滑り台",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.434404",
+    "updatedAt": "2025-12-30T06:58:26.434404"
+  },
+  {
+    "id": "ef247234-efa7-475c-addd-4c9582d2ae41",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "深読み",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.441501",
+    "updatedAt": "2025-12-30T06:58:26.441501"
+  },
+  {
+    "id": "3d38830c-7e7b-4715-8f69-6d007a0a66a5",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "渋谷ブルース",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.44851",
+    "updatedAt": "2025-12-30T06:58:26.44851"
+  },
+  {
+    "id": "716a431a-511e-4e4f-81e5-ce293b56ae75",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "満月が消えた",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.455115",
+    "updatedAt": "2025-12-30T06:58:26.455115"
+  },
+  {
+    "id": "a38abdbf-1375-4d1c-9884-13d7f417f426",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "滑走路",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.464041",
+    "updatedAt": "2025-12-30T06:58:26.464042"
+  },
+  {
+    "id": "9b07cfc2-4e77-49f7-9cb8-5310a652f590",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "無口なライオン",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.47108",
+    "updatedAt": "2025-12-30T06:58:26.47108"
+  },
+  {
+    "id": "59919336-157c-4d2c-8545-ebce6b23fc15",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "無表情",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.477076",
+    "updatedAt": "2025-12-30T06:58:26.477076"
+  },
+  {
+    "id": "a64f99eb-fa14-4aad-89c5-c17e48006495",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "無謀人",
+    "lyricist": "指原莉乃",
+    "composer": "YU-JIN",
+    "arranger": "",
+    "createdAt": "2025-12-30T06:58:26.485334",
+    "updatedAt": "2025-12-30T06:58:26.485334"
+  },
+  {
+    "id": "a67d0a8c-4277-40ac-91b7-fc34736f4af8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "熱狂の捌け口",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.498451",
+    "updatedAt": "2025-12-30T06:58:26.498451"
+  },
+  {
+    "id": "1a54a575-2d4f-49ac-97e8-6602e3005d8e",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "狂想カタストロフィ",
+    "lyricist": "指原莉乃",
+    "composer": "古川貴浩",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:26.507394",
+    "updatedAt": "2025-12-30T06:58:26.507394"
+  },
+  {
+    "id": "6d19c340-61eb-4be0-81f2-859d0f1d88d0",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "狼に口笛を",
+    "lyricist": "秋元康",
+    "composer": "Shusui",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.516742",
+    "updatedAt": "2025-12-30T06:58:26.516742"
+  },
+  {
+    "id": "7aa69ece-9507-4437-8b3e-9f7b4d48693f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "猫舌カモミールティー",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.522026",
+    "updatedAt": "2025-12-30T06:58:26.522026"
+  },
+  {
+    "id": "da826d78-80ea-4f25-a953-4995293cffe9",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "環状六号線",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.529533",
+    "updatedAt": "2025-12-30T06:58:26.529533"
+  },
+  {
+    "id": "20619463-2482-4842-92d8-0bc53252d018",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "甘いエビデンス",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.535886",
+    "updatedAt": "2025-12-30T06:58:26.535886"
+  },
+  {
+    "id": "feaaf9b9-ebed-4e7a-b9fb-959cabde2dbf",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "生まれたままで",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.546252",
+    "updatedAt": "2025-12-30T06:58:26.546252"
+  },
+  {
+    "id": "fa8ab461-690b-4524-8bb0-81dc663fb5e2",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "白い雲にのって",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.665615",
+    "updatedAt": "2025-12-30T06:58:26.665615"
+  },
+  {
+    "id": "9366b672-d20c-4651-a9f4-3564779fa154",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "白米様",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.671097",
+    "updatedAt": "2025-12-30T06:58:26.671097"
+  },
+  {
+    "id": "814b4d89-b8b9-4ede-8d2b-c188cfc20280",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "相対性理論に異議を唱える",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.67654",
+    "updatedAt": "2025-12-30T06:58:26.67654"
+  },
+  {
+    "id": "6968067b-d926-4212-ae21-2d73beaafb75",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "真夏日よ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.681373",
+    "updatedAt": "2025-12-30T06:58:26.681373"
+  },
+  {
+    "id": "a2d8aafc-b63e-4f67-b8c8-cb52badfa5e0",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "真夜中のカノン",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.68782",
+    "updatedAt": "2025-12-30T06:58:26.68782"
+  },
+  {
+    "id": "92caccab-5ba6-4600-a8ff-37165b514cc2",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "知ってる？",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.71944",
+    "updatedAt": "2025-12-30T06:58:26.71944"
+  },
+  {
+    "id": "bd878da6-7f3c-422e-89ac-74405ce451fe",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "知らんけど",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.725827",
+    "updatedAt": "2025-12-30T06:58:26.725827"
+  },
+  {
+    "id": "897b70ad-435f-4455-9aa6-68a76ffff5a6",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "知りたいこと",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.741356",
+    "updatedAt": "2025-12-30T06:58:26.741356"
+  },
+  {
+    "id": "70dbab8c-f19e-4387-a20c-b258572ceef0",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "硬い殻のように抱きしめたい",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.7519",
+    "updatedAt": "2025-12-30T06:58:26.7519"
+  },
+  {
+    "id": "d3c57f9b-50e8-4663-b91a-f8aabbe123db",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "祝祭",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.760966",
+    "updatedAt": "2025-12-30T06:58:26.760966"
+  },
+  {
+    "id": "a2116dff-af7f-48a5-9765-71b66e994c27",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "神様の言うとーり！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.767485",
+    "updatedAt": "2025-12-30T06:58:26.767485"
+  },
+  {
+    "id": "24fbdd05-b036-4183-8264-30cbc80c421b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "私",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.774699",
+    "updatedAt": "2025-12-30T06:58:26.774699"
+  },
+  {
+    "id": "2c377c8a-3d37-46a3-8d89-6b3eb2e4478a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "私のために 誰かのために",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.781862",
+    "updatedAt": "2025-12-30T06:58:26.781862"
+  },
+  {
+    "id": "1de8298f-3489-4cb9-971b-82725f65fd6a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "私の色",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.790976",
+    "updatedAt": "2025-12-30T06:58:26.790977"
+  },
+  {
+    "id": "f2673cc8-61a2-41d7-9a82-42a3fe7b9415",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "秘密インシデント",
+    "lyricist": "指原莉乃",
+    "composer": "宮川麿・M!SATO",
+    "arranger": "宮川麿",
+    "createdAt": "2025-12-30T06:58:26.799338",
+    "updatedAt": "2025-12-30T06:58:26.799338"
+  },
+  {
+    "id": "9a8322b0-7415-444d-acad-e939c140b2ad",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "空扉",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.805508",
+    "updatedAt": "2025-12-30T06:58:26.805508"
+  },
+  {
+    "id": "d200df8e-ad6e-4110-9a24-50b118ff3036",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "空気感",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.813992",
+    "updatedAt": "2025-12-30T06:58:26.813992"
+  },
+  {
+    "id": "1dec95ca-defc-4a72-a61d-b18fae04c4aa",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "空白の花",
+    "lyricist": "指原莉乃",
+    "composer": "長浜駿平",
+    "arranger": "若田部誠",
+    "createdAt": "2025-12-30T06:58:26.821868",
+    "updatedAt": "2025-12-30T06:58:26.821868"
+  },
+  {
+    "id": "c5c04b4e-ac0e-449b-8b3c-dc404a229d97",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "立ち直り中",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.872462",
+    "updatedAt": "2025-12-30T06:58:26.872462"
+  },
+  {
+    "id": "88779f23-67b3-46ca-b08b-405950525b54",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "笑って フラジール",
+    "lyricist": "指原莉乃",
+    "composer": "Haggy Rock",
+    "arranger": "佐藤厚仁",
+    "createdAt": "2025-12-30T06:58:26.878066",
+    "updatedAt": "2025-12-30T06:58:26.878066"
+  },
+  {
+    "id": "286be667-ba8b-4dcd-85b5-66fd3b9b270c",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "笑顔のレシピ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.88455",
+    "updatedAt": "2025-12-30T06:58:26.88455"
+  },
+  {
+    "id": "ff8cc8d0-38d5-4296-99ba-74d90e45cd7b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "純粋とは何か？",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.89265",
+    "updatedAt": "2025-12-30T06:58:26.89265"
+  },
+  {
+    "id": "ac824e6e-a89e-445b-9820-b738d11062a6",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "絶対アイドル辞めないで！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:26.899226",
+    "updatedAt": "2025-12-30T06:58:26.899226"
+  },
+  {
+    "id": "c979ede2-ec86-4842-a0b6-739c6d523aea",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "絶望の一秒前",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.904748",
+    "updatedAt": "2025-12-30T06:58:26.904748"
+  },
+  {
+    "id": "723413fc-2271-4d34-8b17-a8b54773e3e4",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "羊飼いよ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.912961",
+    "updatedAt": "2025-12-30T06:58:26.912961"
+  },
+  {
+    "id": "14b10901-598a-427d-a8fb-494a3c473776",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "羽根の記憶",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.91916",
+    "updatedAt": "2025-12-30T06:58:26.91916"
+  },
+  {
+    "id": "1c3af35e-fccd-40b3-a17a-0151f3d60c30",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "考えないようにする",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.924559",
+    "updatedAt": "2025-12-30T06:58:26.924559"
+  },
+  {
+    "id": "03425243-6e71-4cea-afa4-48d3943739b2",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "自分じゃない感じ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.931393",
+    "updatedAt": "2025-12-30T06:58:26.931393"
+  },
+  {
+    "id": "a3fdec18-4cd3-4439-908f-7b4750727151",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "自分のこと",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.936849",
+    "updatedAt": "2025-12-30T06:58:26.936849"
+  },
+  {
+    "id": "15f5ce54-4877-4506-a230-0560efd7553f",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "自分賛歌",
+    "lyricist": "指原莉乃",
+    "composer": "長沢知亜紀・永野小織",
+    "arranger": "めんま",
+    "createdAt": "2025-12-30T06:58:26.942584",
+    "updatedAt": "2025-12-30T06:58:26.942584"
+  },
+  {
+    "id": "780f00a2-5401-473c-a621-bd63b5b96546",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "自惚れビーチ",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.949451",
+    "updatedAt": "2025-12-30T06:58:26.949451"
+  },
+  {
+    "id": "a6654522-9d48-4f2e-b65e-5840d8d185d7",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "自由の彼方",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:26.955735",
+    "updatedAt": "2025-12-30T06:58:26.955735"
+  },
+  {
+    "id": "e1beaf26-e732-4d22-bacd-77d2d7da2935",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "落とし物",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.007307",
+    "updatedAt": "2025-12-30T06:58:27.007307"
+  },
+  {
+    "id": "5884c78f-c796-435d-9698-7403796f6ef7",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "薄明光線",
+    "lyricist": "指原莉乃",
+    "composer": "成本智美",
+    "arranger": "賀佐泰洋",
+    "createdAt": "2025-12-30T06:58:27.014724",
+    "updatedAt": "2025-12-30T06:58:27.014724"
+  },
+  {
+    "id": "081b8c9c-8001-4d28-80f6-a5abd3c4d7f6",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "虹が架かる瞬間",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:27.021669",
+    "updatedAt": "2025-12-30T06:58:27.021669"
+  },
+  {
+    "id": "4bbd3d6e-527e-47da-a6fb-d2799ff32959",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "虹色プロパガンダ",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:27.027606",
+    "updatedAt": "2025-12-30T06:58:27.027606"
+  },
+  {
+    "id": "3b3d7883-e430-4a71-9590-dcadbfdcc25c",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "行くあてのない僕たち",
+    "lyricist": "秋元康",
+    "composer": "近藤圭一",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.034898",
+    "updatedAt": "2025-12-30T06:58:27.034898"
+  },
+  {
+    "id": "16884200-01fd-4272-a900-14d488d88908",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "裸足でSummer",
+    "lyricist": "秋元康",
+    "composer": "福森秀敏",
+    "arranger": "APAZZI",
+    "createdAt": "2025-12-30T06:58:27.042231",
+    "updatedAt": "2025-12-30T06:58:27.042231"
+  },
+  {
+    "id": "8b5fc009-4d57-4f6f-ae86-85245f741114",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "言霊砲",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.049183",
+    "updatedAt": "2025-12-30T06:58:27.049183"
+  },
+  {
+    "id": "e3a5cd63-6e2b-4acb-8a8f-13eb97f3a409",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "記憶のどこかで",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:27.055773",
+    "updatedAt": "2025-12-30T06:58:27.055773"
+  },
+  {
+    "id": "744b9e4c-0c5a-43a0-bf75-a33041ea5c10",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "設定温度",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.064403",
+    "updatedAt": "2025-12-30T06:58:27.064404"
+  },
+  {
+    "id": "67486896-9f53-4134-8762-2c001cd625a7",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "話したい誰かがいる",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.07289",
+    "updatedAt": "2025-12-30T06:58:27.07289"
+  },
+  {
+    "id": "0304ca54-9d0a-4a2f-bb3b-fa208e79a2db",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "誰かの肩",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.112624",
+    "updatedAt": "2025-12-30T06:58:27.112624"
+  },
+  {
+    "id": "ce30a955-0268-4e2b-9b31-6b87eeda67f1",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "誰かは味方",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.12982",
+    "updatedAt": "2025-12-30T06:58:27.12982"
+  },
+  {
+    "id": "6bcba839-be37-452c-9d70-c6cdb7cf80ec",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "誰にもバレずに",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:27.152869",
+    "updatedAt": "2025-12-30T06:58:27.152869"
+  },
+  {
+    "id": "79341dd1-de1d-4b6a-a21a-09b860266552",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "誰よりそばにいたい",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.16164",
+    "updatedAt": "2025-12-30T06:58:27.16164"
+  },
+  {
+    "id": "021dac58-02aa-4878-9a34-0e2aeaac0653",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "走れ!Bicycle",
+    "lyricist": "秋元康",
+    "composer": "Shusui・伊藤涼・木村篤史・ヒロイズム",
+    "arranger": "湯浅篤",
+    "createdAt": "2025-12-30T06:58:27.171997",
+    "updatedAt": "2025-12-30T06:58:27.171997"
+  },
+  {
+    "id": "6f07ceee-5872-45ce-830e-b9a7caf614a4",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "起きる。",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.184671",
+    "updatedAt": "2025-12-30T06:58:27.184672"
+  },
+  {
+    "id": "f56a47ce-a4d5-440e-8d2a-e424f279394c",
+    "groupId": "f5f3ab17-da9d-4507-b3e8-3c4697115b15",
+    "title": "超孤独ライオン",
+    "lyricist": "指原莉乃",
+    "composer": "鈴木裕明",
+    "arranger": "鈴木裕明",
+    "createdAt": "2025-12-30T06:58:27.195634",
+    "updatedAt": "2025-12-30T06:58:27.195634"
+  },
+  {
+    "id": "3b4d73b1-f130-4f56-97ea-05e9e657e916",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "超特急 ≠ME行き",
+    "lyricist": "指原莉乃",
+    "composer": "バグベア",
+    "arranger": "バグベア",
+    "createdAt": "2025-12-30T06:58:27.203028",
+    "updatedAt": "2025-12-30T06:58:27.203028"
+  },
+  {
+    "id": "db8230a0-67a0-4905-b301-3fc1e6c5c6f1",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "超特急逃走中！",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:27.215733",
+    "updatedAt": "2025-12-30T06:58:27.215733"
+  },
+  {
+    "id": "42558121-71aa-4ba6-a288-35fe1d4bbcbc",
+    "groupId": "851d57be-ebce-46cc-83e6-0f940eea0f61",
+    "title": "超絶ヒロイン",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:27.221684",
+    "updatedAt": "2025-12-30T06:58:27.221684"
+  },
+  {
+    "id": "a1b8eafd-ced2-4a13-81fe-0cc20889339f",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "路面電車の街",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.229881",
+    "updatedAt": "2025-12-30T06:58:27.229881"
+  },
+  {
+    "id": "fc89f3fe-9677-4e08-87e4-dcb66922dc78",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "踏んでしまった",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.239389",
+    "updatedAt": "2025-12-30T06:58:27.239389"
+  },
+  {
+    "id": "1e05d0ce-f4be-4daf-aba7-d4d796f80ed3",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "車道側",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.248564",
+    "updatedAt": "2025-12-30T06:58:27.248564"
+  },
+  {
+    "id": "73a12199-fe49-4c17-b432-eaa9291e37c8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "転がった鐘を鳴らせ!",
+    "lyricist": "秋元康",
+    "composer": "Akira Sunset",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.257641",
+    "updatedAt": "2025-12-30T06:58:27.257641"
+  },
+  {
+    "id": "7ff90dff-572d-4d3c-9423-b8ae8279baff",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "逃げ水",
+    "lyricist": "秋元康",
+    "composer": "谷村庸平",
+    "arranger": "谷村庸平",
+    "createdAt": "2025-12-30T06:58:27.265507",
+    "updatedAt": "2025-12-30T06:58:27.265507"
+  },
+  {
+    "id": "dc469c23-681e-4295-ae9e-1e2cebb8835b",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "遠回りの愛情",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.27443",
+    "updatedAt": "2025-12-30T06:58:27.27443"
+  },
+  {
+    "id": "7434f41b-797a-4050-a368-1441cb6d1192",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "遥かなるブータン",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.284899",
+    "updatedAt": "2025-12-30T06:58:27.284899"
+  },
+  {
+    "id": "ad5f7946-9dd8-4734-996a-d8873a456bf5",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "部活中に関わらず",
+    "lyricist": "指原莉乃",
+    "composer": "外山大輔",
+    "arranger": "外山大輔",
+    "createdAt": "2025-12-30T06:58:27.294248",
+    "updatedAt": "2025-12-30T06:58:27.294248"
+  },
+  {
+    "id": "7462acfd-3bd4-49ee-ac0f-df95c6a06913",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "醜い私",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.30503",
+    "updatedAt": "2025-12-30T06:58:27.305031"
+  },
+  {
+    "id": "4ddc8854-4ad2-4e23-8caf-ad48b2848021",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "釣り堀",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.398334",
+    "updatedAt": "2025-12-30T06:58:27.398334"
+  },
+  {
+    "id": "6d9843dc-094f-461d-935c-3a9bd86a9f8a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "銭湯ラプソディー",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.405515",
+    "updatedAt": "2025-12-30T06:58:27.405515"
+  },
+  {
+    "id": "06e45760-07f6-4785-84b5-158aac6bfee4",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "錆びたコンパス",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.414314",
+    "updatedAt": "2025-12-30T06:58:27.414314"
+  },
+  {
+    "id": "211a2c1a-3309-4909-add5-caace53a9070",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "隙間",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.423891",
+    "updatedAt": "2025-12-30T06:58:27.423892"
+  },
+  {
+    "id": "565b4018-55f5-4d61-b001-0c615a180997",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "雪が降る日にまた会おう",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.433934",
+    "updatedAt": "2025-12-30T06:58:27.433935"
+  },
+  {
+    "id": "e767dcde-b476-4001-ac98-92963d286978",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "雲になればいい",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.44748",
+    "updatedAt": "2025-12-30T06:58:27.44748"
+  },
+  {
+    "id": "6c635b77-f065-48a7-a0bc-f31142b4ae99",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "青春\"サブリミナル\"！",
+    "lyricist": "指原莉乃",
+    "composer": "塚田耕平",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:27.455285",
+    "updatedAt": "2025-12-30T06:58:27.455285"
+  },
+  {
+    "id": "394e8b08-9b7f-4291-9e53-f4d2be3afcaf",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "革命の馬",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.466833",
+    "updatedAt": "2025-12-30T06:58:27.466833"
+  },
+  {
+    "id": "f4cb0a3d-8617-4c3f-9537-9f97a58f8f91",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "音が出ないギター",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.475597",
+    "updatedAt": "2025-12-30T06:58:27.475597"
+  },
+  {
+    "id": "72f66cad-f431-4b93-8be1-f61aa6dbd533",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "頬杖をついては眠れない",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.48545",
+    "updatedAt": "2025-12-30T06:58:27.48545"
+  },
+  {
+    "id": "09c8e199-66ef-4b59-b25b-57d105be51f8",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "顔を洗え!",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.49413",
+    "updatedAt": "2025-12-30T06:58:27.49413"
+  },
+  {
+    "id": "7190c7aa-f85c-44f3-a1e7-e6ee77ab3c77",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "風船は生きている",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.503957",
+    "updatedAt": "2025-12-30T06:58:27.503958"
+  },
+  {
+    "id": "833ea5fd-bf82-4b98-86d5-6e4298bff04a",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "魚たちのLOVE SONG",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.513887",
+    "updatedAt": "2025-12-30T06:58:27.513887"
+  },
+  {
+    "id": "60854307-9a3d-447b-9bbc-bbcc888f2db4",
+    "groupId": "d68a4748-b05f-45a1-8bbe-eae479bf7e4e",
+    "title": "黄昏はいつも",
+    "lyricist": "秋元康",
+    "composer": "杉山勝彦",
+    "arranger": null,
+    "createdAt": "2025-12-30T06:58:27.521047",
+    "updatedAt": "2025-12-30T06:58:27.521047"
+  },
+  {
+    "id": "c808b9f5-0904-4abd-8b82-3a9915bfb3ad",
+    "groupId": "87735f11-f71c-4913-8825-eef57e7738ec",
+    "title": "＝LOVE",
+    "lyricist": "指原莉乃",
+    "composer": "渡辺尚",
+    "arranger": "古川貴浩",
+    "createdAt": "2025-12-30T06:58:27.527078",
+    "updatedAt": "2025-12-30T06:58:27.527078"
+  }
+]
