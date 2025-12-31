@@ -15,6 +15,8 @@ import { SetlistsPage } from './pages/SetlistsPage';
 import { SetlistDetailPage } from './pages/SetlistDetailPage';
 import { SetlistCreatePage } from './pages/SetlistCreatePage';
 import { MemberSortPage } from './pages/MemberSortPage';
+import { ConversationsPage } from './pages/ConversationsPage';
+import { ConversationDetailPage } from './pages/ConversationDetailPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -48,6 +50,9 @@ function App() {
               <Route path="/setlists/:id" element={<SetlistDetailPage />} />
               <Route path="/setlists/:id/edit" element={<SetlistCreatePage />} />
               <Route path="/member-sort" element={<MemberSortPage />} />
+              <Route path="/conversations" element={<ConversationsPage />} />
+              <Route path="/conversations/new" element={<ConversationDetailPage />} />
+              <Route path="/conversations/:id" element={<ConversationDetailPage />} />
             </Routes>
           </main>
           <Footer />
