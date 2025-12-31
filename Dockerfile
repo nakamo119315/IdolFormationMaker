@@ -3,14 +3,14 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # Copy solution and project files
-COPY *.sln ./
+COPY *.slnx ./
 COPY src/Domain/*.csproj ./src/Domain/
 COPY src/Application/*.csproj ./src/Application/
 COPY src/Infrastructure/*.csproj ./src/Infrastructure/
 COPY src/Presentation/*.csproj ./src/Presentation/
 
 # Restore dependencies
-RUN dotnet restore
+RUN dotnet restore IdolManagement.slnx
 
 # Copy source code
 COPY src/ ./src/
