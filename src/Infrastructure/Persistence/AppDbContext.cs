@@ -1,3 +1,4 @@
+using IdolManagement.Domain.Conversations.Entities;
 using IdolManagement.Domain.Formations.Entities;
 using IdolManagement.Domain.Groups.Entities;
 using IdolManagement.Domain.Members.Entities;
@@ -22,6 +23,8 @@ public class AppDbContext : DbContext
     public DbSet<Setlist> Setlists => Set<Setlist>();
     public DbSet<SetlistItem> SetlistItems => Set<SetlistItem>();
     public DbSet<SetlistItemParticipant> SetlistItemParticipants => Set<SetlistItemParticipant>();
+    public DbSet<MeetGreetConversation> MeetGreetConversations => Set<MeetGreetConversation>();
+    public DbSet<ConversationMessage> ConversationMessages => Set<ConversationMessage>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -146,3 +146,62 @@ export interface UpdateSetlistDto {
   eventDate?: string | null;
   items: CreateSetlistItemDto[];
 }
+
+// Conversation types
+export interface MeetGreetConversation {
+  id: string;
+  title: string;
+  memberId: string | null;
+  memberName: string | null;
+  conversationDate: string;
+  messages: ConversationMessage[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ConversationSummary {
+  id: string;
+  title: string;
+  memberId: string | null;
+  memberName: string | null;
+  conversationDate: string;
+  messageCount: number;
+  previewText: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ConversationMessage {
+  id: string;
+  speakerType: SpeakerType;
+  content: string;
+  order: number;
+  createdAt: string;
+}
+
+export type SpeakerType = 'Self' | 'Partner';
+
+export interface CreateConversationDto {
+  title: string;
+  memberId?: string | null;
+  conversationDate?: string;
+  messages: CreateMessageDto[];
+}
+
+export interface CreateMessageDto {
+  speakerType: SpeakerType;
+  content: string;
+  order: number;
+}
+
+export interface UpdateConversationDto {
+  title: string;
+  memberId: string | null;
+  conversationDate: string | null;
+  messages: CreateMessageDto[];
+}
+
+export interface AddMessageDto {
+  speakerType: SpeakerType;
+  content: string;
+}
