@@ -2,22 +2,23 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-# Copy solution and project files
-COPY *.slnx ./
+# Copy project files
 COPY src/Domain/*.csproj ./src/Domain/
 COPY src/Application/*.csproj ./src/Application/
 COPY src/Infrastructure/*.csproj ./src/Infrastructure/
 COPY src/Presentation/*.csproj ./src/Presentation/
 
 # Restore dependencies
-RUN dotnet restore IdolManagement.slnx
+WORKDIR /src/src/Presentation
+RUN dotnet restore
 
 # Copy source code
+WORKDIR /src
 COPY src/ ./src/
 
 # Build and publish
 WORKDIR /src/src/Presentation
-RUN dotnet publish -c Release -o /app/publish
+RUN dotnet publish -c Release -o /app/publish --no-restore
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
