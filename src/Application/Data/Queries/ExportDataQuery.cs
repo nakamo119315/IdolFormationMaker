@@ -4,6 +4,7 @@ using IdolManagement.Domain.Members.Repositories;
 using IdolManagement.Domain.Formations.Repositories;
 using IdolManagement.Domain.Songs.Repositories;
 using IdolManagement.Domain.Setlists.Repositories;
+using IdolManagement.Domain.Conversations.Repositories;
 
 namespace IdolManagement.Application.Data.Queries;
 
@@ -16,19 +17,22 @@ public class ExportDataHandler
     private readonly IFormationRepository _formationRepository;
     private readonly ISongRepository _songRepository;
     private readonly ISetlistRepository _setlistRepository;
+    private readonly IConversationRepository _conversationRepository;
 
     public ExportDataHandler(
         IGroupRepository groupRepository,
         IMemberRepository memberRepository,
         IFormationRepository formationRepository,
         ISongRepository songRepository,
-        ISetlistRepository setlistRepository)
+        ISetlistRepository setlistRepository,
+        IConversationRepository conversationRepository)
     {
         _groupRepository = groupRepository;
         _memberRepository = memberRepository;
         _formationRepository = formationRepository;
         _songRepository = songRepository;
         _setlistRepository = setlistRepository;
+        _conversationRepository = conversationRepository;
     }
 
     public async Task<ExportDataDto> HandleAsync(ExportDataQuery query, CancellationToken cancellationToken = default)
@@ -38,6 +42,7 @@ public class ExportDataHandler
         var formations = await _formationRepository.GetAllAsync(cancellationToken);
         var songs = await _songRepository.GetAllAsync(cancellationToken);
         var setlists = await _setlistRepository.GetAllAsync(cancellationToken);
+        var conversations = await _conversationRepository.GetAllAsync(null, cancellationToken);
 
         return new ExportDataDto
         {
@@ -102,6 +107,21 @@ public class ExportDataHandler
                     Order = i.Order,
                     CenterMemberId = i.CenterMemberId,
                     ParticipantMemberIds = i.Participants.Select(p => p.MemberId).ToList()
+                }).ToList()
+            }).ToList(),
+            Conversations = conversations.Select(c => new ExportConversationDto
+            {
+                Id = c.Id,
+                Title = c.Title,
+                MemberId = c.MemberId,
+                MemberName = c.MemberName,
+                ConversationDate = c.ConversationDate.ToString("yyyy-MM-dd"),
+                Messages = c.Messages.OrderBy(m => m.Order).Select(m => new ExportConversationMessageDto
+                {
+                    Id = m.Id,
+                    SpeakerType = (int)m.SpeakerType,
+                    Content = m.Content,
+                    Order = m.Order
                 }).ToList()
             }).ToList()
         };

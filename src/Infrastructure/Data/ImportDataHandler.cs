@@ -9,6 +9,8 @@ using IdolManagement.Domain.Songs.Entities;
 using IdolManagement.Domain.Songs.Repositories;
 using IdolManagement.Domain.Setlists.Entities;
 using IdolManagement.Domain.Setlists.Repositories;
+using IdolManagement.Domain.Conversations.Entities;
+using IdolManagement.Domain.Conversations.Repositories;
 using IdolManagement.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +26,7 @@ public class ImportDataHandler
     private readonly IFormationRepository _formationRepository;
     private readonly ISongRepository _songRepository;
     private readonly ISetlistRepository _setlistRepository;
+    private readonly IConversationRepository _conversationRepository;
 
     public ImportDataHandler(
         AppDbContext context,
@@ -31,7 +34,8 @@ public class ImportDataHandler
         IMemberRepository memberRepository,
         IFormationRepository formationRepository,
         ISongRepository songRepository,
-        ISetlistRepository setlistRepository)
+        ISetlistRepository setlistRepository,
+        IConversationRepository conversationRepository)
     {
         _context = context;
         _groupRepository = groupRepository;
@@ -39,6 +43,7 @@ public class ImportDataHandler
         _formationRepository = formationRepository;
         _songRepository = songRepository;
         _setlistRepository = setlistRepository;
+        _conversationRepository = conversationRepository;
     }
 
     public async Task<ImportResultDto> HandleAsync(ImportDataCommand command, CancellationToken cancellationToken = default)
@@ -212,6 +217,34 @@ public class ImportDataHandler
                 await _setlistRepository.AddAsync(setlist, cancellationToken);
             }
 
+            // 6. Import conversations (depends on members)
+            foreach (var conversationDto in data.Conversations ?? new List<ExportConversationDto>())
+            {
+                var existingConversation = await _conversationRepository.GetByIdAsync(conversationDto.Id, cancellationToken);
+                if (existingConversation != null)
+                {
+                    continue;
+                }
+
+                var conversationDate = DateOnly.Parse(conversationDto.ConversationDate);
+                var newMemberId = conversationDto.MemberId.HasValue && memberIdMap.ContainsKey(conversationDto.MemberId.Value)
+                    ? memberIdMap[conversationDto.MemberId.Value]
+                    : conversationDto.MemberId;
+
+                var conversation = MeetGreetConversation.Create(
+                    conversationDto.Title,
+                    conversationDate,
+                    newMemberId,
+                    conversationDto.MemberName);
+
+                foreach (var messageDto in conversationDto.Messages.OrderBy(m => m.Order))
+                {
+                    conversation.AddMessage((SpeakerType)messageDto.SpeakerType, messageDto.Content);
+                }
+
+                await _conversationRepository.AddAsync(conversation, cancellationToken);
+            }
+
             await _context.SaveChangesAsync(cancellationToken);
 
             return new ImportResultDto
@@ -224,7 +257,8 @@ public class ImportDataHandler
                     Members = data.Members.Count,
                     Formations = data.Formations.Count,
                     Songs = data.Songs.Count,
-                    Setlists = data.Setlists.Count
+                    Setlists = data.Setlists.Count,
+                    Conversations = data.Conversations?.Count ?? 0
                 }
             };
         }
@@ -242,6 +276,8 @@ public class ImportDataHandler
     private async Task ClearAllDataAsync(CancellationToken cancellationToken)
     {
         // Delete in reverse order of dependencies
+        await _context.Database.ExecuteSqlRawAsync("DELETE FROM ConversationMessages", cancellationToken);
+        await _context.Database.ExecuteSqlRawAsync("DELETE FROM MeetGreetConversations", cancellationToken);
         await _context.Database.ExecuteSqlRawAsync("DELETE FROM SetlistItemParticipants", cancellationToken);
         await _context.Database.ExecuteSqlRawAsync("DELETE FROM SetlistItems", cancellationToken);
         await _context.Database.ExecuteSqlRawAsync("DELETE FROM Setlists", cancellationToken);

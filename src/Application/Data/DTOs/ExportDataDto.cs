@@ -9,6 +9,7 @@ public record ExportDataDto
     public List<ExportFormationDto> Formations { get; init; } = new();
     public List<ExportSongDto> Songs { get; init; } = new();
     public List<ExportSetlistDto> Setlists { get; init; } = new();
+    public List<ExportConversationDto> Conversations { get; init; } = new();
 }
 
 public record ExportGroupDto
@@ -97,4 +98,23 @@ public record ImportCountsDto
     public int Formations { get; init; }
     public int Songs { get; init; }
     public int Setlists { get; init; }
+    public int Conversations { get; init; }
+}
+
+public record ExportConversationDto
+{
+    public Guid Id { get; init; }
+    public string Title { get; init; } = string.Empty;
+    public Guid? MemberId { get; init; }
+    public string? MemberName { get; init; }
+    public string ConversationDate { get; init; } = string.Empty;
+    public List<ExportConversationMessageDto> Messages { get; init; } = new();
+}
+
+public record ExportConversationMessageDto
+{
+    public Guid Id { get; init; }
+    public int SpeakerType { get; init; }
+    public string Content { get; init; } = string.Empty;
+    public int Order { get; init; }
 }

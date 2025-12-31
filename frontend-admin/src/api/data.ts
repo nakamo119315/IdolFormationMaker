@@ -8,6 +8,7 @@ export interface ExportDataDto {
   formations: ExportFormationDto[];
   songs: ExportSongDto[];
   setlists: ExportSetlistDto[];
+  conversations: ExportConversationDto[];
 }
 
 export interface ExportGroupDto {
@@ -86,6 +87,23 @@ export interface ImportCountsDto {
   formations: number;
   songs: number;
   setlists: number;
+  conversations: number;
+}
+
+export interface ExportConversationDto {
+  id: string;
+  title: string;
+  memberId: string | null;
+  memberName: string | null;
+  conversationDate: string;
+  messages: ExportConversationMessageDto[];
+}
+
+export interface ExportConversationMessageDto {
+  id: string;
+  speakerType: number;
+  content: string;
+  order: number;
 }
 
 export const dataApi = {
