@@ -101,27 +101,18 @@ export function SetlistDetailPage() {
         : `${groupName}_${setlist.name}.png`;
       const safeFileName = fileName.replace(/\//g, '-');
 
-      // iOS Safari対応: share APIがあれば使う
-      if (navigator.share && navigator.canShare?.({ files: [new File([blob], safeFileName, { type: 'image/png' })] })) {
-        const file = new File([blob], safeFileName, { type: 'image/png' });
-        await navigator.share({
-          files: [file],
-          title: setlist.name,
-        });
-      } else {
-        // 通常のダウンロード
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = safeFileName;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-      }
+      // 画像をダウンロード
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = safeFileName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
     } catch (error) {
       console.error('ダウンロードエラー:', error);
-      alert('ダウンロードに失敗しました');
+      alert('画像の保存に失敗しました');
     } finally {
       setIsDownloading(false);
     }

@@ -46,9 +46,14 @@ public class MembersController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<MemberDto>>> GetAll(CancellationToken cancellationToken)
+    public async Task<ActionResult<IEnumerable<MemberDto>>> GetAll(
+        [FromQuery] Guid? groupId = null,
+        [FromQuery] int? generation = null,
+        [FromQuery] bool? isGraduated = null,
+        CancellationToken cancellationToken = default)
     {
-        var members = await _getAllHandler.HandleAsync(new GetAllMembersQuery(), cancellationToken);
+        var members = await _getAllHandler.HandleAsync(
+            new GetAllMembersQuery(groupId, generation, isGraduated), cancellationToken);
         return Ok(members);
     }
 
