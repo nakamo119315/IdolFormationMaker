@@ -87,13 +87,13 @@ export function ChatBubble({ message, isOwn, partnerName = '相手', onEdit, onD
           )}
         </div>
 
-        {/* Edit/Delete buttons - inline horizontal */}
+        {/* Edit/Delete buttons - always visible on mobile, hover on desktop */}
         {!isEditing && (onEdit || onDelete) && (
-          <div className={`flex gap-1 mt-1 opacity-0 group-hover:opacity-100 transition-opacity ${isOwn ? 'justify-end' : 'justify-start'}`}>
+          <div className={`flex gap-1 mt-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity ${isOwn ? 'justify-end' : 'justify-start'}`}>
             {onEdit && (
               <button
                 onClick={() => setIsEditing(true)}
-                className="px-2 py-0.5 text-xs text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded"
+                className="px-2 py-1 text-xs text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded active:bg-blue-100"
               >
                 編集
               </button>
@@ -101,7 +101,7 @@ export function ChatBubble({ message, isOwn, partnerName = '相手', onEdit, onD
             {onDelete && (
               <button
                 onClick={onDelete}
-                className="px-2 py-0.5 text-xs text-slate-500 hover:text-red-600 hover:bg-red-50 rounded"
+                className="px-2 py-1 text-xs text-slate-500 hover:text-red-600 hover:bg-red-50 rounded active:bg-red-100"
               >
                 削除
               </button>

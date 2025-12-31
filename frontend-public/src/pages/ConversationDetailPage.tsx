@@ -479,9 +479,9 @@ export function ConversationDetailPage() {
     return (
       <div className="min-h-screen flex items-center justify-center pt-24">
         <div className="text-center">
-          <p className="text-slate-500 mb-4">会話記録が見つかりません</p>
+          <p className="text-slate-500 mb-4">ミーグリレポが見つかりません</p>
           <Link to="/conversations" className="text-blue-500 hover:underline">
-            会話記録一覧に戻る
+            ミーグリレポ一覧に戻る
           </Link>
         </div>
       </div>

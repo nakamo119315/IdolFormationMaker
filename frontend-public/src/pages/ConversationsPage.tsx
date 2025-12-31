@@ -31,7 +31,7 @@ export function ConversationsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold text-slate-800 mb-4">会話記録</h1>
+          <h1 className="text-4xl font-bold text-slate-800 mb-4">ミーグリレポ</h1>
           <p className="text-slate-600">ミーグリでの会話を記録・管理しましょう</p>
         </motion.div>
 
@@ -114,7 +114,7 @@ export function ConversationsPage() {
               />
             </svg>
             <p className="text-slate-500 mb-4">
-              {selectedMemberId ? '該当する会話記録がありません' : '会話記録がありません'}
+              {selectedMemberId ? '該当するミーグリレポがありません' : 'ミーグリレポがありません'}
             </p>
             <Link
               to="/conversations/new"
