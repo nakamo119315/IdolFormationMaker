@@ -1,3 +1,5 @@
+using IdolManagement.Application.Conversations.Commands;
+using IdolManagement.Application.Conversations.Queries;
 using IdolManagement.Application.Data.Queries;
 using IdolManagement.Infrastructure.Data;
 using IdolManagement.Application.Formations.Commands;
@@ -10,6 +12,7 @@ using IdolManagement.Application.Setlists.Commands;
 using IdolManagement.Application.Setlists.Queries;
 using IdolManagement.Application.Songs.Commands;
 using IdolManagement.Application.Songs.Queries;
+using IdolManagement.Domain.Conversations.Repositories;
 using IdolManagement.Domain.Formations.Repositories;
 using IdolManagement.Domain.Groups.Repositories;
 using IdolManagement.Domain.Members.Repositories;
@@ -34,6 +37,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IFormationRepository, FormationRepository>();
         services.AddScoped<ISongRepository, SongRepository>();
         services.AddScoped<ISetlistRepository, SetlistRepository>();
+        services.AddScoped<IConversationRepository, ConversationRepository>();
 
         return services;
     }
@@ -86,6 +90,14 @@ public static class ServiceCollectionExtensions
         services.AddScoped<GetSetlistHandler>();
         services.AddScoped<GetAllSetlistsHandler>();
         services.AddScoped<GetSetlistsByGroupHandler>();
+
+        // Conversations
+        services.AddScoped<CreateConversationHandler>();
+        services.AddScoped<UpdateConversationHandler>();
+        services.AddScoped<DeleteConversationHandler>();
+        services.AddScoped<AddMessageHandler>();
+        services.AddScoped<GetConversationHandler>();
+        services.AddScoped<GetAllConversationsHandler>();
 
         // Data Export/Import
         services.AddScoped<ExportDataHandler>();
