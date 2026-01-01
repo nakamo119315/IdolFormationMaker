@@ -74,8 +74,7 @@ export function FormationCreatePage() {
 
   const filteredMembers = members?.filter((m) => m.groupId === groupId) ?? [];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     if (!name || !groupId || positions.length === 0) return;
 
     const data = {
@@ -122,11 +121,10 @@ export function FormationCreatePage() {
           </h1>
         </motion.div>
 
-        <motion.form
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          onSubmit={handleSubmit}
           className="space-y-6"
         >
           {/* Basic Info */}
@@ -199,14 +197,15 @@ export function FormationCreatePage() {
               キャンセル
             </button>
             <button
-              type="submit"
+              type="button"
+              onClick={handleSubmit}
               disabled={!name || !groupId || positions.length === 0}
               className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-medium hover:from-primary-600 hover:to-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-primary-500/30"
             >
               {isEditing ? '更新' : '作成'}
             </button>
           </div>
-        </motion.form>
+        </motion.div>
       </div>
     </div>
   );

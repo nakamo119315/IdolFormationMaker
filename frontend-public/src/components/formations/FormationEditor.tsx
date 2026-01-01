@@ -76,36 +76,46 @@ function PlacedMember({
   const imageUrl = member.images.find(img => img.isPrimary)?.url ?? member.images[0]?.url;
 
   return (
-    <motion.div
-      ref={setNodeRef}
-      {...listeners}
-      {...attributes}
-      initial={{ scale: 0 }}
-      animate={{ scale: 1, opacity: isDragging ? 0.5 : 1 }}
-      exit={{ scale: 0 }}
-      className="relative w-10 h-10 sm:w-12 sm:h-12 cursor-grab touch-none select-none group"
-    >
-      <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-full flex items-center justify-center text-[10px] font-bold z-10 shadow-md">
-        {positionNumber}
-      </div>
-      {imageUrl ? (
-        <img
-          src={imageUrl}
-          alt={member.name}
-          className="w-full h-full rounded-full object-cover border-2 border-white shadow-lg"
-        />
-      ) : (
-        <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white font-bold border-2 border-white shadow-lg">
-          {member.name.charAt(0)}
-        </div>
-      )}
+    <div className="relative w-10 h-10 sm:w-12 sm:h-12">
+      {/* 削除ボタン - ドラッグ領域の外 */}
       <button
-        onClick={(e) => { e.stopPropagation(); onRemove(); }}
-        className="absolute -top-1.5 -left-1.5 w-5 h-5 bg-slate-500 hover:bg-red-500 text-white rounded-full flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 sm:opacity-100 transition-opacity z-10"
+        type="button"
+        onClick={() => onRemove()}
+        onMouseDown={(e) => e.stopPropagation()}
+        onTouchStart={(e) => e.stopPropagation()}
+        onPointerDown={(e) => e.stopPropagation()}
+        className="absolute -top-2 -left-2 w-6 h-6 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold z-20 shadow-md border-2 border-white"
       >
-        x
+        ×
       </button>
-    </motion.div>
+
+      {/* ドラッグ可能な領域 */}
+      <motion.div
+        ref={setNodeRef}
+        {...listeners}
+        {...attributes}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, opacity: isDragging ? 0.5 : 1 }}
+        exit={{ scale: 0 }}
+        className="w-full h-full cursor-grab touch-none select-none"
+      >
+        <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-full flex items-center justify-center text-[10px] font-bold z-10 shadow-md">
+          {positionNumber}
+        </div>
+        {imageUrl ? (
+          <img
+            src={imageUrl}
+            alt={member.name}
+            className="w-full h-full rounded-full object-cover border-2 border-white shadow-lg"
+            draggable={false}
+          />
+        ) : (
+          <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white font-bold border-2 border-white shadow-lg">
+            {member.name.charAt(0)}
+          </div>
+        )}
+      </motion.div>
+    </div>
   );
 }
 
