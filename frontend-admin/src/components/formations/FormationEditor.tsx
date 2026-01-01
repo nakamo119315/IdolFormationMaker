@@ -71,7 +71,7 @@ function PlacedMember({
 
   const imageUrl = member.images.find(img => img.isPrimary)?.url ?? member.images[0]?.url;
 
-  const handleRemove = (e: React.MouseEvent | React.TouchEvent) => {
+  const handleRemove = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     onRemove();
@@ -84,7 +84,6 @@ function PlacedMember({
         type="button"
         className="remove-btn"
         onClick={handleRemove}
-        onTouchEnd={handleRemove}
       >×</button>
 
       {/* ドラッグ可能な領域 */}

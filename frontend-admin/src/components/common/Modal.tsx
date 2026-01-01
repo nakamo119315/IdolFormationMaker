@@ -10,12 +10,20 @@ interface ModalProps {
 export function Modal({ isOpen, onClose, title, children }: ModalProps) {
   if (!isOpen) return null;
 
+  const stopPropagation = (e: React.MouseEvent | React.TouchEvent) => {
+    e.stopPropagation();
+  };
+
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="modal-content"
+        onClick={stopPropagation}
+        onTouchEnd={stopPropagation}
+      >
         <div className="modal-header">
           <h2>{title}</h2>
-          <button className="close-btn" onClick={onClose}>×</button>
+          <button type="button" className="close-btn" onClick={onClose}>×</button>
         </div>
         <div className="modal-body">{children}</div>
       </div>
