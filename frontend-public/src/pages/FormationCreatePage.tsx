@@ -66,8 +66,9 @@ export function FormationCreatePage() {
   const updateMutation = useMutation({
     mutationFn: ({ id, data }: { id: string; data: typeof formationsApi.update extends (id: string, data: infer D) => unknown ? D : never }) =>
       formationsApi.update(id, data),
-    onSuccess: () => {
+    onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['formations'] });
+      queryClient.invalidateQueries({ queryKey: ['formation', variables.id] });
       navigate('/formations');
     },
   });
