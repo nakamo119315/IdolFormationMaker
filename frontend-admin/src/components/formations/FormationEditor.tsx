@@ -71,21 +71,8 @@ function PlacedMember({
 
   const imageUrl = member.images.find(img => img.isPrimary)?.url ?? member.images[0]?.url;
 
-  const handleRemove = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    onRemove();
-  };
-
   return (
     <div className={`placed-member-wrapper ${isDragging ? 'dragging' : ''}`}>
-      {/* 削除ボタン - ドラッグ領域の外 */}
-      <button
-        type="button"
-        className="remove-btn"
-        onClick={handleRemove}
-      >×</button>
-
       {/* ドラッグ可能な領域 */}
       <div
         ref={setNodeRef}
@@ -99,6 +86,19 @@ function PlacedMember({
         ) : (
           <div className="placed-thumb-placeholder">{member.name.charAt(0)}</div>
         )}
+      </div>
+      {/* 削除ボタン - ドラッグ領域の後に配置（z-indexで前面） */}
+      <div
+        className="remove-btn-container"
+        onMouseDown={(e) => e.stopPropagation()}
+        onTouchStart={(e) => e.stopPropagation()}
+        onPointerDown={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          className="remove-btn"
+          onClick={() => onRemove()}
+        >×</button>
       </div>
     </div>
   );

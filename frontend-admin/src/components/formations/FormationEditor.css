@@ -228,25 +228,28 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.remove-btn {
+.remove-btn-container {
   position: absolute;
-  top: -8px;
-  left: -8px;
-  width: 22px;
-  height: 22px;
+  top: -10px;
+  left: -10px;
+  z-index: 200;
+  pointer-events: auto;
+}
+
+.remove-btn {
+  width: 24px;
+  height: 24px;
   background: #e74c3c;
   color: white;
-  border: none;
+  border: 2px solid white;
   border-radius: 50%;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
-  transition: background 0.2s, transform 0.2s;
-  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
@@ -258,7 +261,6 @@
 
 .remove-btn:active {
   background: #a93226;
-  transform: scale(0.95);
 }
 
 /* ドラッグオーバーレイ */
@@ -368,13 +370,15 @@
     right: -2px;
   }
 
+  .remove-btn-container {
+    top: -12px;
+    left: -12px;
+  }
+
   .remove-btn {
-    width: 24px;
-    height: 24px;
-    font-size: 0.75rem;
-    top: -10px;
-    left: -10px;
-    opacity: 1;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
   }
 
   .grid-label-top,
