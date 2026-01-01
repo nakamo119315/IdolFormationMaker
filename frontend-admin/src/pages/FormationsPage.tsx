@@ -147,9 +147,7 @@ export function FormationsPage() {
     setViewingFormation(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
+  const handleSubmit = () => {
     const result = createFormationSchema.safeParse(formData);
     if (!result.success) {
       const errors: Record<string, string> = {};
@@ -342,7 +340,7 @@ export function FormationsPage() {
         onClose={closeModal}
         title={editingFormation ? 'フォーメーション編集' : 'フォーメーション登録'}
       >
-        <form onSubmit={handleSubmit}>
+        <div>
           <div className="form-group">
             <label>名前</label>
             <input
@@ -397,14 +395,15 @@ export function FormationsPage() {
               キャンセル
             </button>
             <button
-              type="submit"
+              type="button"
               className="btn btn-primary"
+              onClick={handleSubmit}
               disabled={createMutation.isPending || updateMutation.isPending}
             >
               {createMutation.isPending || updateMutation.isPending ? '保存中...' : (editingFormation ? '更新' : '登録')}
             </button>
           </div>
-        </form>
+        </div>
       </Modal>
     </div>
   );
