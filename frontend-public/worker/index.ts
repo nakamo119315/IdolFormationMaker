@@ -22,8 +22,16 @@ export default {
       return handleApiRequest(request, env, url);
     }
 
-    // Static assets
-    return env.ASSETS.fetch(request);
+    // Static assets - with SPA fallback
+    const response = await env.ASSETS.fetch(request);
+
+    // If asset not found and not a file request, return index.html for SPA routing
+    if (response.status === 404 && !url.pathname.includes('.')) {
+      const indexRequest = new Request(new URL('/', request.url), request);
+      return env.ASSETS.fetch(indexRequest);
+    }
+
+    return response;
   },
 };
 
