@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuery } from '@tanstack/react-query';
 import { membersApi } from '../api/members';
@@ -20,22 +20,52 @@ interface MergeSortState {
   finalRanking: Member[];
 }
 
+// Base64画像キャッシュ
+const imageCache = new Map<string, string>();
+
+// 画像をBase64に変換
+async function imageToBase64(url: string): Promise<string | null> {
+  if (imageCache.has(url)) {
+    return imageCache.get(url)!;
+  }
+  try {
+    const response = await fetch(url, { mode: 'cors' });
+    const blob = await response.blob();
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64 = reader.result as string;
+        imageCache.set(url, base64);
+        resolve(base64);
+      };
+      reader.onerror = () => resolve(null);
+      reader.readAsDataURL(blob);
+    });
+  } catch {
+    return null;
+  }
+}
+
 // 画像コンポーネント（エラーハンドリング付き）
 function MemberImage({
   src,
   alt,
   className,
   fallbackClassName,
+  base64Src,
 }: {
   src?: string;
   alt: string;
   className: string;
   fallbackClassName?: string;
+  base64Src?: string | null;
 }) {
   const [hasError, setHasError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  if (!src || hasError) {
+  const imageSrc = base64Src || src;
+
+  if (!imageSrc || hasError) {
     return (
       <div className={fallbackClassName || className}>
         <span className="text-white font-bold text-2xl sm:text-3xl">
@@ -48,10 +78,10 @@ function MemberImage({
   return (
     <>
       {!isLoaded && (
-        <div className={`${className} animate-pulse`} />
+        <div className={`${className} animate-pulse`} style={{ background: 'linear-gradient(135deg, #7e1083, #580c5c)' }} />
       )}
       <img
-        src={src}
+        src={imageSrc}
         alt={alt}
         className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
         style={{ transition: 'opacity 0.3s' }}
@@ -70,7 +100,33 @@ export function MemberSortPage() {
   const [sortState, setSortState] = useState<MergeSortState | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [base64Images, setBase64Images] = useState<Map<string, string>>(new Map());
+  const [imagesLoading, setImagesLoading] = useState(false);
   const resultRef = useRef<HTMLDivElement>(null);
+
+  // 結果画面になったら画像をBase64にプリロード
+  useEffect(() => {
+    if (phase === 'result' && sortState?.finalRanking) {
+      const loadImages = async () => {
+        setImagesLoading(true);
+        const newBase64Map = new Map<string, string>();
+
+        for (const member of sortState.finalRanking) {
+          const primaryImage = member.images.find((img) => img.isPrimary) ?? member.images[0];
+          if (primaryImage?.url) {
+            const base64 = await imageToBase64(primaryImage.url);
+            if (base64) {
+              newBase64Map.set(member.id, base64);
+            }
+          }
+        }
+
+        setBase64Images(newBase64Map);
+        setImagesLoading(false);
+      };
+      loadImages();
+    }
+  }, [phase, sortState?.finalRanking]);
 
   const { data: members, isLoading: membersLoading } = useQuery({
     queryKey: ['members'],
@@ -531,6 +587,7 @@ export function MemberSortPage() {
                             alt={member.name}
                             className="w-full h-full object-cover"
                             fallbackClassName="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center"
+                            base64Src={base64Images.get(member.id)}
                           />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -571,13 +628,13 @@ export function MemberSortPage() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={handleSaveImage}
-                  disabled={isSaving}
+                  disabled={isSaving || imagesLoading}
                   className="btn-download-outline"
                 >
-                  {isSaving ? (
+                  {isSaving || imagesLoading ? (
                     <>
                       <span className="btn-download-spinner" style={{ borderTopColor: '#7e1083', borderColor: 'rgba(126, 16, 131, 0.3)' }} />
-                      保存中...
+                      {imagesLoading ? '画像読込中...' : '保存中...'}
                     </>
                   ) : (
                     <>
