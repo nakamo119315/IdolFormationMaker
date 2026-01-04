@@ -241,7 +241,7 @@ export function SetlistDetailPage() {
         style={{ display: 'none', width: '400px' }}
       >
         <div style={{
-          padding: '16px',
+          padding: '12px 16px 16px 16px',
           background: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 30%, #ddd6fe 60%, #ede9fe 100%)',
           fontFamily: '"Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
         }}>
@@ -249,8 +249,8 @@ export function SetlistDetailPage() {
           <div style={{
             background: 'rgba(255,255,255,0.9)',
             borderRadius: '12px',
-            padding: '10px 16px 12px 16px',
-            marginBottom: '12px',
+            padding: '8px 16px 10px 16px',
+            marginBottom: '10px',
             boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1)',
           }}>
             <div style={{ color: '#7e1083', fontSize: '14px', fontWeight: '600', marginBottom: '2px' }}>

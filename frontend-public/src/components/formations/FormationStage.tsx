@@ -28,7 +28,7 @@ export function FormationStage({ formation, members }: FormationStageProps) {
     setIsDownloading(true);
     try {
       const canvas = await html2canvas(stageRef.current, {
-        backgroundColor: '#334155',
+        backgroundColor: '#f3e8ff',
         scale: window.devicePixelRatio * 2,
         useCORS: true,
         allowTaint: true,
@@ -112,14 +112,14 @@ export function FormationStage({ formation, members }: FormationStageProps) {
       </div>
 
       {/* ステージ背景 */}
-      <div ref={stageRef} className="bg-gradient-to-b from-slate-800 via-slate-700 to-slate-600 rounded-2xl sm:rounded-3xl p-3 sm:p-8 shadow-2xl overflow-hidden">
+      <div ref={stageRef} className="p-3 sm:p-6 shadow-2xl overflow-hidden" style={{ background: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 30%, #ddd6fe 60%, #ede9fe 100%)' }}>
         {/* ステージ後方ラベル */}
-        <div className="text-center mb-2 sm:mb-6">
-          <span className="text-white/40 text-[10px] sm:text-xs uppercase tracking-widest">Stage Back</span>
+        <div className="text-center mb-1 sm:mb-4">
+          <span className="text-purple-600/60 text-[10px] sm:text-xs uppercase tracking-widest">Stage Back</span>
         </div>
 
         {/* フォーメーショングリッド */}
-        <div className="flex flex-col gap-3 sm:gap-8 py-2 sm:py-8">
+        <div className="flex flex-col gap-3 sm:gap-6 py-1 sm:py-4">
           {rows.map(({ row, positions }, rowIndex) => (
             <motion.div
               key={row}
@@ -188,7 +188,7 @@ export function FormationStage({ formation, members }: FormationStageProps) {
                     {/* メンバー名 */}
                     <div className="mt-1 text-center">
                       <p
-                        className="text-white font-medium truncate"
+                        className="text-purple-800 font-medium truncate"
                         style={{ fontSize: `${Math.max(7, Math.round(size * 0.2))}px` }}
                       >
                         {member?.name ?? '未設定'}
@@ -203,7 +203,7 @@ export function FormationStage({ formation, members }: FormationStageProps) {
 
         {/* ステージ前方ラベル */}
         <div className="text-center mt-3 sm:mt-6">
-          <span className="text-white/40 text-[10px] sm:text-xs uppercase tracking-widest">Stage Front</span>
+          <span className="text-purple-600/60 text-[10px] sm:text-xs uppercase tracking-widest">Stage Front</span>
         </div>
 
         {/* ステージエッジ装飾 */}
