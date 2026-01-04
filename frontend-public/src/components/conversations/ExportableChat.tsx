@@ -19,15 +19,16 @@ const ExportableChat = forwardRef<HTMLDivElement, ExportableChatProps>(
         ref={ref}
         style={{
           width: '400px',
-          backgroundColor: '#ffffff',
+          background: 'linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 30%, #c4a0f5 60%, #e0d0fa 100%)',
           padding: '16px',
           fontFamily: 'sans-serif',
+          borderRadius: '16px',
         }}
       >
-        <div style={{ fontWeight: 'bold', fontSize: '15px', color: '#333', marginBottom: '4px' }}>
+        <div style={{ fontWeight: 'bold', fontSize: '15px', color: '#581c87', marginBottom: '4px' }}>
           {conversation.title}
         </div>
-        <div style={{ fontSize: '12px', color: '#666', marginBottom: '16px', paddingBottom: '12px', borderBottom: '1px solid #eee' }}>
+        <div style={{ fontSize: '12px', color: '#7c3aed', marginBottom: '16px', paddingBottom: '12px', borderBottom: '1px solid rgba(255,255,255,0.5)' }}>
           {displayPartnerName}
         </div>
 
@@ -44,7 +45,7 @@ const ExportableChat = forwardRef<HTMLDivElement, ExportableChatProps>(
                           <td style={{
                             textAlign: isSelf ? 'right' : 'left',
                             fontSize: '10px',
-                            color: '#999',
+                            color: '#6b21a8',
                             paddingBottom: '4px',
                           }}>
                             {isSelf ? '自分' : displayPartnerName}
@@ -54,7 +55,7 @@ const ExportableChat = forwardRef<HTMLDivElement, ExportableChatProps>(
                           <td style={{ textAlign: isSelf ? 'right' : 'left' }}>
                             <table style={{
                               display: 'inline-table',
-                              backgroundColor: isSelf ? '#7e1083' : '#f0f0f0',
+                              backgroundColor: isSelf ? '#7e1083' : 'rgba(255,255,255,0.9)',
                               borderRadius: '12px',
                               maxWidth: '70%',
                             }}>
@@ -63,7 +64,7 @@ const ExportableChat = forwardRef<HTMLDivElement, ExportableChatProps>(
                                   <td style={{
                                     padding: '8px 12px',
                                     fontSize: '13px',
-                                    color: isSelf ? '#fff' : '#333',
+                                    color: isSelf ? '#fff' : '#581c87',
                                     textAlign: 'left',
                                   }}>
                                     {message.content}
@@ -82,7 +83,7 @@ const ExportableChat = forwardRef<HTMLDivElement, ExportableChatProps>(
           </tbody>
         </table>
 
-        <div style={{ fontSize: '10px', color: '#999', textAlign: 'center', marginTop: '16px', paddingTop: '12px', borderTop: '1px solid #eee' }}>
+        <div style={{ fontSize: '10px', color: '#6b21a8', textAlign: 'center', marginTop: '16px', paddingTop: '12px', borderTop: '1px solid rgba(255,255,255,0.5)' }}>
           {sortedMessages.length}件
         </div>
       </div>
