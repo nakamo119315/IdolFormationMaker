@@ -24,7 +24,7 @@ export function SongDetailPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="text-slate-500 mb-4">楽曲が見つかりません</p>
+          <p className="text-primary-600/70 mb-4">楽曲が見つかりません</p>
           <Link to="/songs" className="text-primary-500 hover:underline">
             楽曲一覧に戻る
           </Link>
@@ -36,7 +36,7 @@ export function SongDetailPage() {
   const groupName = groups?.find((g) => g.id === song.groupId)?.name ?? '';
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-24 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 戻るリンク */}
         <motion.div
@@ -46,7 +46,7 @@ export function SongDetailPage() {
         >
           <Link
             to="/songs"
-            className="inline-flex items-center text-slate-500 hover:text-primary-500 transition-colors"
+            className="inline-flex items-center text-primary-600/70 hover:text-primary-500 transition-colors"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -63,22 +63,22 @@ export function SongDetailPage() {
         >
           <div className="text-center mb-6">
             <p className="text-primary-500 font-medium mb-2">{groupName}</p>
-            <h1 className="text-3xl md:text-4xl font-bold text-primary-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-primary-700 mb-4">
               {song.title}
             </h1>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div className="bg-slate-50 rounded-xl p-4">
-              <p className="text-sm text-slate-500 mb-1">作詞</p>
+              <p className="text-sm text-primary-600/70 mb-1">作詞</p>
               <p className="font-medium text-slate-800">{song.lyricist}</p>
             </div>
             <div className="bg-slate-50 rounded-xl p-4">
-              <p className="text-sm text-slate-500 mb-1">作曲</p>
+              <p className="text-sm text-primary-600/70 mb-1">作曲</p>
               <p className="font-medium text-slate-800">{song.composer}</p>
             </div>
             <div className="bg-slate-50 rounded-xl p-4">
-              <p className="text-sm text-slate-500 mb-1">編曲</p>
+              <p className="text-sm text-primary-600/70 mb-1">編曲</p>
               <p className="font-medium text-slate-800">{song.arranger || '-'}</p>
             </div>
           </div>
@@ -92,7 +92,7 @@ export function SongDetailPage() {
             transition={{ delay: 0.1 }}
             className="bg-white rounded-2xl shadow-lg p-8 border border-slate-100"
           >
-            <h2 className="text-xl font-bold text-primary-800 mb-6 text-center">
+            <h2 className="text-xl font-bold text-primary-700 mb-6 text-center">
               歌詞
             </h2>
             <div className="text-slate-700 whitespace-pre-wrap leading-relaxed text-center">
@@ -108,7 +108,7 @@ export function SongDetailPage() {
             transition={{ delay: 0.1 }}
             className="bg-slate-50 rounded-2xl p-8 text-center"
           >
-            <p className="text-slate-500">歌詞は登録されていません</p>
+            <p className="text-primary-600/70">歌詞は登録されていません</p>
           </motion.div>
         )}
       </div>

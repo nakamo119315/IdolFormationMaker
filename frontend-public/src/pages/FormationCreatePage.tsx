@@ -101,7 +101,7 @@ export function FormationCreatePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-20 sm:pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-20 sm:pt-24 pb-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ export function FormationCreatePage() {
         >
           <button
             onClick={() => navigate('/formations')}
-            className="flex items-center text-slate-600 hover:text-primary-500 transition-colors mb-4"
+            className="flex items-center text-primary-600 hover:text-primary-500 transition-colors mb-4"
           >
             <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -177,7 +177,7 @@ export function FormationCreatePage() {
             className="bg-white rounded-2xl shadow-lg p-4 sm:p-6"
           >
             <h2 className="text-lg sm:text-xl font-semibold text-primary-800 mb-4">ポジション配置</h2>
-            <p className="text-sm text-slate-500 mb-4">
+            <p className="text-sm text-primary-600/70 mb-4">
               メンバーをドラッグしてステージに配置してください。配置順に自動でポジション番号が振られます。
             </p>
             <FormationEditor

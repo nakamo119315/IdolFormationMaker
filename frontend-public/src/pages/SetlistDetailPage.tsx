@@ -41,7 +41,7 @@ export function SetlistDetailPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="text-slate-500 mb-4">セットリストが見つかりません</p>
+          <p className="text-primary-600/70 mb-4">セットリストが見つかりません</p>
           <Link to="/setlists" className="text-primary-500 hover:underline">
             セトリ一覧に戻る
           </Link>
@@ -119,7 +119,7 @@ export function SetlistDetailPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-20 pb-8">
+    <div className="min-h-screen gradient-bg pt-20 pb-8">
       <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* 戻るリンク */}
         <motion.div
@@ -129,7 +129,7 @@ export function SetlistDetailPage() {
         >
           <Link
             to="/setlists"
-            className="inline-flex items-center text-sm text-slate-500 hover:text-primary-500 transition-colors"
+            className="inline-flex items-center text-sm text-primary-600/70 hover:text-primary-500 transition-colors"
           >
             <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -188,7 +188,7 @@ export function SetlistDetailPage() {
               />
               <div className="text-right">
                 {setlist.eventDate && (
-                  <p className="text-sm text-slate-500">{setlist.eventDate}</p>
+                  <p className="text-sm text-primary-600/70">{setlist.eventDate}</p>
                 )}
                 <p className="text-sm text-slate-400">{setlist.items.length}曲</p>
               </div>
@@ -229,7 +229,7 @@ export function SetlistDetailPage() {
         </motion.div>
 
         {setlist.items.length === 0 && (
-          <div className="text-center py-10 text-slate-500">
+          <div className="text-center py-10 text-primary-600/70">
             楽曲が登録されていません
           </div>
         )}

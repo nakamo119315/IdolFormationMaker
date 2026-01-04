@@ -47,7 +47,7 @@ function SortableItem({
         <button
           {...attributes}
           {...listeners}
-          className="p-1 text-slate-400 hover:text-slate-600 cursor-grab active:cursor-grabbing flex-shrink-0"
+          className="p-1 text-slate-400 hover:text-primary-600 cursor-grab active:cursor-grabbing flex-shrink-0"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
@@ -61,7 +61,7 @@ function SortableItem({
           </p>
 
           <div className="mt-2 flex items-center gap-2">
-            <label className="text-xs text-slate-500 flex-shrink-0">センター:</label>
+            <label className="text-xs text-primary-600/70 flex-shrink-0">センター:</label>
             <select
               value={item.centerMemberId || ''}
               onChange={(e) => onUpdate({ ...item, centerMemberId: e.target.value || null })}
@@ -257,7 +257,7 @@ export function SetlistCreatePage() {
   }) || [];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-24 pb-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ヘッダー */}
         <motion.div
@@ -267,7 +267,7 @@ export function SetlistCreatePage() {
         >
           <Link
             to="/setlists"
-            className="inline-flex items-center text-slate-500 hover:text-primary-500 transition-colors mb-4"
+            className="inline-flex items-center text-primary-600/70 hover:text-primary-500 transition-colors mb-4"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -342,7 +342,7 @@ export function SetlistCreatePage() {
             >
               <h2 className="text-lg font-bold text-primary-800 mb-4">
                 楽曲を追加
-                <span className="ml-2 text-sm font-normal text-slate-500">({filteredSongs.length}曲)</span>
+                <span className="ml-2 text-sm font-normal text-primary-600/70">({filteredSongs.length}曲)</span>
               </h2>
               <div className="space-y-3">
                 {/* 検索入力 */}
@@ -366,7 +366,7 @@ export function SetlistCreatePage() {
                     <button
                       type="button"
                       onClick={() => setSongSearch('')}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-primary-600"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -439,7 +439,7 @@ export function SetlistCreatePage() {
           >
             <Link
               to="/setlists"
-              className="px-6 py-3 text-slate-600 hover:text-slate-800 transition-colors"
+              className="px-6 py-3 text-primary-600 hover:text-slate-800 transition-colors"
             >
               キャンセル
             </Link>

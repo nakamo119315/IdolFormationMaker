@@ -48,7 +48,7 @@ export function MembersPage() {
   if (membersLoading || groupsLoading) return <Loading />;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ヘッダー */}
         <motion.div
@@ -56,10 +56,10 @@ export function MembersPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-700 mb-4">
             Members
           </h1>
-          <p className="text-slate-500 max-w-2xl mx-auto">
+          <p className="text-primary-600/70 max-w-2xl mx-auto">
             輝くアイドルたちをご紹介
           </p>
         </motion.div>
@@ -78,7 +78,7 @@ export function MembersPage() {
               setSelectedGroupId(e.target.value);
               setSelectedGeneration(''); // Reset generation when group changes
             }}
-            className="px-4 py-2 rounded-xl border border-slate-200 bg-white shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+            className="px-4 py-2 rounded-xl border border-primary-200 bg-white/80 backdrop-blur-sm shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
           >
             <option value="">すべてのグループ</option>
             {groups?.map((group) => (
@@ -93,7 +93,7 @@ export function MembersPage() {
             <select
               value={selectedGeneration}
               onChange={(e) => setSelectedGeneration(e.target.value)}
-              className="px-4 py-2 rounded-xl border border-slate-200 bg-white shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+              className="px-4 py-2 rounded-xl border border-primary-200 bg-white/80 backdrop-blur-sm shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
             >
               <option value="">すべての期</option>
               {availableGenerations.map((gen) => (
@@ -105,7 +105,7 @@ export function MembersPage() {
           )}
 
           {/* フィルター結果の表示 */}
-          <span className="flex items-center text-slate-500 text-sm">
+          <span className="flex items-center text-primary-600 text-sm font-medium">
             {filteredMembers.length}人のメンバー
           </span>
         </motion.div>
@@ -118,7 +118,7 @@ export function MembersPage() {
         </div>
 
         {filteredMembers.length === 0 && (
-          <div className="text-center py-20 text-slate-500">
+          <div className="text-center py-20 text-primary-600">
             該当するメンバーがいません
           </div>
         )}

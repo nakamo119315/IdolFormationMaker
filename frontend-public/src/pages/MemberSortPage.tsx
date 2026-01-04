@@ -10,18 +10,56 @@ import html2canvas from 'html2canvas-pro';
 type Phase = 'filter' | 'sorting' | 'result';
 
 interface MergeSortState {
-  // Working arrays for merge sort
   segments: Member[][];
-  // Current merge state
   leftIndex: number;
   rightIndex: number;
   mergedSoFar: Member[];
   currentLeft: Member[];
   currentRight: Member[];
-  // Comparisons tracking
   completedComparisons: number;
-  // Final result
   finalRanking: Member[];
+}
+
+// 画像コンポーネント（エラーハンドリング付き）
+function MemberImage({
+  src,
+  alt,
+  className,
+  fallbackClassName,
+}: {
+  src?: string;
+  alt: string;
+  className: string;
+  fallbackClassName?: string;
+}) {
+  const [hasError, setHasError] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  if (!src || hasError) {
+    return (
+      <div className={fallbackClassName || className}>
+        <span className="text-white font-bold text-2xl sm:text-3xl">
+          {alt.charAt(0)}
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      {!isLoaded && (
+        <div className={`${className} animate-pulse`} />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        style={{ transition: 'opacity 0.3s' }}
+        onLoad={() => setIsLoaded(true)}
+        onError={() => setHasError(true)}
+      />
+    </>
+  );
 }
 
 export function MemberSortPage() {
@@ -80,40 +118,31 @@ export function MemberSortPage() {
     return shuffled;
   };
 
-  // Estimate total comparisons for merge sort: O(n log n)
   const estimateComparisons = (n: number): number => {
     if (n <= 1) return 0;
     return Math.ceil(n * Math.log2(n));
   };
 
-  // Calculate remaining comparisons based on current state
   const calculateRemainingComparisons = (state: MergeSortState): number => {
     if (state.finalRanking.length > 0) return 0;
 
     let remaining = 0;
     const { segments, leftIndex, rightIndex, currentLeft, currentRight } = state;
 
-    // Current merge: remaining comparisons = min of remaining elements on each side
     const leftRemaining = currentLeft.length - leftIndex;
     const rightRemaining = currentRight.length - rightIndex;
-    // Worst case for current merge
     remaining += Math.min(leftRemaining, rightRemaining);
 
-    // Future merges: estimate based on segment sizes
-    // Get sizes of all segments (excluding current pair being merged)
     const futureSizes = segments
       .filter(s => s !== currentLeft && s !== currentRight)
       .map(s => s.length);
-    // Add the result of current merge
     futureSizes.push(currentLeft.length + currentRight.length);
 
-    // Estimate remaining merge rounds
     while (futureSizes.length > 1) {
       const sorted = [...futureSizes].sort((a, b) => a - b);
       const newSizes: number[] = [];
       for (let i = 0; i < sorted.length; i += 2) {
         if (i + 1 < sorted.length) {
-          // Merge two segments: worst case is min(size1, size2) comparisons
           remaining += Math.min(sorted[i], sorted[i + 1]);
           newSizes.push(sorted[i] + sorted[i + 1]);
         } else {
@@ -131,7 +160,6 @@ export function MemberSortPage() {
     if (filteredMembers.length < 2) return;
 
     const shuffled = shuffleArray(filteredMembers);
-    // Initialize segments: each member is its own sorted segment
     const segments = shuffled.map((m) => [m]);
 
     setSortState({
@@ -150,7 +178,6 @@ export function MemberSortPage() {
   const advanceMergeSort = (state: MergeSortState, winner: Member): MergeSortState => {
     const { leftIndex, rightIndex, mergedSoFar, currentLeft, currentRight } = state;
 
-    // Determine which side the winner came from
     const leftMember = currentLeft[leftIndex];
     const winnerIsLeft = winner.id === leftMember?.id;
 
@@ -158,19 +185,15 @@ export function MemberSortPage() {
     const newLeftIndex = winnerIsLeft ? leftIndex + 1 : leftIndex;
     const newRightIndex = winnerIsLeft ? rightIndex : rightIndex + 1;
 
-    // Check if one side is exhausted
     if (newLeftIndex >= currentLeft.length) {
-      // Left exhausted, append remaining right
       const finalMerged = [...newMerged, ...currentRight.slice(newRightIndex)];
       return finishCurrentMerge(state, finalMerged);
     }
     if (newRightIndex >= currentRight.length) {
-      // Right exhausted, append remaining left
       const finalMerged = [...newMerged, ...currentLeft.slice(newLeftIndex)];
       return finishCurrentMerge(state, finalMerged);
     }
 
-    // Continue current merge
     return {
       ...state,
       leftIndex: newLeftIndex,
@@ -183,17 +206,14 @@ export function MemberSortPage() {
   const finishCurrentMerge = (state: MergeSortState, mergedSegment: Member[]): MergeSortState => {
     const { segments, currentLeft, currentRight } = state;
 
-    // Find the indices of current segments
     const leftSegmentIndex = segments.findIndex((s) => s === currentLeft);
     const rightSegmentIndex = segments.findIndex((s) => s === currentRight);
 
-    // Create new segments array with merged result
     const newSegments = segments.filter(
       (_, i) => i !== leftSegmentIndex && i !== rightSegmentIndex
     );
     newSegments.push(mergedSegment);
 
-    // If only one segment left, we're done!
     if (newSegments.length === 1) {
       return {
         ...state,
@@ -203,7 +223,6 @@ export function MemberSortPage() {
       };
     }
 
-    // Start next merge
     return {
       ...state,
       segments: newSegments,
@@ -231,7 +250,6 @@ export function MemberSortPage() {
     return member.images.find((img) => img.isPrimary) ?? member.images[0];
   };
 
-  // Current comparison pair
   const currentPair = useMemo(() => {
     if (!sortState || sortState.finalRanking.length > 0) return null;
     const left = sortState.currentLeft[sortState.leftIndex];
@@ -240,7 +258,6 @@ export function MemberSortPage() {
     return [left, right];
   }, [sortState]);
 
-  // Calculate remaining comparisons dynamically
   const remainingComparisons = useMemo(() => {
     if (!sortState) return 0;
     return calculateRemainingComparisons(sortState);
@@ -262,10 +279,10 @@ export function MemberSortPage() {
     setSaveMessage(null);
     try {
       const canvas = await html2canvas(resultRef.current, {
-        backgroundColor: '#f8fafc',
+        backgroundColor: '#faf5ff',
         scale: 2,
         useCORS: true,
-        allowTaint: false,
+        allowTaint: true,
         logging: false,
       });
       const link = document.createElement('a');
@@ -291,7 +308,7 @@ export function MemberSortPage() {
   if (membersLoading || groupsLoading) return <Loading />;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-20 sm:pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-20 sm:pt-24 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatePresence mode="wait">
           {/* フィルター画面 */}
@@ -304,17 +321,17 @@ export function MemberSortPage() {
               className="space-y-8"
             >
               <div className="text-center">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-800 mb-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-700 mb-4">
                   Member Sort
                 </h1>
-                <p className="text-slate-500">
+                <p className="text-primary-600/70">
                   2択で選んで、あなただけのランキングを作ろう
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 space-y-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-primary-100 p-4 sm:p-6 space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                  <label className="block text-sm font-medium text-primary-800 mb-2">
                     グループ
                   </label>
                   <select
@@ -323,7 +340,7 @@ export function MemberSortPage() {
                       setSelectedGroupId(e.target.value);
                       setSelectedGenerations([]);
                     }}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+                    className="w-full px-4 py-3 rounded-xl border border-primary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                   >
                     <option value="">すべてのグループ</option>
                     {groups?.map((group) => (
@@ -336,7 +353,7 @@ export function MemberSortPage() {
 
                 {selectedGroup?.hasGeneration && availableGenerations.length > 0 && (
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                    <label className="block text-sm font-medium text-primary-800 mb-2">
                       期別
                     </label>
                     <div className="flex flex-wrap gap-2">
@@ -350,10 +367,10 @@ export function MemberSortPage() {
                                 : [...prev, gen]
                             );
                           }}
-                          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                          className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                             selectedGenerations.includes(gen)
-                              ? 'bg-primary-500 text-white'
-                              : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                              ? 'bg-primary-500 text-white shadow-md'
+                              : 'bg-primary-100 text-primary-700 hover:bg-primary-200'
                           }`}
                         >
                           {gen}期
@@ -369,17 +386,17 @@ export function MemberSortPage() {
                       type="checkbox"
                       checked={includeGraduated}
                       onChange={(e) => setIncludeGraduated(e.target.checked)}
-                      className="w-5 h-5 rounded border-slate-300 text-primary-500 focus:ring-primary-500"
+                      className="w-5 h-5 rounded border-primary-300 text-primary-500 focus:ring-primary-500"
                     />
-                    <span className="text-slate-700">卒業メンバーを含める</span>
+                    <span className="text-primary-800">卒業メンバーを含める</span>
                   </label>
                 </div>
 
-                <div className="pt-4 border-t border-slate-100">
-                  <p className="text-center text-slate-500 mb-4">
-                    対象: <span className="font-semibold text-primary-500">{filteredMembers.length}</span> 名
+                <div className="pt-4 border-t border-primary-100">
+                  <p className="text-center text-primary-600 mb-4">
+                    対象: <span className="font-bold text-primary-700">{filteredMembers.length}</span> 名
                     {filteredMembers.length >= 2 && (
-                      <span className="text-sm text-slate-400 ml-2">
+                      <span className="text-sm text-primary-500 ml-2">
                         (約{estimateComparisons(filteredMembers.length)}回比較)
                       </span>
                     )}
@@ -387,7 +404,7 @@ export function MemberSortPage() {
                   <button
                     onClick={startSort}
                     disabled={filteredMembers.length < 2}
-                    className="w-full py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold text-lg hover:from-primary-600 hover:to-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-primary-500/30"
+                    className="w-full py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold text-lg hover:from-primary-600 hover:to-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-primary-500/30 hover:shadow-xl hover:shadow-primary-500/40 hover:-translate-y-0.5"
                   >
                     ソート開始
                   </button>
@@ -406,21 +423,23 @@ export function MemberSortPage() {
               className="space-y-6"
             >
               <div className="text-center">
-                <h2 className="text-xl sm:text-2xl font-bold text-primary-800 mb-2">
+                <h2 className="text-xl sm:text-2xl font-bold text-primary-700 mb-4">
                   どちらが好き？
                 </h2>
-                <div className="w-full bg-slate-200 rounded-full h-2 mb-2">
-                  <div
-                    className="bg-primary-500 h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${progressPercent}%` }}
-                  />
+                <div className="bg-white/60 backdrop-blur-sm rounded-full p-1 mb-2">
+                  <div className="w-full bg-primary-100 rounded-full h-3">
+                    <div
+                      className="bg-gradient-to-r from-primary-400 to-primary-600 h-3 rounded-full transition-all duration-300 shadow-sm"
+                      style={{ width: `${progressPercent}%` }}
+                    />
+                  </div>
                 </div>
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-primary-600">
                   {sortState?.completedComparisons}回完了 / 残り約{remainingComparisons}回
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-6">
                 {currentPair.map((member, idx) => {
                   const image = getPrimaryImage(member);
                   return (
@@ -428,32 +447,25 @@ export function MemberSortPage() {
                       key={member.id}
                       initial={{ opacity: 0, scale: 0.9, x: idx === 0 ? -20 : 20 }}
                       animate={{ opacity: 1, scale: 1, x: 0 }}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
                       onClick={() => handleChoice(member)}
-                      className="bg-white rounded-2xl shadow-lg overflow-hidden group"
+                      className="bg-white rounded-2xl shadow-xl overflow-hidden group border-2 border-transparent hover:border-primary-300 transition-all"
                     >
                       <div className="aspect-[3/4] relative overflow-hidden">
-                        {image ? (
-                          <img
-                            src={image.url}
-                            alt={member.name}
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                          />
-                        ) : (
-                          <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                            <span className="text-4xl sm:text-5xl text-white font-bold">
-                              {member.name.charAt(0)}
-                            </span>
-                          </div>
-                        )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                        <MemberImage
+                          src={image?.url}
+                          alt={member.name}
+                          className="w-full h-full object-cover absolute inset-0 transition-transform duration-300 group-hover:scale-110"
+                          fallbackClassName="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center absolute inset-0"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-primary-900/20 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white">
-                          <h3 className="text-base sm:text-lg font-bold truncate">
+                          <h3 className="text-base sm:text-lg font-bold truncate drop-shadow-md">
                             {member.name}
                           </h3>
                           {member.generation && (
-                            <p className="text-xs sm:text-sm text-white/70">
+                            <p className="text-xs sm:text-sm text-white/80">
                               {member.generation}期
                             </p>
                           )}
@@ -475,23 +487,23 @@ export function MemberSortPage() {
               className="space-y-6"
             >
               <div className="text-center">
-                <h1 className="text-2xl sm:text-3xl font-bold text-primary-800 mb-2">
+                <h1 className="text-2xl sm:text-3xl font-bold text-primary-700 mb-2">
                   Your Ranking
                 </h1>
-                <p className="text-slate-500">
+                <p className="text-primary-600/70">
                   あなたのランキングが完成しました！
                 </p>
               </div>
 
-              <div ref={resultRef} className="bg-white rounded-2xl shadow-lg p-4 sm:p-6">
+              <div ref={resultRef} className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-primary-100 p-4 sm:p-6">
                 <div className="space-y-2">
                   {sortState.finalRanking.map((member, index) => {
                     const image = getPrimaryImage(member);
                     const isTop3 = index < 3;
-                    const rankColors = [
-                      'from-yellow-400 to-yellow-500',
-                      'from-slate-300 to-slate-400',
-                      'from-amber-600 to-amber-700',
+                    const rankStyles = [
+                      { bg: 'bg-gradient-to-r from-yellow-400 to-amber-500', text: 'text-white', shadow: 'shadow-amber-300' },
+                      { bg: 'bg-gradient-to-r from-slate-300 to-slate-400', text: 'text-white', shadow: 'shadow-slate-300' },
+                      { bg: 'bg-gradient-to-r from-amber-600 to-amber-700', text: 'text-white', shadow: 'shadow-amber-400' },
                     ];
 
                     return (
@@ -500,43 +512,39 @@ export function MemberSortPage() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.03 }}
-                        className={`flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl ${
-                          isTop3 ? 'bg-slate-50' : ''
+                        className={`flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl transition-colors ${
+                          isTop3 ? 'bg-primary-50/80' : 'hover:bg-primary-50/50'
                         }`}
                       >
                         <div
-                          className={`w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0 flex items-center justify-center rounded-full font-bold text-xs sm:text-sm ${
+                          className={`w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center rounded-full font-bold text-sm sm:text-base ${
                             isTop3
-                              ? `bg-gradient-to-br ${rankColors[index]} text-white shadow-md`
-                              : 'bg-slate-200 text-slate-600'
+                              ? `${rankStyles[index].bg} ${rankStyles[index].text} shadow-md ${rankStyles[index].shadow}`
+                              : 'bg-primary-100 text-primary-700'
                           }`}
                         >
                           {index + 1}
                         </div>
-                        {image ? (
-                          <img
-                            src={image.url}
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 rounded-full overflow-hidden border-2 border-primary-200 shadow-md">
+                          <MemberImage
+                            src={image?.url}
                             alt={member.name}
-                            crossOrigin="anonymous"
-                            className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-full object-cover"
+                            className="w-full h-full object-cover"
+                            fallbackClassName="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center"
                           />
-                        ) : (
-                          <div className="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white font-bold text-xs sm:text-sm">
-                            {member.name.charAt(0)}
-                          </div>
-                        )}
+                        </div>
                         <div className="flex-1 min-w-0">
-                          <p className="font-semibold text-slate-800 truncate text-sm sm:text-base">
+                          <p className="font-semibold text-primary-800 truncate text-sm sm:text-base">
                             {member.name}
                           </p>
                           {member.generation && (
-                            <p className="text-xs sm:text-sm text-slate-500">
+                            <p className="text-xs sm:text-sm text-primary-500">
                               {member.generation}期
                             </p>
                           )}
                         </div>
                         {member.isGraduated && (
-                          <span className="text-xs px-2 py-0.5 bg-slate-200 text-slate-600 rounded-full flex-shrink-0">
+                          <span className="text-xs px-2 py-1 bg-primary-100 text-primary-600 rounded-full flex-shrink-0 font-medium">
                             卒業
                           </span>
                         )}
@@ -547,15 +555,17 @@ export function MemberSortPage() {
               </div>
 
               {saveMessage && (
-                <div
-                  className={`text-center py-2 px-4 rounded-lg ${
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`text-center py-3 px-4 rounded-xl ${
                     saveMessage.type === 'success'
-                      ? 'bg-green-100 text-green-700'
-                      : 'bg-red-100 text-red-700'
+                      ? 'bg-green-100 text-green-700 border border-green-200'
+                      : 'bg-red-100 text-red-700 border border-red-200'
                   }`}
                 >
                   {saveMessage.text}
-                </div>
+                </motion.div>
               )}
 
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
