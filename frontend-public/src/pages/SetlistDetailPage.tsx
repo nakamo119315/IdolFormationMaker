@@ -177,7 +177,7 @@ export function SetlistDetailPage() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-primary-500 text-sm font-medium">{groupName}</p>
-              <h1 className="text-xl font-bold text-slate-800">
+              <h1 className="text-xl font-bold text-primary-800">
                 {setlist.name}
               </h1>
             </div>

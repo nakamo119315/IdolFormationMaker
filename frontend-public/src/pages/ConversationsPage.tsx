@@ -31,7 +31,7 @@ export function ConversationsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold text-slate-800 mb-4">ミーグリレポ</h1>
+          <h1 className="text-4xl font-bold text-primary-800 mb-4">ミーグリレポ</h1>
           <p className="text-slate-600">ミーグリでの会話を記録・管理しましょう</p>
         </motion.div>
 

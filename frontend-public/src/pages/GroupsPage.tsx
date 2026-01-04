@@ -21,7 +21,7 @@ export function GroupsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-800 mb-4">
             Groups
           </h1>
           <p className="text-slate-500 max-w-2xl mx-auto">

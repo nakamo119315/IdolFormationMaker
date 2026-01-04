@@ -102,7 +102,7 @@ export function MemberDetailPage() {
             className="flex flex-col justify-center"
           >
             <div className="flex items-start justify-between gap-4 mb-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-slate-800">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-800">
                 {member.name}
               </h1>
               <ShareButton

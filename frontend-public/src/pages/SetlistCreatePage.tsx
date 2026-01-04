@@ -274,7 +274,7 @@ export function SetlistCreatePage() {
             </svg>
             戻る
           </Link>
-          <h1 className="text-3xl font-bold text-slate-800">
+          <h1 className="text-3xl font-bold text-primary-800">
             {isEdit ? 'セトリ編集' : 'セトリ作成'}
           </h1>
         </motion.div>
@@ -287,7 +287,7 @@ export function SetlistCreatePage() {
             transition={{ delay: 0.1 }}
             className="bg-white rounded-2xl shadow-lg p-6 mb-6 border border-slate-100"
           >
-            <h2 className="text-lg font-bold text-slate-800 mb-4">基本情報</h2>
+            <h2 className="text-lg font-bold text-primary-800 mb-4">基本情報</h2>
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">セトリ名</label>
@@ -340,7 +340,7 @@ export function SetlistCreatePage() {
               transition={{ delay: 0.2 }}
               className="bg-white rounded-2xl shadow-lg p-6 mb-6 border border-slate-100"
             >
-              <h2 className="text-lg font-bold text-slate-800 mb-4">
+              <h2 className="text-lg font-bold text-primary-800 mb-4">
                 楽曲を追加
                 <span className="ml-2 text-sm font-normal text-slate-500">({filteredSongs.length}曲)</span>
               </h2>
@@ -412,7 +412,7 @@ export function SetlistCreatePage() {
               transition={{ delay: 0.3 }}
               className="bg-slate-50 rounded-2xl p-6 mb-6"
             >
-              <h2 className="text-lg font-bold text-slate-800 mb-4">セットリスト（ドラッグで並べ替え）</h2>
+              <h2 className="text-lg font-bold text-primary-800 mb-4">セットリスト（ドラッグで並べ替え）</h2>
               <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
                 <SortableContext items={items.map((i) => i.tempId)} strategy={verticalListSortingStrategy}>
                   {items.map((item) => (

@@ -34,7 +34,7 @@ export function SongsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-800 mb-4">
             Songs
           </h1>
           <p className="text-slate-500 max-w-2xl mx-auto">
@@ -89,7 +89,7 @@ export function SongsPage() {
               >
                 <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="text-lg font-bold text-slate-800 mb-1">
+                    <h3 className="text-lg font-bold text-primary-800 mb-1">
                       {song.title}
                     </h3>
                     <p className="text-sm text-primary-500 font-medium mb-2">

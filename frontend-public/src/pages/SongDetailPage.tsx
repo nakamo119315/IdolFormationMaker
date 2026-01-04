@@ -63,7 +63,7 @@ export function SongDetailPage() {
         >
           <div className="text-center mb-6">
             <p className="text-primary-500 font-medium mb-2">{groupName}</p>
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-primary-800 mb-4">
               {song.title}
             </h1>
           </div>
@@ -92,7 +92,7 @@ export function SongDetailPage() {
             transition={{ delay: 0.1 }}
             className="bg-white rounded-2xl shadow-lg p-8 border border-slate-100"
           >
-            <h2 className="text-xl font-bold text-slate-800 mb-6 text-center">
+            <h2 className="text-xl font-bold text-primary-800 mb-6 text-center">
               歌詞
             </h2>
             <div className="text-slate-700 whitespace-pre-wrap leading-relaxed text-center">

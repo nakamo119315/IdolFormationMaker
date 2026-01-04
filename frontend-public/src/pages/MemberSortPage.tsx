@@ -304,7 +304,7 @@ export function MemberSortPage() {
               className="space-y-8"
             >
               <div className="text-center">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-800 mb-4">
                   Member Sort
                 </h1>
                 <p className="text-slate-500">
@@ -406,7 +406,7 @@ export function MemberSortPage() {
               className="space-y-6"
             >
               <div className="text-center">
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-2">
+                <h2 className="text-xl sm:text-2xl font-bold text-primary-800 mb-2">
                   どちらが好き？
                 </h2>
                 <div className="w-full bg-slate-200 rounded-full h-2 mb-2">
@@ -475,7 +475,7 @@ export function MemberSortPage() {
               className="space-y-6"
             >
               <div className="text-center">
-                <h1 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2">
+                <h1 className="text-2xl sm:text-3xl font-bold text-primary-800 mb-2">
                   Your Ranking
                 </h1>
                 <p className="text-slate-500">

@@ -48,7 +48,7 @@ export function FormationsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-800 mb-4">
             Formations
           </h1>
           <p className="text-slate-500 max-w-2xl mx-auto mb-6">
@@ -136,7 +136,7 @@ export function FormationsPage() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="mb-6 text-center">
-                  <h2 className="text-2xl font-bold text-slate-800">
+                  <h2 className="text-2xl font-bold text-primary-800">
                     {selectedFormation.name}
                   </h2>
                 </div>

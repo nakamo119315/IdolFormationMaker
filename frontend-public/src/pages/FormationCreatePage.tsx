@@ -117,7 +117,7 @@ export function FormationCreatePage() {
             </svg>
             戻る
           </button>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-800">
             {isEditing ? 'フォーメーション編集' : '新規フォーメーション'}
           </h1>
         </motion.div>
@@ -130,7 +130,7 @@ export function FormationCreatePage() {
         >
           {/* Basic Info */}
           <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 space-y-4">
-            <h2 className="text-lg sm:text-xl font-semibold text-slate-800">基本情報</h2>
+            <h2 className="text-lg sm:text-xl font-semibold text-primary-800">基本情報</h2>
 
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-2">
@@ -176,7 +176,7 @@ export function FormationCreatePage() {
             transition={{ delay: 0.2 }}
             className="bg-white rounded-2xl shadow-lg p-4 sm:p-6"
           >
-            <h2 className="text-lg sm:text-xl font-semibold text-slate-800 mb-4">ポジション配置</h2>
+            <h2 className="text-lg sm:text-xl font-semibold text-primary-800 mb-4">ポジション配置</h2>
             <p className="text-sm text-slate-500 mb-4">
               メンバーをドラッグしてステージに配置してください。配置順に自動でポジション番号が振られます。
             </p>
