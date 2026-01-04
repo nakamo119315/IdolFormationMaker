@@ -23,7 +23,7 @@ export function ConversationsPage() {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -31,8 +31,8 @@ export function ConversationsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold text-slate-800 mb-4">ミーグリレポ</h1>
-          <p className="text-slate-600">ミーグリでの会話を記録・管理しましょう</p>
+          <h1 className="text-4xl font-bold text-primary-700 mb-4">ミーグリレポ</h1>
+          <p className="text-primary-600">ミーグリでの会話を記録・管理しましょう</p>
         </motion.div>
 
         {/* Controls */}
@@ -51,7 +51,7 @@ export function ConversationsPage() {
               id="member-filter"
               value={selectedMemberId}
               onChange={(e) => setSelectedMemberId(e.target.value)}
-              className="flex-1 sm:flex-none px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="flex-1 sm:flex-none px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             >
               <option value="">すべて</option>
               {members?.map((member) => (
@@ -65,7 +65,7 @@ export function ConversationsPage() {
           {/* Create button */}
           <Link
             to="/conversations/new"
-            className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium hover:from-primary-600 hover:to-primary-700 transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -113,12 +113,12 @@ export function ConversationsPage() {
                 d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
               />
             </svg>
-            <p className="text-slate-500 mb-4">
+            <p className="text-primary-600/70 mb-4">
               {selectedMemberId ? '該当するミーグリレポがありません' : 'ミーグリレポがありません'}
             </p>
             <Link
               to="/conversations/new"
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
+              className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />

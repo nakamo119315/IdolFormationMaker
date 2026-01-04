@@ -42,7 +42,7 @@ export function SetlistsPage() {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ヘッダー */}
         <motion.div
@@ -50,15 +50,15 @@ export function SetlistsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-700 mb-4">
             Setlists
           </h1>
-          <p className="text-slate-500 max-w-2xl mx-auto mb-6">
+          <p className="text-primary-600/70 max-w-2xl mx-auto mb-6">
             ユーザー作成のセットリスト
           </p>
           <Link
             to="/setlists/new"
-            className="inline-flex items-center px-6 py-3 bg-rose-500 text-white rounded-full font-medium hover:bg-rose-600 transition-colors shadow-lg"
+            className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-full font-medium hover:bg-primary-600 transition-colors shadow-lg"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -78,8 +78,8 @@ export function SetlistsPage() {
             onClick={() => setSelectedGroupId('')}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               selectedGroupId === ''
-                ? 'bg-rose-500 text-white shadow-md'
-                : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+                ? 'bg-primary-500 text-white shadow-md'
+                : 'bg-white text-primary-600 hover:bg-slate-100 border border-slate-200'
             }`}
           >
             すべて
@@ -90,8 +90,8 @@ export function SetlistsPage() {
               onClick={() => setSelectedGroupId(group.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                 selectedGroupId === group.id
-                  ? 'bg-rose-500 text-white shadow-md'
-                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+                  ? 'bg-primary-500 text-white shadow-md'
+                  : 'bg-white text-primary-600 hover:bg-slate-100 border border-slate-200'
               }`}
             >
               {group.name}
@@ -114,10 +114,10 @@ export function SetlistsPage() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <p className="text-sm text-rose-500 font-medium mb-1">
+                    <p className="text-sm text-primary-500 font-medium mb-1">
                       {getGroupName(setlist.groupId)}
                     </p>
-                    <h3 className="text-lg font-bold text-slate-800">
+                    <h3 className="text-lg font-bold text-primary-700">
                       {setlist.name}
                     </h3>
                   </div>
@@ -130,7 +130,7 @@ export function SetlistsPage() {
                     </svg>
                   </button>
                 </div>
-                <div className="flex items-center justify-between text-sm text-slate-500">
+                <div className="flex items-center justify-between text-sm text-primary-600/70">
                   <span>{setlist.itemCount}曲</span>
                   {setlist.eventDate && (
                     <span>{setlist.eventDate}</span>
@@ -143,10 +143,10 @@ export function SetlistsPage() {
 
         {setlists?.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-slate-500 mb-4">セットリストがありません</p>
+            <p className="text-primary-600/70 mb-4">セットリストがありません</p>
             <Link
               to="/setlists/new"
-              className="text-rose-500 hover:underline"
+              className="text-primary-500 hover:underline"
             >
               最初のセットリストを作成する
             </Link>

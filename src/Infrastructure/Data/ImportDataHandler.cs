@@ -76,7 +76,7 @@ public class ImportDataHandler
                     ? (DateOnly?)null
                     : DateOnly.Parse(groupDto.DebutDate);
 
-                var group = Group.Create(groupDto.Name, debutDate);
+                var group = Group.Create(groupDto.Name, debutDate, groupDto.HasGeneration);
                 await _groupRepository.AddAsync(group, cancellationToken);
                 groupIdMap[groupDto.Id] = group.Id;
             }
@@ -102,7 +102,9 @@ public class ImportDataHandler
                     memberDto.Birthplace,
                     memberDto.PenLightColor1,
                     memberDto.PenLightColor2,
-                    newGroupId);
+                    newGroupId,
+                    memberDto.Generation,
+                    memberDto.IsGraduated);
 
                 // Add images
                 foreach (var imageDto in memberDto.Images)

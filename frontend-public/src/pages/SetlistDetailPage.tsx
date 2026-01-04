@@ -41,8 +41,8 @@ export function SetlistDetailPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="text-slate-500 mb-4">セットリストが見つかりません</p>
-          <Link to="/setlists" className="text-rose-500 hover:underline">
+          <p className="text-primary-600/70 mb-4">セットリストが見つかりません</p>
+          <Link to="/setlists" className="text-primary-500 hover:underline">
             セトリ一覧に戻る
           </Link>
         </div>
@@ -119,7 +119,7 @@ export function SetlistDetailPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-20 pb-8">
+    <div className="min-h-screen gradient-bg pt-20 pb-8">
       <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* 戻るリンク */}
         <motion.div
@@ -129,7 +129,7 @@ export function SetlistDetailPage() {
         >
           <Link
             to="/setlists"
-            className="inline-flex items-center text-sm text-slate-500 hover:text-rose-500 transition-colors"
+            className="inline-flex items-center text-sm text-primary-600/70 hover:text-primary-500 transition-colors"
           >
             <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -140,19 +140,16 @@ export function SetlistDetailPage() {
             <button
               onClick={handleDownload}
               disabled={isDownloading}
-              className="inline-flex items-center px-3 py-1.5 bg-rose-500 text-white rounded-lg text-sm font-medium hover:bg-rose-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn-download"
             >
               {isDownloading ? (
                 <>
-                  <svg className="w-4 h-4 mr-1 animate-spin" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                  </svg>
+                  <span className="btn-download-spinner" />
                   保存中...
                 </>
               ) : (
                 <>
-                  <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="btn-download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
                   画像保存
@@ -179,8 +176,8 @@ export function SetlistDetailPage() {
         >
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-rose-500 text-sm font-medium">{groupName}</p>
-              <h1 className="text-xl font-bold text-slate-800">
+              <p className="text-primary-500 text-sm font-medium">{groupName}</p>
+              <h1 className="text-xl font-bold text-primary-800">
                 {setlist.name}
               </h1>
             </div>
@@ -191,7 +188,7 @@ export function SetlistDetailPage() {
               />
               <div className="text-right">
                 {setlist.eventDate && (
-                  <p className="text-sm text-slate-500">{setlist.eventDate}</p>
+                  <p className="text-sm text-primary-600/70">{setlist.eventDate}</p>
                 )}
                 <p className="text-sm text-slate-400">{setlist.items.length}曲</p>
               </div>
@@ -214,14 +211,14 @@ export function SetlistDetailPage() {
                   key={item.id}
                   className="flex items-baseline gap-1 px-2 py-1 rounded hover:bg-slate-50 transition-colors"
                 >
-                  <span className="text-rose-500 text-sm font-bold flex-shrink-0">
+                  <span className="text-primary-500 text-sm font-bold flex-shrink-0">
                     {item.order}.
                   </span>
                   <span className="text-sm text-slate-800">
                     {getSongTitle(item.songId)}
                   </span>
                   {centerName && (
-                    <span className="text-xs text-rose-400 ml-1">
+                    <span className="text-xs text-primary-400 ml-1">
                       (C: {centerName})
                     </span>
                   )}
@@ -232,7 +229,7 @@ export function SetlistDetailPage() {
         </motion.div>
 
         {setlist.items.length === 0 && (
-          <div className="text-center py-10 text-slate-500">
+          <div className="text-center py-10 text-primary-600/70">
             楽曲が登録されていません
           </div>
         )}
@@ -245,8 +242,8 @@ export function SetlistDetailPage() {
       >
         <div style={{
           padding: '24px',
-          background: 'linear-gradient(135deg, #fdf2f8 0%, #ffffff 50%, #fff1f2 100%)',
-          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+          background: 'linear-gradient(135deg, #faf5ff 0%, #ffffff 50%, #f3e8ff 100%)',
+          fontFamily: '"Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
         }}>
           {/* ヘッダー */}
           <div style={{
@@ -256,7 +253,7 @@ export function SetlistDetailPage() {
             marginBottom: '16px',
             boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
           }}>
-            <div style={{ color: '#f43f5e', fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>
+            <div style={{ color: '#7e1083', fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>
               {groupName}
             </div>
             <div style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b' }}>
@@ -289,14 +286,14 @@ export function SetlistDetailPage() {
                     borderBottom: '1px solid #f1f5f9',
                   }}
                 >
-                  <span style={{ color: '#f43f5e', fontSize: '14px', fontWeight: 'bold', minWidth: '24px' }}>
+                  <span style={{ color: '#7e1083', fontSize: '14px', fontWeight: 'bold', minWidth: '24px' }}>
                     {item.order}.
                   </span>
                   <span style={{ fontSize: '14px', color: '#1e293b', flex: 1 }}>
                     {getSongTitle(item.songId)}
                   </span>
                   {centerName && (
-                    <span style={{ fontSize: '12px', color: '#fb7185' }}>
+                    <span style={{ fontSize: '12px', color: '#a855f7' }}>
                       C: {centerName}
                     </span>
                   )}
@@ -321,7 +318,7 @@ export function SetlistDetailPage() {
       {isDownloading && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
           <div className="bg-white rounded-2xl p-6 flex flex-col items-center gap-3">
-            <svg className="w-8 h-8 animate-spin text-rose-500" fill="none" viewBox="0 0 24 24">
+            <svg className="w-8 h-8 animate-spin text-primary-500" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
             </svg>

@@ -46,7 +46,7 @@ export function GroupDetailPage() {
   if (!group) return <div className="pt-24 text-center">グループが見つかりません</div>;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 戻るリンク */}
         <motion.div
@@ -56,7 +56,7 @@ export function GroupDetailPage() {
         >
           <Link
             to="/groups"
-            className="inline-flex items-center text-slate-500 hover:text-primary-600 transition-colors"
+            className="inline-flex items-center text-primary-600 hover:text-primary-700 transition-colors font-medium"
           >
             <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -71,10 +71,10 @@ export function GroupDetailPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-700 mb-4">
             {group.name}
           </h1>
-          <p className="text-slate-500">
+          <p className="text-primary-600/70">
             {groupMembers.length}人
           </p>
         </motion.div>
@@ -90,7 +90,7 @@ export function GroupDetailPage() {
             <select
               value={selectedGeneration}
               onChange={(e) => setSelectedGeneration(e.target.value)}
-              className="px-4 py-2 rounded-xl border border-slate-200 bg-white shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+              className="px-4 py-2 rounded-xl border border-primary-200 bg-white/80 backdrop-blur-sm shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
             >
               <option value="">すべての期</option>
               {availableGenerations.map((gen) => (
@@ -99,7 +99,7 @@ export function GroupDetailPage() {
                 </option>
               ))}
             </select>
-            <span className="flex items-center text-slate-500 text-sm">
+            <span className="flex items-center text-primary-600 text-sm font-medium">
               {filteredMembers.length}人のメンバー
             </span>
           </motion.div>
@@ -113,7 +113,7 @@ export function GroupDetailPage() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-20 text-slate-500">
+          <div className="text-center py-20 text-primary-600">
             {selectedGeneration ? '該当するメンバーがいません' : 'このグループにはまだメンバーがいません'}
           </div>
         )}

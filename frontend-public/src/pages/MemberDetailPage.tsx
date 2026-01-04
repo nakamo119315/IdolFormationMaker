@@ -25,8 +25,8 @@ export function MemberDetailPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="text-slate-500 mb-4">メンバーが見つかりません</p>
-          <Link to="/members" className="text-rose-500 hover:underline">
+          <p className="text-primary-600/70 mb-4">メンバーが見つかりません</p>
+          <Link to="/members" className="text-primary-500 hover:underline">
             メンバー一覧に戻る
           </Link>
         </div>
@@ -38,7 +38,7 @@ export function MemberDetailPage() {
   const group = groups?.find(g => g.id === member.groupId);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-24 pb-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 戻るリンク */}
         <motion.div
@@ -48,7 +48,7 @@ export function MemberDetailPage() {
         >
           <Link
             to="/members"
-            className="inline-flex items-center text-slate-500 hover:text-primary-600 transition-colors"
+            className="inline-flex items-center text-primary-600/70 hover:text-primary-600 transition-colors"
           >
             <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -102,7 +102,7 @@ export function MemberDetailPage() {
             className="flex flex-col justify-center"
           >
             <div className="flex items-start justify-between gap-4 mb-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-slate-800">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-700">
                 {member.name}
               </h1>
               <ShareButton
@@ -128,7 +128,7 @@ export function MemberDetailPage() {
                   </span>
                 )}
                 {member.isGraduated && (
-                  <span className="px-3 py-1 bg-slate-200 text-slate-600 rounded-full text-sm font-medium">
+                  <span className="px-3 py-1 bg-slate-200 text-primary-600 rounded-full text-sm font-medium">
                     卒業
                   </span>
                 )}
@@ -137,7 +137,7 @@ export function MemberDetailPage() {
 
             <div className="space-y-6">
               <div className="p-6 bg-white rounded-2xl shadow-lg">
-                <h3 className="text-sm font-medium text-slate-500 tracking-wider mb-2">
+                <h3 className="text-sm font-medium text-primary-600/70 tracking-wider mb-2">
                   生年月日
                 </h3>
                 <p className="text-2xl font-semibold text-slate-800">{member.birthDate}</p>
@@ -145,7 +145,7 @@ export function MemberDetailPage() {
 
               {member.birthplace && (
                 <div className="p-6 bg-white rounded-2xl shadow-lg">
-                  <h3 className="text-sm font-medium text-slate-500 tracking-wider mb-2">
+                  <h3 className="text-sm font-medium text-primary-600/70 tracking-wider mb-2">
                     出身地
                   </h3>
                   <p className="text-2xl font-semibold text-slate-800">{member.birthplace}</p>
@@ -154,7 +154,7 @@ export function MemberDetailPage() {
 
               {member.penLightColor1 && (
                 <div className="p-6 bg-white rounded-2xl shadow-lg">
-                  <h3 className="text-sm font-medium text-slate-500 tracking-wider mb-2">
+                  <h3 className="text-sm font-medium text-primary-600/70 tracking-wider mb-2">
                     ペンライトカラー
                   </h3>
                   <p className="text-2xl font-semibold text-slate-800">
@@ -165,7 +165,7 @@ export function MemberDetailPage() {
               )}
 
               <div className="p-6 bg-white rounded-2xl shadow-lg">
-                <h3 className="text-sm font-medium text-slate-500 tracking-wider mb-2">
+                <h3 className="text-sm font-medium text-primary-600/70 tracking-wider mb-2">
                   画像数
                 </h3>
                 <p className="text-2xl font-semibold text-slate-800">{member.images.length}</p>

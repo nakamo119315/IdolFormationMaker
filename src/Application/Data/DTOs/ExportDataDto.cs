@@ -17,6 +17,7 @@ public record ExportGroupDto
     public Guid Id { get; init; }
     public string Name { get; init; } = string.Empty;
     public string? DebutDate { get; init; }
+    public bool HasGeneration { get; init; }
 }
 
 public record ExportMemberDto
@@ -28,6 +29,8 @@ public record ExportMemberDto
     public string? PenLightColor1 { get; init; }
     public string? PenLightColor2 { get; init; }
     public Guid? GroupId { get; init; }
+    public int? Generation { get; init; }
+    public bool IsGraduated { get; init; }
     public List<ExportMemberImageDto> Images { get; init; } = new();
 }
 

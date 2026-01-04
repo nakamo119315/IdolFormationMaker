@@ -52,7 +52,8 @@ public class ExportDataHandler
             {
                 Id = g.Id,
                 Name = g.Name,
-                DebutDate = g.DebutDate?.ToString("yyyy-MM-dd")
+                DebutDate = g.DebutDate?.ToString("yyyy-MM-dd"),
+                HasGeneration = g.HasGeneration
             }).ToList(),
             Members = members.Select(m => new ExportMemberDto
             {
@@ -63,6 +64,8 @@ public class ExportDataHandler
                 PenLightColor1 = m.PenLightColor1,
                 PenLightColor2 = m.PenLightColor2,
                 GroupId = m.GroupId,
+                Generation = m.Generation,
+                IsGraduated = m.IsGraduated,
                 Images = m.Images.Select(i => new ExportMemberImageDto
                 {
                     Id = i.Id,

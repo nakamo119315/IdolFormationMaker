@@ -54,7 +54,7 @@ const ExportableChat = forwardRef<HTMLDivElement, ExportableChatProps>(
                           <td style={{ textAlign: isSelf ? 'right' : 'left' }}>
                             <table style={{
                               display: 'inline-table',
-                              backgroundColor: isSelf ? '#3b82f6' : '#f0f0f0',
+                              backgroundColor: isSelf ? '#7e1083' : '#f0f0f0',
                               borderRadius: '12px',
                               maxWidth: '70%',
                             }}>

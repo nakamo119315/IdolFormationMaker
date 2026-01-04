@@ -47,7 +47,7 @@ function SortableItem({
         <button
           {...attributes}
           {...listeners}
-          className="p-1 text-slate-400 hover:text-slate-600 cursor-grab active:cursor-grabbing flex-shrink-0"
+          className="p-1 text-slate-400 hover:text-primary-600 cursor-grab active:cursor-grabbing flex-shrink-0"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
@@ -56,12 +56,12 @@ function SortableItem({
 
         <div className="flex-1 min-w-0">
           <p className="font-medium text-slate-800 text-sm leading-snug">
-            <span className="text-rose-500 mr-1">{item.order}.</span>
+            <span className="text-primary-500 mr-1">{item.order}.</span>
             {getSongTitle(item.songId)}
           </p>
 
           <div className="mt-2 flex items-center gap-2">
-            <label className="text-xs text-slate-500 flex-shrink-0">センター:</label>
+            <label className="text-xs text-primary-600/70 flex-shrink-0">センター:</label>
             <select
               value={item.centerMemberId || ''}
               onChange={(e) => onUpdate({ ...item, centerMemberId: e.target.value || null })}
@@ -257,7 +257,7 @@ export function SetlistCreatePage() {
   }) || [];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-24 pb-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ヘッダー */}
         <motion.div
@@ -267,14 +267,14 @@ export function SetlistCreatePage() {
         >
           <Link
             to="/setlists"
-            className="inline-flex items-center text-slate-500 hover:text-rose-500 transition-colors mb-4"
+            className="inline-flex items-center text-primary-600/70 hover:text-primary-500 transition-colors mb-4"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             戻る
           </Link>
-          <h1 className="text-3xl font-bold text-slate-800">
+          <h1 className="text-3xl font-bold text-primary-800">
             {isEdit ? 'セトリ編集' : 'セトリ作成'}
           </h1>
         </motion.div>
@@ -287,7 +287,7 @@ export function SetlistCreatePage() {
             transition={{ delay: 0.1 }}
             className="bg-white rounded-2xl shadow-lg p-6 mb-6 border border-slate-100"
           >
-            <h2 className="text-lg font-bold text-slate-800 mb-4">基本情報</h2>
+            <h2 className="text-lg font-bold text-primary-800 mb-4">基本情報</h2>
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">セトリ名</label>
@@ -296,7 +296,7 @@ export function SetlistCreatePage() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="例: 2024/12/25 Xmasライブ"
-                  className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                  className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   required
                 />
               </div>
@@ -309,7 +309,7 @@ export function SetlistCreatePage() {
                       setGroupId(e.target.value);
                       setItems([]);
                     }}
-                    className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                    className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     required
                     disabled={isEdit}
                   >
@@ -325,7 +325,7 @@ export function SetlistCreatePage() {
                     type="date"
                     value={eventDate}
                     onChange={(e) => setEventDate(e.target.value)}
-                    className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                    className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -340,9 +340,9 @@ export function SetlistCreatePage() {
               transition={{ delay: 0.2 }}
               className="bg-white rounded-2xl shadow-lg p-6 mb-6 border border-slate-100"
             >
-              <h2 className="text-lg font-bold text-slate-800 mb-4">
+              <h2 className="text-lg font-bold text-primary-800 mb-4">
                 楽曲を追加
-                <span className="ml-2 text-sm font-normal text-slate-500">({filteredSongs.length}曲)</span>
+                <span className="ml-2 text-sm font-normal text-primary-600/70">({filteredSongs.length}曲)</span>
               </h2>
               <div className="space-y-3">
                 {/* 検索入力 */}
@@ -360,13 +360,13 @@ export function SetlistCreatePage() {
                     value={songSearch}
                     onChange={(e) => setSongSearch(e.target.value)}
                     placeholder="曲名で検索..."
-                    className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                    className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   />
                   {songSearch && (
                     <button
                       type="button"
                       onClick={() => setSongSearch('')}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-primary-600"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -380,7 +380,7 @@ export function SetlistCreatePage() {
                     <select
                       value={selectedSongId}
                       onChange={(e) => setSelectedSongId(e.target.value)}
-                      className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                      className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     >
                       <option value="">曲を選択してください</option>
                       {filteredSongs.map((song) => (
@@ -395,7 +395,7 @@ export function SetlistCreatePage() {
                       setSongSearch('');
                     }}
                     disabled={!selectedSongId}
-                    className="w-full sm:w-auto px-4 py-3 sm:py-2 bg-rose-500 text-white rounded-lg font-medium hover:bg-rose-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="w-full sm:w-auto px-4 py-3 sm:py-2 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     追加
                   </button>
@@ -412,7 +412,7 @@ export function SetlistCreatePage() {
               transition={{ delay: 0.3 }}
               className="bg-slate-50 rounded-2xl p-6 mb-6"
             >
-              <h2 className="text-lg font-bold text-slate-800 mb-4">セットリスト（ドラッグで並べ替え）</h2>
+              <h2 className="text-lg font-bold text-primary-800 mb-4">セットリスト（ドラッグで並べ替え）</h2>
               <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
                 <SortableContext items={items.map((i) => i.tempId)} strategy={verticalListSortingStrategy}>
                   {items.map((item) => (
@@ -439,14 +439,14 @@ export function SetlistCreatePage() {
           >
             <Link
               to="/setlists"
-              className="px-6 py-3 text-slate-600 hover:text-slate-800 transition-colors"
+              className="px-6 py-3 text-primary-600 hover:text-slate-800 transition-colors"
             >
               キャンセル
             </Link>
             <button
               type="submit"
               disabled={!name || !groupId || items.length === 0}
-              className="px-6 py-3 bg-rose-500 text-white rounded-lg font-medium hover:bg-rose-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-lg"
+              className="px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-lg"
             >
               {isEdit ? '更新する' : '作成する'}
             </button>

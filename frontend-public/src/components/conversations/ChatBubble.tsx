@@ -53,7 +53,7 @@ export function ChatBubble({ message, isOwn, partnerName = '相手', onEdit, onD
         <div
           className={`relative px-4 py-3 rounded-2xl break-words ${
             isOwn
-              ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-br-sm'
+              ? 'bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-br-sm'
               : 'bg-slate-200 text-slate-800 rounded-bl-sm'
           }`}
         >
@@ -63,7 +63,7 @@ export function ChatBubble({ message, isOwn, partnerName = '相手', onEdit, onD
                 value={editContent}
                 onChange={(e) => setEditContent(e.target.value)}
                 onKeyDown={handleKeyDown}
-                className="w-full p-2 text-sm text-slate-800 rounded border border-slate-300 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 text-sm text-slate-800 rounded border border-slate-300 resize-none focus:outline-none focus:ring-2 focus:ring-primary-500"
                 rows={2}
                 autoFocus
               />
@@ -76,7 +76,7 @@ export function ChatBubble({ message, isOwn, partnerName = '相手', onEdit, onD
                 </button>
                 <button
                   onClick={handleSaveEdit}
-                  className="px-2 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600"
+                  className="px-2 py-1 text-xs bg-primary-500 text-white rounded hover:bg-primary-600"
                 >
                   保存
                 </button>
@@ -93,7 +93,7 @@ export function ChatBubble({ message, isOwn, partnerName = '相手', onEdit, onD
             {onEdit && (
               <button
                 onClick={() => setIsEditing(true)}
-                className="px-2 py-1 text-xs text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded active:bg-blue-100"
+                className="px-2 py-1 text-xs text-slate-500 hover:text-primary-600 hover:bg-primary-50 rounded active:bg-primary-100"
               >
                 編集
               </button>

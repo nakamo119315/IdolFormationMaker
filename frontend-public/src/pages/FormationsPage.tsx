@@ -40,7 +40,7 @@ export function FormationsPage() {
   if (formationsLoading || membersLoading) return <Loading />;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
+    <div className="min-h-screen gradient-bg pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ヘッダー */}
         <motion.div
@@ -48,10 +48,10 @@ export function FormationsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-700 mb-4">
             Formations
           </h1>
-          <p className="text-slate-500 max-w-2xl mx-auto mb-6">
+          <p className="text-primary-600/70 max-w-2xl mx-auto mb-6">
             ステージを彩るフォーメーション
           </p>
           <button
@@ -83,7 +83,7 @@ export function FormationsPage() {
                     <div>
                       <h3 className="font-semibold text-lg">{formation.name}</h3>
                       <p className={`text-sm ${
-                        selectedFormation?.id === formation.id ? 'text-white/70' : 'text-slate-500'
+                        selectedFormation?.id === formation.id ? 'text-white/70' : 'text-primary-600/70'
                       }`}>
                         {formation.positions.length} positions
                       </p>
@@ -119,7 +119,7 @@ export function FormationsPage() {
               ))}
 
               {formations?.length === 0 && (
-                <div className="text-center py-10 text-slate-500">
+                <div className="text-center py-10 text-primary-600/70">
                   フォーメーションが登録されていません
                 </div>
               )}
@@ -136,7 +136,7 @@ export function FormationsPage() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="mb-6 text-center">
-                  <h2 className="text-2xl font-bold text-slate-800">
+                  <h2 className="text-2xl font-bold text-primary-700">
                     {selectedFormation.name}
                   </h2>
                 </div>
