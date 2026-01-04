@@ -586,7 +586,7 @@ export function MemberSortPage() {
                 </p>
               </div>
 
-              <div ref={resultRef} className="rounded-2xl shadow-xl border border-primary-200 p-4 sm:p-6" style={{ background: 'linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 30%, #c4a0f5 60%, #e0d0fa 100%)' }}>
+              <div ref={resultRef} className="shadow-xl border border-primary-200 p-4 sm:p-6" style={{ background: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 30%, #ddd6fe 60%, #ede9fe 100%)' }}>
                 <div className="space-y-2">
                   {sortState.finalRanking.map((member, index) => {
                     const image = getPrimaryImage(member);

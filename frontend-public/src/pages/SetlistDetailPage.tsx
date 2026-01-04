@@ -241,18 +241,17 @@ export function SetlistDetailPage() {
         style={{ display: 'none', width: '400px' }}
       >
         <div style={{
-          padding: '24px',
-          background: 'linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 30%, #c4a0f5 60%, #e0d0fa 100%)',
+          padding: '16px',
+          background: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 30%, #ddd6fe 60%, #ede9fe 100%)',
           fontFamily: '"Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-          borderRadius: '16px',
         }}>
           {/* ヘッダー */}
           <div style={{
             background: 'rgba(255,255,255,0.9)',
-            borderRadius: '16px',
-            padding: '16px',
-            marginBottom: '16px',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+            borderRadius: '12px',
+            padding: '12px 16px',
+            marginBottom: '12px',
+            boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1)',
           }}>
             <div style={{ color: '#7e1083', fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>
               {groupName}
@@ -270,9 +269,9 @@ export function SetlistDetailPage() {
           {/* セトリ */}
           <div style={{
             background: 'rgba(255,255,255,0.9)',
-            borderRadius: '16px',
-            padding: '16px',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+            borderRadius: '12px',
+            padding: '12px 16px',
+            boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1)',
           }}>
             {sortedItems.map((item) => {
               const centerName = getFullMemberName(item.centerMemberId);
@@ -306,9 +305,9 @@ export function SetlistDetailPage() {
           {/* フッター */}
           <div style={{
             textAlign: 'center',
-            marginTop: '16px',
+            marginTop: '12px',
             fontSize: '12px',
-            color: '#6b21a8',
+            color: '#7c3aed',
           }}>
             全{setlist.items.length}曲
           </div>

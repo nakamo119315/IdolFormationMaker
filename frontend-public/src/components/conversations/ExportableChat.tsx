@@ -19,10 +19,9 @@ const ExportableChat = forwardRef<HTMLDivElement, ExportableChatProps>(
         ref={ref}
         style={{
           width: '400px',
-          background: 'linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 30%, #c4a0f5 60%, #e0d0fa 100%)',
+          background: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 30%, #ddd6fe 60%, #ede9fe 100%)',
           padding: '16px',
           fontFamily: 'sans-serif',
-          borderRadius: '16px',
         }}
       >
         <div style={{ fontWeight: 'bold', fontSize: '15px', color: '#581c87', marginBottom: '4px' }}>
