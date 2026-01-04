@@ -56,7 +56,7 @@ function SortableItem({
 
         <div className="flex-1 min-w-0">
           <p className="font-medium text-slate-800 text-sm leading-snug">
-            <span className="text-rose-500 mr-1">{item.order}.</span>
+            <span className="text-primary-500 mr-1">{item.order}.</span>
             {getSongTitle(item.songId)}
           </p>
 
@@ -267,7 +267,7 @@ export function SetlistCreatePage() {
         >
           <Link
             to="/setlists"
-            className="inline-flex items-center text-slate-500 hover:text-rose-500 transition-colors mb-4"
+            className="inline-flex items-center text-slate-500 hover:text-primary-500 transition-colors mb-4"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -296,7 +296,7 @@ export function SetlistCreatePage() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="例: 2024/12/25 Xmasライブ"
-                  className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                  className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   required
                 />
               </div>
@@ -309,7 +309,7 @@ export function SetlistCreatePage() {
                       setGroupId(e.target.value);
                       setItems([]);
                     }}
-                    className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                    className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     required
                     disabled={isEdit}
                   >
@@ -325,7 +325,7 @@ export function SetlistCreatePage() {
                     type="date"
                     value={eventDate}
                     onChange={(e) => setEventDate(e.target.value)}
-                    className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                    className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -360,7 +360,7 @@ export function SetlistCreatePage() {
                     value={songSearch}
                     onChange={(e) => setSongSearch(e.target.value)}
                     placeholder="曲名で検索..."
-                    className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                    className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   />
                   {songSearch && (
                     <button
@@ -380,7 +380,7 @@ export function SetlistCreatePage() {
                     <select
                       value={selectedSongId}
                       onChange={(e) => setSelectedSongId(e.target.value)}
-                      className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                      className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     >
                       <option value="">曲を選択してください</option>
                       {filteredSongs.map((song) => (
@@ -395,7 +395,7 @@ export function SetlistCreatePage() {
                       setSongSearch('');
                     }}
                     disabled={!selectedSongId}
-                    className="w-full sm:w-auto px-4 py-3 sm:py-2 bg-rose-500 text-white rounded-lg font-medium hover:bg-rose-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="w-full sm:w-auto px-4 py-3 sm:py-2 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     追加
                   </button>
@@ -446,7 +446,7 @@ export function SetlistCreatePage() {
             <button
               type="submit"
               disabled={!name || !groupId || items.length === 0}
-              className="px-6 py-3 bg-rose-500 text-white rounded-lg font-medium hover:bg-rose-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-lg"
+              className="px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-lg"
             >
               {isEdit ? '更新する' : '作成する'}
             </button>

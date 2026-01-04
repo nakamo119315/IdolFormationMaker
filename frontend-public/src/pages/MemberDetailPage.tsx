@@ -26,7 +26,7 @@ export function MemberDetailPage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <p className="text-slate-500 mb-4">メンバーが見つかりません</p>
-          <Link to="/members" className="text-rose-500 hover:underline">
+          <Link to="/members" className="text-primary-500 hover:underline">
             メンバー一覧に戻る
           </Link>
         </div>

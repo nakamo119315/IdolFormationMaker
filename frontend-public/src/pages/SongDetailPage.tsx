@@ -25,7 +25,7 @@ export function SongDetailPage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <p className="text-slate-500 mb-4">楽曲が見つかりません</p>
-          <Link to="/songs" className="text-rose-500 hover:underline">
+          <Link to="/songs" className="text-primary-500 hover:underline">
             楽曲一覧に戻る
           </Link>
         </div>
@@ -46,7 +46,7 @@ export function SongDetailPage() {
         >
           <Link
             to="/songs"
-            className="inline-flex items-center text-slate-500 hover:text-rose-500 transition-colors"
+            className="inline-flex items-center text-slate-500 hover:text-primary-500 transition-colors"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -62,7 +62,7 @@ export function SongDetailPage() {
           className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-slate-100"
         >
           <div className="text-center mb-6">
-            <p className="text-rose-500 font-medium mb-2">{groupName}</p>
+            <p className="text-primary-500 font-medium mb-2">{groupName}</p>
             <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               {song.title}
             </h1>

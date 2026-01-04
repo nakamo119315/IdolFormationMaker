@@ -562,32 +562,17 @@ export function MemberSortPage() {
                 <button
                   onClick={handleSaveImage}
                   disabled={isSaving}
-                  className="px-6 py-3 bg-white text-slate-700 rounded-xl font-medium border border-slate-200 hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+                  className="btn-download-outline"
                 >
                   {isSaving ? (
                     <>
-                      <svg className="animate-spin w-5 h-5" viewBox="0 0 24 24">
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                          fill="none"
-                        />
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        />
-                      </svg>
+                      <span className="btn-download-spinner" style={{ borderTopColor: '#7e1083', borderColor: 'rgba(126, 16, 131, 0.3)' }} />
                       保存中...
                     </>
                   ) : (
                     <>
                       <svg
-                        className="w-5 h-5"
+                        className="btn-download-icon"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -605,7 +590,7 @@ export function MemberSortPage() {
                 </button>
                 <button
                   onClick={handleReset}
-                  className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-medium hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg shadow-primary-500/30"
+                  className="btn-download"
                 >
                   もう一度
                 </button>

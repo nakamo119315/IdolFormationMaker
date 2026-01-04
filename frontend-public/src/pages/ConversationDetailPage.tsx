@@ -320,7 +320,7 @@ function ConversationForm({ conversation, members, isNewMode, id }: Conversation
         <div className="flex items-center justify-between mb-2">
           <Link
             to="/conversations"
-            className="inline-flex items-center text-slate-500 hover:text-blue-600 transition-colors"
+            className="inline-flex items-center text-slate-500 hover:text-primary-600 transition-colors"
           >
             <svg className="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -354,7 +354,7 @@ function ConversationForm({ conversation, members, isNewMode, id }: Conversation
               id="member"
               value={selectedMemberId}
               onChange={handleMemberChange}
-              className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             >
               <option value="">選択してください（任意）</option>
               {members?.map((member) => (
@@ -375,7 +375,7 @@ function ConversationForm({ conversation, members, isNewMode, id }: Conversation
               type="date"
               value={conversationDate}
               onChange={handleDateChange}
-              className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             />
           </div>
 
@@ -390,7 +390,7 @@ function ConversationForm({ conversation, members, isNewMode, id }: Conversation
               value={title}
               onChange={handleTitleChange}
               placeholder="タイトルを入力（空欄の場合は自動生成）"
-              className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               maxLength={100}
             />
           </div>
@@ -480,7 +480,7 @@ export function ConversationDetailPage() {
       <div className="min-h-screen flex items-center justify-center pt-24">
         <div className="text-center">
           <p className="text-slate-500 mb-4">ミーグリレポが見つかりません</p>
-          <Link to="/conversations" className="text-blue-500 hover:underline">
+          <Link to="/conversations" className="text-primary-500 hover:underline">
             ミーグリレポ一覧に戻る
           </Link>
         </div>

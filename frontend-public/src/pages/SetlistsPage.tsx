@@ -58,7 +58,7 @@ export function SetlistsPage() {
           </p>
           <Link
             to="/setlists/new"
-            className="inline-flex items-center px-6 py-3 bg-rose-500 text-white rounded-full font-medium hover:bg-rose-600 transition-colors shadow-lg"
+            className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-full font-medium hover:bg-primary-600 transition-colors shadow-lg"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -78,7 +78,7 @@ export function SetlistsPage() {
             onClick={() => setSelectedGroupId('')}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               selectedGroupId === ''
-                ? 'bg-rose-500 text-white shadow-md'
+                ? 'bg-primary-500 text-white shadow-md'
                 : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
             }`}
           >
@@ -90,7 +90,7 @@ export function SetlistsPage() {
               onClick={() => setSelectedGroupId(group.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                 selectedGroupId === group.id
-                  ? 'bg-rose-500 text-white shadow-md'
+                  ? 'bg-primary-500 text-white shadow-md'
                   : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
               }`}
             >
@@ -114,7 +114,7 @@ export function SetlistsPage() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <p className="text-sm text-rose-500 font-medium mb-1">
+                    <p className="text-sm text-primary-500 font-medium mb-1">
                       {getGroupName(setlist.groupId)}
                     </p>
                     <h3 className="text-lg font-bold text-slate-800">
@@ -146,7 +146,7 @@ export function SetlistsPage() {
             <p className="text-slate-500 mb-4">セットリストがありません</p>
             <Link
               to="/setlists/new"
-              className="text-rose-500 hover:underline"
+              className="text-primary-500 hover:underline"
             >
               最初のセットリストを作成する
             </Link>
