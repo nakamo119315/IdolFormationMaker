@@ -101,28 +101,30 @@ export function MemberSortPage() {
   const [isSaving, setIsSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [base64Images, setBase64Images] = useState<Map<string, string>>(new Map());
-  const [imagesLoading, setImagesLoading] = useState(false);
   const resultRef = useRef<HTMLDivElement>(null);
 
-  // 結果画面になったら画像をBase64にプリロード
+  // 結果画面になったら画像をBase64にプリロード（バックグラウンドで並列処理）
   useEffect(() => {
     if (phase === 'result' && sortState?.finalRanking) {
       const loadImages = async () => {
-        setImagesLoading(true);
-        const newBase64Map = new Map<string, string>();
-
-        for (const member of sortState.finalRanking) {
+        const promises = sortState.finalRanking.map(async (member) => {
           const primaryImage = member.images.find((img) => img.isPrimary) ?? member.images[0];
           if (primaryImage?.url) {
             const base64 = await imageToBase64(primaryImage.url);
-            if (base64) {
-              newBase64Map.set(member.id, base64);
-            }
+            return { memberId: member.id, base64 };
           }
-        }
+          return null;
+        });
+
+        const results = await Promise.all(promises);
+        const newBase64Map = new Map<string, string>();
+        results.forEach((result) => {
+          if (result?.base64) {
+            newBase64Map.set(result.memberId, result.base64);
+          }
+        });
 
         setBase64Images(newBase64Map);
-        setImagesLoading(false);
       };
       loadImages();
     }
@@ -628,13 +630,13 @@ export function MemberSortPage() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={handleSaveImage}
-                  disabled={isSaving || imagesLoading}
+                  disabled={isSaving}
                   className="btn-download-outline"
                 >
-                  {isSaving || imagesLoading ? (
+                  {isSaving ? (
                     <>
                       <span className="btn-download-spinner" style={{ borderTopColor: '#7e1083', borderColor: 'rgba(126, 16, 131, 0.3)' }} />
-                      {imagesLoading ? '画像読込中...' : '保存中...'}
+                      保存中...
                     </>
                   ) : (
                     <>
