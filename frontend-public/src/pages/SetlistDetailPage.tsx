@@ -249,11 +249,11 @@ export function SetlistDetailPage() {
           <div style={{
             background: 'rgba(255,255,255,0.9)',
             borderRadius: '12px',
-            padding: '12px 16px',
+            padding: '10px 16px 12px 16px',
             marginBottom: '12px',
             boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1)',
           }}>
-            <div style={{ color: '#7e1083', fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>
+            <div style={{ color: '#7e1083', fontSize: '14px', fontWeight: '600', marginBottom: '2px' }}>
               {groupName}
             </div>
             <div style={{ fontSize: '20px', fontWeight: 'bold', color: '#581c87' }}>
@@ -270,7 +270,7 @@ export function SetlistDetailPage() {
           <div style={{
             background: 'rgba(255,255,255,0.9)',
             borderRadius: '12px',
-            padding: '12px 16px',
+            padding: '6px 16px 10px 16px',
             boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1)',
           }}>
             {sortedItems.map((item) => {
@@ -282,7 +282,7 @@ export function SetlistDetailPage() {
                     display: 'flex',
                     alignItems: 'baseline',
                     gap: '8px',
-                    padding: '6px 0',
+                    padding: '5px 0',
                     borderBottom: '1px solid rgba(126,16,131,0.1)',
                   }}
                 >
