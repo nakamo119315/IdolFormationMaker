@@ -23,25 +23,44 @@ interface MergeSortState {
 // Base64画像キャッシュ
 const imageCache = new Map<string, string>();
 
-// 画像をBase64に変換
+// 画像をBase64に変換（imgタグ経由でCanvas描画）
 async function imageToBase64(url: string): Promise<string | null> {
   if (imageCache.has(url)) {
     return imageCache.get(url)!;
   }
   try {
-    const response = await fetch(url, { mode: 'cors' });
-    const blob = await response.blob();
     return new Promise((resolve) => {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const base64 = reader.result as string;
-        imageCache.set(url, base64);
-        resolve(base64);
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        try {
+          const canvas = document.createElement('canvas');
+          canvas.width = img.naturalWidth;
+          canvas.height = img.naturalHeight;
+          const ctx = canvas.getContext('2d');
+          if (ctx) {
+            ctx.drawImage(img, 0, 0);
+            const base64 = canvas.toDataURL('image/png');
+            imageCache.set(url, base64);
+            console.log('Image converted to base64:', url.substring(0, 50));
+            resolve(base64);
+          } else {
+            console.warn('Failed to get canvas context for:', url);
+            resolve(null);
+          }
+        } catch (e) {
+          console.warn('Canvas conversion failed (CORS?):', url, e);
+          resolve(null);
+        }
       };
-      reader.onerror = () => resolve(null);
-      reader.readAsDataURL(blob);
+      img.onerror = () => {
+        console.warn('Image load failed:', url);
+        resolve(null);
+      };
+      img.src = url;
     });
-  } catch {
+  } catch (e) {
+    console.warn('imageToBase64 error:', e);
     return null;
   }
 }
