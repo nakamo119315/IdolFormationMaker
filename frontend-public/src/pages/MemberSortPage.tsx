@@ -64,6 +64,8 @@ function MemberImage({
   const [isLoaded, setIsLoaded] = useState(false);
 
   const imageSrc = base64Src || src;
+  // base64Srcが存在する場合は即座にロード済みとみなす（Data URLは即座に利用可能）
+  const effectivelyLoaded = isLoaded || !!base64Src;
 
   if (!imageSrc || hasError) {
     return (
@@ -77,13 +79,13 @@ function MemberImage({
 
   return (
     <>
-      {!isLoaded && (
+      {!effectivelyLoaded && (
         <div className={`${className} animate-pulse`} style={{ background: 'linear-gradient(135deg, #7e1083, #580c5c)' }} />
       )}
       <img
         src={imageSrc}
         alt={alt}
-        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        className={`${className} ${effectivelyLoaded ? 'opacity-100' : 'opacity-0'}`}
         style={{ transition: 'opacity 0.3s' }}
         onLoad={() => setIsLoaded(true)}
         onError={() => setHasError(true)}
@@ -101,12 +103,14 @@ export function MemberSortPage() {
   const [isSaving, setIsSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [base64Images, setBase64Images] = useState<Map<string, string>>(new Map());
+  const [isLoadingImages, setIsLoadingImages] = useState(false);
   const resultRef = useRef<HTMLDivElement>(null);
 
   // 結果画面になったら画像をBase64にプリロード（バックグラウンドで並列処理）
   useEffect(() => {
     if (phase === 'result' && sortState?.finalRanking) {
       const loadImages = async () => {
+        setIsLoadingImages(true);
         const promises = sortState.finalRanking.map(async (member) => {
           const primaryImage = member.images.find((img) => img.isPrimary) ?? member.images[0];
           if (primaryImage?.url) {
@@ -125,6 +129,7 @@ export function MemberSortPage() {
         });
 
         setBase64Images(newBase64Map);
+        setIsLoadingImages(false);
       };
       loadImages();
     }
@@ -332,10 +337,13 @@ export function MemberSortPage() {
   }, [sortState, totalEstimated]);
 
   const handleSaveImage = async () => {
-    if (!resultRef.current || isSaving) return;
+    if (!resultRef.current || isSaving || !sortState || isLoadingImages) return;
     setIsSaving(true);
     setSaveMessage(null);
     try {
+      // DOM更新を待つために少し遅延
+      await new Promise((resolve) => setTimeout(resolve, 300));
+
       const canvas = await html2canvas(resultRef.current, {
         backgroundColor: '#faf5ff',
         scale: 2,
@@ -630,10 +638,15 @@ export function MemberSortPage() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={handleSaveImage}
-                  disabled={isSaving}
+                  disabled={isSaving || isLoadingImages}
                   className="btn-download-outline"
                 >
-                  {isSaving ? (
+                  {isLoadingImages ? (
+                    <>
+                      <span className="btn-download-spinner" style={{ borderTopColor: '#7e1083', borderColor: 'rgba(126, 16, 131, 0.3)' }} />
+                      画像準備中...
+                    </>
+                  ) : isSaving ? (
                     <>
                       <span className="btn-download-spinner" style={{ borderTopColor: '#7e1083', borderColor: 'rgba(126, 16, 131, 0.3)' }} />
                       保存中...
