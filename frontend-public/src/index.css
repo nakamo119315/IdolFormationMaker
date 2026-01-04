@@ -59,7 +59,7 @@ body {
 }
 
 @utility gradient-bg {
-  background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 30%, #c4a0f5 60%, #e0d0fa 100%);
+  background: linear-gradient(135deg, #f8f5ff 0%, #ede4ff 50%, #f0e8ff 100%);
 }
 
 @utility glass {

@@ -551,7 +551,7 @@ export function MemberSortPage() {
                 </p>
               </div>
 
-              <div ref={resultRef} className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-primary-100 p-4 sm:p-6">
+              <div ref={resultRef} className="rounded-2xl shadow-xl border border-primary-200 p-4 sm:p-6" style={{ background: 'linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 30%, #c4a0f5 60%, #e0d0fa 100%)' }}>
                 <div className="space-y-2">
                   {sortState.finalRanking.map((member, index) => {
                     const image = getPrimaryImage(member);
@@ -569,7 +569,7 @@ export function MemberSortPage() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.03 }}
                         className={`flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl transition-colors ${
-                          isTop3 ? 'bg-primary-50/80' : 'hover:bg-primary-50/50'
+                          isTop3 ? 'bg-white/90 shadow-sm' : 'bg-white/60 hover:bg-white/80'
                         }`}
                       >
                         <div
