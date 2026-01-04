@@ -241,26 +241,26 @@ export function SetlistDetailPage() {
         style={{ display: 'none', width: '400px' }}
       >
         <div style={{
-          padding: '24px',
-          background: 'linear-gradient(135deg, #faf5ff 0%, #ffffff 50%, #f3e8ff 100%)',
+          padding: '12px 16px 16px 16px',
+          background: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 30%, #ddd6fe 60%, #ede9fe 100%)',
           fontFamily: '"Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
         }}>
           {/* ヘッダー */}
           <div style={{
-            background: 'white',
-            borderRadius: '16px',
-            padding: '16px',
-            marginBottom: '16px',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+            background: 'rgba(255,255,255,0.9)',
+            borderRadius: '12px',
+            padding: '8px 16px 10px 16px',
+            marginBottom: '10px',
+            boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1)',
           }}>
-            <div style={{ color: '#7e1083', fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>
+            <div style={{ color: '#7e1083', fontSize: '14px', fontWeight: '600', marginBottom: '2px' }}>
               {groupName}
             </div>
-            <div style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b' }}>
+            <div style={{ fontSize: '20px', fontWeight: 'bold', color: '#581c87' }}>
               {setlist.name}
             </div>
             {setlist.eventDate && (
-              <div style={{ fontSize: '14px', color: '#64748b', marginTop: '4px' }}>
+              <div style={{ fontSize: '14px', color: '#7c3aed', marginTop: '4px' }}>
                 {setlist.eventDate}
               </div>
             )}
@@ -268,10 +268,10 @@ export function SetlistDetailPage() {
 
           {/* セトリ */}
           <div style={{
-            background: 'white',
-            borderRadius: '16px',
-            padding: '16px',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+            background: 'rgba(255,255,255,0.9)',
+            borderRadius: '12px',
+            padding: '6px 16px 10px 16px',
+            boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1)',
           }}>
             {sortedItems.map((item) => {
               const centerName = getFullMemberName(item.centerMemberId);
@@ -282,14 +282,14 @@ export function SetlistDetailPage() {
                     display: 'flex',
                     alignItems: 'baseline',
                     gap: '8px',
-                    padding: '6px 0',
-                    borderBottom: '1px solid #f1f5f9',
+                    padding: '5px 0',
+                    borderBottom: '1px solid rgba(126,16,131,0.1)',
                   }}
                 >
                   <span style={{ color: '#7e1083', fontSize: '14px', fontWeight: 'bold', minWidth: '24px' }}>
                     {item.order}.
                   </span>
-                  <span style={{ fontSize: '14px', color: '#1e293b', flex: 1 }}>
+                  <span style={{ fontSize: '14px', color: '#581c87', flex: 1 }}>
                     {getSongTitle(item.songId)}
                   </span>
                   {centerName && (
@@ -305,9 +305,9 @@ export function SetlistDetailPage() {
           {/* フッター */}
           <div style={{
             textAlign: 'center',
-            marginTop: '16px',
+            marginTop: '12px',
             fontSize: '12px',
-            color: '#94a3b8',
+            color: '#7c3aed',
           }}>
             全{setlist.items.length}曲
           </div>
