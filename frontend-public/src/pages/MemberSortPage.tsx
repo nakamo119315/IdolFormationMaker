@@ -23,12 +23,19 @@ interface MergeSortState {
 // Base64画像キャッシュ
 const imageCache = new Map<string, string>();
 
-// 画像をBase64に変換（imgタグ経由でCanvas描画）
+// 画像プロキシURL経由でCORS対応
+function getProxiedUrl(url: string): string {
+  // images.weserv.nl は無料の画像プロキシサービス
+  return `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
+}
+
+// 画像をBase64に変換（プロキシ経由でCORS回避）
 async function imageToBase64(url: string): Promise<string | null> {
   if (imageCache.has(url)) {
     return imageCache.get(url)!;
   }
   try {
+    const proxiedUrl = getProxiedUrl(url);
     return new Promise((resolve) => {
       const img = new Image();
       img.crossOrigin = 'anonymous';
@@ -42,22 +49,20 @@ async function imageToBase64(url: string): Promise<string | null> {
             ctx.drawImage(img, 0, 0);
             const base64 = canvas.toDataURL('image/png');
             imageCache.set(url, base64);
-            console.log('Image converted to base64:', url.substring(0, 50));
             resolve(base64);
           } else {
-            console.warn('Failed to get canvas context for:', url);
             resolve(null);
           }
         } catch (e) {
-          console.warn('Canvas conversion failed (CORS?):', url, e);
+          console.warn('Canvas conversion failed:', e);
           resolve(null);
         }
       };
       img.onerror = () => {
-        console.warn('Image load failed:', url);
+        console.warn('Proxied image load failed:', url);
         resolve(null);
       };
-      img.src = url;
+      img.src = proxiedUrl;
     });
   } catch (e) {
     console.warn('imageToBase64 error:', e);
