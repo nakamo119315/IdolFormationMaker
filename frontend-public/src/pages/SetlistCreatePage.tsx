@@ -10,7 +10,7 @@ import { setlistsApi } from '../api/setlists';
 import { songsApi } from '../api/songs';
 import { groupsApi } from '../api/groups';
 import { Loading } from '../components/common/Loading';
-import { matchesSearch } from '../utils/textNormalize';
+import { matchesSongSearch } from '../utils/textNormalize';
 import type { CreateSetlistItemDto, Member } from '../types';
 
 interface SetlistItemForm extends CreateSetlistItemDto {
@@ -155,7 +155,7 @@ export function SetlistCreatePage() {
     if (!songs || !songSearch) return;
     const filtered = songs.filter((s) => {
       const matchesGroupFilter = !groupId || s.groupId === groupId;
-      const matchesSearchQuery = matchesSearch(s.title, songSearch);
+      const matchesSearchQuery = matchesSongSearch(s, songSearch);
       return matchesGroupFilter && matchesSearchQuery;
     });
     if (filtered.length > 0) {
@@ -252,7 +252,7 @@ export function SetlistCreatePage() {
 
   const filteredSongs = songs?.filter((s) => {
     const matchesGroupFilter = !groupId || s.groupId === groupId;
-    const matchesSearchQuery = !songSearch || matchesSearch(s.title, songSearch);
+    const matchesSearchQuery = !songSearch || matchesSongSearch(s, songSearch);
     return matchesGroupFilter && matchesSearchQuery;
   }) || [];
 
@@ -359,7 +359,7 @@ export function SetlistCreatePage() {
                     type="text"
                     value={songSearch}
                     onChange={(e) => setSongSearch(e.target.value)}
-                    placeholder="曲名で検索..."
+                    placeholder="曲名・作詞・作曲・編曲で検索..."
                     className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   />
                   {songSearch && (
