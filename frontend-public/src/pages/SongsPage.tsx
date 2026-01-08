@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import { songsApi } from '../api/songs';
 import { groupsApi } from '../api/groups';
 import { Loading } from '../components/common/Loading';
+import { matchesSongSearch } from '../utils/textNormalize';
 
 export function SongsPage() {
   const [selectedGroupId, setSelectedGroupId] = useState<string>('');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const { data: groups } = useQuery({
     queryKey: ['groups'],
@@ -22,6 +24,12 @@ export function SongsPage() {
   const getGroupName = (groupId: string) => {
     return groups?.find((g) => g.id === groupId)?.name ?? '';
   };
+
+  // フィルタリング（検索 + グループ）
+  const filteredSongs = songs?.filter((song) => {
+    const matchesSearch = !searchQuery || matchesSongSearch(song, searchQuery);
+    return matchesSearch;
+  }) || [];
 
   if (isLoading) return <Loading />;
 
@@ -47,7 +55,7 @@ export function SongsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-2 mb-8"
+          className="flex flex-wrap justify-center gap-2 mb-6"
         >
           <button
             onClick={() => setSelectedGroupId('')}
@@ -74,9 +82,46 @@ export function SongsPage() {
           ))}
         </motion.div>
 
+        {/* 検索フィールド */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+          className="max-w-md mx-auto mb-8"
+        >
+          <div className="relative">
+            <svg
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="曲名・作詞・作曲・編曲で検索..."
+              className="w-full bg-white border border-slate-200 rounded-full pl-12 pr-12 py-3 focus:ring-2 focus:ring-primary-500 focus:border-transparent shadow-sm"
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery('')}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-primary-600"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+          </div>
+        </motion.div>
+
         {/* 楽曲リスト */}
         <div className="space-y-4">
-          {songs?.map((song, index) => (
+          {filteredSongs.map((song, index) => (
             <motion.div
               key={song.id}
               initial={{ opacity: 0, y: 20 }}
@@ -112,9 +157,9 @@ export function SongsPage() {
           ))}
         </div>
 
-        {songs?.length === 0 && (
+        {filteredSongs.length === 0 && (
           <div className="text-center py-20 text-primary-600/70">
-            楽曲が登録されていません
+            {searchQuery ? '検索結果がありません' : '楽曲が登録されていません'}
           </div>
         )}
       </div>

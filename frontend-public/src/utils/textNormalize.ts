@@ -64,3 +64,33 @@ export function matchesSearch(target: string, query: string): boolean {
     return normalizedTarget.includes(normalizedWord);
   });
 }
+
+/**
+ * 楽曲の複数フィールドを検索対象にしたマッチング関数
+ * タイトル、作詞者、作曲者、編曲者のいずれかにマッチすればtrue
+ * キーワード検索的に使用可能
+ */
+export function matchesSongSearch(
+  song: { title: string; lyricist: string; composer: string; arranger: string | null },
+  query: string
+): boolean {
+  if (!query) return true;
+
+  // スペースで分割して各ワードがすべて含まれているかチェック
+  const words = query.trim().split(/\s+/).filter(w => w.length > 0);
+
+  // 検索対象のフィールドを結合
+  const searchTarget = [
+    song.title,
+    song.lyricist,
+    song.composer,
+    song.arranger || '',
+  ].join(' ');
+
+  const normalizedTarget = normalizeForSearch(searchTarget);
+
+  return words.every(word => {
+    const normalizedWord = normalizeForSearch(word);
+    return normalizedTarget.includes(normalizedWord);
+  });
+}

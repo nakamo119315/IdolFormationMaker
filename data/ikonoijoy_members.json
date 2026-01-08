@@ -1,0 +1,334 @@
+{
+  "groups": [
+    {
+      "id": "8e8a4322-56b3-4548-806e-a2b3d30e6c40",
+      "name": "=LOVE",
+      "debutDate": "2017-09-06",
+      "memberCount": 10,
+      "members": [
+        {
+          "id": "a35e5a80-2cae-42d1-8589-b4b3082b4a61",
+          "name": "大谷映美里",
+          "birthDate": "1998-03-15",
+          "birthplace": "東京都",
+          "penLightColor1": "白",
+          "penLightColor2": "紫",
+          "imageUrl": "https://equal-love.jp/image/profile/otani_emiri.jpg"
+        },
+        {
+          "id": "f5a5e334-8dc2-48df-ab77-9df028585929",
+          "name": "音嶋莉沙",
+          "birthDate": "1998-08-11",
+          "birthplace": "福岡県",
+          "penLightColor1": "水色",
+          "penLightColor2": "ピンク",
+          "imageUrl": "https://equal-love.jp/image/profile/otoshima_risa.jpg"
+        },
+        {
+          "id": "a5f47640-7cb5-4256-a4d4-08b3f921468d",
+          "name": "諸橋沙夏",
+          "birthDate": "1996-08-03",
+          "birthplace": "福島県",
+          "penLightColor1": "黄緑",
+          "penLightColor2": null,
+          "imageUrl": "https://equal-love.jp/image/profile/morohashi_sana.jpg"
+        },
+        {
+          "id": "2f113798-195b-4561-a58f-d384ea101acd",
+          "name": "山本杏奈",
+          "birthDate": "1997-11-30",
+          "birthplace": "広島県",
+          "penLightColor1": "青",
+          "penLightColor2": "黄",
+          "imageUrl": "https://equal-love.jp/image/profile/yamamoto_anna.jpg"
+        },
+        {
+          "id": "0421ac17-c824-408b-a284-e26e2155fcf9",
+          "name": "大場花菜",
+          "birthDate": "2000-02-04",
+          "birthplace": "埼玉県",
+          "penLightColor1": "青",
+          "penLightColor2": "オレンジ",
+          "imageUrl": "https://equal-love.jp/image/profile/oba_hana.jpg"
+        },
+        {
+          "id": "1d16cc25-86a6-4b07-aab8-0b28f129786f",
+          "name": "佐々木舞香",
+          "birthDate": "2000-01-21",
+          "birthplace": "愛知県",
+          "penLightColor1": "白",
+          "penLightColor2": null,
+          "imageUrl": "https://equal-love.jp/image/profile/sasaki_maika.jpg"
+        },
+        {
+          "id": "643f112a-3caf-4746-9f65-180047932e2d",
+          "name": "野口衣織",
+          "birthDate": "2000-04-26",
+          "birthplace": "茨城県",
+          "penLightColor1": "紫",
+          "penLightColor2": null,
+          "imageUrl": "https://equal-love.jp/image/profile/noguchi_iori.jpg"
+        },
+        {
+          "id": "d8736fff-63a8-4584-9c7c-30fc30db3ecc",
+          "name": "髙松瞳",
+          "birthDate": "2001-01-19",
+          "birthplace": "東京都",
+          "penLightColor1": "赤",
+          "penLightColor2": null,
+          "imageUrl": "https://equal-love.jp/image/profile/takamatsu_hitomi.jpg"
+        },
+        {
+          "id": "dfc4c782-476e-462a-9195-431f362743de",
+          "name": "瀧脇笙古",
+          "birthDate": "2001-07-09",
+          "birthplace": "神奈川県",
+          "penLightColor1": "黄",
+          "penLightColor2": "オレンジ",
+          "imageUrl": "https://equal-love.jp/image/profile/takiwaki_shoko.jpg"
+        },
+        {
+          "id": "4a671849-ade6-4b24-ab6a-f31991ba0846",
+          "name": "齋藤樹愛羅",
+          "birthDate": "2004-11-26",
+          "birthplace": "栃木県",
+          "penLightColor1": "ピンク",
+          "penLightColor2": null,
+          "imageUrl": "https://equal-love.jp/image/profile/saito_kiara.jpg"
+        }
+      ]
+    },
+    {
+      "id": "2e06dbcf-9d47-4f84-b1ec-58fc2e942e03",
+      "name": "≠ME",
+      "debutDate": "2021-04-07",
+      "memberCount": 12,
+      "members": [
+        {
+          "id": "2c3be1d8-c872-4126-b6f3-5b6d3ee63631",
+          "name": "蟹沢萌子",
+          "birthDate": "1999-10-25",
+          "birthplace": "神奈川県",
+          "penLightColor1": "赤",
+          "penLightColor2": "水色",
+          "imageUrl": "https://not-equal-me.jp/image/profile/kanisawa_moeko.jpg"
+        },
+        {
+          "id": "c558ef7a-ced6-4acf-bc9f-d9ec84b3ac83",
+          "name": "谷崎早耶",
+          "birthDate": "1999-10-07",
+          "birthplace": "熊本県",
+          "penLightColor1": "白",
+          "penLightColor2": "ピンク",
+          "imageUrl": "https://not-equal-me.jp/image/profile/tanizaki_saya.jpg"
+        },
+        {
+          "id": "7c5a3a79-e2d1-4a83-9c97-194198c56417",
+          "name": "冨田菜々風",
+          "birthDate": "2000-07-17",
+          "birthplace": "鹿児島県",
+          "penLightColor1": "黄",
+          "penLightColor2": "緑",
+          "imageUrl": "https://not-equal-me.jp/image/profile/tomita_nanaka.jpg"
+        },
+        {
+          "id": "9c5d2823-2d3c-435d-91dd-70a0cb335260",
+          "name": "菅波美玲",
+          "birthDate": "2001-04-13",
+          "birthplace": "東京都",
+          "penLightColor1": "水色",
+          "penLightColor2": "水色",
+          "imageUrl": "https://not-equal-me.jp/image/profile/suganami_mirei.jpg"
+        },
+        {
+          "id": "6e048928-8723-4f7e-84a1-cf7efa7407d0",
+          "name": "鈴木瞳美",
+          "birthDate": "2001-04-13",
+          "birthplace": "東京都",
+          "penLightColor1": "薄ピンク",
+          "penLightColor2": "薄ピンク",
+          "imageUrl": "https://not-equal-me.jp/image/profile/suzuki_hitomi.jpg"
+        },
+        {
+          "id": "b73b26e0-4c3c-41fd-a10a-b11d814d2f5c",
+          "name": "落合希来里",
+          "birthDate": "2001-05-22",
+          "birthplace": "栃木県",
+          "penLightColor1": "黄",
+          "penLightColor2": "黄",
+          "imageUrl": "https://not-equal-me.jp/image/profile/ochiai_kirari.jpg"
+        },
+        {
+          "id": "a2f85a9a-f2b0-4605-b1ae-b93d6ea80b22",
+          "name": "河口夏音",
+          "birthDate": "2001-07-29",
+          "birthplace": "広島県",
+          "penLightColor1": "白",
+          "penLightColor2": "オレンジ",
+          "imageUrl": "https://not-equal-me.jp/image/profile/kawaguchi_natsune.jpg"
+        },
+        {
+          "id": "8eb50278-a685-4228-80bf-d1a63a03139c",
+          "name": "尾木波菜",
+          "birthDate": "2003-05-08",
+          "birthplace": "千葉県",
+          "penLightColor1": "青",
+          "penLightColor2": "白",
+          "imageUrl": "https://not-equal-me.jp/image/profile/ogi_hana.jpg"
+        },
+        {
+          "id": "a5d0cd91-44f9-49ad-918e-2f79d45f1e14",
+          "name": "本田珠由記",
+          "birthDate": "2004-02-27",
+          "birthplace": "栃木県",
+          "penLightColor1": "薄紫",
+          "penLightColor2": "水色",
+          "imageUrl": "https://not-equal-me.jp/image/profile/honda_miyuki.jpg"
+        },
+        {
+          "id": "578ccced-9fda-4ecd-a811-f01433d0bcd9",
+          "name": "永田詩央里",
+          "birthDate": "2004-04-02",
+          "birthplace": "広島県",
+          "penLightColor1": "青",
+          "penLightColor2": "青",
+          "imageUrl": "https://not-equal-me.jp/image/profile/nagata_shiori.jpg"
+        },
+        {
+          "id": "ea596980-f523-4c48-9227-0acb44c7f0d6",
+          "name": "櫻井もも",
+          "birthDate": "2004-04-13",
+          "birthplace": "神奈川県",
+          "penLightColor1": "さくら",
+          "penLightColor2": "もも",
+          "imageUrl": "https://not-equal-me.jp/image/profile/sakurai_momo.jpg"
+        },
+        {
+          "id": "71344cba-cbd1-4b14-9b1b-52e43b323d96",
+          "name": "川中子奈月心",
+          "birthDate": "2005-09-26",
+          "birthplace": "東京都",
+          "penLightColor1": "黒",
+          "penLightColor2": "ミントグリーン",
+          "imageUrl": "https://not-equal-me.jp/image/profile/kawanago_natsumi.jpg"
+        }
+      ]
+    },
+    {
+      "id": "f5f48ca4-a752-41a6-8846-f013b77d77e8",
+      "name": "≒JOY",
+      "debutDate": "2022-12-14",
+      "memberCount": 12,
+      "members": [
+        {
+          "id": "b238956c-b9a7-4a1f-a9ca-6333038d1949",
+          "name": "小澤愛実",
+          "birthDate": "2003-04-09",
+          "birthplace": "神奈川県",
+          "penLightColor1": "薄黄",
+          "penLightColor2": "薄黄",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/ozawa_aimi.jpg"
+        },
+        {
+          "id": "3c367fe9-a249-4f6c-a863-d8e8abc854ef",
+          "name": "市原愛弓",
+          "birthDate": "2003-08-21",
+          "birthplace": "福岡県",
+          "penLightColor1": "紫",
+          "penLightColor2": "紫",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/ichihara_ayumi.jpg"
+        },
+        {
+          "id": "3ebb01e8-7414-4944-b4a7-1d5d43b08f42",
+          "name": "藤沢莉子",
+          "birthDate": "2004-01-16",
+          "birthplace": "埼玉県",
+          "penLightColor1": "緑",
+          "penLightColor2": "白",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/fujisawa_riko.jpg"
+        },
+        {
+          "id": "c8731a62-5719-4496-9682-1d5a86300b49",
+          "name": "村山結香",
+          "birthDate": "2004-02-15",
+          "birthplace": "福岡県",
+          "penLightColor1": "赤",
+          "penLightColor2": "赤",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/murayama_yuuka.jpg"
+        },
+        {
+          "id": "93fab4a6-c6ec-483c-8140-3a621af5b379",
+          "name": "髙橋舞",
+          "birthDate": "2004-10-22",
+          "birthplace": "神奈川県",
+          "penLightColor1": "オレンジ",
+          "penLightColor2": "赤",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/takahashi_mai.jpg"
+        },
+        {
+          "id": "54a5263f-6ebe-43cb-a18d-4e33efbb1bce",
+          "name": "大西葵",
+          "birthDate": "2005-02-22",
+          "birthplace": "兵庫県",
+          "penLightColor1": "ピンク",
+          "penLightColor2": "青",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/onishi_aoi.jpg"
+        },
+        {
+          "id": "5bf82d37-77ec-41f1-bc2b-2492a3484edd",
+          "name": "江角怜音",
+          "birthDate": "2005-04-26",
+          "birthplace": "大阪府",
+          "penLightColor1": "青",
+          "penLightColor2": "青",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/esumi_renon.jpg"
+        },
+        {
+          "id": "85480e17-f88d-4143-88b2-b6c0269d210b",
+          "name": "大信田美月",
+          "birthDate": "2005-08-06",
+          "birthplace": "東京都",
+          "penLightColor1": "白",
+          "penLightColor2": "水色",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/oshida_mitsuki.jpg"
+        },
+        {
+          "id": "89e03f73-c76a-4a8c-8fd0-fe48730c866f",
+          "name": "逢田珠里依",
+          "birthDate": "2005-09-13",
+          "birthplace": "東京都",
+          "penLightColor1": "黄",
+          "penLightColor2": "赤",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/aida_jurii.jpg"
+        },
+        {
+          "id": "52a26bfe-609a-4958-bf17-041c3a8c7390",
+          "name": "山田杏佳",
+          "birthDate": "2006-02-02",
+          "birthplace": "神奈川県",
+          "penLightColor1": "薄紫",
+          "penLightColor2": "薄ピンク",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/yamada_momoka.jpg"
+        },
+        {
+          "id": "df51165e-6fb2-40cf-b8e7-00b4de6f8ec1",
+          "name": "山野愛月",
+          "birthDate": "2006-10-21",
+          "birthplace": "大阪府",
+          "penLightColor1": "水色",
+          "penLightColor2": "黄緑",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/yamano_arisu.jpg"
+        },
+        {
+          "id": "e7a52d6e-ed25-4880-994d-eb3c5c742f04",
+          "name": "天野香乃愛",
+          "birthDate": "2007-01-21",
+          "birthplace": "埼玉県",
+          "penLightColor1": "薄紫",
+          "penLightColor2": "黄",
+          "imageUrl": "https://nearly-equal-joy.jp/image/profile/amano_konoa.jpg"
+        }
+      ]
+    }
+  ]
+}
