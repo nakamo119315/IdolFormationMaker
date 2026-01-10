@@ -1,0 +1,10 @@
+# web/wrangler.toml
+name = "idolformationmaker"
+compatibility_date = "2026-01-10"
+main = "worker/index.ts" # もしファイルがなければ空のtsファイルを作ってください
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+
+# ここには何も書かない（Gitに公開しないため）
