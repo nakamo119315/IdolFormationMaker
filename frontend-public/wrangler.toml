@@ -1,9 +1,0 @@
-name = "idolformationmaker"
-compatibility_date = "2024-12-25"
-main = "worker/index.ts"
-
-[assets]
-directory = "./dist"
-binding = "ASSETS"
-
-# API_URL is set via: npx wrangler secret put API_URL
