@@ -4,8 +4,13 @@ import { useQuery } from '@tanstack/react-query';
 import { membersApi } from '../api/members';
 import { groupsApi } from '../api/groups';
 import { Loading } from '../components/common/Loading';
+import { ImagePreviewModal } from '../components/common/ImagePreviewModal';
 import type { Member } from '../types';
 import html2canvas from 'html2canvas-pro';
+
+// モバイルデバイスかどうかを判定
+const isMobileDevice = () =>
+  /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 type Phase = 'filter' | 'sorting' | 'result';
 
@@ -129,6 +134,7 @@ export function MemberSortPage() {
   const [saveMessage, setSaveMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [base64Images, setBase64Images] = useState<Map<string, string>>(new Map());
   const [isLoadingImages, setIsLoadingImages] = useState(false);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
 
   // 結果画面になったら画像をBase64にプリロード（バックグラウンドで並列処理）
@@ -376,12 +382,21 @@ export function MemberSortPage() {
         allowTaint: true,
         logging: false,
       });
-      const link = document.createElement('a');
-      link.download = `member-ranking-${new Date().toISOString().slice(0, 10)}.png`;
-      link.href = canvas.toDataURL('image/png');
-      link.click();
-      setSaveMessage({ type: 'success', text: '画像を保存しました' });
-      setTimeout(() => setSaveMessage(null), 3000);
+
+      const dataUrl = canvas.toDataURL('image/png');
+
+      if (isMobileDevice()) {
+        // モバイルの場合はプレビュー表示（長押しで保存）
+        setPreviewImage(dataUrl);
+      } else {
+        // PCの場合は通常のダウンロード
+        const link = document.createElement('a');
+        link.download = `member-ranking-${new Date().toISOString().slice(0, 10)}.png`;
+        link.href = dataUrl;
+        link.click();
+        setSaveMessage({ type: 'success', text: '画像を保存しました' });
+        setTimeout(() => setSaveMessage(null), 3000);
+      }
     } catch (error) {
       console.error('Failed to save image:', error);
       setSaveMessage({ type: 'error', text: '画像の保存に失敗しました' });
@@ -706,6 +721,15 @@ export function MemberSortPage() {
           )}
         </AnimatePresence>
       </div>
+
+      {/* 画像プレビューモーダル（モバイル用） */}
+      {previewImage && (
+        <ImagePreviewModal
+          imageUrl={previewImage}
+          fileName={`member-ranking-${new Date().toISOString().slice(0, 10)}.png`}
+          onClose={() => setPreviewImage(null)}
+        />
+      )}
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import html2canvas from 'html2canvas-pro';
 import type { Formation, Member } from '../../types';
+import { ImagePreviewModal } from '../common/ImagePreviewModal';
 
 interface FormationStageProps {
   formation: Formation;
@@ -225,26 +226,11 @@ export function FormationStage({ formation, members }: FormationStageProps) {
 
       {/* 画像プレビューモーダル（スマホ用） */}
       {previewImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 flex flex-col items-center justify-center p-4"
-          onClick={() => setPreviewImage(null)}
-        >
-          <div className="text-white text-center mb-4">
-            <p className="text-lg font-medium">画像を長押しして保存</p>
-            <p className="text-sm text-white/60 mt-1">タップで閉じる</p>
-          </div>
-          <img
-            src={previewImage}
-            alt={formation.name}
-            className="max-w-full max-h-[70vh] rounded-lg shadow-2xl"
-          />
-          <button
-            onClick={() => setPreviewImage(null)}
-            className="mt-6 px-6 py-2 bg-white/20 hover:bg-white/30 text-white rounded-full transition-colors"
-          >
-            閉じる
-          </button>
-        </div>
+        <ImagePreviewModal
+          imageUrl={previewImage}
+          fileName={`${formation.name}_formation.png`}
+          onClose={() => setPreviewImage(null)}
+        />
       )}
     </div>
   );

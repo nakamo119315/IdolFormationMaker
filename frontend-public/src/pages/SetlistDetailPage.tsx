@@ -9,10 +9,17 @@ import { groupsApi } from '../api/groups';
 import { membersApi } from '../api/members';
 import { Loading } from '../components/common/Loading';
 import { ShareButton } from '../components/common/ShareButton';
+import { ImagePreviewModal } from '../components/common/ImagePreviewModal';
+
+// モバイルデバイスかどうかを判定
+const isMobileDevice = () =>
+  /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 export function SetlistDetailPage() {
   const { id } = useParams<{ id: string }>();
   const [isDownloading, setIsDownloading] = useState(false);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [previewFileName, setPreviewFileName] = useState<string>('');
   const downloadRef = useRef<HTMLDivElement>(null);
 
   const { data: setlist, isLoading: setlistLoading } = useQuery({
@@ -87,29 +94,23 @@ export function SetlistDetailPage() {
 
       downloadRef.current.style.display = 'none';
 
-      // Blob生成
-      const blob = await new Promise<Blob | null>((resolve) => {
-        canvas.toBlob(resolve, 'image/png', 1.0);
-      });
-
-      if (!blob) {
-        throw new Error('画像の生成に失敗しました');
-      }
-
+      const dataUrl = canvas.toDataURL('image/png');
       const fileName = setlist.eventDate
         ? `${groupName}_${setlist.name}_${setlist.eventDate}.png`
         : `${groupName}_${setlist.name}.png`;
       const safeFileName = fileName.replace(/\//g, '-');
 
-      // 画像をダウンロード
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = safeFileName;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+      if (isMobileDevice()) {
+        // モバイルの場合はプレビュー表示（長押しで保存）
+        setPreviewImage(dataUrl);
+        setPreviewFileName(safeFileName);
+      } else {
+        // PCの場合は通常のダウンロード
+        const link = document.createElement('a');
+        link.download = safeFileName;
+        link.href = dataUrl;
+        link.click();
+      }
     } catch (error) {
       console.error('ダウンロードエラー:', error);
       alert('画像の保存に失敗しました');
@@ -325,6 +326,18 @@ export function SetlistDetailPage() {
             <p className="text-slate-700 font-medium">画像を作成中...</p>
           </div>
         </div>
+      )}
+
+      {/* 画像プレビューモーダル（モバイル用） */}
+      {previewImage && (
+        <ImagePreviewModal
+          imageUrl={previewImage}
+          fileName={previewFileName}
+          onClose={() => {
+            setPreviewImage(null);
+            setPreviewFileName('');
+          }}
+        />
       )}
     </div>
   );
