@@ -21,7 +21,7 @@ public class CreateMemberHandlerTests
     public async Task HandleAsync_WithValidData_ShouldCreateAndReturnMember()
     {
         // Arrange
-        var dto = new CreateMemberDto("Test Member", new DateOnly(2000, 1, 15), "東京都", "ピンク", "白", null, null, null);
+        var dto = new CreateMemberDto("Test Member", new DateOnly(2000, 1, 15), "東京都", "ピンク", "白", null, null, null, null, null);
         var command = new CreateMemberCommand(dto);
 
         _memberRepositoryMock
@@ -51,7 +51,7 @@ public class CreateMemberHandlerTests
     {
         // Arrange
         var groupId = Guid.NewGuid();
-        var dto = new CreateMemberDto("Test Member", new DateOnly(2000, 1, 15), null, null, null, groupId, null, null);
+        var dto = new CreateMemberDto("Test Member", new DateOnly(2000, 1, 15), null, null, null, groupId, null, null, null, null);
         var command = new CreateMemberCommand(dto);
 
         _memberRepositoryMock

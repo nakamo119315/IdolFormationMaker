@@ -26,7 +26,9 @@ public class CreateMemberHandler
             command.Dto.PenLightColor2,
             command.Dto.GroupId,
             command.Dto.Generation,
-            command.Dto.IsGraduated ?? false
+            command.Dto.IsGraduated ?? false,
+            command.Dto.Nickname,
+            command.Dto.CallName
         );
 
         await _memberRepository.AddAsync(member, cancellationToken);

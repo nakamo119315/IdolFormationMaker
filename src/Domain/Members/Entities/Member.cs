@@ -13,6 +13,8 @@ public class Member : IEntity
     public Guid? GroupId { get; private set; }
     public int? Generation { get; private set; }
     public bool IsGraduated { get; private set; }
+    public string? Nickname { get; private set; }
+    public string? CallName { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; private set; }
 
@@ -21,7 +23,7 @@ public class Member : IEntity
 
     private Member() { }
 
-    public static Member Create(string name, DateOnly birthDate, string? birthplace = null, string? penLightColor1 = null, string? penLightColor2 = null, Guid? groupId = null, int? generation = null, bool isGraduated = false)
+    public static Member Create(string name, DateOnly birthDate, string? birthplace = null, string? penLightColor1 = null, string? penLightColor2 = null, Guid? groupId = null, int? generation = null, bool isGraduated = false, string? nickname = null, string? callName = null)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Name is required.", nameof(name));
@@ -38,12 +40,14 @@ public class Member : IEntity
             GroupId = groupId,
             Generation = generation,
             IsGraduated = isGraduated,
+            Nickname = nickname,
+            CallName = callName,
             CreatedAt = now,
             UpdatedAt = now
         };
     }
 
-    public void Update(string name, DateOnly birthDate, string? birthplace, string? penLightColor1, string? penLightColor2, Guid? groupId, int? generation, bool isGraduated)
+    public void Update(string name, DateOnly birthDate, string? birthplace, string? penLightColor1, string? penLightColor2, Guid? groupId, int? generation, bool isGraduated, string? nickname, string? callName)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Name is required.", nameof(name));
@@ -56,6 +60,8 @@ public class Member : IEntity
         GroupId = groupId;
         Generation = generation;
         IsGraduated = isGraduated;
+        Nickname = nickname;
+        CallName = callName;
         UpdatedAt = DateTime.UtcNow;
     }
 

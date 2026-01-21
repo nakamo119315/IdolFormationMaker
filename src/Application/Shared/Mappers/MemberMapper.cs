@@ -15,6 +15,8 @@ public static class MemberMapper
         member.GroupId,
         member.Generation,
         member.IsGraduated,
+        member.Nickname,
+        member.CallName,
         member.Images.Select(ToDto),
         member.CreatedAt,
         member.UpdatedAt

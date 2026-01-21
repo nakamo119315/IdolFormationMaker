@@ -72,7 +72,7 @@ public class MemberTests
         System.Threading.Thread.Sleep(10);
 
         // Act
-        member.Update(newName, newBirthDate, null, null, null, newGroupId, null, false);
+        member.Update(newName, newBirthDate, null, null, null, newGroupId, null, false, null, null);
 
         // Assert
         Assert.Equal(newName, member.Name);
@@ -165,7 +165,7 @@ public class MemberTests
         Assert.False(member.IsGraduated);
 
         // Act
-        member.Update("Updated Name", new DateOnly(2000, 1, 15), null, null, null, null, 4, true);
+        member.Update("Updated Name", new DateOnly(2000, 1, 15), null, null, null, null, 4, true, null, null);
 
         // Assert
         Assert.Equal(4, member.Generation);
@@ -217,7 +217,7 @@ public class MemberTests
         System.Threading.Thread.Sleep(10);
 
         // Act
-        member.Update("Updated", new DateOnly(2001, 1, 1), null, null, null, null, null, false);
+        member.Update("Updated", new DateOnly(2001, 1, 1), null, null, null, null, null, false, null, null);
 
         // Assert - CreatedAtは変更されないこと
         Assert.Equal(originalCreatedAt, member.CreatedAt);
@@ -392,7 +392,7 @@ public class MemberTests
 
         // Act & Assert
         Assert.Throws<ArgumentException>(() =>
-            member.Update(invalidName!, new DateOnly(2000, 1, 1), null, null, null, null, null, false));
+            member.Update(invalidName!, new DateOnly(2000, 1, 1), null, null, null, null, null, false, null, null));
     }
 
     [Fact]
@@ -403,7 +403,7 @@ public class MemberTests
         var originalName = member.Name;
 
         // Act
-        try { member.Update("", new DateOnly(2000, 1, 1), null, null, null, null, null, false); }
+        try { member.Update("", new DateOnly(2000, 1, 1), null, null, null, null, null, false, null, null); }
         catch { /* expected */ }
 
         // Assert - 元のデータは変更されていない

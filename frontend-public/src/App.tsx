@@ -5,12 +5,14 @@ import { Footer } from './components/common/Footer';
 import { HomePage } from './pages/HomePage';
 import { MembersPage } from './pages/MembersPage';
 import { MemberDetailPage } from './pages/MemberDetailPage';
+import { MemberEditPage } from './pages/MemberEditPage';
 import { GroupsPage } from './pages/GroupsPage';
 import { GroupDetailPage } from './pages/GroupDetailPage';
 import { FormationsPage } from './pages/FormationsPage';
 import { FormationCreatePage } from './pages/FormationCreatePage';
 import { SongsPage } from './pages/SongsPage';
 import { SongDetailPage } from './pages/SongDetailPage';
+import { SongEditPage } from './pages/SongEditPage';
 import { SetlistsPage } from './pages/SetlistsPage';
 import { SetlistDetailPage } from './pages/SetlistDetailPage';
 import { SetlistCreatePage } from './pages/SetlistCreatePage';
@@ -37,14 +39,18 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/members" element={<MembersPage />} />
+              <Route path="/members/new" element={<MemberEditPage />} />
               <Route path="/members/:id" element={<MemberDetailPage />} />
+              <Route path="/members/:id/edit" element={<MemberEditPage />} />
               <Route path="/groups" element={<GroupsPage />} />
               <Route path="/groups/:id" element={<GroupDetailPage />} />
               <Route path="/formations" element={<FormationsPage />} />
               <Route path="/formations/new" element={<FormationCreatePage />} />
               <Route path="/formations/:id/edit" element={<FormationCreatePage />} />
               <Route path="/songs" element={<SongsPage />} />
+              <Route path="/songs/new" element={<SongEditPage />} />
               <Route path="/songs/:id" element={<SongDetailPage />} />
+              <Route path="/songs/:id/edit" element={<SongEditPage />} />
               <Route path="/setlists" element={<SetlistsPage />} />
               <Route path="/setlists/new" element={<SetlistCreatePage />} />
               <Route path="/setlists/:id" element={<SetlistDetailPage />} />
