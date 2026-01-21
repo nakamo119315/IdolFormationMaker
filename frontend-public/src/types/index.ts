@@ -8,6 +8,8 @@ export interface Member {
   groupId: string | null;
   generation: number | null;
   isGraduated: boolean;
+  nickname: string | null;
+  callName: string | null;
   images: MemberImage[];
   createdAt: string;
   updatedAt: string;
@@ -204,4 +206,50 @@ export interface UpdateConversationDto {
 export interface AddMessageDto {
   speakerType: SpeakerType;
   content: string;
+}
+
+// Member DTOs
+export interface CreateMemberDto {
+  name: string;
+  birthDate: string;
+  birthplace?: string | null;
+  penLightColor1?: string | null;
+  penLightColor2?: string | null;
+  groupId?: string | null;
+  generation?: number | null;
+  isGraduated?: boolean;
+  nickname?: string | null;
+  callName?: string | null;
+}
+
+export interface UpdateMemberDto {
+  name: string;
+  birthDate: string;
+  birthplace?: string | null;
+  penLightColor1?: string | null;
+  penLightColor2?: string | null;
+  groupId?: string | null;
+  generation?: number | null;
+  isGraduated: boolean;
+  nickname?: string | null;
+  callName?: string | null;
+}
+
+// Song DTOs
+export interface CreateSongDto {
+  groupId: string;
+  title: string;
+  lyricist: string;
+  composer: string;
+  arranger?: string | null;
+  lyrics?: string | null;
+}
+
+export interface UpdateSongDto {
+  groupId: string;
+  title: string;
+  lyricist: string;
+  composer: string;
+  arranger?: string | null;
+  lyrics?: string | null;
 }

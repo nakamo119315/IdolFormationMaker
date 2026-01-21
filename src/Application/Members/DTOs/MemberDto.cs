@@ -10,6 +10,8 @@ public record MemberDto(
     Guid? GroupId,
     int? Generation,
     bool IsGraduated,
+    string? Nickname,
+    string? CallName,
     IEnumerable<MemberImageDto> Images,
     DateTime CreatedAt,
     DateTime UpdatedAt
@@ -30,7 +32,9 @@ public record CreateMemberDto(
     string? PenLightColor2,
     Guid? GroupId,
     int? Generation,
-    bool? IsGraduated
+    bool? IsGraduated,
+    string? Nickname,
+    string? CallName
 );
 
 public record UpdateMemberDto(
@@ -41,7 +45,9 @@ public record UpdateMemberDto(
     string? PenLightColor2,
     Guid? GroupId,
     int? Generation,
-    bool IsGraduated
+    bool IsGraduated,
+    string? Nickname,
+    string? CallName
 );
 
 public record AddMemberImageDto(

@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useQuery } from '@tanstack/react-query';
-import { useParams, Link } from 'react-router-dom';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { songsApi } from '../api/songs';
 import { groupsApi } from '../api/groups';
 import { Loading } from '../components/common/Loading';
 
 export function SongDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   const { data: song, isLoading: songLoading } = useQuery({
     queryKey: ['song', id],
@@ -17,6 +21,14 @@ export function SongDetailPage() {
   const { data: groups } = useQuery({
     queryKey: ['groups'],
     queryFn: groupsApi.getAll,
+  });
+
+  const deleteMutation = useMutation({
+    mutationFn: () => songsApi.delete(id!),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['songs'] });
+      navigate('/songs');
+    },
   });
 
   if (songLoading) return <Loading />;
@@ -63,9 +75,31 @@ export function SongDetailPage() {
         >
           <div className="text-center mb-6">
             <p className="text-primary-500 font-medium mb-2">{groupName}</p>
-            <h1 className="text-3xl md:text-4xl font-bold text-primary-700 mb-4">
-              {song.title}
-            </h1>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-primary-700">
+                {song.title}
+              </h1>
+              <div className="flex items-center gap-2">
+                <Link
+                  to={`/songs/${id}/edit`}
+                  className="p-2 text-primary-600 hover:bg-primary-100 rounded-lg transition-colors"
+                  title="編集"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                </Link>
+                <button
+                  onClick={() => setShowDeleteConfirm(true)}
+                  className="p-2 text-red-600 hover:bg-red-100 rounded-lg transition-colors"
+                  title="削除"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -112,6 +146,37 @@ export function SongDetailPage() {
           </motion.div>
         )}
       </div>
+
+      {/* 削除確認ダイアログ */}
+      {showDeleteConfirm && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-white rounded-2xl p-6 max-w-md w-full shadow-xl"
+          >
+            <h3 className="text-xl font-bold text-slate-800 mb-4">曲を削除</h3>
+            <p className="text-slate-600 mb-6">
+              「{song.title}」を削除してもよろしいですか？この操作は取り消せません。
+            </p>
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={() => setShowDeleteConfirm(false)}
+                className="px-4 py-2 bg-slate-200 text-slate-700 rounded-xl font-medium hover:bg-slate-300 transition-colors"
+              >
+                キャンセル
+              </button>
+              <button
+                onClick={() => deleteMutation.mutate()}
+                disabled={deleteMutation.isPending}
+                className="px-4 py-2 bg-red-500 text-white rounded-xl font-medium hover:bg-red-600 disabled:opacity-50 transition-colors"
+              >
+                {deleteMutation.isPending ? '削除中...' : '削除'}
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 }

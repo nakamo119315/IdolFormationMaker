@@ -1,6 +1,7 @@
-import { useParams, Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { membersApi } from '../api/members';
 import { groupsApi } from '../api/groups';
 import { Loading } from '../components/common/Loading';
@@ -8,6 +9,9 @@ import { ShareButton } from '../components/common/ShareButton';
 
 export function MemberDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   const { data: member, isLoading } = useQuery({
     queryKey: ['member', id],
@@ -18,6 +22,14 @@ export function MemberDetailPage() {
   const { data: groups } = useQuery({
     queryKey: ['groups'],
     queryFn: groupsApi.getAll,
+  });
+
+  const deleteMutation = useMutation({
+    mutationFn: () => membersApi.delete(id!),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['members'] });
+      navigate('/members');
+    },
   });
 
   if (isLoading) return <Loading />;
@@ -101,14 +113,34 @@ export function MemberDetailPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col justify-center"
           >
-            <div className="flex items-start justify-between gap-4 mb-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-primary-700">
+            <div className="mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-700 mb-3">
                 {member.name}
               </h1>
-              <ShareButton
-                title={`${member.name} | Idol Management`}
-                text={`${member.name}のプロフィールをチェック！`}
-              />
+              <div className="flex items-center gap-2">
+                <Link
+                  to={`/members/${id}/edit`}
+                  className="inline-flex items-center gap-1 px-3 py-1.5 text-sm text-primary-600 hover:bg-primary-100 rounded-lg transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                  編集
+                </Link>
+                <button
+                  onClick={() => setShowDeleteConfirm(true)}
+                  className="inline-flex items-center gap-1 px-3 py-1.5 text-sm text-red-600 hover:bg-red-100 rounded-lg transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                  削除
+                </button>
+                <ShareButton
+                  title={`${member.name} | Idol Management`}
+                  text={`${member.name}のプロフィールをチェック！`}
+                />
+              </div>
             </div>
 
             {group && (
@@ -164,6 +196,24 @@ export function MemberDetailPage() {
                 </div>
               )}
 
+              {member.nickname && (
+                <div className="p-6 bg-white rounded-2xl shadow-lg">
+                  <h3 className="text-sm font-medium text-primary-600/70 tracking-wider mb-2">
+                    ニックネーム
+                  </h3>
+                  <p className="text-2xl font-semibold text-slate-800">{member.nickname}</p>
+                </div>
+              )}
+
+              {member.callName && (
+                <div className="p-6 bg-white rounded-2xl shadow-lg">
+                  <h3 className="text-sm font-medium text-primary-600/70 tracking-wider mb-2">
+                    コール名
+                  </h3>
+                  <p className="text-2xl font-semibold text-slate-800">{member.callName}</p>
+                </div>
+              )}
+
               <div className="p-6 bg-white rounded-2xl shadow-lg">
                 <h3 className="text-sm font-medium text-primary-600/70 tracking-wider mb-2">
                   画像数
@@ -174,6 +224,37 @@ export function MemberDetailPage() {
           </motion.div>
         </div>
       </div>
+
+      {/* 削除確認ダイアログ */}
+      {showDeleteConfirm && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-white rounded-2xl p-6 max-w-md w-full shadow-xl"
+          >
+            <h3 className="text-xl font-bold text-slate-800 mb-4">メンバーを削除</h3>
+            <p className="text-slate-600 mb-6">
+              「{member.name}」を削除してもよろしいですか？この操作は取り消せません。
+            </p>
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={() => setShowDeleteConfirm(false)}
+                className="px-4 py-2 bg-slate-200 text-slate-700 rounded-xl font-medium hover:bg-slate-300 transition-colors"
+              >
+                キャンセル
+              </button>
+              <button
+                onClick={() => deleteMutation.mutate()}
+                disabled={deleteMutation.isPending}
+                className="px-4 py-2 bg-red-500 text-white rounded-xl font-medium hover:bg-red-600 disabled:opacity-50 transition-colors"
+              >
+                {deleteMutation.isPending ? '削除中...' : '削除'}
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 }

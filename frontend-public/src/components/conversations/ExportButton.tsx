@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import type { MeetGreetConversation } from '../../types';
 import { useExportToImage } from '../../hooks/useExportToImage';
+import { ImagePreviewModal } from '../common/ImagePreviewModal';
 import ExportableChat from './ExportableChat';
 
 interface ExportButtonProps {
@@ -14,7 +15,7 @@ export default function ExportButton({
   partnerName,
 }: ExportButtonProps) {
   const exportRef = useRef<HTMLDivElement>(null);
-  const { exportToImage, isExporting } = useExportToImage();
+  const { exportToImage, isExporting, previewImage, previewFileName, closePreview } = useExportToImage();
   const [isRendering, setIsRendering] = useState(false);
 
   const handleExport = async () => {
@@ -89,6 +90,15 @@ export default function ExportButton({
           </div>,
           document.body
         )}
+
+      {/* Image preview modal for mobile */}
+      {previewImage && (
+        <ImagePreviewModal
+          imageUrl={previewImage}
+          fileName={previewFileName}
+          onClose={closePreview}
+        />
+      )}
     </>
   );
 }

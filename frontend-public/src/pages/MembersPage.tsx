@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useQuery } from '@tanstack/react-query';
 import { membersApi } from '../api/members';
@@ -59,9 +60,18 @@ export function MembersPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-primary-700 mb-4">
             Members
           </h1>
-          <p className="text-primary-600/70 max-w-2xl mx-auto">
+          <p className="text-primary-600/70 max-w-2xl mx-auto mb-6">
             輝くアイドルたちをご紹介
           </p>
+          <Link
+            to="/members/new"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-medium hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg shadow-primary-500/30"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+            </svg>
+            新規メンバー
+          </Link>
         </motion.div>
 
         {/* フィルター */}

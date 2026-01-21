@@ -29,7 +29,9 @@ public class UpdateMemberHandler
             command.Dto.PenLightColor2,
             command.Dto.GroupId,
             command.Dto.Generation,
-            command.Dto.IsGraduated
+            command.Dto.IsGraduated,
+            command.Dto.Nickname,
+            command.Dto.CallName
         );
 
         await _memberRepository.UpdateAsync(member, cancellationToken);
