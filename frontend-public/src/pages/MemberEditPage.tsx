@@ -36,9 +36,11 @@ export function MemberEditPage() {
   });
 
   // Initialize form when member data is loaded (only once)
+  // This is a valid pattern for form initialization from async data
   useEffect(() => {
     if (member && !initializedRef.current) {
       initializedRef.current = true;
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Form initialization from loaded data
       setName(member.name);
       setBirthDate(member.birthDate);
       setBirthplace(member.birthplace ?? '');

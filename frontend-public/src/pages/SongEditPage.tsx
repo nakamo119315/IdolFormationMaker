@@ -32,9 +32,11 @@ export function SongEditPage() {
   });
 
   // Initialize form when song data is loaded (only once)
+  // This is a valid pattern for form initialization from async data
   useEffect(() => {
     if (song && !initializedRef.current) {
       initializedRef.current = true;
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Form initialization from loaded data
       setTitle(song.title);
       setGroupId(song.groupId);
       setLyricist(song.lyricist);
