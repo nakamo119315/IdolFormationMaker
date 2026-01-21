@@ -71,35 +71,35 @@ export function SongDetailPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-slate-100"
+          className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-slate-100 relative"
         >
+          {/* 編集・削除ボタン（右上に配置） */}
+          <div className="absolute top-4 right-4 flex items-center gap-1">
+            <Link
+              to={`/songs/${id}/edit`}
+              className="p-2 text-primary-600 hover:bg-primary-100 rounded-lg transition-colors"
+              title="編集"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+              </svg>
+            </Link>
+            <button
+              onClick={() => setShowDeleteConfirm(true)}
+              className="p-2 text-red-600 hover:bg-red-100 rounded-lg transition-colors"
+              title="削除"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+            </button>
+          </div>
+
           <div className="text-center mb-6">
             <p className="text-primary-500 font-medium mb-2">{groupName}</p>
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <h1 className="text-3xl md:text-4xl font-bold text-primary-700">
-                {song.title}
-              </h1>
-              <div className="flex items-center gap-2">
-                <Link
-                  to={`/songs/${id}/edit`}
-                  className="p-2 text-primary-600 hover:bg-primary-100 rounded-lg transition-colors"
-                  title="編集"
-                >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                  </svg>
-                </Link>
-                <button
-                  onClick={() => setShowDeleteConfirm(true)}
-                  className="p-2 text-red-600 hover:bg-red-100 rounded-lg transition-colors"
-                  title="削除"
-                >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <h1 className="text-3xl md:text-4xl font-bold text-primary-700 px-12">
+              {song.title}
+            </h1>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 text-center">
