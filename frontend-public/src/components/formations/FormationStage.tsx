@@ -114,10 +114,6 @@ export function FormationStage({ formation, members }: FormationStageProps) {
 
       {/* ステージ背景 */}
       <div ref={stageRef} className="p-3 sm:p-6 shadow-2xl overflow-hidden" style={{ background: 'linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 30%, #ddd6fe 60%, #ede9fe 100%)' }}>
-        {/* ステージ後方ラベル */}
-        <div className="text-center mb-1 sm:mb-4">
-          <span className="text-purple-600/60 text-[10px] sm:text-xs uppercase tracking-widest">Stage Back</span>
-        </div>
 
         {/* フォーメーショングリッド */}
         <div className="flex flex-col gap-3 sm:gap-6 py-1 sm:py-4">
@@ -154,22 +150,11 @@ export function FormationStage({ formation, members }: FormationStageProps) {
                     className="relative group flex-shrink-0"
                     style={{ width: `${size + 8}px` }}
                   >
-                    {/* ポジション番号バッジ */}
-                    <div
-                      className="absolute -top-1 -right-1 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold z-10 shadow-lg"
-                      style={{
-                        width: `${Math.max(12, Math.round(size * 0.3))}px`,
-                        height: `${Math.max(12, Math.round(size * 0.3))}px`,
-                        fontSize: `${Math.max(7, Math.round(size * 0.18))}px`
-                      }}
-                    >
-                      {pos.positionNumber}
-                    </div>
 
                     {/* メンバー画像/プレースホルダー */}
                     <div
                       className="rounded-full overflow-hidden border-2 border-white/30 shadow-xl transition-all duration-300 group-hover:border-primary-400 group-hover:scale-110 mx-auto"
-                      style={{ width: `${size}px`, height: `${size}px` }}
+                      style={{ width: `${size}px`, height: `${size+16}px` }}
                     >
                       {imageUrl ? (
                         <img
@@ -200,11 +185,6 @@ export function FormationStage({ formation, members }: FormationStageProps) {
               })}
             </motion.div>
           ))}
-        </div>
-
-        {/* ステージ前方ラベル */}
-        <div className="text-center mt-3 sm:mt-6">
-          <span className="text-purple-600/60 text-[10px] sm:text-xs uppercase tracking-widest">Stage Front</span>
         </div>
 
         {/* ステージエッジ装飾 */}
