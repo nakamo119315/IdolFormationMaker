@@ -34,49 +34,62 @@ export function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-white/70 mb-8 max-w-2xl mx-auto"
+            className="text-xl mb-8 max-w-2xl mx-auto"
           >
-            あなたの推しに会いに行こう
+            アイドルのフォーメーション・セトリ・ソート
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="grid grid-cols-2 md:grid-cols-3 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link to="/members" className="btn-primary">
-              View Members
+              Members
             </Link>
             <Link
               to="/groups"
-              className="px-6 py-3 border-2 border-white/30 text-white font-medium rounded-full
-                       hover:bg-white/10 transition-all duration-300"
+              className="btn-primary"
             >
-              View Groups
+              Groups
+            </Link>
+            <Link
+              to="/formations"
+              className="btn-primary"
+            >
+              Formations
+            </Link>
+            <Link
+              to="/songs"
+              className="btn-primary"
+            >
+              Songs
+            </Link>
+            <Link
+              to="/setlists"
+              className="btn-primary"
+            >
+              Setlists
+            </Link>
+            <Link
+              to="/conversations"
+              className="btn-primary"
+            >
+              Conversations
+            </Link>
+            <Link
+              to="/member-sort"
+              className="btn-primary"
+            >
+              Member-Sort
             </Link>
           </motion.div>
         </div>
-
-        {/* スクロールインジケーター */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
-          >
-            <div className="w-1.5 h-3 bg-white/50 rounded-full mt-2" />
-          </motion.div>
-        </motion.div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white/5">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <motion.div
@@ -86,7 +99,7 @@ export function HomePage() {
               className="text-center"
             >
               <div className="text-5xl font-bold text-primary-400">{members?.length ?? 0}</div>
-              <div className="text-white/60 mt-2">Members</div>
+              <div className="text-primary-400 mt-2">Members</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -96,7 +109,7 @@ export function HomePage() {
               className="text-center"
             >
               <div className="text-5xl font-bold text-primary-400">{groups?.length ?? 0}</div>
-              <div className="text-white/60 mt-2">Groups</div>
+              <div className="text-primary-400 mt-2">Groups</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -106,7 +119,7 @@ export function HomePage() {
               className="text-center col-span-2 md:col-span-1"
             >
               <div className="text-5xl font-bold text-primary-400">∞</div>
-              <div className="text-white/60 mt-2">Dreams</div>
+              <div className="text-primary-400 mt-2">Dreams</div>
             </motion.div>
           </div>
         </div>
