@@ -32,7 +32,7 @@ const imageCache = new Map<string, string>();
 function getProxiedUrl(url: string): string {
   // images.weserv.nl は無料の画像プロキシサービス
   // w=300&h=300 で高解像度、q=100 で最高品質
-  return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=300&h=300&fit=cover&q=100`;
+  return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&fit=cover&q=100`;
 }
 
 // 画像をBase64に変換（プロキシ経由でCORS回避）
@@ -631,7 +631,7 @@ export function MemberSortPage() {
                         >
                           {index + 1}
                         </div>
-                        <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 rounded-full overflow-hidden border-2 border-primary-200 shadow-md">
+                        <div className="w-16 h-24 sm:w-16 sm:h-24 flex-shrink-0 rounded-full overflow-hidden border-2 border-primary-200 shadow-md">
                           <MemberImage
                             src={image?.url}
                             alt={member.name}
